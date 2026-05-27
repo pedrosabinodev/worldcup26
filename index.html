@@ -112,7 +112,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .option-btn.correct .opt-check,.option-btn.reveal-correct .opt-check,.option-btn.wrong .opt-check{opacity:1}
 
 /* FEEDBACK */
-.feedback{height:40px;display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.feedback{min-height:40px;display:flex;align-items:center;gap:10px;margin-bottom:24px;flex-wrap:wrap}
 .feedback-text{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;opacity:0;transition:opacity .3s}
 .feedback-text.show{opacity:1}
 .feedback-text.correct{color:var(--success)}.feedback-text.wrong{color:var(--danger)}
@@ -201,6 +201,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
       <div class="feedback">
         <span class="feedback-text" id="ft"></span>&nbsp;
         <span class="feedback-sub" id="fs"></span>
+        <span class="feedback-sub" id="fi"></span>
       </div>
     </div>
 
@@ -589,6 +590,8 @@ function renderRound(){
   document.getElementById('ft').className='feedback-text';
   document.getElementById('fs').textContent='';
   document.getElementById('fs').className='feedback-sub';
+  document.getElementById('fi').textContent='';
+  document.getElementById('fi').className='feedback-sub';
 
   fetchPhoto(currentPlayer.wiki);
   fetchClubBadge(currentPlayer.club);
@@ -663,11 +666,13 @@ function handleAnswer(idx){
     else if(i===correctIdx&&!isCorrect){btn.classList.add('reveal-correct');chk.textContent='✓';}
   });
 
-  const ft=document.getElementById('ft'),fs=document.getElementById('fs');
+  const ft=document.getElementById('ft'),fs=document.getElementById('fs'),fi=document.getElementById('fi');
   if(isCorrect){
     ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
     ft.className='feedback-text show correct';
     fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
+    fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
+    fi.className='feedback-sub show';
   } else {
     ft.textContent='Not quite.';
     ft.className='feedback-text show wrong';
