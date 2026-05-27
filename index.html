@@ -121,6 +121,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
 #fi{margin-left:20px}
+.reveal-feedback-mobile{display:none;flex:1;flex-direction:column;justify-content:center;gap:2px;min-width:0}
+#fi-m{font-size:13px}
 
 /* RESULTS */
 #results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding:40px 0}
@@ -141,12 +143,15 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{flex-direction:column;align-items:flex-start;gap:20px}
   .photo-scene,.photo-flipper,.photo-front,.photo-back{width:100%!important;height:220px!important}
   .photo-back img.player-img,.no-photo-back{width:100%!important;height:220px!important}
-  .player-name{font-size:38px}
+  .player-name{font-size:38px;margin-bottom:8px}
   .option-btn{padding:11px 10px;gap:10px}
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
   .player-info{width:100%}
   .reveal-country{display:none}.next-btn{padding:14px;text-align:center}
+  .reveal-feedback-mobile{display:flex}
+  .feedback{display:none}
+  .reveal-row{align-items:center}
 }
 </style>
 </head>
@@ -529,6 +534,11 @@ function renderRound(){
             <div class="reveal-country-name">${currentPlayer.country}</div>
           </div>
         </div>
+        <div class="reveal-feedback-mobile">
+          <span class="feedback-text" id="ft-m"></span>
+          <span class="feedback-sub" id="fs-m"></span>
+          <span class="feedback-sub" id="fi-m"></span>
+        </div>
         <button class="next-btn" id="next-btn" onclick="nextRound()">
           ${round<queue.length?'Next ›':'Results ›'}
         </button>
@@ -621,19 +631,24 @@ function handleAnswer(idx){
     else if(i===correctIdx&&!isCorrect){btn.classList.add('reveal-correct');chk.textContent='✓';}
   });
 
-  const ft=document.getElementById('ft'),fs=document.getElementById('fs'),fi=document.getElementById('fi');
-  if(isCorrect){
-    ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
-    ft.className='feedback-text show correct';
-    fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
-    fs.className='feedback-sub show correct';
-    fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
-    fi.className='feedback-sub show';
-  } else {
-    ft.textContent='Not quite.';
-    ft.className='feedback-text show wrong';
-    fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
-    fs.className='feedback-sub show';
+  for(const sfx of ['','m']){
+    const id=s=>document.getElementById(s+(sfx?'-'+sfx:''));
+    const ft=id('ft'),fs=id('fs'),fi=id('fi');
+    if(!ft) continue;
+    if(isCorrect){
+      ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
+      ft.className='feedback-text show correct';
+      fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
+      fs.className='feedback-sub show correct';
+      fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
+      fi.className='feedback-sub show';
+    } else {
+      ft.textContent='Not quite.';
+      ft.className='feedback-text show wrong';
+      fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
+      fs.className='feedback-sub show';
+      if(fi) fi.className='feedback-sub';
+    }
   }
 
   // Flip card
