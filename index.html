@@ -78,6 +78,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .club-badge{position:absolute;bottom:7px;right:7px;width:34px;height:34px;border-radius:50%;background:rgba(10,10,11,.85);border:1.5px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:3;opacity:0;transition:opacity .4s ease .25s}
 .club-badge.show{opacity:1}
 .club-badge svg{width:28px;height:28px;display:block}
+.club-badge img{width:28px;height:28px;object-fit:contain;display:block}
 .no-photo-back{width:var(--PW);height:var(--PH);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
 .spinner{width:20px;height:20px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
@@ -267,6 +268,54 @@ function clubBadge(club){
   const svg=CLUB_BADGES[club];
   if(svg) return svg;
   return `<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#333"/><text x="14" y="18" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#fff">${(club||'?').slice(0,3).toUpperCase()}</text></svg>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// CLUB BADGE PHOTOS — Wikipedia thumbnails (real crests)
+// Falls back to inline SVG if Wikipedia has no thumbnail
+// ═══════════════════════════════════════════════════════════
+const CLUB_WIKI={
+  "Real Madrid":"Real_Madrid_CF",
+  "Man City":"Manchester_City_F.C.",
+  "Inter Miami":"Inter_Miami_CF",
+  "PSG":"Paris_Saint-Germain_F.C.",
+  "Liverpool":"Liverpool_F.C.",
+  "Bayern Munich":"FC_Bayern_Munich",
+  "Barcelona":"FC_Barcelona",
+  "Arsenal":"Arsenal_F.C.",
+  "Atlético":"Club_Atlético_de_Madrid",
+  "Borussia D.":"Borussia_Dortmund",
+  "B. Leverkusen":"Bayer_04_Leverkusen",
+  "Al Nassr":"Al-Nassr_FC",
+  "Tottenham":"Tottenham_Hotspur_F.C.",
+  "Real Betis":"Real_Betis",
+  "Galatasaray":"Galatasaray_S.K._(football)",
+  "Al-Qadsiah":"Al-Qadsiah_FC",
+  "Wolfsburg":"VfL_Wolfsburg",
+  "Newcastle":"Newcastle_United_F.C.",
+  "Nottm Forest":"Nottingham_Forest_F.C.",
+  "Santos":"Santos_FC",
+  "Rayo Vallecano":"Rayo_Vallecano",
+  "AC Milan":"AC_Milan",
+  "PSV":"PSV_Eindhoven",
+  "Independiente":"Club_Atlético_Independiente",
+  "Fenerbahçe":"Fenerbahçe_S.K._(football)",
+  "Dortmund":"Borussia_Dortmund",
+  "Leverkusen":"Bayer_04_Leverkusen",
+  "Al Ahly":"Al_Ahly_SC",
+  "Austin FC":"Austin_FC",
+};
+const clubPhotoCache={};
+async function fetchClubBadge(club){
+  if(clubPhotoCache[club]!==undefined) return;
+  const wiki=CLUB_WIKI[club];
+  if(!wiki){clubPhotoCache[club]=null;return;}
+  try{
+    const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
+    if(!r.ok) throw 0;
+    const d=await r.json();
+    clubPhotoCache[club]=d.thumbnail?.source||null;
+  }catch(e){clubPhotoCache[club]=null;}
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -495,7 +544,7 @@ function renderRound(){
         </div>
         <div class="photo-back" id="photo-back">
           <div class="spinner"></div>
-          <div class="club-badge" id="club-badge">${clubBadge(currentPlayer.club)}</div>
+          <div class="club-badge" id="club-badge"></div>
         </div>
       </div>
     </div>
@@ -530,6 +579,7 @@ function renderRound(){
   document.getElementById('fs').className='feedback-sub';
 
   fetchPhoto(currentPlayer.wiki);
+  fetchClubBadge(currentPlayer.club);
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -617,8 +667,16 @@ function handleAnswer(idx){
   const flipper=document.getElementById('flipper');
   if(flipper) flipper.classList.add('flipped');
 
-  // Club badge fades in after flip
-  setTimeout(()=>{const b=document.getElementById('club-badge');if(b)b.classList.add('show');},750);
+  // Club badge fades in after flip — real crest from Wikipedia, SVG fallback
+  setTimeout(async()=>{
+    await fetchClubBadge(currentPlayer.club);
+    const b=document.getElementById('club-badge');
+    if(!b) return;
+    const src=clubPhotoCache[currentPlayer.club];
+    if(src){b.innerHTML=`<img src="${src}" alt="">`;}
+    else{b.innerHTML=clubBadge(currentPlayer.club);}
+    b.classList.add('show');
+  },750);
 
   // Reveal row fades in — no layout shift
   const rr=document.getElementById('reveal-row');
