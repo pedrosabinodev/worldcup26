@@ -368,10 +368,9 @@ const FLAGS={
   ht:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="1" fill="#00209F"/><rect y="1" width="3" height="1" fill="#D21034"/></svg>`,
 };
 function flagImg(code,w=44,h=32){
-  const k=code.replace('-','_'),svg=FLAGS[k];
-  if(!svg) return `<div style="width:${w}px;height:${h}px;background:#222;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#666">${code.toUpperCase()}</div>`;
-  const b64='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(svg)));
-  return `<img src="${b64}" width="${w}" height="${h}" style="display:block;border-radius:2px;object-fit:cover" alt=""/>`;
+  const REMAP={'sc':'gb-sct'};
+  const cdnCode=(REMAP[code]||code).replace('_','-');
+  return `<img src="https://flagcdn.com/w80/${cdnCode}.png" width="${w}" height="${h}" style="display:block;border-radius:2px;object-fit:cover" alt="" loading="lazy"/>`;
 }
 
 // ═══════════════════════════════════════════════════════════
