@@ -116,8 +116,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-text{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;opacity:0;transition:opacity .3s}
 .feedback-text.show{opacity:1}
 .feedback-text.correct{color:var(--success)}.feedback-text.wrong{color:var(--danger)}
-.feedback-sub{font-size:16px;color:var(--success);opacity:0;transition:opacity .3s .1s;padding-left: 8px;}
+.feedback-sub{font-size:16px;color:var(--muted);opacity:0;transition:opacity .3s .1s;padding-left: 8px;}
 .feedback-sub.show{opacity:1}
+.feedback-sub.correct{color:var(--success)}
 
 /* RESULTS */
 #results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding:40px 0}
@@ -671,14 +672,15 @@ function handleAnswer(idx){
     ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
     ft.className='feedback-text show correct';
     fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
+    fs.className='feedback-sub show correct';
     fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
     fi.className='feedback-sub show';
   } else {
     ft.textContent='Not quite.';
     ft.className='feedback-text show wrong';
     fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
+    fs.className='feedback-sub show';
   }
-  fs.className='feedback-sub show';
 
   // Flip card
   const flipper=document.getElementById('flipper');
