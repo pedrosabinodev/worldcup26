@@ -6,6 +6,7 @@
 <title>World Cup 26 — Do You Know The Players?</title>
 <meta name="description" content="Guess which country each World Cup 2026 player represents. A football trivia game for FIFA World Cup 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -104,9 +105,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .option-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;padding:14px 18px;border-radius:3px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:14px}
 .option-btn:hover:not(:disabled){background:var(--surface2);border-color:var(--muted)}
 .option-btn:disabled{cursor:default}
-.option-btn.correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
+.option-btn.correct,.option-btn.reveal-correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
 .option-btn.wrong{background:rgba(255,77,77,.06);border-color:var(--danger);color:var(--danger);opacity:.7}
-.option-btn.reveal-correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
 .flag-wrap{width:44px;min-width:44px;height:32px;border-radius:3px;overflow:hidden;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .opt-name{flex:1;font-size:14px;line-height:1.3}
 .opt-check{font-size:18px;margin-left:auto;opacity:0;transition:opacity .2s;flex-shrink:0}
@@ -327,55 +327,6 @@ async function fetchClubBadge(club){
   }catch(e){clubPhotoCache[club]=null;}
 }
 
-// ═══════════════════════════════════════════════════════════
-// FLAGS — inline SVG, base64-encoded at runtime
-// Only confirmed FIFA World Cup 2026 qualified nations
-// ═══════════════════════════════════════════════════════════
-const FLAGS={
-  ar:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#74acdf"/><rect y=".667" width="3" height=".667" fill="#fff"/><circle cx="1.5" cy="1" r=".25" fill="#f6b40e"/></svg>`,
-  pt:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ff0000"/><rect width="1.2" height="2" fill="#006600"/><circle cx="1.2" cy="1" r=".35" fill="#ffff00"/></svg>`,
-  fr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg>`,
-  no:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16"><rect width="22" height="16" fill="#ef2b2d"/><rect x="6" width="4" height="16" fill="#fff"/><rect y="6" width="22" height="4" fill="#fff"/><rect x="7" width="2" height="16" fill="#002868"/><rect y="7" width="22" height="2" fill="#002868"/></svg>`,
-  br:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#009c3b"/><polygon points="1.5,0.15 2.85,1 1.5,1.85 0.15,1" fill="#ffdf00"/><circle cx="1.5" cy="1" r=".35" fill="#002776"/></svg>`,
-  es:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>`,
-  gb_eng:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width=".5" height="2" fill="#cf142b"/><rect y=".75" width="3" height=".5" fill="#cf142b"/></svg>`,
-  eg:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ce1126"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#000"/></svg>`,
-  nl:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ae1c28"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#21468b"/></svg>`,
-  be:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#000"/><rect x="1" width="1" height="2" fill="#fae042"/><rect x="2" width="1" height="2" fill="#ef3340"/></svg>`,
-  uy:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect y=".222" width="3" height=".222" fill="#75aadb"/><rect y=".667" width="3" height=".222" fill="#75aadb"/><rect y="1.111" width="3" height=".222" fill="#75aadb"/><rect y="1.556" width="3" height=".222" fill="#75aadb"/><rect width=".9" height=".889" fill="#fff"/><circle cx=".45" cy=".444" r=".25" fill="#fcd116"/></svg>`,
-  jp:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".6" fill="#bc002d"/></svg>`,
-  ng:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#008751"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#008751"/></svg>`,
-  dz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1.5" height="2" fill="#006233"/><rect x="1.5" width="1.5" height="2" fill="#fff"/><circle cx="1.6" cy="1" r=".35" fill="#d21034"/><circle cx="1.77" cy="1" r=".26" fill="#fff"/></svg>`,
-  ma:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#c1272d"/><polygon points="1.5,0.55 1.62,0.92 1.97,0.92 1.69,1.12 1.79,1.49 1.5,1.29 1.21,1.49 1.31,1.12 1.03,0.92 1.38,0.92" fill="none" stroke="#006233" stroke-width=".06"/></svg>`,
-  ch:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><rect width="2" height="2" fill="#ff0000"/><rect x=".75" y=".375" width=".5" height="1.25" fill="#fff"/><rect x=".375" y=".75" width="1.25" height=".5" fill="#fff"/></svg>`,
-  de:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>`,
-  hr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ff0000"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#0000cc"/></svg>`,
-  co:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fcd116"/><rect y=".5" width="3" height=".75" fill="#003087"/><rect y="1.25" width="3" height=".75" fill="#ce1126"/></svg>`,
-  us:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 10"><rect width="19" height="10" fill="#bf0a30"/><rect y="1.54" width="19" height="1.54" fill="#fff"/><rect y="3.08" width="19" height="1.54" fill="#bf0a30"/><rect y="4.62" width="19" height="1.54" fill="#fff"/><rect y="6.15" width="19" height="1.54" fill="#bf0a30"/><rect y="7.69" width="19" height="1.54" fill="#fff"/><rect width="7.6" height="5.38" fill="#002868"/></svg>`,
-  mx:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#006847"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg>`,
-  ca:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#ff0000"/><rect x="1" width="2" height="2" fill="#fff"/><polygon points="2,0.35 2.15,0.75 2.55,0.75 2.25,1 2.35,1.4 2,1.2 1.65,1.4 1.75,1 1.45,0.75 1.85,0.75" fill="#ff0000"/></svg>`,
-  gh:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#006b3f"/><rect width="3" height="1.33" fill="#fcd116"/><rect width="3" height=".67" fill="#ce1126"/><polygon points="1.5,0.6 1.63,1 2,1 1.72,1.22 1.82,1.62 1.5,1.4 1.18,1.62 1.28,1.22 1,1 1.37,1" fill="#000"/></svg>`,
-  ec:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#34a853"/><rect width="3" height=".67" fill="#ffda00"/><rect y="1.33" width="3" height=".67" fill="#ea4335"/></svg>`,
-  py:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#d52b1e"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#009b3a"/></svg>`,
-  kr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".55" fill="#cd2e3a"/><path d="M1.5,0.45 A0.55,0.55 0 0,1 1.5,1.55" fill="#003478"/></svg>`,
-  sc:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="3" height=".667" fill="#003f87"/><rect y="1.333" width="3" height=".667" fill="#003f87"/></svg>`,
-  at:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ed2939"/><rect y=".667" width="3" height=".667" fill="#fff"/></svg>`,
-  se:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><rect width="16" height="10" fill="#006AA7"/><rect x="5" width="2" height="10" fill="#FECC02"/><rect y="4" width="16" height="2" fill="#FECC02"/></svg>`,
-  ba:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#002395"/><polygon points="1,0 2,0 3,2 2,2" fill="#FBDE3A"/></svg>`,
-  tr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#E30A17"/><circle cx="1.1" cy="1" r=".45" fill="#fff"/><circle cx="1.3" cy="1" r=".35" fill="#E30A17"/></svg>`,
-  cz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#d7141a"/><rect width="3" height="1" fill="#fff"/><polygon points="0,0 1.5,1 0,2" fill="#11457e"/></svg>`,
-  tn:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#e70013"/><circle cx="1.5" cy="1" r=".6" fill="#fff"/><circle cx="1.5" cy="1" r=".45" fill="#e70013"/></svg>`,
-  sn:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#00853F"/><rect x="1" width="1" height="2" fill="#FDEF42"/><rect x="2" width="1" height="2" fill="#E31B23"/><polygon points="1.5,0.6 1.63,1 2,1 1.72,1.22 1.82,1.62 1.5,1.4 1.18,1.62 1.28,1.22 1,1 1.37,1" fill="#00853F"/></svg>`,
-  ci:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#F77F00"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#009A44"/></svg>`,
-  za:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4"><rect width="6" height="4" fill="#007A4D"/><rect y="1.5" width="6" height="1" fill="#FFB612"/><rect y="1.25" width="6" height="1.5" fill="#fff"/><polygon points="0,0 2.5,2 0,4" fill="#000"/><polygon points="0,0.3 2,2 0,3.7" fill="#DE3831"/></svg>`,
-  nz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#00247D"/></svg>`,
-  ir:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#239f40"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#da0000"/></svg>`,
-  sa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#006c35"/></svg>`,
-  qa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#8D1B3D"/><rect width=".9" height="2" fill="#fff"/></svg>`,
-  au:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#00008B"/></svg>`,
-  pa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#fff"/><rect x="2" width="2" height="1" fill="#D21034"/><rect y="1" width="2" height="1" fill="#005293"/></svg>`,
-  ht:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="1" fill="#00209F"/><rect y="1" width="3" height="1" fill="#D21034"/></svg>`,
-};
 function flagImg(code,w=44,h=32){
   const REMAP={'sc':'gb-sct'};
   const cdnCode=(REMAP[code]||code).replace('_','-');
@@ -623,7 +574,6 @@ async function fetchPhoto(wiki){
 function loadPhotoIntoBack(src){
   const back=document.getElementById('photo-back');
   if(!back) return;
-  const bdg=back.querySelector('.club-badge');
   if(src){
     const img=new Image();
     img.crossOrigin='anonymous';
@@ -696,7 +646,7 @@ function handleAnswer(idx){
     const b=document.getElementById('club-badge');
     if(!b) return;
     const src=clubPhotoCache[currentPlayer.club];
-    if(src){b.innerHTML=`<img src="${src}" alt="">`;}
+    if(src){const ci=document.createElement('img');ci.src=src;ci.alt='';b.appendChild(ci);}
     else{b.innerHTML=clubBadge(currentPlayer.club);}
     b.classList.add('show');
   },750);
