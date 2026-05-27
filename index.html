@@ -134,7 +134,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 @media(max-width:900px){.ad-col{display:none}}
 @media(max-width:600px){
   #welcome-screen{padding-top:12px}
-  .welcome-title{font-size:52px}.mode-cards{flex-direction:column;padding-bottom:16px}
+  .welcome-title{font-size:52px}.mode-cards{flex-direction:column;padding-bottom:32px}
   .player-card{flex-direction:column;align-items:flex-start;gap:20px}
   .photo-scene,.photo-flipper,.photo-front,.photo-back{width:100%!important;height:220px!important}
   .photo-back img.player-img,.no-photo-back{width:100%!important;height:220px!important}
@@ -671,7 +671,7 @@ function handleAnswer(idx){
   } else {
     ft.textContent='Not quite.';
     ft.className='feedback-text show wrong';
-    fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country}`;
+    fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
   }
   fs.className='feedback-sub show';
 
