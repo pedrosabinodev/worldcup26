@@ -26,7 +26,8 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font
 
 /* HEADER */
 header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:.04em;line-height:1}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:.04em;line-height:1;cursor:pointer;user-select:none;opacity:1;transition:opacity .15s}
+.logo:hover{opacity:.7}
 .logo span{color:var(--accent)}
 .score-row{display:flex;gap:24px;align-items:center}
 .score-item{text-align:right;display:flex;flex-direction:column;gap:4px}
@@ -154,7 +155,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   <div class="main">
 
     <header>
-      <div class="logo">WORLD CUP <span>26</span></div>
+      <div class="logo" onclick="showWelcome()">WORLD CUP <span>26</span></div>
       <div class="score-row" id="hud" style="display:none">
         <div class="score-item"><div class="score-label">Score</div><div class="score-val" id="score">0</div></div>
         <div class="score-item"><div class="score-label">Streak</div><div class="score-val streak-val" id="streak">0</div></div>
