@@ -116,9 +116,10 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-text{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;opacity:0;transition:opacity .3s}
 .feedback-text.show{opacity:1}
 .feedback-text.correct{color:var(--success)}.feedback-text.wrong{color:var(--danger)}
-.feedback-sub{font-size:16px;color:var(--muted);opacity:0;transition:opacity .3s .1s;padding-left: 8px;}
+.feedback-sub{font-size:16px;color:var(--muted);opacity:0;transition:opacity .3s .1s}
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
+#fi{margin-left:20px}
 
 /* RESULTS */
 #results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding:40px 0}
@@ -200,7 +201,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
       <div class="player-card" id="player-card"></div>
       <div class="options-grid" id="options-grid"></div>
       <div class="feedback">
-        <span class="feedback-text" id="ft"></span>&nbsp;
+        <span class="feedback-text" id="ft"></span>
         <span class="feedback-sub" id="fs"></span>
         <span class="feedback-sub" id="fi"></span>
       </div>
