@@ -43,7 +43,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .diff-breadcrumb-sep{font-size:12px;color:var(--border2)}
 
 /* WELCOME */
-#welcome-screen{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
+#welcome-screen{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0px 0}
 .welcome-eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
 .welcome-title{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:.9;letter-spacing:-.02em;color:var(--text);margin-bottom:12px}
 .welcome-title span{color:var(--accent)}
@@ -137,7 +137,10 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{flex-direction:column;align-items:flex-start;gap:20px}
   .photo-scene,.photo-flipper,.photo-front,.photo-back{width:100%!important;height:220px!important}
   .photo-back img.player-img,.no-photo-back{width:100%!important;height:220px!important}
-  .player-name{font-size:38px}.options-grid{grid-template-columns:1fr}
+  .player-name{font-size:38px}
+  .option-btn{padding:11px 10px;gap:10px}
+  .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .opt-check{font-size:14px}
   .reveal-row{flex-direction:column}.next-btn{padding:14px;text-align:center}
 }
 </style>
@@ -378,9 +381,13 @@ function flagImg(code,w=44,h=32){
 // Rules:
 // - Only confirmed FIFA WC2026 qualified nations
 // - Italy excluded (lost to Bosnia in UEFA playoff)
-// - d:1=Stars, d:2=Mixed, d:3=All
+// - d:1=Stars, d:2=Mixed, d:3=All  ← optional when using official list
 // - wiki = Wikipedia page title for photo API
-// UPDATE: Replace this array on June 2, 2026 with full official squads
+//
+// JUNE 2 UPDATE — replace PLAYERS with the official squads.
+// Required fields: name, country, code, pos, club, wiki
+// Optional: d (1/2/3) — if omitted, all modes draw from the full pool.
+// Minimal entry: {name:"Player Name", country:"France", code:"fr", pos:"Forward", club:"PSG", wiki:"Page_Title"}
 // ═══════════════════════════════════════════════════════════
 const PLAYERS=[
   // STARS (d:1)
@@ -490,6 +497,10 @@ function showWelcome(){show('welcome-screen');}
 // GAME LOGIC
 // ═══════════════════════════════════════════════════════════
 function getPool(d){
+  // If the dataset has no difficulty tiers (e.g. official FIFA list with no d field),
+  // all modes draw from the full pool so the game never breaks on swap day.
+  const hasTiers=PLAYERS.some(p=>p.d);
+  if(!hasTiers) return PLAYERS;
   if(d==='stars') return PLAYERS.filter(p=>p.d===1);
   if(d==='mixed') return PLAYERS.filter(p=>p.d<=2);
   return PLAYERS;
