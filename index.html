@@ -29,7 +29,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:.04em;line-height:1;cursor:pointer;user-select:none;opacity:1;transition:opacity .15s}
 .logo:hover{opacity:.7}
 .logo span{color:var(--accent)}
-.score-row{display:flex;gap:24px;align-items:center}
+.score-row{display:flex;gap:24px;align-items:center;transition:opacity .2s}
 .score-item{text-align:right;display:flex;flex-direction:column;gap:4px}
 .score-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1}
 .score-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:600;line-height:1}
@@ -156,7 +156,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 
     <header>
       <div class="logo" onclick="showWelcome()">WORLD CUP <span>26</span></div>
-      <div class="score-row" id="hud" style="display:none">
+      <div class="score-row" id="hud" style="visibility:hidden;opacity:0">
         <div class="score-item"><div class="score-label">Score</div><div class="score-val" id="score">0</div></div>
         <div class="score-item"><div class="score-label">Streak</div><div class="score-val streak-val" id="streak">0</div></div>
         <div class="score-item"><div class="score-label">Round</div><div class="score-val" id="round-display">1/20</div></div>
@@ -494,7 +494,9 @@ const TOTAL_ROUNDS=20,photoCache={};
 function show(id){
   ['welcome-screen','game-screen','results-screen'].forEach(s=>document.getElementById(s).style.display='none');
   document.getElementById(id).style.display='flex';
-  document.getElementById('hud').style.display=id==='game-screen'?'flex':'none';
+  const hud=document.getElementById('hud');
+  hud.style.visibility=id==='game-screen'?'visible':'hidden';
+  hud.style.opacity=id==='game-screen'?'1':'0';
   document.getElementById('diff-breadcrumb').style.display=id==='game-screen'?'flex':'none';
 }
 function showWelcome(){show('welcome-screen');}
