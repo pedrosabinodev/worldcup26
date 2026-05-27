@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup 26 — Do You Know The Players?</title>
+<meta name="description" content="Guess which country each World Cup 2026 player represents. A football trivia game for FIFA World Cup 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0b;--surface:#111113;--surface2:#18181c;
+  --border:#242428;--border2:#2e2e34;
+  --text:#f0f0ee;--muted:#6b6b72;
+  --accent:#e8ff47;--danger:#ff4d4d;--success:#47ff8e;
+  --orange:#ff7c2a;--ad:#13131a;
+  --PW:150px;--PH:210px;
+}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden}
+.shell{display:flex;min-height:100vh}
+.main{flex:1;display:flex;flex-direction:column;max-width:820px;margin:0 auto;padding:0 24px}
+.ad-col{width:300px;min-width:300px;padding:24px 16px 24px 0;display:flex;flex-direction:column;gap:16px}
+.ad-slot{background:var(--ad);border:1px dashed var(--border2);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.ad-slot.tall{height:600px}.ad-slot.med{height:250px}
+
+/* HEADER */
+header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;letter-spacing:.04em;line-height:1}
+.logo span{color:var(--accent)}
+.score-row{display:flex;gap:24px;align-items:center}
+.score-item{text-align:right;display:flex;flex-direction:column;gap:4px}
+.score-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1}
+.score-val{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:600;line-height:1}
+.streak-val{color:var(--accent)}
+
+/* BREADCRUMB */
+.diff-breadcrumb{display:none;align-items:center;gap:8px;padding:10px 0 14px;cursor:pointer;width:fit-content;opacity:.7;transition:opacity .18s}
+.diff-breadcrumb:hover{opacity:1}
+.diff-breadcrumb-arrow{font-size:14px;color:var(--muted);line-height:1;margin-right:2px}
+.diff-breadcrumb-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1}
+.diff-breadcrumb-value{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);line-height:1}
+.diff-breadcrumb-sep{font-size:11px;color:var(--border2)}
+
+/* WELCOME */
+#welcome-screen{flex:1;display:flex;flex-direction:column;justify-content:center;padding:60px 0}
+.welcome-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.welcome-title{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:.9;letter-spacing:-.02em;color:var(--text);margin-bottom:12px}
+.welcome-title span{color:var(--accent)}
+.welcome-sub{font-size:16px;color:var(--muted);line-height:1.6;max-width:440px;margin-bottom:56px}
+.mode-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.mode-cards{display:flex;gap:14px}
+.mode-card{flex:1;background:var(--surface);border:2px solid var(--border2);border-radius:6px;padding:28px 24px;cursor:pointer;text-align:left;transition:border-color .15s,background .15s,transform .12s;user-select:none}
+.mode-card:hover{border-color:var(--accent);background:rgba(232,255,71,.06);transform:translateY(-2px)}
+.mode-card:active{transform:translateY(0) scale(.98)}
+.mode-card-icon{font-size:28px;margin-bottom:14px}
+.mode-card-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--text);margin-bottom:6px;transition:color .15s}
+.mode-card:hover .mode-card-title{color:var(--accent)}
+.mode-card-desc{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* GAME */
+#game-screen{flex:1;display:none;flex-direction:column;padding:0 0 40px}
+.progress-bar{height:2px;background:var(--border);border-radius:1px;margin-bottom:32px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:1px;transition:width .4s ease}
+.q-counter{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+
+/* PLAYER CARD */
+.player-card{display:flex;gap:40px;align-items:flex-end;margin-bottom:36px}
+.photo-scene{width:var(--PW);height:var(--PH);flex-shrink:0;perspective:700px}
+.photo-flipper{width:var(--PW);height:var(--PH);position:relative;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1)}
+.photo-flipper.flipped{transform:rotateY(180deg)}
+.photo-front,.photo-back{position:absolute;top:0;left:0;width:var(--PW);height:var(--PH);backface-visibility:hidden;border-radius:4px;border:1px solid var(--border);overflow:hidden}
+.photo-front{background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.qmark{font-family:'Barlow Condensed',sans-serif;font-size:100px;font-weight:700;color:var(--border2);line-height:1;user-select:none}
+.qmark-sub{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.photo-back{background:var(--surface2);transform:rotateY(180deg);position:relative}
+.photo-back img.player-img{display:block;width:var(--PW);height:var(--PH);object-fit:cover;object-position:top center}
+.club-badge{position:absolute;bottom:7px;right:7px;width:34px;height:34px;border-radius:50%;background:rgba(10,10,11,.85);border:1.5px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:3;opacity:0;transition:opacity .4s ease .25s}
+.club-badge.show{opacity:1}
+.club-badge svg{width:28px;height:28px;display:block}
+.no-photo-back{width:var(--PW);height:var(--PH);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.spinner{width:20px;height:20px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.player-info{flex:1;display:flex;flex-direction:column}
+.question-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.player-name{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:700;line-height:.95;letter-spacing:-.01em;color:var(--text);margin-bottom:20px;word-break:break-word}
+.player-pos{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+
+/* REVEAL ROW — always in DOM, no layout shift */
+.reveal-row{display:flex;gap:10px;align-items:stretch;visibility:hidden;opacity:0;transition:opacity .3s ease}
+.reveal-row.show{visibility:visible;opacity:1}
+.reveal-country{padding:12px 16px;background:var(--surface2);border:1px solid var(--border2);border-radius:3px;display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+.reveal-country-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.reveal-country-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600}
+.next-btn{background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;padding:0 28px;border-radius:3px;cursor:pointer;white-space:nowrap;flex-shrink:0;align-self:stretch;visibility:hidden;opacity:0;transition:background .18s,opacity .3s ease .15s;pointer-events:none}
+.next-btn.show{visibility:visible;opacity:1;pointer-events:all}
+.next-btn:hover{background:#ff9048}
+.next-btn:active{transform:scale(.97)}
+
+/* OPTIONS */
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+.option-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;padding:14px 18px;border-radius:3px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:14px}
+.option-btn:hover:not(:disabled){background:var(--surface2);border-color:var(--muted)}
+.option-btn:disabled{cursor:default}
+.option-btn.correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
+.option-btn.wrong{background:rgba(255,77,77,.06);border-color:var(--danger);color:var(--danger);opacity:.7}
+.option-btn.reveal-correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
+.flag-wrap{width:44px;min-width:44px;height:32px;border-radius:3px;overflow:hidden;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.opt-name{flex:1;font-size:14px;line-height:1.3}
+.opt-check{font-size:18px;margin-left:auto;opacity:0;transition:opacity .2s;flex-shrink:0}
+.option-btn.correct .opt-check,.option-btn.reveal-correct .opt-check,.option-btn.wrong .opt-check{opacity:1}
+
+/* FEEDBACK */
+.feedback{height:40px;display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.feedback-text{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;opacity:0;transition:opacity .3s}
+.feedback-text.show{opacity:1}
+.feedback-text.correct{color:var(--success)}.feedback-text.wrong{color:var(--danger)}
+.feedback-sub{font-size:13px;color:var(--muted);opacity:0;transition:opacity .3s .1s}
+.feedback-sub.show{opacity:1}
+
+/* RESULTS */
+#results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;padding:40px 0}
+.results-score{font-family:'Barlow Condensed',sans-serif;font-size:96px;font-weight:700;color:var(--accent);line-height:1}
+.results-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.results-sub{font-size:18px;color:var(--muted);max-width:360px;line-height:1.6}
+.results-btn-row{display:flex;gap:12px;margin-top:8px}
+.play-again{background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;padding:16px 40px;border-radius:3px;cursor:pointer}
+.play-again:hover{background:#ff9048}
+.change-mode{background:none;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border2);padding:16px 32px;border-radius:3px;cursor:pointer}
+.change-mode:hover{border-color:var(--muted);color:var(--text)}
+
+/* RESPONSIVE */
+@media(max-width:900px){.ad-col{display:none}}
+@media(max-width:600px){
+  .welcome-title{font-size:52px}.mode-cards{flex-direction:column}
+  .player-card{flex-direction:column;align-items:flex-start;gap:20px}
+  .photo-scene,.photo-flipper,.photo-front,.photo-back{width:100%!important;height:220px!important}
+  .photo-back img.player-img,.no-photo-back{width:100%!important;height:220px!important}
+  .player-name{font-size:38px}.options-grid{grid-template-columns:1fr}
+  .reveal-row{flex-direction:column}.next-btn{padding:14px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="main">
+
+    <header>
+      <div class="logo">WORLD CUP <span>26</span></div>
+      <div class="score-row" id="hud" style="display:none">
+        <div class="score-item"><div class="score-label">Score</div><div class="score-val" id="score">0</div></div>
+        <div class="score-item"><div class="score-label">Streak</div><div class="score-val streak-val" id="streak">0</div></div>
+        <div class="score-item"><div class="score-label">Round</div><div class="score-val" id="round-display">1/20</div></div>
+      </div>
+    </header>
+
+    <div class="diff-breadcrumb" id="diff-breadcrumb" onclick="showWelcome()">
+      <span class="diff-breadcrumb-arrow">←</span>
+      <span class="diff-breadcrumb-label">Difficulty</span>
+      <span class="diff-breadcrumb-sep">/</span>
+      <span class="diff-breadcrumb-value" id="diff-breadcrumb-value">Stars Only</span>
+    </div>
+
+    <!-- WELCOME SCREEN -->
+    <div id="welcome-screen">
+      <div class="welcome-eyebrow">FIFA World Cup 2026</div>
+      <div class="welcome-title">Do you know<br>the <span>players?</span></div>
+      <div class="welcome-sub">Guess which country each player represents. Answer to reveal their photo and club. 20 rounds per match.</div>
+      <div class="mode-label">Choose your difficulty to start</div>
+      <div class="mode-cards">
+        <div class="mode-card" onclick="startGame('stars')">
+          <div class="mode-card-icon">⭐</div>
+          <div class="mode-card-title">Stars Only</div>
+          <div class="mode-card-desc">World-famous players everyone should know. Great for casual fans.</div>
+        </div>
+        <div class="mode-card" onclick="startGame('mixed')">
+          <div class="mode-card-icon">🌍</div>
+          <div class="mode-card-title">Mixed</div>
+          <div class="mode-card-desc">Stars plus well-known players from all 48 nations. A real test.</div>
+        </div>
+        <div class="mode-card" onclick="startGame('all')">
+          <div class="mode-card-icon">🔥</div>
+          <div class="mode-card-title">All Players</div>
+          <div class="mode-card-desc">Every player in the dataset. Experts only.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="q-counter" id="q-counter">Player 1 of 20</div>
+      <div class="player-card" id="player-card"></div>
+      <div class="options-grid" id="options-grid"></div>
+      <div class="feedback">
+        <span class="feedback-text" id="ft"></span>&nbsp;
+        <span class="feedback-sub" id="fs"></span>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="results-screen">
+      <div class="results-label">Final score</div>
+      <div class="results-score" id="results-score">0</div>
+      <div class="results-sub" id="results-sub"></div>
+      <div class="results-btn-row">
+        <button class="play-again" onclick="startGame(currentDifficulty)">Play Again</button>
+        <button class="change-mode" onclick="showWelcome()">Change Difficulty</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AD COLUMN -->
+  <!-- Replace these divs with real Google AdSense <ins> tags after approval -->
+  <div class="ad-col">
+    <div class="ad-slot tall">
+      <!-- ADSENSE 300x600: paste <ins> tag here -->
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+      <span>AdSense 300×600</span>
+    </div>
+    <div class="ad-slot med">
+      <!-- ADSENSE 300x250: paste <ins> tag here -->
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+      <span>AdSense 300×250</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// CLUB BADGES — stylised SVGs using club colours
+// Not reproductions of trademarked crests
+// ═══════════════════════════════════════════════════════════
+const CLUB_BADGES={
+  "Real Madrid":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#00529f"/><circle cx="14" cy="14" r="10" fill="#febe10"/><text x="14" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#00529f">RM</text></svg>`,
+  "Man City":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#6caddf"/><rect x="7" y="7" width="14" height="14" rx="2" fill="#fff"/><text x="14" y="18" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="bold" fill="#6caddf">CITY</text><circle cx="14" cy="9" r="2" fill="#6caddf"/></svg>`,
+  "Inter Miami":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#231f20"/><polygon points="14,4 22,10 22,20 14,24 6,20 6,10" fill="none" stroke="#f7b5cd" stroke-width="2"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#f7b5cd">MIAMI</text></svg>`,
+  "PSG":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#004170"/><circle cx="14" cy="14" r="7" fill="#da291c"/><circle cx="14" cy="14" r="5" fill="#004170"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" font-weight="bold" fill="#fff">PSG</text></svg>`,
+  "Liverpool":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#c8102e"/><ellipse cx="14" cy="12" rx="6" ry="7" fill="#f6eb61"/><ellipse cx="14" cy="12" rx="4" ry="5" fill="#c8102e"/><rect x="8" y="18" width="12" height="3" rx="1" fill="#f6eb61"/></svg>`,
+  "Bayern Munich":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#dc052d"/><rect x="5" y="5" width="9" height="9" fill="#fff"/><rect x="14" y="5" width="9" height="9" fill="#0066b2"/><rect x="5" y="14" width="9" height="9" fill="#0066b2"/><rect x="14" y="14" width="9" height="9" fill="#fff"/><circle cx="14" cy="14" r="13" fill="none" stroke="#dc052d" stroke-width="2"/></svg>`,
+  "Barcelona":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#a50044"/><rect x="1" y="9" width="26" height="4" fill="#004d98"/><rect x="1" y="15" width="26" height="4" fill="#004d98"/><rect x="6" y="1" width="4" height="26" fill="#ffcc00"/><circle cx="14" cy="14" r="13" fill="none" stroke="#a50044" stroke-width="1.5"/></svg>`,
+  "Arsenal":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#ef0107"/><polygon points="14,5 20,10 18,20 14,23 10,20 8,10" fill="#fff"/><polygon points="14,8 18,12 16,19 14,21 12,19 10,12" fill="#ef0107"/><circle cx="14" cy="13" r="3" fill="#fff"/></svg>`,
+  "Atlético":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#cb3524"/><rect x="5" y="5" width="18" height="18" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/><rect x="7" y="7" width="6" height="14" fill="#fff"/><rect x="15" y="7" width="6" height="14" fill="#fff"/></svg>`,
+  "Borussia D.":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#fde100"/><circle cx="14" cy="14" r="7" fill="#000"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#fde100">BVB</text></svg>`,
+  "B. Leverkusen":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#e32221"/><rect x="5" y="12" width="18" height="4" rx="2" fill="#000"/><circle cx="14" cy="9" r="4" fill="#000"/><circle cx="14" cy="9" r="2.5" fill="#e32221"/></svg>`,
+  "Al Nassr":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#041e41"/><polygon points="14,5 16,11 23,11 17,15 19,22 14,18 9,22 11,15 5,11 12,11" fill="#ffd700"/></svg>`,
+  "Tottenham":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#132257"/><polygon points="14,4 15.5,9 20,9 16.5,12 18,17 14,14 10,17 11.5,12 8,9 12.5,9" fill="#fff"/></svg>`,
+  "Real Betis":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#00a650"/><rect x="11" y="2" width="6" height="24" rx="1" fill="#fff"/></svg>`,
+  "Galatasaray":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#e8a000"/><circle cx="14" cy="14" r="7" fill="#c80028"/><circle cx="14" cy="14" r="4" fill="#e8a000"/><rect x="1" y="12" width="26" height="4" fill="#c80028"/><circle cx="14" cy="14" r="13" fill="none" stroke="#c80028" stroke-width="1.5"/></svg>`,
+  "Al-Qadsiah":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#003087"/><rect x="6" y="10" width="16" height="8" rx="2" fill="#fff"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" font-weight="bold" fill="#003087">AQD</text></svg>`,
+  "Wolfsburg":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#65b32e"/><path d="M8 8 L14 20 L20 8 Z" fill="#fff"/><path d="M9 8 L14 18 L19 8 Z" fill="#65b32e"/></svg>`,
+  "Newcastle":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#000"/><rect x="1" y="7" width="13" height="7" fill="#000"/><rect x="14" y="7" width="13" height="7" fill="#fff"/><rect x="1" y="14" width="13" height="7" fill="#fff"/><rect x="14" y="14" width="13" height="7" fill="#000"/></svg>`,
+  "Nottm Forest":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#c8102e"/><rect x="6" y="6" width="16" height="16" rx="8" fill="#fff"/><rect x="9" y="9" width="10" height="10" rx="5" fill="#c8102e"/></svg>`,
+  "Santos":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#000"/><circle cx="14" cy="14" r="9" fill="#fff"/><circle cx="14" cy="14" r="6" fill="#000"/><text x="14" y="17" text-anchor="middle" font-family="Georgia,serif" font-size="5" font-weight="bold" fill="#fff">SFC</text></svg>`,
+  "Rayo Vallecano":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#fff"/><path d="M7 5 L16 5 L21 23 L12 23 Z" fill="#cc0000"/><path d="M10 5 L14 5 L19 23 L15 23 Z" fill="#fff"/></svg>`,
+  "AC Milan":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#cc0000"/><rect x="9" y="1" width="5" height="26" fill="#000"/><circle cx="14" cy="14" r="13" fill="none" stroke="#000" stroke-width="1"/></svg>`,
+  "PSV":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#cc0000"/><circle cx="14" cy="14" r="7" fill="#fff"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#cc0000">PSV</text></svg>`,
+  "Independiente":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#cc0000"/><polygon points="14,5 16.5,11 23,11 18,15 20,22 14,18 8,22 10,15 5,11 11.5,11" fill="#fff"/></svg>`,
+  "Fenerbahçe":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#003f87"/><circle cx="14" cy="14" r="7" fill="#ffcd00"/><circle cx="14" cy="14" r="4" fill="#003f87"/></svg>`,
+  "Dortmund":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#fde100"/><circle cx="14" cy="14" r="7" fill="#000"/><text x="14" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#fde100">BVB</text></svg>`,
+  "Leverkusen":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#e32221"/><rect x="5" y="12" width="18" height="4" rx="2" fill="#000"/><circle cx="14" cy="9" r="4" fill="#000"/><circle cx="14" cy="9" r="2.5" fill="#e32221"/></svg>`,
+  "Al Ahly":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#cc0000"/><polygon points="14,5 16,10 22,10 17,14 19,20 14,16 9,20 11,14 6,10 12,10" fill="#fff"/></svg>`,
+  "Austin FC":`<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#00b140"/><circle cx="14" cy="14" r="7" fill="#000"/><circle cx="14" cy="14" r="4" fill="#00b140"/></svg>`,
+};
+function clubBadge(club){
+  const svg=CLUB_BADGES[club];
+  if(svg) return svg;
+  return `<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#333"/><text x="14" y="18" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#fff">${(club||'?').slice(0,3).toUpperCase()}</text></svg>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// FLAGS — inline SVG, base64-encoded at runtime
+// Only confirmed FIFA World Cup 2026 qualified nations
+// ═══════════════════════════════════════════════════════════
+const FLAGS={
+  ar:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#74acdf"/><rect y=".667" width="3" height=".667" fill="#fff"/><circle cx="1.5" cy="1" r=".25" fill="#f6b40e"/></svg>`,
+  pt:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ff0000"/><rect width="1.2" height="2" fill="#006600"/><circle cx="1.2" cy="1" r=".35" fill="#ffff00"/></svg>`,
+  fr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg>`,
+  no:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16"><rect width="22" height="16" fill="#ef2b2d"/><rect x="6" width="4" height="16" fill="#fff"/><rect y="6" width="22" height="4" fill="#fff"/><rect x="7" width="2" height="16" fill="#002868"/><rect y="7" width="22" height="2" fill="#002868"/></svg>`,
+  br:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#009c3b"/><polygon points="1.5,0.15 2.85,1 1.5,1.85 0.15,1" fill="#ffdf00"/><circle cx="1.5" cy="1" r=".35" fill="#002776"/></svg>`,
+  es:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>`,
+  gb_eng:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect x="1.25" width=".5" height="2" fill="#cf142b"/><rect y=".75" width="3" height=".5" fill="#cf142b"/></svg>`,
+  eg:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ce1126"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#000"/></svg>`,
+  nl:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ae1c28"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#21468b"/></svg>`,
+  be:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#000"/><rect x="1" width="1" height="2" fill="#fae042"/><rect x="2" width="1" height="2" fill="#ef3340"/></svg>`,
+  uy:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect y=".222" width="3" height=".222" fill="#75aadb"/><rect y=".667" width="3" height=".222" fill="#75aadb"/><rect y="1.111" width="3" height=".222" fill="#75aadb"/><rect y="1.556" width="3" height=".222" fill="#75aadb"/><rect width=".9" height=".889" fill="#fff"/><circle cx=".45" cy=".444" r=".25" fill="#fcd116"/></svg>`,
+  jp:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".6" fill="#bc002d"/></svg>`,
+  ng:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#008751"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#008751"/></svg>`,
+  dz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1.5" height="2" fill="#006233"/><rect x="1.5" width="1.5" height="2" fill="#fff"/><circle cx="1.6" cy="1" r=".35" fill="#d21034"/><circle cx="1.77" cy="1" r=".26" fill="#fff"/></svg>`,
+  ma:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#c1272d"/><polygon points="1.5,0.55 1.62,0.92 1.97,0.92 1.69,1.12 1.79,1.49 1.5,1.29 1.21,1.49 1.31,1.12 1.03,0.92 1.38,0.92" fill="none" stroke="#006233" stroke-width=".06"/></svg>`,
+  ch:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><rect width="2" height="2" fill="#ff0000"/><rect x=".75" y=".375" width=".5" height="1.25" fill="#fff"/><rect x=".375" y=".75" width="1.25" height=".5" fill="#fff"/></svg>`,
+  de:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>`,
+  hr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ff0000"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#0000cc"/></svg>`,
+  co:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fcd116"/><rect y=".5" width="3" height=".75" fill="#003087"/><rect y="1.25" width="3" height=".75" fill="#ce1126"/></svg>`,
+  us:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 10"><rect width="19" height="10" fill="#bf0a30"/><rect y="1.54" width="19" height="1.54" fill="#fff"/><rect y="3.08" width="19" height="1.54" fill="#bf0a30"/><rect y="4.62" width="19" height="1.54" fill="#fff"/><rect y="6.15" width="19" height="1.54" fill="#bf0a30"/><rect y="7.69" width="19" height="1.54" fill="#fff"/><rect width="7.6" height="5.38" fill="#002868"/></svg>`,
+  mx:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#006847"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg>`,
+  ca:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#ff0000"/><rect x="1" width="2" height="2" fill="#fff"/><polygon points="2,0.35 2.15,0.75 2.55,0.75 2.25,1 2.35,1.4 2,1.2 1.65,1.4 1.75,1 1.45,0.75 1.85,0.75" fill="#ff0000"/></svg>`,
+  gh:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#006b3f"/><rect width="3" height="1.33" fill="#fcd116"/><rect width="3" height=".67" fill="#ce1126"/><polygon points="1.5,0.6 1.63,1 2,1 1.72,1.22 1.82,1.62 1.5,1.4 1.18,1.62 1.28,1.22 1,1 1.37,1" fill="#000"/></svg>`,
+  ec:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#34a853"/><rect width="3" height=".67" fill="#ffda00"/><rect y="1.33" width="3" height=".67" fill="#ea4335"/></svg>`,
+  py:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#d52b1e"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#009b3a"/></svg>`,
+  kr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".55" fill="#cd2e3a"/><path d="M1.5,0.45 A0.55,0.55 0 0,1 1.5,1.55" fill="#003478"/></svg>`,
+  sc:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="3" height=".667" fill="#003f87"/><rect y="1.333" width="3" height=".667" fill="#003f87"/></svg>`,
+  at:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ed2939"/><rect y=".667" width="3" height=".667" fill="#fff"/></svg>`,
+  se:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"><rect width="16" height="10" fill="#006AA7"/><rect x="5" width="2" height="10" fill="#FECC02"/><rect y="4" width="16" height="2" fill="#FECC02"/></svg>`,
+  ba:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#002395"/><polygon points="1,0 2,0 3,2 2,2" fill="#FBDE3A"/></svg>`,
+  tr:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#E30A17"/><circle cx="1.1" cy="1" r=".45" fill="#fff"/><circle cx="1.3" cy="1" r=".35" fill="#E30A17"/></svg>`,
+  cz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#d7141a"/><rect width="3" height="1" fill="#fff"/><polygon points="0,0 1.5,1 0,2" fill="#11457e"/></svg>`,
+  tn:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#e70013"/><circle cx="1.5" cy="1" r=".6" fill="#fff"/><circle cx="1.5" cy="1" r=".45" fill="#e70013"/></svg>`,
+  sn:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#00853F"/><rect x="1" width="1" height="2" fill="#FDEF42"/><rect x="2" width="1" height="2" fill="#E31B23"/><polygon points="1.5,0.6 1.63,1 2,1 1.72,1.22 1.82,1.62 1.5,1.4 1.18,1.62 1.28,1.22 1,1 1.37,1" fill="#00853F"/></svg>`,
+  ci:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="1" height="2" fill="#F77F00"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#009A44"/></svg>`,
+  za:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4"><rect width="6" height="4" fill="#007A4D"/><rect y="1.5" width="6" height="1" fill="#FFB612"/><rect y="1.25" width="6" height="1.5" fill="#fff"/><polygon points="0,0 2.5,2 0,4" fill="#000"/><polygon points="0,0.3 2,2 0,3.7" fill="#DE3831"/></svg>`,
+  nz:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#00247D"/></svg>`,
+  ir:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#239f40"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#da0000"/></svg>`,
+  sa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#006c35"/></svg>`,
+  qa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#8D1B3D"/><rect width=".9" height="2" fill="#fff"/></svg>`,
+  au:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#00008B"/></svg>`,
+  pa:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2"><rect width="4" height="2" fill="#fff"/><rect x="2" width="2" height="1" fill="#D21034"/><rect y="1" width="2" height="1" fill="#005293"/></svg>`,
+  ht:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="1" fill="#00209F"/><rect y="1" width="3" height="1" fill="#D21034"/></svg>`,
+};
+function flagImg(code,w=44,h=32){
+  const k=code.replace('-','_'),svg=FLAGS[k];
+  if(!svg) return `<div style="width:${w}px;height:${h}px;background:#222;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#666">${code.toUpperCase()}</div>`;
+  const b64='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(svg)));
+  return `<img src="${b64}" width="${w}" height="${h}" style="display:block;border-radius:2px;object-fit:cover" alt=""/>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// PLAYERS
+// Rules:
+// - Only confirmed FIFA WC2026 qualified nations
+// - Italy excluded (lost to Bosnia in UEFA playoff)
+// - d:1=Stars, d:2=Mixed, d:3=All
+// - wiki = Wikipedia page title for photo API
+// UPDATE: Replace this array on June 2, 2026 with full official squads
+// ═══════════════════════════════════════════════════════════
+const PLAYERS=[
+  // STARS (d:1)
+  {name:"Lionel Messi",country:"Argentina",code:"ar",pos:"Forward",club:"Inter Miami",d:1,wiki:"Lionel_Messi"},
+  {name:"Cristiano Ronaldo",country:"Portugal",code:"pt",pos:"Forward",club:"Al Nassr",d:1,wiki:"Cristiano_Ronaldo"},
+  {name:"Kylian Mbappé",country:"France",code:"fr",pos:"Forward",club:"Real Madrid",d:1,wiki:"Kylian_Mbappé"},
+  {name:"Erling Haaland",country:"Norway",code:"no",pos:"Forward",club:"Man City",d:1,wiki:"Erling_Haaland"},
+  {name:"Vinicius Jr.",country:"Brazil",code:"br",pos:"Forward",club:"Real Madrid",d:1,wiki:"Vinícius_Júnior"},
+  {name:"Lamine Yamal",country:"Spain",code:"es",pos:"Forward",club:"Barcelona",d:1,wiki:"Lamine_Yamal"},
+  {name:"Jude Bellingham",country:"England",code:"gb-eng",pos:"Midfielder",club:"Real Madrid",d:1,wiki:"Jude_Bellingham"},
+  {name:"Harry Kane",country:"England",code:"gb-eng",pos:"Forward",club:"Bayern Munich",d:1,wiki:"Harry_Kane"},
+  {name:"Mohamed Salah",country:"Egypt",code:"eg",pos:"Forward",club:"Liverpool",d:1,wiki:"Mohamed_Salah"},
+  {name:"Virgil van Dijk",country:"Netherlands",code:"nl",pos:"Defender",club:"Liverpool",d:1,wiki:"Virgil_van_Dijk"},
+  {name:"Rodri",country:"Spain",code:"es",pos:"Midfielder",club:"Man City",d:1,wiki:"Rodri_(footballer,_born_1996)"},
+  {name:"Kevin De Bruyne",country:"Belgium",code:"be",pos:"Midfielder",club:"Man City",d:1,wiki:"Kevin_De_Bruyne"},
+  {name:"Pedri",country:"Spain",code:"es",pos:"Midfielder",club:"Barcelona",d:1,wiki:"Pedri"},
+  {name:"Bukayo Saka",country:"England",code:"gb-eng",pos:"Forward",club:"Arsenal",d:1,wiki:"Bukayo_Saka"},
+  {name:"Achraf Hakimi",country:"Morocco",code:"ma",pos:"Defender",club:"PSG",d:1,wiki:"Achraf_Hakimi"},
+  {name:"Luka Modrić",country:"Croatia",code:"hr",pos:"Midfielder",club:"Real Madrid",d:1,wiki:"Luka_Modrić"},
+  {name:"Heung-min Son",country:"South Korea",code:"kr",pos:"Forward",club:"Tottenham",d:1,wiki:"Son_Heung-min"},
+  {name:"Federico Valverde",country:"Uruguay",code:"uy",pos:"Midfielder",club:"Real Madrid",d:1,wiki:"Federico_Valverde"},
+  {name:"Riyad Mahrez",country:"Algeria",code:"dz",pos:"Forward",club:"Al-Qadsiah",d:1,wiki:"Riyad_Mahrez"},
+  {name:"Martin Ødegaard",country:"Norway",code:"no",pos:"Midfielder",club:"Arsenal",d:1,wiki:"Martin_Ødegaard"},
+  // MIXED (d:2)
+  {name:"Rúben Dias",country:"Portugal",code:"pt",pos:"Defender",club:"Man City",d:2,wiki:"Rúben_Dias"},
+  {name:"Alexis Mac Allister",country:"Argentina",code:"ar",pos:"Midfielder",club:"Liverpool",d:2,wiki:"Alexis_Mac_Allister"},
+  {name:"Gavi",country:"Spain",code:"es",pos:"Midfielder",club:"Barcelona",d:2,wiki:"Gavi_(footballer,_born_2004)"},
+  {name:"Takefusa Kubo",country:"Japan",code:"jp",pos:"Forward",club:"Real Betis",d:2,wiki:"Takefusa_Kubo"},
+  {name:"Hakim Ziyech",country:"Morocco",code:"ma",pos:"Midfielder",club:"Galatasaray",d:2,wiki:"Hakim_Ziyech"},
+  {name:"Darwin Núñez",country:"Uruguay",code:"uy",pos:"Forward",club:"Liverpool",d:2,wiki:"Darwin_Núñez"},
+  {name:"Cody Gakpo",country:"Netherlands",code:"nl",pos:"Forward",club:"Liverpool",d:2,wiki:"Cody_Gakpo"},
+  {name:"Granit Xhaka",country:"Switzerland",code:"ch",pos:"Midfielder",club:"B. Leverkusen",d:2,wiki:"Granit_Xhaka"},
+  {name:"Ademola Lookman",country:"Nigeria",code:"ng",pos:"Forward",club:"Atlético",d:2,wiki:"Ademola_Lookman"},
+  {name:"Luis Díaz",country:"Colombia",code:"co",pos:"Forward",club:"Liverpool",d:2,wiki:"Luis_Díaz_(footballer,_born_2001)"},
+  {name:"James Rodríguez",country:"Colombia",code:"co",pos:"Midfielder",club:"Rayo Vallecano",d:2,wiki:"James_Rodríguez"},
+  {name:"Christian Pulisic",country:"USA",code:"us",pos:"Forward",club:"AC Milan",d:2,wiki:"Christian_Pulisic"},
+  {name:"Alphonso Davies",country:"Canada",code:"ca",pos:"Defender",club:"Bayern Munich",d:2,wiki:"Alphonso_Davies"},
+  {name:"Antoine Griezmann",country:"France",code:"fr",pos:"Forward",club:"Atlético",d:2,wiki:"Antoine_Griezmann"},
+  {name:"Jamal Musiala",country:"Germany",code:"de",pos:"Midfielder",club:"Bayern Munich",d:2,wiki:"Jamal_Musiala"},
+  {name:"Florian Wirtz",country:"Germany",code:"de",pos:"Midfielder",club:"B. Leverkusen",d:2,wiki:"Florian_Wirtz"},
+  {name:"Wataru Endo",country:"Japan",code:"jp",pos:"Midfielder",club:"Liverpool",d:2,wiki:"Wataru_Endo"},
+  {name:"Andrew Robertson",country:"Scotland",code:"sc",pos:"Defender",club:"Liverpool",d:2,wiki:"Andrew_Robertson"},
+  {name:"Callum Hudson-Odoi",country:"Ghana",code:"gh",pos:"Forward",club:"Nottm Forest",d:2,wiki:"Callum_Hudson-Odoi"},
+  {name:"Edin Džeko",country:"Bosnia & Herz.",code:"ba",pos:"Forward",club:"Fenerbahçe",d:2,wiki:"Edin_Džeko"},
+  {name:"Edson Álvarez",country:"Mexico",code:"mx",pos:"Midfielder",club:"Fenerbahçe",d:2,wiki:"Edson_Álvarez"},
+  {name:"Hirving Lozano",country:"Mexico",code:"mx",pos:"Forward",club:"PSV",d:2,wiki:"Hirving_Lozano"},
+  {name:"Sadio Mané",country:"Senegal",code:"sn",pos:"Forward",club:"Al Nassr",d:2,wiki:"Sadio_Mané"},
+  // ALL (d:3)
+  {name:"Ridle Baku",country:"Germany",code:"de",pos:"Defender",club:"Wolfsburg",d:3,wiki:"Ridle_Baku"},
+  {name:"Sofiane Boufal",country:"Morocco",code:"ma",pos:"Forward",club:"Al Nassr",d:3,wiki:"Sofiane_Boufal"},
+  {name:"Serhou Guirassy",country:"Germany",code:"de",pos:"Forward",club:"Borussia D.",d:3,wiki:"Serhou_Guirassy"},
+  {name:"Yassine Bounou",country:"Morocco",code:"ma",pos:"Goalkeeper",club:"Al-Qadsiah",d:3,wiki:"Yassine_Bounou"},
+  {name:"Rodrigo Bentancur",country:"Uruguay",code:"uy",pos:"Midfielder",club:"Tottenham",d:3,wiki:"Rodrigo_Bentancur"},
+  {name:"Enner Valencia",country:"Ecuador",code:"ec",pos:"Forward",club:"Independiente",d:3,wiki:"Enner_Valencia"},
+  {name:"Neymar Jr.",country:"Brazil",code:"br",pos:"Forward",club:"Santos",d:3,wiki:"Neymar"},
+  {name:"Richarlison",country:"Brazil",code:"br",pos:"Forward",club:"Tottenham",d:3,wiki:"Richarlison"},
+  {name:"Marcel Sabitzer",country:"Austria",code:"at",pos:"Midfielder",club:"Borussia D.",d:3,wiki:"Marcel_Sabitzer"},
+  {name:"Dejan Kulusevski",country:"Sweden",code:"se",pos:"Midfielder",club:"Tottenham",d:3,wiki:"Dejan_Kulusevski"},
+  {name:"Sardar Azmoun",country:"Iran",code:"ir",pos:"Forward",club:"Leverkusen",d:3,wiki:"Sardar_Azmoun"},
+  {name:"Saleh Al-Shehri",country:"Saudi Arabia",code:"sa",pos:"Forward",club:"Al Nassr",d:3,wiki:"Saleh_Al-Shehri"},
+  {name:"Sébastien Haller",country:"Ivory Coast",code:"ci",pos:"Forward",club:"Dortmund",d:3,wiki:"Sébastien_Haller"},
+  {name:"Percy Tau",country:"South Africa",code:"za",pos:"Forward",club:"Al Ahly",d:3,wiki:"Percy_Tau"},
+];
+
+// ═══════════════════════════════════════════════════════════
+// QUALIFIED COUNTRIES — wrong answer options pulled ONLY from here
+// All 43 confirmed FIFA World Cup 2026 nations
+// ═══════════════════════════════════════════════════════════
+const QUALIFIED_COUNTRIES=[
+  {country:"USA",code:"us"},{country:"Mexico",code:"mx"},{country:"Canada",code:"ca"},
+  {country:"England",code:"gb-eng"},{country:"France",code:"fr"},{country:"Croatia",code:"hr"},
+  {country:"Norway",code:"no"},{country:"Portugal",code:"pt"},{country:"Germany",code:"de"},
+  {country:"Netherlands",code:"nl"},{country:"Switzerland",code:"ch"},{country:"Scotland",code:"sc"},
+  {country:"Spain",code:"es"},{country:"Austria",code:"at"},{country:"Belgium",code:"be"},
+  {country:"Bosnia & Herz.",code:"ba"},{country:"Sweden",code:"se"},{country:"Türkiye",code:"tr"},
+  {country:"Czechia",code:"cz"},{country:"Morocco",code:"ma"},{country:"Tunisia",code:"tn"},
+  {country:"Egypt",code:"eg"},{country:"Algeria",code:"dz"},{country:"Ghana",code:"gh"},
+  {country:"Senegal",code:"sn"},{country:"Ivory Coast",code:"ci"},{country:"South Africa",code:"za"},
+  {country:"Nigeria",code:"ng"},{country:"Argentina",code:"ar"},{country:"Brazil",code:"br"},
+  {country:"Colombia",code:"co"},{country:"Ecuador",code:"ec"},{country:"Paraguay",code:"py"},
+  {country:"Uruguay",code:"uy"},{country:"Panama",code:"pa"},{country:"Haiti",code:"ht"},
+  {country:"Japan",code:"jp"},{country:"South Korea",code:"kr"},{country:"Australia",code:"au"},
+  {country:"Iran",code:"ir"},{country:"Saudi Arabia",code:"sa"},{country:"Qatar",code:"qa"},
+  {country:"New Zealand",code:"nz"},
+];
+
+// ═══════════════════════════════════════════════════════════
+// GAME STATE
+// ═══════════════════════════════════════════════════════════
+const MODE_LABELS={'stars':'Stars Only','mixed':'Mixed','all':'All Players'};
+let score=0,streak=0,round=0,answered=false;
+let currentPlayer=null,options=[],queue=[],currentDifficulty='stars';
+const TOTAL_ROUNDS=20,photoCache={};
+
+// ═══════════════════════════════════════════════════════════
+// SCREEN MANAGEMENT
+// ═══════════════════════════════════════════════════════════
+function show(id){
+  ['welcome-screen','game-screen','results-screen'].forEach(s=>document.getElementById(s).style.display='none');
+  document.getElementById(id).style.display='flex';
+  document.getElementById('hud').style.display=id==='game-screen'?'flex':'none';
+  document.getElementById('diff-breadcrumb').style.display=id==='game-screen'?'flex':'none';
+}
+function showWelcome(){show('welcome-screen');}
+
+// ═══════════════════════════════════════════════════════════
+// GAME LOGIC
+// ═══════════════════════════════════════════════════════════
+function getPool(d){
+  if(d==='stars') return PLAYERS.filter(p=>p.d===1);
+  if(d==='mixed') return PLAYERS.filter(p=>p.d<=2);
+  return PLAYERS;
+}
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+function buildOptions(p){
+  const w=shuffle(QUALIFIED_COUNTRIES.filter(c=>c.country!==p.country)).slice(0,3);
+  return shuffle([{country:p.country,code:p.code},...w]);
+}
+
+// startGame: click difficulty card → game starts immediately
+function startGame(d){
+  currentDifficulty=d||currentDifficulty;
+  score=0;streak=0;round=0;
+  const pool=getPool(currentDifficulty);
+  // NO-REPEAT: shuffle + slice guarantees each player appears at most once
+  queue=shuffle(pool).slice(0,Math.min(TOTAL_ROUNDS,pool.length));
+  document.getElementById('diff-breadcrumb-value').textContent=MODE_LABELS[currentDifficulty];
+  show('game-screen');
+  nextRound();
+}
+
+function nextRound(){
+  if(round>=queue.length){showResults();return;}
+  answered=false;
+  currentPlayer=queue[round];
+  options=buildOptions(currentPlayer);
+  round++;
+  updateHUD();
+  renderRound();
+}
+
+function updateHUD(){
+  document.getElementById('score').textContent=score;
+  document.getElementById('streak').textContent=streak;
+  document.getElementById('round-display').textContent=`${Math.min(round,queue.length)}/${queue.length}`;
+  document.getElementById('progress-fill').style.width=`${((round-1)/queue.length*100).toFixed(1)}%`;
+  document.getElementById('q-counter').textContent=`Player ${round} of ${queue.length}`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════════
+function renderRound(){
+  document.getElementById('player-card').innerHTML=`
+    <div class="photo-scene">
+      <div class="photo-flipper" id="flipper">
+        <div class="photo-front">
+          <div class="qmark">?</div>
+          <div class="qmark-sub">Answer to reveal</div>
+        </div>
+        <div class="photo-back" id="photo-back">
+          <div class="spinner"></div>
+          <div class="club-badge" id="club-badge">${clubBadge(currentPlayer.club)}</div>
+        </div>
+      </div>
+    </div>
+    <div class="player-info">
+      <div class="question-label">Which country does this player represent?</div>
+      <div class="player-name">${currentPlayer.name}</div>
+      <div class="player-pos">${currentPlayer.pos}</div>
+      <div class="reveal-row" id="reveal-row">
+        <div class="reveal-country">
+          ${flagImg(currentPlayer.code,44,32)}
+          <div>
+            <div class="reveal-country-label">Plays for</div>
+            <div class="reveal-country-name">${currentPlayer.country}</div>
+          </div>
+        </div>
+        <button class="next-btn" id="next-btn" onclick="nextRound()">
+          ${round<queue.length?'Next ›':'Results ›'}
+        </button>
+      </div>
+    </div>`;
+
+  document.getElementById('options-grid').innerHTML=options.map((opt,i)=>`
+    <button class="option-btn" id="opt-${i}" onclick="handleAnswer(${i})">
+      <div class="flag-wrap">${flagImg(opt.code,44,32)}</div>
+      <span class="opt-name">${opt.country}</span>
+      <span class="opt-check" id="check-${i}"></span>
+    </button>`).join('');
+
+  document.getElementById('ft').textContent='';
+  document.getElementById('ft').className='feedback-text';
+  document.getElementById('fs').textContent='';
+  document.getElementById('fs').className='feedback-sub';
+
+  fetchPhoto(currentPlayer.wiki);
+}
+
+// ═══════════════════════════════════════════════════════════
+// PHOTO FETCH — Wikipedia REST API
+// Works on deployed sites. Blocked in Claude sandbox preview.
+// ═══════════════════════════════════════════════════════════
+async function fetchPhoto(wiki){
+  if(photoCache[wiki]!==undefined){
+    loadPhotoIntoBack(photoCache[wiki]);
+    return;
+  }
+  try{
+    const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
+    if(!r.ok) throw 0;
+    const d=await r.json();
+    photoCache[wiki]=d.thumbnail?.source||null;
+  }catch(e){photoCache[wiki]=null;}
+  loadPhotoIntoBack(photoCache[wiki]);
+}
+
+function loadPhotoIntoBack(src){
+  const back=document.getElementById('photo-back');
+  if(!back) return;
+  const bdg=back.querySelector('.club-badge');
+  if(src){
+    const img=new Image();
+    img.crossOrigin='anonymous';
+    img.onload=()=>{
+      const b=document.getElementById('photo-back');
+      if(!b) return;
+      const bd=b.querySelector('.club-badge');
+      b.innerHTML='';
+      const el=document.createElement('img');
+      el.src=src;el.alt='';el.className='player-img';
+      b.appendChild(el);
+      if(bd) b.appendChild(bd);
+    };
+    img.src=src;
+  } else {
+    const bd=back.querySelector('.club-badge');
+    back.innerHTML=`<div class="no-photo-back">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round">
+        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+      <span style="font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase">No photo</span>
+    </div>`;
+    if(bd) back.appendChild(bd);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// ANSWER HANDLING
+// ═══════════════════════════════════════════════════════════
+function handleAnswer(idx){
+  if(answered) return;
+  answered=true;
+  const chosen=options[idx];
+  const isCorrect=chosen.country===currentPlayer.country;
+  const correctIdx=options.findIndex(o=>o.country===currentPlayer.country);
+  if(isCorrect){score+=(streak>=3?200:100);streak++;}
+  else{streak=0;}
+  updateHUD();
+
+  options.forEach((_,i)=>{
+    const btn=document.getElementById(`opt-${i}`),chk=document.getElementById(`check-${i}`);
+    btn.disabled=true;
+    if(i===idx&&isCorrect){btn.classList.add('correct');chk.textContent='✓';}
+    else if(i===idx&&!isCorrect){btn.classList.add('wrong');chk.textContent='✗';}
+    else if(i===correctIdx&&!isCorrect){btn.classList.add('reveal-correct');chk.textContent='✓';}
+  });
+
+  const ft=document.getElementById('ft'),fs=document.getElementById('fs');
+  if(isCorrect){
+    ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
+    ft.className='feedback-text show correct';
+    fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
+  } else {
+    ft.textContent='Not quite.';
+    ft.className='feedback-text show wrong';
+    fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country}`;
+  }
+  fs.className='feedback-sub show';
+
+  // Flip card
+  const flipper=document.getElementById('flipper');
+  if(flipper) flipper.classList.add('flipped');
+
+  // Club badge fades in after flip
+  setTimeout(()=>{const b=document.getElementById('club-badge');if(b)b.classList.add('show');},750);
+
+  // Reveal row fades in — no layout shift
+  const rr=document.getElementById('reveal-row');
+  if(rr) rr.classList.add('show');
+
+  // Next button
+  setTimeout(()=>{const nb=document.getElementById('next-btn');if(nb)nb.classList.add('show');},300);
+}
+
+// ═══════════════════════════════════════════════════════════
+// RESULTS
+// ═══════════════════════════════════════════════════════════
+function showResults(){
+  show('results-screen');
+  document.getElementById('results-score').textContent=score;
+  const max=queue.length*200;
+  document.getElementById('results-sub').textContent=
+    score>=max*.85?'You clearly watch too much football. Legendary.':
+    score>=max*.6?'Solid knowledge. A true football fan.':
+    score>=max*.35?'Not bad. Room to grow.':
+    'Keep watching. The World Cup will help.';
+}
+
+// ── INIT
+show('welcome-screen');
+</script>
+</body>
+</html>
