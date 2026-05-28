@@ -131,7 +131,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
 #fi{margin-left:20px}
-#fi-d{font-size:13px;flex-basis:100%}
+#fi-d{font-size:13px}
 .feedback-desktop{display:none;align-items:center;gap:8px;flex-wrap:wrap;min-height:36px;margin-bottom:8px}
 .reveal-feedback-mobile{display:none;flex:1;flex-wrap:wrap;align-items:center;gap:0 8px;min-width:0}
 #fi-m{font-size:13px;flex-basis:100%}
@@ -1896,7 +1896,7 @@ function handleAnswer(idx){
       ft.textContent='Not quite.';
       ft.className='feedback-text show wrong';
     }
-    if(fi){fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
+    if(fi){fi.textContent=`plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
   }
 
   // Flip card
