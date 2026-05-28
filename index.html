@@ -91,10 +91,10 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 /* REVEAL ROW — always in DOM, no layout shift */
 .reveal-row{display:flex;gap:16px;align-items:stretch;visibility:hidden;opacity:0;transition:opacity .3s ease}
 .reveal-row.show{visibility:visible;opacity:1}
-.reveal-country{padding:16px;background:#202020;border:1px solid #565656;border-radius:12px;display:none;align-items:center;gap:16px;flex:1;min-width:0}
+.reveal-country{padding:16px;background:#202020;border:1px solid #565656;border-radius:12px;display:none;align-items:end;gap:16px;flex:1;min-width:0}
 .reveal-country.show{display:flex}
 .reveal-btns{display:flex;gap:16px;align-items:center;flex-shrink:0}
-.next-btn{background:var(--orange);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;white-space:nowrap;flex-shrink:0;visibility:hidden;opacity:0;transition:background .18s,opacity .3s ease .15s;pointer-events:none}
+.next-btn{background:var(--orange);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;gap:6px;visibility:hidden;opacity:0;transition:background .18s,opacity .3s ease .15s;pointer-events:none}
 .next-btn.show{visibility:visible;opacity:1;pointer-events:all}
 .next-btn:hover{background:#ff9048}
 .next-btn:active{transform:scale(.97)}
@@ -1771,7 +1771,8 @@ function renderRound(){
           <div class="reveal-btns">
             ${watchBtnHtml(currentPlayer.country)}
             <button class="next-btn" id="next-btn" onclick="nextRound()">
-              ${round<queue.length?'Next ›':'Results ›'}
+              ${round<queue.length?'Next':'Results'}
+              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
             </button>
           </div>
         </div>
