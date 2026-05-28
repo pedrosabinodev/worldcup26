@@ -98,6 +98,13 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-btn.show{visibility:visible;opacity:1;pointer-events:all}
 .next-btn:hover{background:#ff9048}
 .next-btn:active{transform:scale(.97)}
+.next-match{display:none;flex-direction:column;gap:5px;flex-shrink:0}
+.next-match.show{display:flex}
+.next-match-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.next-match-row{display:flex;gap:8px;align-items:center}
+.next-match-team{display:flex;gap:6px;align-items:center}
+.next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
+.next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
 
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
@@ -156,7 +163,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
   .player-info{width:100%}
-  .reveal-country{display:none}.next-btn{padding:14px 12px;text-align:center}
+  .reveal-country{display:none}.next-match{display:none!important}.next-btn{padding:14px 12px;text-align:center}
   .reveal-feedback-mobile{display:flex}
   .feedback{display:none}
   .reveal-row{align-items:center}
@@ -1497,6 +1504,40 @@ const QUALIFIED_COUNTRIES=[
 // ════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════
+// WC2026 MATCH SCHEDULE
+// Group stage: fill in from official FIFA calendar once confirmed.
+// Knockout rounds: update after each stage completes.
+// Format: {date:"YYYY-MM-DD", t1:"Country", c1:"iso", t2:"Country", c2:"iso"}
+// ═══════════════════════════════════════════════════════════
+const WC26_SCHEDULE=[
+  // PLACEHOLDER — replace with real schedule on June 2
+];
+function getNextMatch(country){
+  const today=new Date().toISOString().slice(0,10);
+  return WC26_SCHEDULE.find(m=>(m.t1===country||m.t2===country)&&m.date>=today)||null;
+}
+function nextMatchHtml(country,code){
+  const m=getNextMatch(country);
+  if(!m) return '';
+  const isHome=m.t1===country;
+  const opp=isHome?m.t2:m.t1, oppCode=isHome?m.c2:m.c1;
+  return `<div class="next-match" id="next-match">
+    <div class="next-match-label">Watch next match</div>
+    <div class="next-match-row">
+      <div class="next-match-team">
+        <span class="next-match-name">${country}</span>
+        ${flagImg(code,28,20)}
+      </div>
+      <span class="next-match-sep">×</span>
+      <div class="next-match-team">
+        ${flagImg(oppCode,28,20)}
+        <span class="next-match-name">${opp}</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
 // GAME STATE
 // ═══════════════════════════════════════════════════════════
 const MODE_LABELS={'stars':'Stars Only','mixed':'Mixed','all':'All Players'};
@@ -1606,6 +1647,7 @@ function renderRound(){
             <div class="reveal-country-name">${currentPlayer.country}</div>
           </div>
         </div>
+        ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
         <div class="reveal-feedback-mobile">
           <span class="feedback-text" id="ft-m"></span>
           <span class="feedback-sub" id="fs-m"></span>
@@ -1745,6 +1787,12 @@ function handleAnswer(idx){
   // Reveal row fades in — no layout shift
   const rr=document.getElementById('reveal-row');
   if(rr) rr.classList.add('show');
+
+  // Next match only on wrong answer
+  if(!isCorrect){
+    const nm=document.getElementById('next-match');
+    if(nm) nm.classList.add('show');
+  }
 
   // Next button
   setTimeout(()=>{const nb=document.getElementById('next-btn');if(nb)nb.classList.add('show');},300);
