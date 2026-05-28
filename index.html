@@ -143,7 +143,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{align-items:stretch}
   .player-info{justify-content:space-between}
   .player-name{margin-bottom:0}
-  #ft{display:none}
+  #ft,#fs{display:none}
+  #fi{margin-left:0}
   .feedback-desktop{display:flex}
 }
 @media(max-width:900px){.ad-col{display:none}}
@@ -542,6 +543,7 @@ function renderRound(){
       <div class="player-bottom">
         <div class="feedback-desktop">
           <span class="feedback-text" id="ft-d"></span>
+          <span class="feedback-sub" id="fs-d"></span>
         </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country">
@@ -657,13 +659,11 @@ function handleAnswer(idx){
       ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
       ft.className='feedback-text show correct';
       if(fs){fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';fs.className='feedback-sub show correct';}
-      if(fi){fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
     } else {
       ft.textContent='Not quite.';
       ft.className='feedback-text show wrong';
-      if(fs){fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fs.className='feedback-sub show';}
-      if(fi) fi.className='feedback-sub';
     }
+    if(fi){fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
   }
 
   // Flip card
