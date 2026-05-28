@@ -351,19 +351,27 @@ function flagImg(code,w=55,h=40){
   return `<img src="https://flagcdn.com/w80/${cdnCode}.png" width="${w}" height="${h}" style="display:block;border-radius:2px;object-fit:cover" alt="" loading="lazy"/>`;
 }
 
-// ═══════════════════════════════════════════════════════════
-// PLAYERS
-// Rules:
-// - Only confirmed FIFA WC2026 qualified nations
-// - Italy excluded (lost to Bosnia in UEFA playoff)
-// - d:1=Stars, d:2=Mixed, d:3=All  ← optional when using official list
-// - wiki = Wikipedia page title for photo API
+// ════════════════════════════════════════════════════════════
+// DATA_BLOCK_START
+// ────────────────────────────────────────────────────────────
+// CURRENT DATA: FIFA World Cup Qatar 2022 — 32 nations, 810 players
+//               (temporary placeholder until official 2026 squads are released)
 //
-// JUNE 2 UPDATE — replace PLAYERS with the official squads.
-// Required fields: name, country, code, pos, club, wiki
-// Optional: d (1/2/3) — if omitted, all modes draw from the full pool.
-// Minimal entry: {name:"Player Name", country:"France", code:"fr", pos:"Forward", club:"PSG", wiki:"Page_Title"}
-// ═══════════════════════════════════════════════════════════
+// JUNE 2, 2026 — replace everything between DATA_BLOCK_START and DATA_BLOCK_END
+// with the official FIFA World Cup 2026 squad lists (48 nations, ~1248 players).
+//
+// Player entry format:
+//   {name:"Lionel Messi", country:"Argentina", code:"ar",
+//    pos:"Forward", club:"Inter Miami", d:1, wiki:"Lionel_Messi"}
+//
+//   Required: name, country, code, pos, club
+//   Optional: d (1=Stars, 2=Mixed, 3=All) — if absent, all modes use full pool
+//   Optional: wiki (Wikipedia page title for photo API) — defaults to name with spaces→underscores
+//
+// Country entry format:
+//   {country:"Argentina", code:"ar"}
+//   code = ISO 3166-1 alpha-2, except: gb-eng, gb-wls, gb-sct
+// ════════════════════════════════════════════════════════════
 const PLAYERS=[
   {name:"Juan Foyth",country:"Argentina",code:"ar",pos:"Defender",club:"Villarreal",d:3,wiki:"Juan_Foyth"},
   {name:"Nicolás Tagliafico",country:"Argentina",code:"ar",pos:"Defender",club:"Olympique Lyon",d:2,wiki:"Nicolás_Tagliafico"},
@@ -1177,10 +1185,8 @@ const PLAYERS=[
   {name:"Amine Bounou",country:"Morocco",code:"ma",pos:"Goalkeeper",club:"Wydad",d:3,wiki:"Amine_Bounou"},
 ];
 
-// ═══════════════════════════════════════════════════════════
 // QUALIFIED COUNTRIES — wrong answer options pulled ONLY from here
 // 32 nations — FIFA World Cup Qatar 2022
-// ═══════════════════════════════════════════════════════════
 const QUALIFIED_COUNTRIES=[
   {country:"Argentina",code:"ar"},
   {country:"Australia",code:"au"},
@@ -1215,6 +1221,9 @@ const QUALIFIED_COUNTRIES=[
   {country:"USA",code:"us"},
   {country:"Wales",code:"gb-wls"},
 ];
+// ════════════════════════════════════════════════════════════
+// DATA_BLOCK_END
+// ════════════════════════════════════════════════════════════
 
 // ═══════════════════════════════════════════════════════════
 // GAME STATE
