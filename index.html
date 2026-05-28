@@ -131,6 +131,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
 #fi{margin-left:20px}
+#fi-d{font-size:13px;flex-basis:100%}
 .feedback-desktop{display:none;align-items:center;gap:8px;flex-wrap:wrap;min-height:36px;margin-bottom:8px}
 .reveal-feedback-mobile{display:none;flex:1;flex-wrap:wrap;align-items:center;gap:0 8px;min-width:0}
 #fi-m{font-size:13px;flex-basis:100%}
@@ -151,7 +152,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{align-items:stretch}
   .player-info{justify-content:space-between}
   .player-name{margin-bottom:0}
-  #ft,#fs{display:none}
+  #ft,#fs,#fi{display:none}
   #fi{margin-left:0}
   .feedback-desktop{display:flex}
   /* Reserve space for reveal-country on desktop so layout never shifts */
@@ -1767,6 +1768,7 @@ function renderRound(){
         <div class="feedback-desktop">
           <span class="feedback-text" id="ft-d"></span>
           <span class="feedback-sub" id="fs-d"></span>
+          <span class="feedback-sub" id="fi-d"></span>
         </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country" id="reveal-country">
