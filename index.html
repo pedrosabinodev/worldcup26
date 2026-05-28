@@ -1590,9 +1590,9 @@ function getNextMatch(country){
 }
 function formatMatchDate(dateStr){
   const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
   const d=new Date(dateStr+'T12:00:00');
-  const[yyyy,mm,dd]=dateStr.split('-');
-  return days[d.getDay()]+' · '+yyyy+'/'+mm+'/'+dd;
+  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate();
 }
 function nextMatchHtml(country,code){
   const m=getNextMatch(country);
