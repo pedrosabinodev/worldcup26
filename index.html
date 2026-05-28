@@ -345,7 +345,7 @@ async function fetchClubBadge(club){
   }catch(e){clubPhotoCache[club]=null;}
 }
 
-function flagImg(code,w=44,h=32){
+function flagImg(code,w=55,h=40){
   const REMAP={'sc':'gb-sct'};
   const cdnCode=(REMAP[code]||code).replace('_','-');
   return `<img src="https://flagcdn.com/w80/${cdnCode}.png" width="${w}" height="${h}" style="display:block;border-radius:2px;object-fit:cover" alt="" loading="lazy"/>`;
