@@ -122,7 +122,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-sub{font-size:16px;color:#a0a0a8;opacity:0;transition:opacity .3s .1s}
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
-#fi,#fi-d{margin-left:20px}
+#fi{margin-left:20px}
 .feedback-desktop{display:none;align-items:center;gap:8px;flex-wrap:wrap;min-height:36px;margin-bottom:8px}
 .reveal-feedback-mobile{display:none;flex:1;flex-wrap:wrap;align-items:center;gap:0 8px;min-width:0}
 #fi-m{font-size:13px;flex-basis:100%}
@@ -143,7 +143,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{align-items:stretch}
   .player-info{justify-content:space-between}
   .player-name{margin-bottom:0}
-  .feedback{display:none}
+  #ft{display:none}
   .feedback-desktop{display:flex}
 }
 @media(max-width:900px){.ad-col{display:none}}
@@ -542,8 +542,6 @@ function renderRound(){
       <div class="player-bottom">
         <div class="feedback-desktop">
           <span class="feedback-text" id="ft-d"></span>
-          <span class="feedback-sub" id="fs-d"></span>
-          <span class="feedback-sub" id="fi-d"></span>
         </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country">
@@ -658,15 +656,12 @@ function handleAnswer(idx){
     if(isCorrect){
       ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
       ft.className='feedback-text show correct';
-      fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';
-      fs.className='feedback-sub show correct';
-      fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
-      fi.className='feedback-sub show';
+      if(fs){fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';fs.className='feedback-sub show correct';}
+      if(fi){fi.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
     } else {
       ft.textContent='Not quite.';
       ft.className='feedback-text show wrong';
-      fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;
-      fs.className='feedback-sub show';
+      if(fs){fs.textContent=`${currentPlayer.name} plays for ${currentPlayer.country} and ${currentPlayer.club}`;fs.className='feedback-sub show';}
       if(fi) fi.className='feedback-sub';
     }
   }
