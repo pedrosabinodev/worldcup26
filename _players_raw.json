@@ -1,0 +1,5532 @@
+[
+  {
+    "name": "Juan Foyth",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Villarreal"
+  },
+  {
+    "name": "Nicolas Tagliafico",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Olympique Lyon"
+  },
+  {
+    "name": "Gonzalo Montiel",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Leandro Paredes",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Juventus"
+  },
+  {
+    "name": "German Pezzella",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Real Betis"
+  },
+  {
+    "name": "Rodrigo De Paul",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Atlético"
+  },
+  {
+    "name": "Marcos Acuña",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Julian Alvarez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "Man City"
+  },
+  {
+    "name": "Lionel Messi",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "PSG"
+  },
+  {
+    "name": "Angel Di Maria",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "Juventus"
+  },
+  {
+    "name": "Geronimo Rulli",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Goalkeeper",
+    "club": "Villarreal"
+  },
+  {
+    "name": "Cristian Romero",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Angel Correa",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "Atlético"
+  },
+  {
+    "name": "Thiago Almada",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Atlanta United"
+  },
+  {
+    "name": "Alejandro Gómez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Guido Rodriguez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Real Betis"
+  },
+  {
+    "name": "Nicolas Otamendi",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Alexis Mac Allister",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "Brighton"
+  },
+  {
+    "name": "Paulo Dybala",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "Roma"
+  },
+  {
+    "name": "Lautaro Martínez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Forward",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Emiliano Martínez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Goalkeeper",
+    "club": "Aston Villa"
+  },
+  {
+    "name": "Enzo Fernández",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Midfielder",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Lisandro Martínez",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Nahuel Molina Lucero",
+    "country": "Argentina",
+    "code": "ar",
+    "pos": "Defender",
+    "club": "Atlético"
+  },
+  {
+    "name": "Milos Degenek",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Columbus Crew"
+  },
+  {
+    "name": "Nathaniel Atkinson",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Heart Of Midlothian"
+  },
+  {
+    "name": "Kye Rowles",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Heart Of Midlothian"
+  },
+  {
+    "name": "Fran Karacic",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Brescia Calcio"
+  },
+  {
+    "name": "Marco Tilio",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Melbourne City"
+  },
+  {
+    "name": "Mathew Leckie",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Melbourne City"
+  },
+  {
+    "name": "Bailey Wright",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Sunderland AFC"
+  },
+  {
+    "name": "Jamie Maclaren",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Melbourne City"
+  },
+  {
+    "name": "Ajdin Hrustic",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "Hellas Verona"
+  },
+  {
+    "name": "Awer Mabil",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Cádiz"
+  },
+  {
+    "name": "Andrew Redmayne",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Goalkeeper",
+    "club": "Sydney"
+  },
+  {
+    "name": "Aaron Mooy",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "Celtic"
+  },
+  {
+    "name": "McGREE Mcgree",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "Middlesbrough"
+  },
+  {
+    "name": "Mitchell Duke",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Fagiano Okayama"
+  },
+  {
+    "name": "Aziz Behich",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Dundee United"
+  },
+  {
+    "name": "Cameron Devlin",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "Heart Of Midlothian"
+  },
+  {
+    "name": "Danny Vukovic",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Goalkeeper",
+    "club": "Central Coast Mariners"
+  },
+  {
+    "name": "Harry Souttar",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Stoke City"
+  },
+  {
+    "name": "Thomas Deng",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Albirex Niigata"
+  },
+  {
+    "name": "Garang Mawien Kuol",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Central Coast Mariners"
+  },
+  {
+    "name": "Jackson Irvine",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "St. Pauli"
+  },
+  {
+    "name": "Craig Goodwin",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Adelaide United"
+  },
+  {
+    "name": "Joel King",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Defender",
+    "club": "Odense BK"
+  },
+  {
+    "name": "Jason Cummings",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Forward",
+    "club": "Central Coast Mariners"
+  },
+  {
+    "name": "Keanu Baccus",
+    "country": "Australia",
+    "code": "au",
+    "pos": "Midfielder",
+    "club": "St Mirren"
+  },
+  {
+    "name": "Toby Alderweireld",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Antwerp"
+  },
+  {
+    "name": "Arthur Theate",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Rennes"
+  },
+  {
+    "name": "Wout Faes",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Leicester"
+  },
+  {
+    "name": "Jan Vertonghen",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Anderlecht"
+  },
+  {
+    "name": "Axel Witsel",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Atlético"
+  },
+  {
+    "name": "Kevin De Bruyne",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Man City"
+  },
+  {
+    "name": "Youri Tielemans",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Leicester"
+  },
+  {
+    "name": "Romelu Lukaku Bolingoli",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Eden Hazard",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Yannick Ferreira Carrasco",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Atlético"
+  },
+  {
+    "name": "Simon Mignolet",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Goalkeeper",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Koen Casteels",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Goalkeeper",
+    "club": "Wolfsburg"
+  },
+  {
+    "name": "Dries Mertens",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Galatasaray"
+  },
+  {
+    "name": "Thomas Meunier",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Thorgan Hazard",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Leandro Trossard",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Brighton"
+  },
+  {
+    "name": "Amadou Mvom Onana",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Everton"
+  },
+  {
+    "name": "Leander Dendoncker",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Aston Villa"
+  },
+  {
+    "name": "Hans Vanaken",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Timothy Castagne",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Midfielder",
+    "club": "Leicester"
+  },
+  {
+    "name": "Charles De Ketelaere",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Michy Batshuayi-atunga Batshuayi",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Fenerbahce SK"
+  },
+  {
+    "name": "Lois Openda",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Lens"
+  },
+  {
+    "name": "Jeremy Doku",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Forward",
+    "club": "Rennes"
+  },
+  {
+    "name": "Zeno Debast",
+    "country": "Belgium",
+    "code": "be",
+    "pos": "Defender",
+    "club": "Anderlecht"
+  },
+  {
+    "name": "Danilo Da Silva Danilo",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Juventus"
+  },
+  {
+    "name": "Thiago Emiliano da Silva",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Marcos Aoas Correa Marquinhos",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "PSG"
+  },
+  {
+    "name": "Carlos Casimiro Casemiro",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "Man United"
+  },
+  {
+    "name": "Alex Lobo Silva Alex Sandro",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Juventus"
+  },
+  {
+    "name": "Lucas Tolentino Coelho de Lima",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "West Ham"
+  },
+  {
+    "name": "Frederico Rodrigues de Paula Santos Fred",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "Man United"
+  },
+  {
+    "name": "Richarlison De Andrade Richarlison",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Neymar Da Silva Santos Júnior Neymar Jr",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "PSG"
+  },
+  {
+    "name": "Raphael Dias Belloli Raphinha",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Weverton Pereira da Silva Weverton",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Goalkeeper",
+    "club": "Palmeiras"
+  },
+  {
+    "name": "Daniel Alves da Silva Dani",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Pumas"
+  },
+  {
+    "name": "Éder Militão",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Fabio Tavares Fabinho",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Alex Nicolao Telles Alex",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Bruno Guimarães Rodriguez Moura Bruno",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "Newcastle"
+  },
+  {
+    "name": "Gabriel De Jesus",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Antony Dos Santos Antony",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Man United"
+  },
+  {
+    "name": "Vinicius Paixão de Oliveira Júnior Vini Jr",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Rodrygo Silva de Goes Rodrygo",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Everton De Barros Ribeiro",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Midfielder",
+    "club": "Flamengo"
+  },
+  {
+    "name": "Ederson Santana de Moraes Ederson",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Goalkeeper",
+    "club": "Man City"
+  },
+  {
+    "name": "Gleison Silva Nascimento Bremer",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Defender",
+    "club": "Juventus"
+  },
+  {
+    "name": "Pedro Abreu dos Santos Pedro",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Flamengo"
+  },
+  {
+    "name": "Gabriel Teodoro Martinelli Silva",
+    "country": "Brazil",
+    "code": "br",
+    "pos": "Forward",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Jerome Ngom Mbekeli",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Colombe Sportive"
+  },
+  {
+    "name": "Nicolas Nkoulou Ndoubena",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Aris Thessaloniki"
+  },
+  {
+    "name": "Christopher Wooh",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Rennes"
+  },
+  {
+    "name": "Nicolas Moumi Ngamaleu",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "FC Dynamo Moscow"
+  },
+  {
+    "name": "Georges-Kevin Nkoudou Mbida",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Besiktas JK"
+  },
+  {
+    "name": "Andre-Frank Zambo Anguissa",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Napoli"
+  },
+  {
+    "name": "Jean-Pierre Nsame",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "BSC Young Boys"
+  },
+  {
+    "name": "Vincent Aboubakar",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Christian Mougang Bassogog",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "Shanghai Shenhua"
+  },
+  {
+    "name": "Karl Toko Ekambi",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "Olympique Lyon"
+  },
+  {
+    "name": "Eric Choupo-moting",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Samuel Oum Gouet",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "KV Mechelen"
+  },
+  {
+    "name": "Pierre Kunde Malong",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Olympiacos Piraeus"
+  },
+  {
+    "name": "Devis Epassy Mboka",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Goalkeeper",
+    "club": "Abha Club"
+  },
+  {
+    "name": "Olivier Mbaissidara Mbaizo",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Philadelphia Union"
+  },
+  {
+    "name": "Martin Hongla Yma Ii",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Hellas Verona"
+  },
+  {
+    "name": "Collins Fai Collins Faï",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Al Tai"
+  },
+  {
+    "name": "Bryan Mbeumo",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Forward",
+    "club": "Brentford"
+  },
+  {
+    "name": "Jean-Charles Castelletto",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Nantes"
+  },
+  {
+    "name": "Olivier Ntcham",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Swansea City AFC"
+  },
+  {
+    "name": "Andre Onana",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Goalkeeper",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Enzo Ebosse",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Udinese"
+  },
+  {
+    "name": "Nouhou Tolo Nouhou",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Defender",
+    "club": "Seattle Sounders"
+  },
+  {
+    "name": "Souaibou Marou Souaibou",
+    "country": "Cameroon",
+    "code": "cm",
+    "pos": "Midfielder",
+    "club": "Coton Sport"
+  },
+  {
+    "name": "Alistair Johnston",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "Sam Adekugbe",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "Hatayspor"
+  },
+  {
+    "name": "Kamal Miller",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "Steven De Sousa Vitória",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "GD Chaves"
+  },
+  {
+    "name": "Samuel Piette",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "Stephen Eustáquio Eustaquio",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "Porto"
+  },
+  {
+    "name": "Liam Fraser",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "KMSR Deinze"
+  },
+  {
+    "name": "Lucas Cavallini",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "Vancouver"
+  },
+  {
+    "name": "Junior Hoilett",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "Reading"
+  },
+  {
+    "name": "Tajon Buchanan",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Ike Ugbo",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "ES Troyes"
+  },
+  {
+    "name": "Atiba Hutchinson",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "Besiktas JK"
+  },
+  {
+    "name": "Mark-Anthony Kaye",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "Toronto"
+  },
+  {
+    "name": "Ismael Kone Koné",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "James Pantemis",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Goalkeeper",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "Cyle Larin",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Milan Borjan",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Goalkeeper",
+    "club": "Red Star Belgrade"
+  },
+  {
+    "name": "Alphonso Davies",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Jonathan David",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Forward",
+    "club": "Lille"
+  },
+  {
+    "name": "Jonathan Osorio",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "Toronto"
+  },
+  {
+    "name": "Richie Laryea",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "Toronto"
+  },
+  {
+    "name": "Liam Millar",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "FC Basel"
+  },
+  {
+    "name": "David Wotherspoon",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Midfielder",
+    "club": "St Johnstone"
+  },
+  {
+    "name": "Derek Cornelius",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "Panetolikos"
+  },
+  {
+    "name": "Joel Waterman",
+    "country": "Canada",
+    "code": "ca",
+    "pos": "Defender",
+    "club": "CF Montréal"
+  },
+  {
+    "name": "Daniel Chacón Salas",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Colorado Rapids"
+  },
+  {
+    "name": "Juan Vargas Campos",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "Millonarios"
+  },
+  {
+    "name": "Keysher Fuller Spence",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Celso Borges Mora",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Alajuelense"
+  },
+  {
+    "name": "Oscar Duarte Gaitan",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "Al Wehda"
+  },
+  {
+    "name": "Anthony Contreras Enríquez",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Forward",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Bryan Oviedo Jiménez",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "Real Salt Lake"
+  },
+  {
+    "name": "Jewison Bennette Villegas",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Sunderland AFC"
+  },
+  {
+    "name": "Bryan Ruiz González Bryan",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Alajuelense"
+  },
+  {
+    "name": "Johan Venegas Ulloa Johan",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Forward",
+    "club": "Alajuelense"
+  },
+  {
+    "name": "Joel Campbell Samuels",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Forward",
+    "club": "León"
+  },
+  {
+    "name": "Gerson Torres Barrantes",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Youstin Salas Gomez",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Saprissa"
+  },
+  {
+    "name": "Francisco Calvo Quesada",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "Konyaspor"
+  },
+  {
+    "name": "Carlos Martínez Castro",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "AD San Carlos"
+  },
+  {
+    "name": "Yeltsin Tejeda Valverde",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Esteban Alvarado Brown",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Goalkeeper",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Kendall Waston Manley",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "Saprissa"
+  },
+  {
+    "name": "Brandon Aguilera Zamora",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "AD Guanacasteca"
+  },
+  {
+    "name": "Douglas López Araya",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "CS Herediano"
+  },
+  {
+    "name": "Ronald Matarrita Ulate",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Defender",
+    "club": "FC Cincinnatti"
+  },
+  {
+    "name": "Patrick Sequeira Mejias",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Goalkeeper",
+    "club": "CD Lugo"
+  },
+  {
+    "name": "Roan Wilson Gordon",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "AD Municipal Grecia"
+  },
+  {
+    "name": "Anthony Hernández González",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Puntarenas"
+  },
+  {
+    "name": "Alvaro Zamora Mata",
+    "country": "Costa Rica",
+    "code": "cr",
+    "pos": "Midfielder",
+    "club": "Saprissa"
+  },
+  {
+    "name": "Josip Stanišić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Borna Barišić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Rangers"
+  },
+  {
+    "name": "Ivan Perišić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Martin Erlić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Sassuolo"
+  },
+  {
+    "name": "Dejan Lovren",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Zenit"
+  },
+  {
+    "name": "Lovro Majer",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Rennes"
+  },
+  {
+    "name": "Mateo Kovačić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Andrej Kramarić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Hoffenheim"
+  },
+  {
+    "name": "Luka Modrić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Marcelo Brozović",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Ivo Grbić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Goalkeeper",
+    "club": "Atlético"
+  },
+  {
+    "name": "Nikola Vlašić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Torino"
+  },
+  {
+    "name": "Marko Livaja",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Hajduk Split"
+  },
+  {
+    "name": "Mario Pašalić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Atalanta"
+  },
+  {
+    "name": "Bruno Petković",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Dinamo Zagreb"
+  },
+  {
+    "name": "Ante Budimir",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Osasuna"
+  },
+  {
+    "name": "Mislav Oršić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Forward",
+    "club": "Dinamo Zagreb"
+  },
+  {
+    "name": "Borna Sosa",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Stuttgart"
+  },
+  {
+    "name": "Josko Gvardiol",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Domagoj Vida",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "AEK Athens"
+  },
+  {
+    "name": "Josip Juranović",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Celtic"
+  },
+  {
+    "name": "Ivica Ivušić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Goalkeeper",
+    "club": "NK Osijek"
+  },
+  {
+    "name": "Josip Šutalo",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Defender",
+    "club": "Dinamo Zagreb"
+  },
+  {
+    "name": "Luka Sučić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "Red Bull Salzburg"
+  },
+  {
+    "name": "Kristijan Jakić",
+    "country": "Croatia",
+    "code": "hr",
+    "pos": "Midfielder",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Joachim Andersen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Crystal Palace"
+  },
+  {
+    "name": "Victor Nelsson",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Galatasaray"
+  },
+  {
+    "name": "Simon Kjær",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Joakim Pedersen Mæhle",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Atalanta"
+  },
+  {
+    "name": "Andreas Christensen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Mathias Jensen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Brentford"
+  },
+  {
+    "name": "Thomas Delaney",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Martin Braithwaite",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Forward",
+    "club": "Espanyol"
+  },
+  {
+    "name": "Christian Eriksen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Man United"
+  },
+  {
+    "name": "Andreas Olsen Skov",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Kasper Rasmussen Dolberg",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Forward",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Rasmus Kristensen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Leeds"
+  },
+  {
+    "name": "Mikkel Damsgaard",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Brentford"
+  },
+  {
+    "name": "Christian Nørgaard",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Brentford"
+  },
+  {
+    "name": "Oliver Christensen",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Goalkeeper",
+    "club": "Hertha"
+  },
+  {
+    "name": "Jens Larsen Stryger",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Trabzonspor"
+  },
+  {
+    "name": "Daniel Wass",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "Brøndby IF"
+  },
+  {
+    "name": "Jonas Wind",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Forward",
+    "club": "Wolfsburg"
+  },
+  {
+    "name": "Yussuf Poulsen Yurary",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Forward",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Andreas Cornelius",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Forward",
+    "club": "FC København"
+  },
+  {
+    "name": "Frederik Rønnow",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Goalkeeper",
+    "club": "Union Berlin"
+  },
+  {
+    "name": "Pierre-Emile Højbjerg",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Robert Skov",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "Hoffenheim"
+  },
+  {
+    "name": "Jesper Lindstrøm",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Midfielder",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Alexander Bah",
+    "country": "Denmark",
+    "code": "dk",
+    "pos": "Defender",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Felix Torres Caicedo",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Santos Laguna"
+  },
+  {
+    "name": "Robert Arboleda Escobar",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "São Paulo"
+  },
+  {
+    "name": "Jose Cifuentes Charcopa",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Los Angeles"
+  },
+  {
+    "name": "William Pacho Tenorio",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Antwerp"
+  },
+  {
+    "name": "Pervis Estupiñán Tenorio Estupiñan",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Brighton"
+  },
+  {
+    "name": "Carlos Gruezo Arvoleda",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Augsburg"
+  },
+  {
+    "name": "Ayrton Preciado Garcia",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Santos Laguna"
+  },
+  {
+    "name": "Romario Ibarra Mina",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "CF Pachuca"
+  },
+  {
+    "name": "Michael Estrada Martínez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Forward",
+    "club": "Cruz Azul"
+  },
+  {
+    "name": "Moises Ramírez Preciado Ramirez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Goalkeeper",
+    "club": "Independiente Del Valle"
+  },
+  {
+    "name": "Enner Valencia Lastra",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Forward",
+    "club": "Fenerbahce SK"
+  },
+  {
+    "name": "Xavier Arreaga Bermello",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Seattle Sounders"
+  },
+  {
+    "name": "Angel Mena Delgado",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "León"
+  },
+  {
+    "name": "Jeremy Sarmiento Morante",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Brighton"
+  },
+  {
+    "name": "Angelo Preciado Quiñonez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Genk"
+  },
+  {
+    "name": "Diego Palacios Espinoza",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "Los Angeles"
+  },
+  {
+    "name": "Gonzalo Plata Jimenez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Valladolid"
+  },
+  {
+    "name": "Jhegson Méndez Carabalí Mendez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Los Angeles"
+  },
+  {
+    "name": "Alan Franco Palma",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "CA Talleres"
+  },
+  {
+    "name": "Alexander Dominguez Carabali",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Goalkeeper",
+    "club": "LDU Quito"
+  },
+  {
+    "name": "Moises Caicedo Corozo",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Midfielder",
+    "club": "Brighton"
+  },
+  {
+    "name": "Djorkaeff Reasco Gonzalez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Forward",
+    "club": "CA Newells Old Boys"
+  },
+  {
+    "name": "Jackson Porozo Vernaza",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Defender",
+    "club": "ES Troyes"
+  },
+  {
+    "name": "Kevin Rodriguez Cortez",
+    "country": "Ecuador",
+    "code": "ec",
+    "pos": "Forward",
+    "club": "Imbabura"
+  },
+  {
+    "name": "Kyle Walker",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Luke Shaw",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Declan Rice",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "West Ham"
+  },
+  {
+    "name": "John Stones",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Harry Maguire",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Jack Grealish",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Man City"
+  },
+  {
+    "name": "Jordan Henderson",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Harry Kane",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Raheem Sterling",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Marcus Rashford",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Man United"
+  },
+  {
+    "name": "Kieran Trippier",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Newcastle"
+  },
+  {
+    "name": "Nick Pope",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Goalkeeper",
+    "club": "Newcastle"
+  },
+  {
+    "name": "Kalvin Phillips",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Man City"
+  },
+  {
+    "name": "Eric Dier",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Conor Coady",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Everton"
+  },
+  {
+    "name": "Bukayo Saka",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Trent Alexander-arnold",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Mason Mount",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Phil Foden",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Man City"
+  },
+  {
+    "name": "Ben White",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Defender",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Jude Bellingham",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Aaron Ramsdale",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Goalkeeper",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Callum Wilson",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Forward",
+    "club": "Newcastle"
+  },
+  {
+    "name": "James Maddison",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Leicester"
+  },
+  {
+    "name": "Conor Gallagher",
+    "country": "England",
+    "code": "gb-eng",
+    "pos": "Midfielder",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Benjamin Pavard",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Axel Disasi Mhakinis Belho",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Monaco"
+  },
+  {
+    "name": "Raphael Varane",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Jules Kounde",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Matteo Guendouzi Olie",
+    "country": "France",
+    "code": "fr",
+    "pos": "Midfielder",
+    "club": "Marseille"
+  },
+  {
+    "name": "Antoine Griezmann",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "Atlético"
+  },
+  {
+    "name": "Aurelien Tchouameni",
+    "country": "France",
+    "code": "fr",
+    "pos": "Midfielder",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Olivier Giroud",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Kylian Mbappe Lottin",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "PSG"
+  },
+  {
+    "name": "Ousmane Dembele",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Randal Kolo Muani",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Youssouf Fofana",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Monaco"
+  },
+  {
+    "name": "Adrien Rabiot",
+    "country": "France",
+    "code": "fr",
+    "pos": "Midfielder",
+    "club": "Juventus"
+  },
+  {
+    "name": "Jordan Veretout",
+    "country": "France",
+    "code": "fr",
+    "pos": "Midfielder",
+    "club": "Marseille"
+  },
+  {
+    "name": "Steve Mandanda Mpidi",
+    "country": "France",
+    "code": "fr",
+    "pos": "Goalkeeper",
+    "club": "Rennes"
+  },
+  {
+    "name": "William Saliba",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Dayot Upamecano",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Karim Benzema",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Kingsley Coman",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Lucas Hernandez",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Theo Hernandez",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Alphonse Areola",
+    "country": "France",
+    "code": "fr",
+    "pos": "Goalkeeper",
+    "club": "West Ham"
+  },
+  {
+    "name": "Ibrahima Konaté Konate",
+    "country": "France",
+    "code": "fr",
+    "pos": "Defender",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Eduardo Camavinga",
+    "country": "France",
+    "code": "fr",
+    "pos": "Midfielder",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Marcus Thuram-ulien Thuram",
+    "country": "France",
+    "code": "fr",
+    "pos": "Forward",
+    "club": "VfL Borussia Mönchengladbach"
+  },
+  {
+    "name": "Antonio Rüdiger",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "David Raum",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Matthias Ginter",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Freiburg"
+  },
+  {
+    "name": "Thilo Kehrer",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "West Ham"
+  },
+  {
+    "name": "Joshua Kimmich",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Kai Havertz",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Forward",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Leon Goretzka",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Niclas Füllkrug",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Forward",
+    "club": "Werder Bremen"
+  },
+  {
+    "name": "Serge Gnabry",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Forward",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Mario Götze",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Kevin Trapp",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Goalkeeper",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Thomas Müller",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Jamal Musiala",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Niklas Süle",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Lukas Klostermann",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Julian Brandt",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Jonas Hofmann",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "VfL Borussia Mönchengladbach"
+  },
+  {
+    "name": "Leroy Sané",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Christian Günter",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Freiburg"
+  },
+  {
+    "name": "Ilkay Gündoğan",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Midfielder",
+    "club": "Man City"
+  },
+  {
+    "name": "Marc-Andre Ter Stegen",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Goalkeeper",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Nico Schlotterbeck",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Karim Adeyemi",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Forward",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Armel Bella Kotchap",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Defender",
+    "club": "Southampton"
+  },
+  {
+    "name": "Youssoufa Moukoko",
+    "country": "Germany",
+    "code": "de",
+    "pos": "Forward",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Tariq Lamptey",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Brighton"
+  },
+  {
+    "name": "Denis Odoi",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Mohammed Abdul Karim",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Southampton"
+  },
+  {
+    "name": "Thomas Partey",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Elisha Owusu",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Gent"
+  },
+  {
+    "name": "Fatawu Issahaku",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Sporting CP"
+  },
+  {
+    "name": "Daniel-Ko\u0000 Kyereh",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Freiburg"
+  },
+  {
+    "name": "Jordan Ayew",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Forward",
+    "club": "Crystal Palace"
+  },
+  {
+    "name": "Andre Ayew",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Forward",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Osman Bukari",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Red Star Belgrade"
+  },
+  {
+    "name": "Ibrahim Ibrahim Danlad",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Goalkeeper",
+    "club": "Asante Kotoko"
+  },
+  {
+    "name": "Daniel Afriyie Bernieh",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Hearts Of Oak"
+  },
+  {
+    "name": "Gideon Mensah",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Auxerre"
+  },
+  {
+    "name": "Joseph Aidoo",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "RC Celta Vigo"
+  },
+  {
+    "name": "Abdul Nurudeen",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Goalkeeper",
+    "club": "KAS Eupen"
+  },
+  {
+    "name": "Baba Baba",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Reading"
+  },
+  {
+    "name": "Daniel Amartey",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Leicester"
+  },
+  {
+    "name": "Inaki Williams Arthuer",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Forward",
+    "club": "Athletic Bilbao"
+  },
+  {
+    "name": "Mohammed Mohammed Kudus",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Ajax"
+  },
+  {
+    "name": "Salis Abdul Samed Abdul-samed",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Lens"
+  },
+  {
+    "name": "Kamaldeen Sulemana Kamaldeen",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Rennes"
+  },
+  {
+    "name": "Alexander Djiku",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Strasbourg"
+  },
+  {
+    "name": "Kamal Sowah",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Midfielder",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Antoine Semenyo",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Forward",
+    "club": "Bristol City"
+  },
+  {
+    "name": "Alidu Seidu",
+    "country": "Ghana",
+    "code": "gh",
+    "pos": "Defender",
+    "club": "Clermont Foot"
+  },
+  {
+    "name": "Sadegh Moharrami Getgasari",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Dinamo Zagreb"
+  },
+  {
+    "name": "Ehsan Haji Safi",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "AEK Athens"
+  },
+  {
+    "name": "Shoja Khalilzadeh Shoja",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Al Ahli"
+  },
+  {
+    "name": "Milad Mohammadikeshmarzi",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "AEK Athens"
+  },
+  {
+    "name": "Saeid Ezatolahi Afagh",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Vejle BK"
+  },
+  {
+    "name": "Alireza Jahan Bakhsh Jirandeh",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Feyenoord Rotterdam"
+  },
+  {
+    "name": "Morteza Pourali Ganji",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Perspolis Tehran"
+  },
+  {
+    "name": "Mehdi Taremi",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Forward",
+    "club": "Porto"
+  },
+  {
+    "name": "Karim Ansari Fard Karim",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Forward",
+    "club": "AC Omonia"
+  },
+  {
+    "name": "Vahid Amiri",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Perspolis Tehran"
+  },
+  {
+    "name": "Payam Niazmandghader Payam",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Goalkeeper",
+    "club": "Sepahan"
+  },
+  {
+    "name": "Hossein Kanani Zadegan",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Al Ahli"
+  },
+  {
+    "name": "Saman Ghoddoos Ghoddos",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Brentford"
+  },
+  {
+    "name": "Rouzbeh Cheshmi Rouzbeh",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Esteghlal Tehran"
+  },
+  {
+    "name": "Mehdi Torabi",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Persepolis"
+  },
+  {
+    "name": "Ali Gholi Zadehnojehdeh",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Sporting Charleroi"
+  },
+  {
+    "name": "Ali Karimi",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Kayserispor"
+  },
+  {
+    "name": "Majid Hosseini Majid",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Kayserispor"
+  },
+  {
+    "name": "Ahmad Noorollahi Ahmad",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Midfielder",
+    "club": "Shabab Al Ahli Club"
+  },
+  {
+    "name": "Amir Abedzadeh",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Goalkeeper",
+    "club": "SD Ponferradina"
+  },
+  {
+    "name": "Ramin Rezaeiansemeskandi Ramin",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Sepahan"
+  },
+  {
+    "name": "Hossein Hosseini",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Goalkeeper",
+    "club": "Esteghlal Tehran"
+  },
+  {
+    "name": "Abolfazl Jalaliboorani Jalali",
+    "country": "Iran",
+    "code": "ir",
+    "pos": "Defender",
+    "club": "Esteghlal Tehran"
+  },
+  {
+    "name": "Miki Yamane",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "Kawasaki"
+  },
+  {
+    "name": "Shogo Taniguchi",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "Kawasaki"
+  },
+  {
+    "name": "Kou Itakura",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "VfL Borussia Mönchengladbach"
+  },
+  {
+    "name": "Yuto Nagatomo",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "FC Tokyo"
+  },
+  {
+    "name": "Wataru Endo",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Stuttgart"
+  },
+  {
+    "name": "Gaku Shibasaki Gaku",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "CD Leganés"
+  },
+  {
+    "name": "Ritsu Doan",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Freiburg"
+  },
+  {
+    "name": "Kaoru Mitoma",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Brighton"
+  },
+  {
+    "name": "Takumi Minamino",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Monaco"
+  },
+  {
+    "name": "Takefusa Kubo",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Real Sociedad"
+  },
+  {
+    "name": "Shuichi Gonda",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Goalkeeper",
+    "club": "Shimizu S-Pulse"
+  },
+  {
+    "name": "Hidemasa Morita",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Sporting CP"
+  },
+  {
+    "name": "Junya Ito",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Stade Reims"
+  },
+  {
+    "name": "Daichi Kamada",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Takehiro Tomiyasu",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Ao Tanaka",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Düsseldorf"
+  },
+  {
+    "name": "Takuma Asano",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Forward",
+    "club": "Bochum"
+  },
+  {
+    "name": "Hiroki Sakai",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "Urawa Reds"
+  },
+  {
+    "name": "Shuto Machino",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Forward",
+    "club": "Shonan Bellmare"
+  },
+  {
+    "name": "Ayase Ueda",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Forward",
+    "club": "Cercle Brugge"
+  },
+  {
+    "name": "Daniel Yabuki Schmidt",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Goalkeeper",
+    "club": "Sint-Truiden VV"
+  },
+  {
+    "name": "Yuki Soma",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Midfielder",
+    "club": "Nagoya"
+  },
+  {
+    "name": "Daizen Maeda",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Forward",
+    "club": "Celtic"
+  },
+  {
+    "name": "Hiroki Ito",
+    "country": "Japan",
+    "code": "jp",
+    "pos": "Defender",
+    "club": "Stuttgart"
+  },
+  {
+    "name": "Jonggyu Yoon",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "FC Seoul"
+  },
+  {
+    "name": "Jinsu Kim",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Minjae Kim",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Napoli"
+  },
+  {
+    "name": "Wooyoung Jung",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Inbeom Hwang",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Olympiacos Piraeus"
+  },
+  {
+    "name": "Heungmin Son",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Seungho Paik",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Guesung Cho",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Forward",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Heechan Hwang",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Wolves"
+  },
+  {
+    "name": "Bumkeun Song",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Goalkeeper",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Junho Son",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Shandong Luneng Taishan"
+  },
+  {
+    "name": "Chul Hong",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Daegu"
+  },
+  {
+    "name": "Moonhwan Kim",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Uijo Hwang",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Forward",
+    "club": "Olympiacos Piraeus"
+  },
+  {
+    "name": "Sangho Na",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "FC Seoul"
+  },
+  {
+    "name": "Kangin Lee",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Mallorca"
+  },
+  {
+    "name": "Younggwon Kim",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Ulsan"
+  },
+  {
+    "name": "Kyungwon Kwon",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Gamba Osaka"
+  },
+  {
+    "name": "Hyeonwoo Jo",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Goalkeeper",
+    "club": "Ulsan"
+  },
+  {
+    "name": "Changhoon Kwon",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Gimcheon Sangmu"
+  },
+  {
+    "name": "Taehwan Kim",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Ulsan"
+  },
+  {
+    "name": "Yumin Cho",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Defender",
+    "club": "Daejeon Hana Citizen"
+  },
+  {
+    "name": "Wooyeong Jeong",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Freiburg"
+  },
+  {
+    "name": "Minkyu Song",
+    "country": "South Korea",
+    "code": "kr",
+    "pos": "Midfielder",
+    "club": "Jeonbuk Hyundai"
+  },
+  {
+    "name": "Nestor Araujo Razo",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "Club América"
+  },
+  {
+    "name": "Cesar Montes Castro",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "CF Monterrey"
+  },
+  {
+    "name": "Edson Alvarez Velazquez",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "Ajax"
+  },
+  {
+    "name": "Johan Vasquez Ibarra",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "US Cremonese"
+  },
+  {
+    "name": "Gerardo Arteaga Zamora",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "Genk"
+  },
+  {
+    "name": "Luis Romo Barron",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "CF Monterrey"
+  },
+  {
+    "name": "Carlos Rodriguez Gomez",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "Cruz Azul"
+  },
+  {
+    "name": "Raul Jimenez Rodriguez Raúl",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "Wolves"
+  },
+  {
+    "name": "Alexis Vega Rojas",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "CD Guadalajara"
+  },
+  {
+    "name": "Rogelio Funes Mori",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "CF Monterrey"
+  },
+  {
+    "name": "Rodolfo Cota Robles",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Goalkeeper",
+    "club": "León"
+  },
+  {
+    "name": "Guillermo Ochoa Magaña",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Goalkeeper",
+    "club": "Club América"
+  },
+  {
+    "name": "Erick Gutierrez Galaviz",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "PSV"
+  },
+  {
+    "name": "Hector Moreno Herrera",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "CF Monterrey"
+  },
+  {
+    "name": "Hector Herrera López",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "Houston Dynamo"
+  },
+  {
+    "name": "Orbelin Pineda Alvarado",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "AEK Athens"
+  },
+  {
+    "name": "Andres Guardado Hernandez",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "Real Betis"
+  },
+  {
+    "name": "Jorge Sanchez Ramos",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "Ajax"
+  },
+  {
+    "name": "Henry Martin Mex",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "Club América"
+  },
+  {
+    "name": "Uriel Antuna Romero",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "Cruz Azul"
+  },
+  {
+    "name": "Hirving Lozano Bahena",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "Napoli"
+  },
+  {
+    "name": "Jesus Gallardo Vasconcelos",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "CF Monterrey"
+  },
+  {
+    "name": "Luis Chavez Magallon",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Midfielder",
+    "club": "CF Pachuca"
+  },
+  {
+    "name": "Roberto Alvarado Hernandez",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Forward",
+    "club": "CD Guadalajara"
+  },
+  {
+    "name": "Kevin Alvarez Campos",
+    "country": "Mexico",
+    "code": "mx",
+    "pos": "Defender",
+    "club": "CF Pachuca"
+  },
+  {
+    "name": "Achraf Hakimi",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "PSG"
+  },
+  {
+    "name": "Noussair Mazraoui",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Sofyan Amrabat",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Fiorentina"
+  },
+  {
+    "name": "Nayef Aguerd",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "West Ham"
+  },
+  {
+    "name": "Romain Saiss",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Besiktas JK"
+  },
+  {
+    "name": "Hakim Ziyach Ziyech",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Azzedine Ounahi",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Angers"
+  },
+  {
+    "name": "Abderrazak Hamed-allah Hamed Allah",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Forward",
+    "club": "Al Ittihad"
+  },
+  {
+    "name": "Anass Zaroury",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Burnley"
+  },
+  {
+    "name": "Abdelhamid Sabiri",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Forward",
+    "club": "UC Sampdoria"
+  },
+  {
+    "name": "Munir El Kajoui",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Goalkeeper",
+    "club": "Al Wehda"
+  },
+  {
+    "name": "Ilias Chair",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Queens Park Rangers"
+  },
+  {
+    "name": "Zakaria Aboukhlal",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Toulouse"
+  },
+  {
+    "name": "Selim Amallah",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Standard Liège"
+  },
+  {
+    "name": "Abde Ezzalzouli",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Forward",
+    "club": "Osasuna"
+  },
+  {
+    "name": "So\u0000ane Boufal",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Angers"
+  },
+  {
+    "name": "Jawad El-yamiq",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Valladolid"
+  },
+  {
+    "name": "Youssef En-nesyri",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Forward",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Achraf Dari",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Stade Brest"
+  },
+  {
+    "name": "Walid Cheddira",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Forward",
+    "club": "SSC Bari"
+  },
+  {
+    "name": "Ahmed Tagnaouti",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Goalkeeper",
+    "club": "Wydad"
+  },
+  {
+    "name": "Bilal El Khannouss",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Genk"
+  },
+  {
+    "name": "Badr Benoun",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Qatar"
+  },
+  {
+    "name": "Yahya Attiat-allah el Idrissi",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Defender",
+    "club": "Wydad"
+  },
+  {
+    "name": "Yahya Jabrane",
+    "country": "Morocco",
+    "code": "ma",
+    "pos": "Midfielder",
+    "club": "Wydad"
+  },
+  {
+    "name": "Jurrien Timber",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Ajax"
+  },
+  {
+    "name": "Matthijs De Ligt",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Bayern Munich"
+  },
+  {
+    "name": "Virgil Van Dijk Virgil",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Nathan Aké",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Stefan De Vrij",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Steven Bergwijn",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "Ajax"
+  },
+  {
+    "name": "Cody Gakpo",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "PSV"
+  },
+  {
+    "name": "Luuk De Jong",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "PSV"
+  },
+  {
+    "name": "Memphis Depay Memphis",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Steven Berghuis",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Ajax"
+  },
+  {
+    "name": "Noa Lang",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "Club Brugge"
+  },
+  {
+    "name": "Justin Bijlow",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Goalkeeper",
+    "club": "Feyenoord Rotterdam"
+  },
+  {
+    "name": "Davy Klaassen",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Ajax"
+  },
+  {
+    "name": "Marten De Roon",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Atalanta"
+  },
+  {
+    "name": "Tyrell Malacia",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Daley Blind",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Ajax"
+  },
+  {
+    "name": "Vincent Janssen",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "Antwerp"
+  },
+  {
+    "name": "Wout Weghorst",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Forward",
+    "club": "Besiktas JK"
+  },
+  {
+    "name": "Teun Koopmeiners",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Atalanta"
+  },
+  {
+    "name": "Frenkie De Jong",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Denzel Dumfries",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Defender",
+    "club": "Inter Milan"
+  },
+  {
+    "name": "Andries Noppert",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Goalkeeper",
+    "club": "Heerenveen"
+  },
+  {
+    "name": "Kenneth Taylor",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "Ajax"
+  },
+  {
+    "name": "Xavi Simons Xavi",
+    "country": "Netherlands",
+    "code": "nl",
+    "pos": "Midfielder",
+    "club": "PSV"
+  },
+  {
+    "name": "Matty Cash",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Aston Villa"
+  },
+  {
+    "name": "Artur Jędrzejczyk",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Legia Warsaw"
+  },
+  {
+    "name": "Mateusz Wieteska",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Clermont Foot"
+  },
+  {
+    "name": "Jan Bednarek",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Aston Villa"
+  },
+  {
+    "name": "Krystian Bielik",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Birmingham City"
+  },
+  {
+    "name": "Arkadiusz Milik",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Forward",
+    "club": "Juventus"
+  },
+  {
+    "name": "Damian Szymański",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "AEK Athens"
+  },
+  {
+    "name": "Robert Lewandowski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Grzegorz Krychowiak",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Al Shabab"
+  },
+  {
+    "name": "Kamil Grosicki",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Pogon Szczecin"
+  },
+  {
+    "name": "Lukasz Skorupski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Goalkeeper",
+    "club": "Bologna"
+  },
+  {
+    "name": "Jakub Kamiński",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Wolfsburg"
+  },
+  {
+    "name": "Jakub Kiwior",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Spezia Calcio"
+  },
+  {
+    "name": "Kamil Glik",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Benevento Calcio"
+  },
+  {
+    "name": "Karol Świderski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Forward",
+    "club": "Charlotte"
+  },
+  {
+    "name": "Szymon Żurkowski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Fiorentina"
+  },
+  {
+    "name": "Bartosz Bereszyński",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "UC Sampdoria"
+  },
+  {
+    "name": "Sebastian Szymański",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Feyenoord Rotterdam"
+  },
+  {
+    "name": "Piotr Zieliński",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Napoli"
+  },
+  {
+    "name": "Nicola Zalewski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Roma"
+  },
+  {
+    "name": "Kamil Grabara",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Goalkeeper",
+    "club": "FC København"
+  },
+  {
+    "name": "Krzysztof Piątek",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Forward",
+    "club": "US Salernitana"
+  },
+  {
+    "name": "Przemyslaw Frankowski",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Lens"
+  },
+  {
+    "name": "Robert Gumny",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Defender",
+    "club": "Augsburg"
+  },
+  {
+    "name": "Michal Skóraś",
+    "country": "Poland",
+    "code": "pl",
+    "pos": "Midfielder",
+    "club": "Lech Poznań"
+  },
+  {
+    "name": "José Dalot Teixeira",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "Man United"
+  },
+  {
+    "name": "Kepler De Lima Ferreira Pepe",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "Porto"
+  },
+  {
+    "name": "Rúben Dos Santos Gato Alves Dias Rúben",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Raphaël Guerreiro Raphael",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "Dortmund"
+  },
+  {
+    "name": "João Lobo Alves Palhinha Gonçalves",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Fulham"
+  },
+  {
+    "name": "Cristiano Dos Santos Aveiro Ronaldo",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "N/A (Free Agent)"
+  },
+  {
+    "name": "Bruno Borges Fernandes",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Man United"
+  },
+  {
+    "name": "André Valente da Silva André",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Bernardo Mota Veiga de Carvalho",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "Man City"
+  },
+  {
+    "name": "João Félix Sequeira João",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "Atlético"
+  },
+  {
+    "name": "José Malheiro de Sá José",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Goalkeeper",
+    "club": "Wolves"
+  },
+  {
+    "name": "Danilo Pereira Danilo",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "PSG"
+  },
+  {
+    "name": "William Silva de Carvalho William",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Real Betis"
+  },
+  {
+    "name": "Rafael Da Conceição Leão",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Vitor Machado Ferreira Vitinha",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "PSG"
+  },
+  {
+    "name": "João Naval da Costa Eduardo",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Rúben Silva Neves",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Wolves"
+  },
+  {
+    "name": "Nuno Tavares Mendes",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "PSG"
+  },
+  {
+    "name": "João Cavaco Cancelo João",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Ricardo Da Luz Horta",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "Braga"
+  },
+  {
+    "name": "Diogo Meireles da Costa Diogo",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Goalkeeper",
+    "club": "Porto"
+  },
+  {
+    "name": "Matheus Nunes Matheus",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Wolves"
+  },
+  {
+    "name": "António Pereira de Albuquerque Tavares António",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Defender",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Otávio Da Silva Monteiro Otávio",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Midfielder",
+    "club": "Porto"
+  },
+  {
+    "name": "Gonçalo Matias Ramos",
+    "country": "Portugal",
+    "code": "pt",
+    "pos": "Forward",
+    "club": "SL Ben\u0000ca"
+  },
+  {
+    "name": "Pedro Correia Pedro",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Abdelkarim Fadlalla Abdelkarim",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Mohammed Albayati",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Tarek Salman Tarek",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Abdelaziz Mohamed",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Rayyan"
+  },
+  {
+    "name": "Ahmed Abdelmotaal Alaadin",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Forward",
+    "club": "Al Gharafa"
+  },
+  {
+    "name": "Ali Thaimn Asad",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Mohammed Muntari",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Forward",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Hasan Alhaydos",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Akram Afif",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Forward",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Karim Boudiaf Karim",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Musaab Mohamed Musaab",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Homam Ahmed Homam",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Gharafa"
+  },
+  {
+    "name": "Bassam Alrawi Bassam",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Boualem Khoukhi",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Ismail Ismail",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Defender",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Khalid Mazeed",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Forward",
+    "club": "Al Wakrah"
+  },
+  {
+    "name": "Almoez Abdulla Almoez",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Forward",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Salem Al-hajri",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Yousof Ali Yousof",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Goalkeeper",
+    "club": "Al Gharafa"
+  },
+  {
+    "name": "Meshaal Barsham",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Goalkeeper",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Assim Madibo",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Naif Alhadhrami Naif",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Rayyan"
+  },
+  {
+    "name": "Jassem Abdulsallam Jassem",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Arabi"
+  },
+  {
+    "name": "Moustafa Mashal Moustafa",
+    "country": "Qatar",
+    "code": "qa",
+    "pos": "Midfielder",
+    "club": "Al Sadd"
+  },
+  {
+    "name": "Sultan Alghannam Sultan",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Abdullah Madu",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Abdulelah Alamri",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Ali Al Bulayhi Albulayhi",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Mohammed Alburayk",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Salman Alfaraj Salman",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Abdulelah Almalki",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Feras Albrikan Feras",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Fateh"
+  },
+  {
+    "name": "Salem Aldawsari Salem",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Saleh Alshehri",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Saud Abdulhamid Saud",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Yasir Alshahrani Yasser",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Abdullah Otayf",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Ali Alhassan",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Sami Alnaji Sami",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Hassan Altambakti",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Defender",
+    "club": "Al Shabab"
+  },
+  {
+    "name": "Nawaf Alabid Nawaf",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Shabab"
+  },
+  {
+    "name": "Hatan Bahbri Hatan",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Shabab"
+  },
+  {
+    "name": "Abdulrahman Alobud",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Ittihad"
+  },
+  {
+    "name": "Mohammed Alowais",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Goalkeeper",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Nawaf Alaqidi",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Goalkeeper",
+    "club": "Al Nassr"
+  },
+  {
+    "name": "Mohammed Kanno",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Nasser Aldawsari Nasser",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Al Hilal SFC"
+  },
+  {
+    "name": "Haitham Asiri Haitham",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Forward",
+    "club": "Al Ahli"
+  },
+  {
+    "name": "Riyadh Sharahili Riyadh",
+    "country": "Saudi Arabia",
+    "code": "sa",
+    "pos": "Midfielder",
+    "club": "Abha Club"
+  },
+  {
+    "name": "Formose Mendy Formose",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Amiens"
+  },
+  {
+    "name": "Kalidou Koulibaly",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Pape Cisse",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Olympiacos Piraeus"
+  },
+  {
+    "name": "Idrissa Gueye Gana",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Everton"
+  },
+  {
+    "name": "Nampalys Mendy",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Leicester"
+  },
+  {
+    "name": "Nicolas Jackson",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "Villarreal"
+  },
+  {
+    "name": "Cheikhou Kouyate Kouyaté",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Nottm Forest"
+  },
+  {
+    "name": "Boulaye Dia",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "US Salernitana"
+  },
+  {
+    "name": "Moussa Ndiaye",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Anderlecht"
+  },
+  {
+    "name": "Pathe Ciss",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Rayo Vallecano"
+  },
+  {
+    "name": "Fode Ballo",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Iliman Ndiaye",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "She\u0000eld United"
+  },
+  {
+    "name": "Ismail Jakobs",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Monaco"
+  },
+  {
+    "name": "Krepin Diatta",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Monaco"
+  },
+  {
+    "name": "Edouard Mendy",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Goalkeeper",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Pape Sarr",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Ismaila Sarr Ismaila",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "Watford"
+  },
+  {
+    "name": "Famara Diedhiou",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "Alanyaspor"
+  },
+  {
+    "name": "Bamba Dieng Bamba",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Forward",
+    "club": "Marseille"
+  },
+  {
+    "name": "Youssouf Sabaly",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Real Betis"
+  },
+  {
+    "name": "Abdou Diallo",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Alfred Gomis",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Goalkeeper",
+    "club": "Rennes"
+  },
+  {
+    "name": "Moustapha Name",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Defender",
+    "club": "Pafos"
+  },
+  {
+    "name": "Mamadou Ndiaye Loum",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Reading"
+  },
+  {
+    "name": "Pape Gueye",
+    "country": "Senegal",
+    "code": "sn",
+    "pos": "Midfielder",
+    "club": "Marseille"
+  },
+  {
+    "name": "Strahinja Pavlović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Red Bull Salzburg"
+  },
+  {
+    "name": "Strahinja Eraković",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Red Star Belgrade"
+  },
+  {
+    "name": "Nikola Milenković",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Fiorentina"
+  },
+  {
+    "name": "Milos Veljković",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Werder Bremen"
+  },
+  {
+    "name": "Nemanja Maksimović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Getafe"
+  },
+  {
+    "name": "Nemanja Radonjić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "Torino"
+  },
+  {
+    "name": "Nemanja Gudelj",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Sevilla"
+  },
+  {
+    "name": "Aleksandar Mitrović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "Fulham"
+  },
+  {
+    "name": "Dusan Tadić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "Ajax"
+  },
+  {
+    "name": "Luka Jović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "Fiorentina"
+  },
+  {
+    "name": "Predrag Rajković",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Goalkeeper",
+    "club": "Mallorca"
+  },
+  {
+    "name": "Stefan Mitrović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Getafe"
+  },
+  {
+    "name": "Andrija Živković",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "PAOK"
+  },
+  {
+    "name": "Srdjan Babić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Almería"
+  },
+  {
+    "name": "Sasa Lukić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Torino"
+  },
+  {
+    "name": "Filip Kostić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Juventus"
+  },
+  {
+    "name": "Dusan Vlahović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "Juventus"
+  },
+  {
+    "name": "Uros Račić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Braga"
+  },
+  {
+    "name": "Sergej Milinković-savić Sergej",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Lazio"
+  },
+  {
+    "name": "Filip Đuričić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Forward",
+    "club": "UC Sampdoria"
+  },
+  {
+    "name": "Darko Lazović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Hellas Verona"
+  },
+  {
+    "name": "Vanja Milinković Savić Vanja",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Goalkeeper",
+    "club": "Torino"
+  },
+  {
+    "name": "Ivan Ilić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Hellas Verona"
+  },
+  {
+    "name": "Filip Mladenović",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Defender",
+    "club": "Legia Warsaw"
+  },
+  {
+    "name": "Marko Grujić",
+    "country": "Serbia",
+    "code": "rs",
+    "pos": "Midfielder",
+    "club": "Porto"
+  },
+  {
+    "name": "Cesar Azpilicueta Tanco",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Eric García Martret Eric",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Pau Francisco Torres Pau",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Villarreal"
+  },
+  {
+    "name": "Sergio Busquets Burgos Sergio",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Marcos Llorente Moreno",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Atlético"
+  },
+  {
+    "name": "Alvaro Morata Martín",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Atlético"
+  },
+  {
+    "name": "Jorge Resurrección Merodio Koke",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Atlético"
+  },
+  {
+    "name": "Pablo Paez Gavira Gavi",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Marco Asensio Willemsen",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Ferran Torres García Ferran",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Nico Williams Arthuer",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Athletic Bilbao"
+  },
+  {
+    "name": "David Raya Martín",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Goalkeeper",
+    "club": "Brentford"
+  },
+  {
+    "name": "Alejandro Balde Martínez",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Hugo Guillamón Sanmartín Hugo",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Valencia"
+  },
+  {
+    "name": "Rodrigo Hernández Cascante Rodrigo",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Man City"
+  },
+  {
+    "name": "Yeremy Pino Santos Yeremy",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Villarreal"
+  },
+  {
+    "name": "Jordi Alba Ramos Jordi",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Carlos Soler Barragan",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "PSG"
+  },
+  {
+    "name": "Dani Carvajal Ramos",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Dani Olmo Carvajal",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "RB Leipzig"
+  },
+  {
+    "name": "Pablo Sarabia Garcia",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "PSG"
+  },
+  {
+    "name": "Unai Simón Mendibil Unai",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Goalkeeper",
+    "club": "Athletic Bilbao"
+  },
+  {
+    "name": "Aymeric Laporte Fevre",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Ansu Fati Vieira Ansu",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Forward",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Pedro González López Pedri",
+    "country": "Spain",
+    "code": "es",
+    "pos": "Midfielder",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Nico Elvedi",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "VfL Borussia Mönchengladbach"
+  },
+  {
+    "name": "Manuel Akanji",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "Man City"
+  },
+  {
+    "name": "Denis Zakaria Lako Lado",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Breel Embolo",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Forward",
+    "club": "Monaco"
+  },
+  {
+    "name": "Remo Freuler",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "Nottm Forest"
+  },
+  {
+    "name": "Haris Seferović Seferovic",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Forward",
+    "club": "Galatasaray"
+  },
+  {
+    "name": "Granit Xhaka",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "Arsenal"
+  },
+  {
+    "name": "Renato Steffen",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "FC Lugano"
+  },
+  {
+    "name": "Jonas Omlin",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Goalkeeper",
+    "club": "Montpellier"
+  },
+  {
+    "name": "Ricardo Rodriguez Araya",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "Torino"
+  },
+  {
+    "name": "Michel Aebischer",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "Bologna"
+  },
+  {
+    "name": "Djibril Sow",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "E. Frankfurt"
+  },
+  {
+    "name": "Christian Fassnacht",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "BSC Young Boys"
+  },
+  {
+    "name": "Ruben Vargas Maritnez",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Forward",
+    "club": "Augsburg"
+  },
+  {
+    "name": "Eray Cömert",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "Valencia"
+  },
+  {
+    "name": "Noah Okafor",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Forward",
+    "club": "Red Bull Salzburg"
+  },
+  {
+    "name": "Fabian Frei",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "FC Basel"
+  },
+  {
+    "name": "Gregor Kobel",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Goalkeeper",
+    "club": "Dortmund"
+  },
+  {
+    "name": "Fabian Schär",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Defender",
+    "club": "Newcastle"
+  },
+  {
+    "name": "Xherdan Shaqiri",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "Chicago Fire"
+  },
+  {
+    "name": "Philipp Köhn",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Goalkeeper",
+    "club": "Red Bull Salzburg"
+  },
+  {
+    "name": "Fabian Rieder",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "BSC Young Boys"
+  },
+  {
+    "name": "Ardon Jashari",
+    "country": "Switzerland",
+    "code": "ch",
+    "pos": "Midfielder",
+    "club": "FC Luzern"
+  },
+  {
+    "name": "Bilel Ifa",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "Al Kuwait"
+  },
+  {
+    "name": "Montassar Talbi",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "Lorient"
+  },
+  {
+    "name": "Yassine Meriah",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "Espérance Tunis"
+  },
+  {
+    "name": "Nader Ghandri",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Club Africain"
+  },
+  {
+    "name": "Dylan Bronn",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "US Salernitana"
+  },
+  {
+    "name": "Youssef Msakni",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Al Arabi"
+  },
+  {
+    "name": "Hannibal Mejbri Hannibal",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Birmingham City"
+  },
+  {
+    "name": "Issam Jebali",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Odense BK"
+  },
+  {
+    "name": "Wahbi Khazri",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Montpellier"
+  },
+  {
+    "name": "Taha Khenissi",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Al Kuwait"
+  },
+  {
+    "name": "Ali Maaloul",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "Al Ahly"
+  },
+  {
+    "name": "Ferjani Sassi",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Al Duhail"
+  },
+  {
+    "name": "Aissa Laïdouni Laidouni",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Ferencvárosi TC"
+  },
+  {
+    "name": "Mohamed Ben Romdhan",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Espérance Tunis"
+  },
+  {
+    "name": "Aymen Dahmen",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Goalkeeper",
+    "club": "CS Sfaxien"
+  },
+  {
+    "name": "Ellyes Skhiri",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Köln"
+  },
+  {
+    "name": "Ghaylen Chaaleli",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Midfielder",
+    "club": "Espérance Tunis"
+  },
+  {
+    "name": "Seifeddine Jaziri",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Zamalek"
+  },
+  {
+    "name": "Mohamed Drager",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "FC Luzern"
+  },
+  {
+    "name": "Wajdi Kechrida",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "Atromitos"
+  },
+  {
+    "name": "Bechir Said Ben",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Goalkeeper",
+    "club": "US Monastir"
+  },
+  {
+    "name": "Naim Sliti",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Al Ettifaq"
+  },
+  {
+    "name": "Ali Elabdi Abdi",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Defender",
+    "club": "SM Caen"
+  },
+  {
+    "name": "Anis Ben Slimane",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Forward",
+    "club": "Brøndby IF"
+  },
+  {
+    "name": "Mouez Hassen",
+    "country": "Tunisia",
+    "code": "tn",
+    "pos": "Goalkeeper",
+    "club": "Club Africain"
+  },
+  {
+    "name": "Jose Giménez de Vargas",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Atlético"
+  },
+  {
+    "name": "Diego Godin Leal",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "CA Vélez Sars\u0000eld"
+  },
+  {
+    "name": "Ronald Araujo da Silva",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Barcelona"
+  },
+  {
+    "name": "Matias Vecino Falero",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Lazio"
+  },
+  {
+    "name": "Rodrigo Bentancur Colman",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Nicolas De la Cruz Arcosa",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "River Plate"
+  },
+  {
+    "name": "Facundo Pellistri Rebollo",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Man United"
+  },
+  {
+    "name": "Luis Suarez Diaz",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Club Nacional"
+  },
+  {
+    "name": "Giorgian De Arrascaeta Benedetti",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Flamengo"
+  },
+  {
+    "name": "Darwin Nuñez Ribeiro",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Liverpool"
+  },
+  {
+    "name": "Sebastian Sosa Silva",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Goalkeeper",
+    "club": "CA Independiente"
+  },
+  {
+    "name": "Guillermo Varela Olivera",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Flamengo"
+  },
+  {
+    "name": "Lucas Torreira di Pascua",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Galatasaray"
+  },
+  {
+    "name": "Federico Valverde Dipetta",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Real Madrid"
+  },
+  {
+    "name": "Mathias Olivera Miramontes",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Napoli"
+  },
+  {
+    "name": "Matias Viña Susperreguy",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Roma"
+  },
+  {
+    "name": "Maxi Gómez González",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Trabzonspor"
+  },
+  {
+    "name": "Sebastian Coates Nion",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Sporting CP"
+  },
+  {
+    "name": "Facundo Torres Perez",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Orlando City"
+  },
+  {
+    "name": "Edinson Cavani Gomez",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Forward",
+    "club": "Valencia"
+  },
+  {
+    "name": "Martin Cáceres Silva",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "LA Galaxy"
+  },
+  {
+    "name": "Sergio Rochet Alvarez",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Goalkeeper",
+    "club": "Club Nacional"
+  },
+  {
+    "name": "Agustin Canobbio Graviz",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Athletico Paranaense"
+  },
+  {
+    "name": "Manuel Ugarte Ribeiro",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Midfielder",
+    "club": "Sporting CP"
+  },
+  {
+    "name": "Jose Rodriguez Bebanz",
+    "country": "Uruguay",
+    "code": "uy",
+    "pos": "Defender",
+    "club": "Club Nacional"
+  },
+  {
+    "name": "Sergino Dest",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "AC Milan"
+  },
+  {
+    "name": "Walker Zimmerman",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Nashville Soccer Club"
+  },
+  {
+    "name": "Tyler Adams",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "Leeds"
+  },
+  {
+    "name": "Antonee Robinson",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Fulham"
+  },
+  {
+    "name": "Yunus Musah",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "Valencia"
+  },
+  {
+    "name": "Giovanni Reyna",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Dortmund"
+  },
+  {
+    "name": "McKENNIE Mckennie",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "Juventus"
+  },
+  {
+    "name": "Jesus Ferreira Castro",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "FC Dallas"
+  },
+  {
+    "name": "Christian Pulisic",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Chelsea"
+  },
+  {
+    "name": "Brenden Aaronson",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Leeds"
+  },
+  {
+    "name": "Ethan Horvath",
+    "country": "USA",
+    "code": "us",
+    "pos": "Goalkeeper",
+    "club": "Luton Town"
+  },
+  {
+    "name": "Tim Ream",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Fulham"
+  },
+  {
+    "name": "Luca De la Torre",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "RC Celta Vigo"
+  },
+  {
+    "name": "Aaron Long",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "NY Red Bulls"
+  },
+  {
+    "name": "Jordan Morris",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Seattle Sounders"
+  },
+  {
+    "name": "Cristian Roldan",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "Seattle Sounders"
+  },
+  {
+    "name": "Shaq Moore",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Nashville Soccer Club"
+  },
+  {
+    "name": "Haji Wright",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Antalyaspor AS"
+  },
+  {
+    "name": "Cameron Carter-vickers",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Celtic"
+  },
+  {
+    "name": "Timothy Weah",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Lille"
+  },
+  {
+    "name": "DeAndre Yedlin",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "Inter Miami"
+  },
+  {
+    "name": "Kellyn Perry-acosta Acosta",
+    "country": "USA",
+    "code": "us",
+    "pos": "Midfielder",
+    "club": "Los Angeles"
+  },
+  {
+    "name": "Josh Sargent",
+    "country": "USA",
+    "code": "us",
+    "pos": "Forward",
+    "club": "Norwich"
+  },
+  {
+    "name": "Sean Johnson",
+    "country": "USA",
+    "code": "us",
+    "pos": "Goalkeeper",
+    "club": "NYCFC"
+  },
+  {
+    "name": "Joe Scally",
+    "country": "USA",
+    "code": "us",
+    "pos": "Defender",
+    "club": "VfL Borussia Mönchengladbach"
+  },
+  {
+    "name": "Chris Gunter",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "AFC Wimbledon"
+  },
+  {
+    "name": "Neco Williams",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Nottm Forest"
+  },
+  {
+    "name": "Ben Thomas Davies",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Tottenham"
+  },
+  {
+    "name": "Chris Mepham",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Bournemouth AFC"
+  },
+  {
+    "name": "Joe Rodon",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Rennes"
+  },
+  {
+    "name": "Joe Allen",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Swansea City AFC"
+  },
+  {
+    "name": "Harry Wilson",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Fulham"
+  },
+  {
+    "name": "Brennan Johnson",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Forward",
+    "club": "Nottm Forest"
+  },
+  {
+    "name": "Aaron Ramsey",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Nice"
+  },
+  {
+    "name": "Gareth Bale",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Forward",
+    "club": "Los Angeles"
+  },
+  {
+    "name": "Danny Ward",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Goalkeeper",
+    "club": "Leicester"
+  },
+  {
+    "name": "Kieffer Moore",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Forward",
+    "club": "Bournemouth AFC"
+  },
+  {
+    "name": "Connor Roberts",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Burnley"
+  },
+  {
+    "name": "Ethan Ampadu",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Spezia Calcio"
+  },
+  {
+    "name": "Joe Morrell",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Portsmouth"
+  },
+  {
+    "name": "Tom Lockyer",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Luton Town"
+  },
+  {
+    "name": "Jonny Williams",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Swindon Town"
+  },
+  {
+    "name": "Mark Harris",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Forward",
+    "club": "Cardiff City"
+  },
+  {
+    "name": "Daniel James",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Forward",
+    "club": "Fulham"
+  },
+  {
+    "name": "Adam Davies",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Goalkeeper",
+    "club": "She\u0000eld United"
+  },
+  {
+    "name": "Sorba Thomas",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Hudders\u0000eld Town"
+  },
+  {
+    "name": "Dylan Levitt",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "Dundee United"
+  },
+  {
+    "name": "Ben Cabango",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Swansea City AFC"
+  },
+  {
+    "name": "Rubin Colwill",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Defender",
+    "club": "Cardiff City"
+  },
+  {
+    "name": "Matt Smith",
+    "country": "Wales",
+    "code": "gb-wls",
+    "pos": "Midfielder",
+    "club": "MK Dons"
+  }
+]
