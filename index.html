@@ -99,13 +99,16 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-btn:hover{background:#ff9048}
 .next-btn:active{transform:scale(.97)}
 .next-match{display:none;flex-direction:column;gap:5px;flex-shrink:0}
-.next-match.show{display:flex;gap:2px}
+.next-match.show{display:flex;gap:8px}
 .next-match-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .next-match-row{display:flex;gap:8px;align-items:center}
 .next-match-team{display:flex;gap:6px;align-items:center}
 .next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
 .next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
 .next-match-date{font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);white-space:nowrap;margin-left:4px}
+.watch-btn{display:none;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:radial-gradient(ellipse at center,rgba(40,40,40,1) 0%,rgba(28,28,28,1) 50%,rgba(16,16,16,1) 100%);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
+.watch-btn.show{display:flex}
+.watch-btn:hover{opacity:.8}
 
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
@@ -164,7 +167,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
   .player-info{width:100%}
-  .reveal-country{display:none}.next-match{display:none!important}.next-btn{padding:14px 12px;text-align:center}
+  .reveal-country{display:none}.next-match{display:none!important}.watch-btn{display:none!important}.next-btn{padding:14px 12px;text-align:center}
   .reveal-feedback-mobile{display:flex}
   .feedback{display:none}
   .reveal-row{align-items:center}
@@ -1586,13 +1589,44 @@ const WC26_SCHEDULE=[
 ];
 function getNextMatch(country){
   const today=new Date().toISOString().slice(0,10);
-  return WC26_SCHEDULE.find(m=>(m.t1===country||m.t2===country)&&m.date>=today)||null;
+  const m=WC26_SCHEDULE.find(m=>(m.t1===country||m.t2===country)&&m.date>=today)||null;
+  if(!m) return null;
+  return {...m,...(CAZETV[m.t1+'|'+m.t2]||{})};
 }
-function formatMatchDate(dateStr){
+// CazéTV YouTube links — keyed by "t1|t2" matching WC26_SCHEDULE order
+const CAZETV={
+  "Mexico|South Africa":          {time:"16:00",link:"https://www.youtube.com/watch?v=YCNysrewn7k"},
+  "South Korea|Czechia":          {time:"23:00",link:"https://www.youtube.com/watch?v=LjEP9frJ2CE"},
+  "Canada|Bosnia and Herzegovina":{time:"16:00",link:"https://www.youtube.com/watch?v=CRtjePKnGvA"},
+  "USA|Paraguay":                 {time:"22:00",link:"https://www.youtube.com/watch?v=7EFTDmwcleI"},
+  "Qatar|Switzerland":            {time:"16:00",link:"https://www.youtube.com/watch?v=ljah6d9m7Z0"},
+  "Brazil|Morocco":               {time:"19:00",link:"https://www.youtube.com/watch?v=vC3fV_awcWE"},
+  "Haiti|Scotland":               {time:"22:00",link:"https://www.youtube.com/watch?v=yBUg81qhrNo"},
+  "Australia|Turkiye":            {time:"01:00",link:"https://www.youtube.com/watch?v=8rr-857IbHA"},
+  "Germany|Curaçao":              {time:"14:00",link:"https://www.youtube.com/watch?v=byP1peOCkzI"},
+  "Netherlands|Japan":            {time:"17:00",link:"https://www.youtube.com/watch?v=6Ca_GzyVOs0"},
+  "Ivory Coast|Ecuador":          {time:"20:00",link:"https://www.youtube.com/watch?v=IFh8Nuuhgcc"},
+  "Sweden|Tunisia":               {time:"23:00",link:"https://www.youtube.com/watch?v=o2wC007Jp-A"},
+  "Spain|Cape Verde":             {time:"13:00",link:"https://www.youtube.com/watch?v=EYStZQ5FsVk"},
+  "Belgium|Egypt":                {time:"16:00",link:"https://www.youtube.com/watch?v=aclBHrhLQr4"},
+  "Saudi Arabia|Uruguay":         {time:"19:00",link:"https://www.youtube.com/watch?v=Mh-iBLsiYDw"},
+  "Iran|New Zealand":             {time:"22:00",link:"https://www.youtube.com/watch?v=vrY_cXwm--g"},
+  "France|Senegal":               {time:"16:00",link:"https://www.youtube.com/watch?v=m1vplAfSs_A"},
+  "Iraq|Norway":                  {time:"19:00",link:"https://www.youtube.com/watch?v=Dgvz5nHdttk"},
+  "Argentina|Algeria":            {time:"22:00",link:"https://www.youtube.com/watch?v=RhpNoBWVQGA"},
+  "Austria|Jordan":               {time:"01:00",link:"https://www.youtube.com/watch?v=r97R-p-TlNM"},
+  "Portugal|DR Congo":            {time:"14:00",link:"https://www.youtube.com/watch?v=HpzKFDctbNw"},
+  "England|Croatia":              {time:"17:00",link:"https://www.youtube.com/watch?v=DaAFndjKuf8"},
+  "Ghana|Panama":                 {time:"20:00",link:"https://www.youtube.com/watch?v=t7XBWsD5p6A"},
+  "Uzbekistan|Colombia":          {time:"23:00",link:"https://www.youtube.com/watch?v=BWsf2c4zKZs"},
+  "Brazil|Haiti":                 {time:"22:00",link:"https://www.youtube.com/watch?v=DUuWdi0r1RI"},
+  "Scotland|Brazil":              {time:"19:00",link:"https://www.youtube.com/watch?v=dxYTTxhgVNU"},
+};
+function formatMatchDate(dateStr,time){
   const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
   const d=new Date(dateStr+'T12:00:00');
-  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate();
+  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate()+(time?' · '+time:'');
 }
 function nextMatchHtml(country,code){
   const m=getNextMatch(country);
@@ -1611,9 +1645,17 @@ function nextMatchHtml(country,code){
         ${flagImg(oppCode,28,20)}
         <span class="next-match-name">${opp}</span>
       </div>
-      <span class="next-match-date">${formatMatchDate(m.date)}</span>
+      <span class="next-match-date">${formatMatchDate(m.date,m.time)}</span>
     </div>
   </div>`;
+}
+function watchBtnHtml(country){
+  const m=getNextMatch(country);
+  if(!m||!m.link) return '';
+  return `<a id="watch-btn" class="watch-btn" href="${m.link}" target="_blank" rel="noopener noreferrer">
+    Watch match
+    <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M228,104a12,12,0,0,1-24,0V69L121.66,151.34a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"/></svg>
+  </a>`;
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1727,6 +1769,7 @@ function renderRound(){
           <span class="feedback-sub" id="fs-m"></span>
           <span class="feedback-sub" id="fi-m"></span>
         </div>
+        ${watchBtnHtml(currentPlayer.country)}
         <button class="next-btn" id="next-btn" onclick="nextRound()">
           ${round<queue.length?'Next ›':'Results ›'}
         </button>
@@ -1862,10 +1905,12 @@ function handleAnswer(idx){
   const rr=document.getElementById('reveal-row');
   if(rr) rr.classList.add('show');
 
-  // Next match only on wrong answer
+  // Next match + watch button only on wrong answer
   if(!isCorrect){
     const nm=document.getElementById('next-match');
     if(nm) nm.classList.add('show');
+    const wb=document.getElementById('watch-btn');
+    if(wb) wb.classList.add('show');
   }
 
   // Next button
