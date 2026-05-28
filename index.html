@@ -87,7 +87,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .player-info{flex:1;display:flex;flex-direction:column}
 .player-top{display:flex;flex-direction:column;gap:8px}
 .player-bottom{display:flex;flex-direction:column}
-.question-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.question-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
 .player-name{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:700;line-height:.95;letter-spacing:-.01em;color:var(--text);margin-bottom:20px;word-break:break-word}
 .player-pos{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
 
@@ -122,7 +122,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .feedback-sub{font-size:16px;color:#a0a0a8;opacity:0;transition:opacity .3s .1s}
 .feedback-sub.show{opacity:1}
 .feedback-sub.correct{color:var(--success)}
-#fi{margin-left:20px}
+#fi,#fi-d{margin-left:20px}
+.feedback-desktop{display:none;align-items:center;gap:8px;flex-wrap:wrap;min-height:36px;margin-bottom:8px}
 .reveal-feedback-mobile{display:none;flex:1;flex-wrap:wrap;align-items:center;gap:0 8px;min-width:0}
 #fi-m{font-size:13px;flex-basis:100%}
 
@@ -142,6 +143,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{align-items:stretch}
   .player-info{justify-content:space-between}
   .player-name{margin-bottom:0}
+  .feedback{display:none}
+  .feedback-desktop{display:flex}
 }
 @media(max-width:900px){.ad-col{display:none}}
 @media(max-width:600px){
@@ -537,6 +540,11 @@ function renderRound(){
         <div class="player-pos">${currentPlayer.pos}</div>
       </div>
       <div class="player-bottom">
+        <div class="feedback-desktop">
+          <span class="feedback-text" id="ft-d"></span>
+          <span class="feedback-sub" id="fs-d"></span>
+          <span class="feedback-sub" id="fi-d"></span>
+        </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country">
           ${flagImg(currentPlayer.code,44,32)}
@@ -643,7 +651,7 @@ function handleAnswer(idx){
     else if(i===correctIdx&&!isCorrect){btn.classList.add('reveal-correct');chk.textContent='✓';}
   });
 
-  for(const sfx of ['','m']){
+  for(const sfx of ['','m','d']){
     const id=s=>document.getElementById(s+(sfx?'-'+sfx:''));
     const ft=id('ft'),fs=id('fs'),fi=id('fi');
     if(!ft) continue;
