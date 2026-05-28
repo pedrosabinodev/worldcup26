@@ -154,6 +154,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   #ft,#fs{display:none}
   #fi{margin-left:0}
   .feedback-desktop{display:flex}
+  /* Reserve space for reveal-country on desktop so layout never shifts */
+  .reveal-country{display:flex;visibility:hidden}
+  .reveal-country.show{visibility:visible}
 }
 @media(max-width:600px){
   #q-label{display:none}
