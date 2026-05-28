@@ -1712,10 +1712,12 @@ function renderRound(){
         </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country">
-          ${flagImg(currentPlayer.code,44,32)}
-          <div>
-            <div class="reveal-country-label">Plays for</div>
-            <div class="reveal-country-name">${currentPlayer.country}</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+            ${flagImg(currentPlayer.code,44,32)}
+            <div>
+              <div class="reveal-country-label">Plays for</div>
+              <div class="reveal-country-name">${currentPlayer.country}</div>
+            </div>
           </div>
           ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
         </div>
