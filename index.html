@@ -1545,7 +1545,7 @@ function startGame(d){
   // Prefetch all photos + unique club badges for the whole queue in background
   const seenClubs=new Set();
   queue.forEach(p=>{
-    fetchPhoto(p.wiki);
+    prefetchPhoto(p.wiki);
     if(!seenClubs.has(p.club)){seenClubs.add(p.club);fetchClubBadge(p.club);}
   });
   document.getElementById('diff-breadcrumb-value').textContent=MODE_LABELS[currentDifficulty];
@@ -1640,17 +1640,25 @@ function renderRound(){
 // PHOTO FETCH — Wikipedia REST API
 // Works on deployed sites. Blocked in Claude sandbox preview.
 // ═══════════════════════════════════════════════════════════
+const _photoInFlight={};
+// Cache-only — never touches the DOM. Safe to call for any player at any time.
+async function prefetchPhoto(wiki){
+  if(photoCache[wiki]!==undefined) return;
+  if(_photoInFlight[wiki]){await _photoInFlight[wiki];return;}
+  _photoInFlight[wiki]=(async()=>{
+    try{
+      const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
+      if(!r.ok) throw 0;
+      const d=await r.json();
+      photoCache[wiki]=d.thumbnail?.source||null;
+    }catch(e){photoCache[wiki]=null;}
+    delete _photoInFlight[wiki];
+  })();
+  await _photoInFlight[wiki];
+}
+// Called only for the current player — waits for cache then writes to DOM.
 async function fetchPhoto(wiki){
-  if(photoCache[wiki]!==undefined){
-    loadPhotoIntoBack(photoCache[wiki]);
-    return;
-  }
-  try{
-    const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
-    if(!r.ok) throw 0;
-    const d=await r.json();
-    photoCache[wiki]=d.thumbnail?.source||null;
-  }catch(e){photoCache[wiki]=null;}
+  await prefetchPhoto(wiki);
   loadPhotoIntoBack(photoCache[wiki]);
 }
 
@@ -1661,14 +1669,14 @@ function loadPhotoIntoBack(src){
     const img=new Image();
     img.crossOrigin='anonymous';
     img.onload=()=>{
-      const b=document.getElementById('photo-back');
-      if(!b) return;
-      const bd=b.querySelector('.club-badge');
-      b.innerHTML='';
+      // Guard: if the user advanced to the next round, this element is detached
+      if(!back.isConnected) return;
+      const bd=back.querySelector('.club-badge');
+      back.innerHTML='';
       const el=document.createElement('img');
       el.src=src;el.alt='';el.className='player-img';
-      b.appendChild(el);
-      if(bd) b.appendChild(bd);
+      back.appendChild(el);
+      if(bd) back.appendChild(bd);
     };
     img.src=src;
   } else {
