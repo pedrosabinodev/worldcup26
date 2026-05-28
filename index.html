@@ -91,23 +91,22 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 /* REVEAL ROW — always in DOM, no layout shift */
 .reveal-row{display:flex;gap:16px;align-items:stretch;visibility:hidden;opacity:0;transition:opacity .3s ease}
 .reveal-row.show{visibility:visible;opacity:1}
-.reveal-country{padding:12px 16px;background:var(--surface2);border:1px solid var(--border2);border-radius:3px;display:flex;align-items:center;gap:12px;flex:1;min-width:0;justify-content:space-between}
+.reveal-country{padding:12px 16px;background:var(--surface2);border:1px solid var(--border2);border-radius:3px;display:none;align-items:center;gap:12px;flex:1;min-width:0;justify-content:space-between}
+.reveal-country.show{display:flex}
 .reveal-country-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .reveal-country-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600}
 .next-btn{background:var(--orange);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;padding:0 28px;border-radius:3px;cursor:pointer;white-space:nowrap;flex-shrink:0;align-self:stretch;visibility:hidden;opacity:0;transition:background .18s,opacity .3s ease .15s;pointer-events:none}
 .next-btn.show{visibility:visible;opacity:1;pointer-events:all}
 .next-btn:hover{background:#ff9048}
 .next-btn:active{transform:scale(.97)}
-.next-match{display:none;flex-direction:column;gap:5px;flex-shrink:0}
-.next-match.show{display:flex;gap:8px}
+.next-match{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
 .next-match-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .next-match-row{display:flex;gap:8px;align-items:center}
 .next-match-team{display:flex;gap:6px;align-items:center}
 .next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
 .next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
 .next-match-date{font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);white-space:nowrap;margin-left:4px}
-.watch-btn{display:none;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:radial-gradient(ellipse at center,rgba(40,40,40,1) 0%,rgba(28,28,28,1) 50%,rgba(16,16,16,1) 100%);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
-.watch-btn.show{display:flex}
+.watch-btn{display:flex;align-items:center;gap:6px;border-radius:8px;background:radial-gradient(ellipse at center,rgba(40,40,40,1) 0%,rgba(28,28,28,1) 50%,rgba(16,16,16,1) 100%);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
 .watch-btn:hover{opacity:.8}
 
 /* OPTIONS */
@@ -167,7 +166,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
   .player-info{width:100%}
-  .reveal-country{display:none}.next-match{display:none!important}.watch-btn{display:none!important}.next-btn{padding:14px 12px;text-align:center}
+  .reveal-country{display:none!important}.next-btn{padding:14px 12px;text-align:center}
   .reveal-feedback-mobile{display:flex}
   .feedback{display:none}
   .reveal-row{align-items:center}
@@ -1761,15 +1760,15 @@ function renderRound(){
           <span class="feedback-sub" id="fs-d"></span>
         </div>
       <div class="reveal-row" id="reveal-row">
-        <div class="reveal-country">
+        <div class="reveal-country" id="reveal-country">
           ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
+          ${watchBtnHtml(currentPlayer.country)}
         </div>
         <div class="reveal-feedback-mobile">
           <span class="feedback-text" id="ft-m"></span>
           <span class="feedback-sub" id="fs-m"></span>
           <span class="feedback-sub" id="fi-m"></span>
         </div>
-        ${watchBtnHtml(currentPlayer.country)}
         <button class="next-btn" id="next-btn" onclick="nextRound()">
           ${round<queue.length?'Next ›':'Results ›'}
         </button>
@@ -1905,12 +1904,10 @@ function handleAnswer(idx){
   const rr=document.getElementById('reveal-row');
   if(rr) rr.classList.add('show');
 
-  // Next match + watch button only on wrong answer
+  // Reveal country box (next match + watch button) only on wrong answer
   if(!isCorrect){
-    const nm=document.getElementById('next-match');
-    if(nm) nm.classList.add('show');
-    const wb=document.getElementById('watch-btn');
-    if(wb) wb.classList.add('show');
+    const rc=document.getElementById('reveal-country');
+    if(rc) rc.classList.add('show');
   }
 
   // Next button
