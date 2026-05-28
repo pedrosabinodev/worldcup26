@@ -99,7 +99,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-btn:hover{background:#ff9048}
 .next-btn:active{transform:scale(.97)}
 .next-match{display:none;flex-direction:column;gap:5px;flex-shrink:0}
-.next-match.show{display:flex}
+.next-match.show{display:flex;gap:2px}
 .next-match-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .next-match-row{display:flex;gap:8px;align-items:center}
 .next-match-team{display:flex;gap:6px;align-items:center}
@@ -1712,13 +1712,6 @@ function renderRound(){
         </div>
       <div class="reveal-row" id="reveal-row">
         <div class="reveal-country">
-          <div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
-            ${flagImg(currentPlayer.code,44,32)}
-            <div>
-              <div class="reveal-country-label">Plays for</div>
-              <div class="reveal-country-name">${currentPlayer.country}</div>
-            </div>
-          </div>
           ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
         </div>
         <div class="reveal-feedback-mobile">
