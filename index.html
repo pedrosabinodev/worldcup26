@@ -105,6 +105,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-match-team{display:flex;gap:6px;align-items:center}
 .next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
 .next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
+.next-match-date{font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);white-space:nowrap;margin-left:4px}
 
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
@@ -1587,6 +1588,12 @@ function getNextMatch(country){
   const today=new Date().toISOString().slice(0,10);
   return WC26_SCHEDULE.find(m=>(m.t1===country||m.t2===country)&&m.date>=today)||null;
 }
+function formatMatchDate(dateStr){
+  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const d=new Date(dateStr+'T12:00:00');
+  const[yyyy,mm,dd]=dateStr.split('-');
+  return days[d.getDay()]+' · '+yyyy+'/'+mm+'/'+dd;
+}
 function nextMatchHtml(country,code){
   const m=getNextMatch(country);
   if(!m) return '';
@@ -1604,6 +1611,7 @@ function nextMatchHtml(country,code){
         ${flagImg(oppCode,28,20)}
         <span class="next-match-name">${opp}</span>
       </div>
+      <span class="next-match-date">${formatMatchDate(m.date)}</span>
     </div>
   </div>`;
 }
