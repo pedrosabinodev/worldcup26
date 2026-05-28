@@ -596,18 +596,24 @@ const CLUB_WIKI={
   "Puntarenas":"Club_Sport_Puntarenas",
 };
 const clubPhotoCache={};
+const _clubInFlight={};
 async function fetchClubBadge(club){
   if(clubPhotoCache[club]!==undefined) return;
+  if(_clubInFlight[club]){await _clubInFlight[club];return;}
   // Normalize PDF ligature artifact: 'fi' encoded as \x00 (e.g. "She\x00eld" → "Sheffield")
   const normalized=club.replace(/\x00/g,'fi');
   const wiki=CLUB_WIKI[normalized]||CLUB_WIKI[club];
   if(!wiki){clubPhotoCache[club]=null;return;}
-  try{
-    const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
-    if(!r.ok) throw 0;
-    const d=await r.json();
-    clubPhotoCache[club]=d.thumbnail?.source||null;
-  }catch(e){clubPhotoCache[club]=null;}
+  _clubInFlight[club]=(async()=>{
+    try{
+      const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(wiki)}`);
+      if(!r.ok) throw 0;
+      const d=await r.json();
+      clubPhotoCache[club]=d.thumbnail?.source||null;
+    }catch(e){clubPhotoCache[club]=null;}
+    delete _clubInFlight[club];
+  })();
+  await _clubInFlight[club];
 }
 
 function flagImg(code,w=55,h=40){
@@ -1496,7 +1502,7 @@ const QUALIFIED_COUNTRIES=[
 const MODE_LABELS={'stars':'Stars Only','mixed':'Mixed','all':'All Players'};
 let score=0,streak=0,round=0,answered=false;
 let currentPlayer=null,options=[],queue=[],currentDifficulty='stars';
-const TOTAL_ROUNDS=20,photoCache={};
+const TOTAL_ROUNDS=10,photoCache={};
 
 // ═══════════════════════════════════════════════════════════
 // SCREEN MANAGEMENT
@@ -1536,6 +1542,12 @@ function startGame(d){
   const pool=getPool(currentDifficulty);
   // NO-REPEAT: shuffle + slice guarantees each player appears at most once
   queue=shuffle(pool).slice(0,Math.min(TOTAL_ROUNDS,pool.length));
+  // Prefetch all photos + unique club badges for the whole queue in background
+  const seenClubs=new Set();
+  queue.forEach(p=>{
+    fetchPhoto(p.wiki);
+    if(!seenClubs.has(p.club)){seenClubs.add(p.club);fetchClubBadge(p.club);}
+  });
   document.getElementById('diff-breadcrumb-value').textContent=MODE_LABELS[currentDifficulty];
   show('game-screen');
   nextRound();
