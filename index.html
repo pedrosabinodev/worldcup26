@@ -1922,11 +1922,9 @@ function handleAnswer(idx){
   const rc=document.getElementById('reveal-country');
   if(rc) rc.classList.add('show');
 
-  // Watch button only on wrong answer
-  if(!isCorrect){
-    const wb=document.getElementById('watch-btn');
-    if(wb) wb.classList.add('show');
-  }
+  // Watch button — always show when a CazéTV link exists
+  const wb=document.getElementById('watch-btn');
+  if(wb) wb.classList.add('show');
 
   // Next button
   setTimeout(()=>{const nb=document.getElementById('next-btn');if(nb)nb.classList.add('show');},300);
