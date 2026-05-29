@@ -106,12 +106,13 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-match-team{display:flex;gap:6px;align-items:center}
 .next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
 .next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
-.watch-btn{display:none!important;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:radial-gradient(ellipse at center,rgba(40,40,40,1) 0%,rgba(28,28,28,1) 50%,rgba(16,16,16,1) 100%);color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
+.watch-btn{display:none!important;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:#282828;color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
 .watch-btn.show{display:flex!important}
 .watch-btn:hover{opacity:.8}
 
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.options-grid .next-btn{grid-column:1/-1;justify-content:center;align-self:stretch}
 .option-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;padding:14px 18px;border-radius:3px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:14px}
 .option-btn:hover:not(:disabled){background:var(--surface2);border-color:var(--muted)}
 .option-btn:disabled{cursor:default}
@@ -190,16 +191,15 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
   /* Bottom: feedback + reveal box */
-  .player-bottom-m{display:flex;flex-direction:column;gap:8px;padding-top:8px;width:100%}
-  .feedback-m{display:flex;column-gap:8px;row-gap:2px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+  .player-bottom-m{display:flex;flex-direction:column;gap:20px;padding-top:8px;width:100%}
+  .player-btm-actions{display:flex;flex-direction:column;gap:8px;width:100%}
+  .feedback-m{display:flex;column-gap:8px;row-gap:2px;align-items:baseline;flex-wrap:wrap}
   .reveal-row{flex-direction:column;align-items:stretch}
   .reveal-country{flex-direction:column;gap:12px;width:100%;box-sizing:border-box;align-items:flex-start}
   .reveal-country.show{display:flex!important}
-  .reveal-btns{gap:12px;align-items:stretch;width:100%;margin-top:2px}
-  .reveal-btns>*{flex:1;justify-content:center;align-self:auto}
-  .reveal-btns .watch-btn{padding:12px 20px}
+  .watch-btn{width:100%;justify-content:center;padding:12px 16px!important}
   .next-match-name,.next-match-datetime{white-space:normal}
-  .next-btn{padding:12px 20px;text-align:center;justify-content:center}
+  .next-btn{padding:12px 20px;text-align:center;justify-content:center;width:100%}
   .feedback{display:none}
 }
 </style>
@@ -1802,18 +1802,18 @@ function renderRound(){
         </div>
       </div>
       <div class="player-bottom-m">
-        <div class="feedback-m">
-          <span class="feedback-text" id="ft-m"></span>
-          <span class="feedback-sub" id="fs-m"></span>
-          <span class="feedback-sub" id="fi-m"></span>
+        <div class="player-btm-actions">
+          <div class="feedback-m">
+            <span class="feedback-text" id="ft-m"></span>
+            <span class="feedback-sub" id="fs-m"></span>
+            <span class="feedback-sub" id="fi-m"></span>
+          </div>
+          <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
         </div>
         <div class="reveal-row" id="reveal-row">
           <div class="reveal-country" id="reveal-country">
             ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
-            <div class="reveal-btns">
-              ${watchBtnHtml(currentPlayer.country)}
-              <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
-            </div>
+            ${watchBtnHtml(currentPlayer.country)}
           </div>
         </div>
       </div>`;
@@ -1848,7 +1848,6 @@ function renderRound(){
               ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
               <div class="reveal-btns">
                 ${watchBtnHtml(currentPlayer.country)}
-                <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
               </div>
             </div>
             <div class="reveal-feedback-mobile">
@@ -1859,7 +1858,8 @@ function renderRound(){
           </div>
         </div>
       </div>`;
-    document.getElementById('options-grid').innerHTML=optHtml(options);
+    document.getElementById('options-grid').innerHTML=optHtml(options)+
+      `<button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>`;
   }
 
   document.getElementById('ft').textContent='';
