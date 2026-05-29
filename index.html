@@ -160,24 +160,41 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .reveal-country.show{visibility:visible}
 }
 @media(max-width:600px){
+  /* Welcome */
   #q-label{display:none}
   #welcome-screen{padding-top:12px}
   .welcome-title{font-size:52px}.mode-cards{flex-direction:column;padding-bottom:32px}
-  .player-card{flex-direction:column;align-items:flex-start;gap:20px}
-  .photo-scene,.photo-flipper,.photo-front,.photo-back{width:100%!important;height:220px!important}
-  .photo-back img.player-img,.no-photo-back{width:100%!important;height:220px!important}
-  .player-name{font-size:38px;margin-bottom:8px}
+  /* Game layout — new mobile structure */
+  #options-grid{display:none}
+  .player-card{display:flex;flex-direction:column;gap:12px}
+  .player-name{font-size:38px}
+  /* Name + position above the row */
+  .player-top-m{display:flex;flex-direction:column;gap:4px;width:100%}
+  /* Mid row: photo | options side by side */
+  .player-mid-m{display:flex;flex-direction:row;align-items:stretch;gap:12px;width:100%}
+  .player-mid-m .photo-scene{flex:1;min-width:0}
+  .player-mid-m .photo-flipper{width:100%!important;height:100%!important;min-height:160px}
+  .player-mid-m .photo-front{width:100%!important;height:100%!important;background:linear-gradient(180deg,#262f38 0%,#13181e 100%)!important}
+  .player-mid-m .photo-front .qmark,.player-mid-m .photo-front .qmark-sub{display:none}
+  .player-mid-m .photo-back{width:100%!important;height:100%!important}
+  .player-mid-m .photo-back img.player-img,.player-mid-m .no-photo-back{width:100%!important;height:100%!important}
+  /* Options column */
+  .player-options-m{flex:1;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .question-label-m{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .options-m{display:flex;flex-direction:column;gap:10px}
   .option-btn{padding:11px 10px;gap:10px}
   .opt-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .opt-check{font-size:14px}
-  .player-info{width:100%}
-  .reveal-row{flex-direction:column;align-items:stretch;gap:12px}
+  /* Bottom: feedback + reveal box */
+  .player-bottom-m{display:flex;flex-direction:column;gap:12px;padding-top:12px;width:100%}
+  .feedback-m{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .reveal-row{flex-direction:column;align-items:stretch}
   .reveal-country{flex-direction:column;gap:12px;width:100%;box-sizing:border-box;align-items:flex-start}
   .reveal-country.show{display:flex!important}
-  .reveal-btns{flex-wrap:wrap}
+  .reveal-btns{gap:12px}
+  .reveal-btns>*{flex:1;justify-content:center}
   .next-match-name,.next-match-datetime{white-space:normal}
-  .next-btn{padding:14px 20px;text-align:center;justify-content:center;flex:1}
-  .reveal-feedback-mobile{display:flex}
+  .next-btn{padding:12px 20px;text-align:center;justify-content:center}
   .feedback{display:none}
 }
 </style>
@@ -1747,56 +1764,97 @@ function updateHUD(){
 // RENDER
 // ═══════════════════════════════════════════════════════════
 function renderRound(){
-  document.getElementById('player-card').innerHTML=`
-    <div class="photo-scene">
-      <div class="photo-flipper" id="flipper">
-        <div class="photo-front">
-          <div class="qmark">?</div>
-          <div class="qmark-sub">Answer to reveal</div>
-        </div>
-        <div class="photo-back" id="photo-back">
-          <div class="spinner"></div>
-          <div class="club-badge" id="club-badge"></div>
-        </div>
-      </div>
-    </div>
-    <div class="player-info">
-      <div class="player-top">
-        <div class="player-name">${currentPlayer.name}</div>
-        <div class="player-pos">${currentPlayer.pos}</div>
-      </div>
-      <div class="player-bottom">
-        <div class="feedback-desktop">
-          <span class="feedback-text" id="ft-d"></span>
-          <span class="feedback-sub" id="fs-d"></span>
-          <span class="feedback-sub" id="fi-d"></span>
-        </div>
-      <div class="reveal-row" id="reveal-row">
-        <div class="reveal-country" id="reveal-country">
-          ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
-          <div class="reveal-btns">
-            ${watchBtnHtml(currentPlayer.country)}
-            <button class="next-btn" id="next-btn" onclick="nextRound()">
-              ${round<queue.length?'Next':'Results'}
-              <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
-            </button>
-          </div>
-        </div>
-        <div class="reveal-feedback-mobile">
-          <span class="feedback-text" id="ft-m"></span>
-          <span class="feedback-sub" id="fs-m"></span>
-          <span class="feedback-sub" id="fi-m"></span>
-        </div>
-      </div>
-      </div>
-    </div>`;
-
-  document.getElementById('options-grid').innerHTML=options.map((opt,i)=>`
+  const isMob=window.innerWidth<=600;
+  const nextLbl=round<queue.length?'Next':'Results';
+  const arrow=`<svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>`;
+  const optHtml=opts=>opts.map((opt,i)=>`
     <button class="option-btn" id="opt-${i}" onclick="handleAnswer(${i})">
       <div class="flag-wrap">${flagImg(opt.code,44,32)}</div>
       <span class="opt-name">${opt.country}</span>
       <span class="opt-check" id="check-${i}"></span>
     </button>`).join('');
+
+  if(isMob){
+    document.getElementById('player-card').innerHTML=`
+      <div class="player-top-m">
+        <div class="player-name">${currentPlayer.name}</div>
+        <div class="player-pos">${currentPlayer.pos}</div>
+      </div>
+      <div class="player-mid-m">
+        <div class="photo-scene">
+          <div class="photo-flipper" id="flipper">
+            <div class="photo-front"></div>
+            <div class="photo-back" id="photo-back">
+              <div class="spinner"></div>
+              <div class="club-badge" id="club-badge"></div>
+            </div>
+          </div>
+        </div>
+        <div class="player-options-m">
+          <div class="question-label-m">WHICH COUNTRY DOES THIS PLAYER REPRESENT?</div>
+          <div class="options-m" id="options-m"></div>
+        </div>
+      </div>
+      <div class="player-bottom-m">
+        <div class="feedback-m">
+          <span class="feedback-text" id="ft-m"></span>
+          <span class="feedback-sub" id="fs-m"></span>
+          <span class="feedback-sub" id="fi-m"></span>
+        </div>
+        <div class="reveal-row" id="reveal-row">
+          <div class="reveal-country" id="reveal-country">
+            ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
+            <div class="reveal-btns">
+              ${watchBtnHtml(currentPlayer.country)}
+              <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    document.getElementById('options-m').innerHTML=optHtml(options);
+  } else {
+    document.getElementById('player-card').innerHTML=`
+      <div class="photo-scene">
+        <div class="photo-flipper" id="flipper">
+          <div class="photo-front">
+            <div class="qmark">?</div>
+            <div class="qmark-sub">Answer to reveal</div>
+          </div>
+          <div class="photo-back" id="photo-back">
+            <div class="spinner"></div>
+            <div class="club-badge" id="club-badge"></div>
+          </div>
+        </div>
+      </div>
+      <div class="player-info">
+        <div class="player-top">
+          <div class="player-name">${currentPlayer.name}</div>
+          <div class="player-pos">${currentPlayer.pos}</div>
+        </div>
+        <div class="player-bottom">
+          <div class="feedback-desktop">
+            <span class="feedback-text" id="ft-d"></span>
+            <span class="feedback-sub" id="fs-d"></span>
+            <span class="feedback-sub" id="fi-d"></span>
+          </div>
+          <div class="reveal-row" id="reveal-row">
+            <div class="reveal-country" id="reveal-country">
+              ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
+              <div class="reveal-btns">
+                ${watchBtnHtml(currentPlayer.country)}
+                <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
+              </div>
+            </div>
+            <div class="reveal-feedback-mobile">
+              <span class="feedback-text" id="ft-m"></span>
+              <span class="feedback-sub" id="fs-m"></span>
+              <span class="feedback-sub" id="fi-m"></span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    document.getElementById('options-grid').innerHTML=optHtml(options);
+  }
 
   document.getElementById('ft').textContent='';
   document.getElementById('ft').className='feedback-text';
