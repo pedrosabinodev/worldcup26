@@ -1953,7 +1953,8 @@ function handleAnswer(idx){
     const ft=id('ft'),fs=id('fs'),fi=id('fi');
     if(!ft) continue;
     if(isCorrect){
-      ft.textContent=streak>1?`🔥 Streak × ${streak}`:'Correct!';
+      const correctMsgs=['Correct!','Nice!','Great shot!',"You're right!"];
+      ft.textContent=streak>1?`🔥 Streak × ${streak}`:correctMsgs[Math.floor(Math.random()*correctMsgs.length)];
       ft.className='feedback-text show correct';
       if(fs){fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';fs.className='feedback-sub show correct';}
     } else {
