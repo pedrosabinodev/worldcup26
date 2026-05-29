@@ -1958,7 +1958,8 @@ function handleAnswer(idx){
       ft.className='feedback-text show correct';
       if(fs){fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';fs.className='feedback-sub show correct';}
     } else {
-      ft.textContent='Not quite.';
+      const wrongMsgs=['Not quite.','Almost!','So close!','Oops!','Nice try!'];
+      ft.textContent=wrongMsgs[Math.floor(Math.random()*wrongMsgs.length)];
       ft.className='feedback-text show wrong';
     }
     if(fi){fi.textContent=`Plays for ${currentPlayer.country} and ${currentPlayer.club}`;fi.className='feedback-sub show';}
