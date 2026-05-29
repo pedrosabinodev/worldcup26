@@ -16,7 +16,7 @@
   --text:#f0f0ee;--muted:#8b8b95;
   --accent:#e8ff47;--danger:#ff4d4d;--success:#47ff8e;
   --orange:#ff7c2a;
-  --PW:150px;--PH:210px;
+  --PW:154px;--PH:210px;
 }
 body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;font-weight:400;min-height:100vh;overflow-x:hidden}
 .shell{display:flex;min-height:100vh}
@@ -165,6 +165,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .reveal-country{display:flex;visibility:hidden;flex-direction:column;gap:8px;align-items:flex-start;justify-content:flex-end}
   .reveal-country.show{visibility:visible}
   .reveal-country-row{display:flex;justify-content:space-between;align-items:center;width:100%}
+  /* Reserve watch-btn space on desktop so reveal-country-row height never shifts */
+  .watch-btn{display:flex;visibility:hidden;opacity:0;transition:opacity .3s}
+  .watch-btn.show{visibility:visible;opacity:1}
 }
 @media(max-width:600px){
   /* Welcome */
