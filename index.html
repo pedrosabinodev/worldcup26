@@ -157,8 +157,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   #fi{margin-left:0}
   .feedback-desktop{display:flex}
   /* Reserve space for reveal-country on desktop so layout never shifts */
-  .reveal-country{display:flex;visibility:hidden}
+  .reveal-country{display:flex;visibility:hidden;flex-direction:column;gap:8px;align-items:flex-start;justify-content:flex-end}
   .reveal-country.show{visibility:visible}
+  .reveal-country-row{display:flex;justify-content:space-between;align-items:center;width:100%}
 }
 @media(max-width:600px){
   /* Welcome */
@@ -1844,12 +1845,31 @@ function renderRound(){
             <span class="feedback-sub" id="fi-d"></span>
           </div>
           <div class="reveal-row" id="reveal-row">
-            <div class="reveal-country" id="reveal-country">
-              ${nextMatchHtml(currentPlayer.country,currentPlayer.code)}
-              <div class="reveal-btns">
-                ${watchBtnHtml(currentPlayer.country)}
-              </div>
-            </div>
+            <div class="reveal-country" id="reveal-country">${(()=>{
+              const m_d=getNextMatch(currentPlayer.country);
+              if(!m_d) return '';
+              const isHome=m_d.t1===currentPlayer.country;
+              const opp=isHome?m_d.t2:m_d.t1,oppCode=isHome?m_d.c2:m_d.c1;
+              return `
+                <div class="next-match-header" id="next-match">
+                  <span class="next-match-label">Next match</span>
+                  <span class="next-match-datetime">${formatMatchDate(m_d.date,m_d.time)}</span>
+                </div>
+                <div class="reveal-country-row">
+                  <div class="next-match-row">
+                    <div class="next-match-team">
+                      <span class="next-match-name">${currentPlayer.country}</span>
+                      ${flagImg(currentPlayer.code,28,20)}
+                    </div>
+                    <span class="next-match-sep">×</span>
+                    <div class="next-match-team">
+                      ${flagImg(oppCode,28,20)}
+                      <span class="next-match-name">${opp}</span>
+                    </div>
+                  </div>
+                  <div class="reveal-btns">${watchBtnHtml(currentPlayer.country)}</div>
+                </div>`;
+            })()}</div>
             <div class="reveal-feedback-mobile">
               <span class="feedback-text" id="ft-m"></span>
               <span class="feedback-sub" id="fs-m"></span>
