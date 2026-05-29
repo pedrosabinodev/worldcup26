@@ -106,9 +106,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-match-team{display:flex;gap:6px;align-items:center}
 .next-match-name{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:var(--text);white-space:nowrap}
 .next-match-sep{font-size:14px;font-weight:500;color:var(--muted)}
-.watch-btn{display:none!important;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:#282828;color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer}
+.watch-btn{display:none!important;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;background:#282828;border:1px solid transparent;color:#fff;font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;cursor:pointer;transition:background .15s,border-color .15s}
 .watch-btn.show{display:flex!important}
-.watch-btn:hover{opacity:.8}
+.watch-btn:hover{background:#363636;border-color:#4b4b4b}
 
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
