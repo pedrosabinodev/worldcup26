@@ -1596,6 +1596,8 @@ function startGame(d){
   const seenClubs=new Set();
   queue.forEach(p=>{
     prefetchPhoto(p.wiki,p.photo);
+    // Preload TheSportsDB images immediately so browser caches them
+    if(p.photo){const pi=new Image();pi.src=p.photo;}
     if(!seenClubs.has(p.club)){seenClubs.add(p.club);fetchClubBadge(p.club);}
   });
   document.getElementById('diff-breadcrumb-value').textContent=MODE_LABELS[currentDifficulty];
@@ -1777,10 +1779,10 @@ async function prefetchPhoto(wiki,photoUrl){
 async function fetchPhoto(wiki,photoUrl){
   const key=photoUrl||wiki;
   await prefetchPhoto(wiki,photoUrl);
-  loadPhotoIntoBack(photoCache[key]);
+  loadPhotoIntoBack(photoCache[key],photoUrl?wiki:null);
 }
 
-function loadPhotoIntoBack(src){
+function loadPhotoIntoBack(src,fallbackWiki){
   const back=document.getElementById('photo-back');
   if(!back) return;
   if(src){
@@ -1795,6 +1797,12 @@ function loadPhotoIntoBack(src){
       el.src=src;el.alt='';el.className='player-img';
       back.appendChild(el);
       if(bd) back.appendChild(bd);
+    };
+    img.onerror=()=>{
+      // TheSportsDB failed — fall back to Wikipedia
+      if(!back.isConnected) return;
+      if(fallbackWiki) loadPhotoIntoBack(null);
+      prefetchPhoto(fallbackWiki).then(()=>loadPhotoIntoBack(photoCache[fallbackWiki]));
     };
     img.src=src;
   } else {
