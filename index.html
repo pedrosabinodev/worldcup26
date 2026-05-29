@@ -100,7 +100,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .next-btn:active{transform:scale(.97)}
 .next-match{display:flex;flex-direction:column;gap:12px;flex:1;min-width:0}
 .next-match-header{display:flex;align-items:center;gap:8px}
-.next-match-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.next-match-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .next-match-datetime{font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;color:#afafaf;white-space:nowrap}
 .next-match-row{display:flex;gap:8px;align-items:center}
 .next-match-team{display:flex;gap:6px;align-items:center}
@@ -1656,7 +1656,8 @@ function formatMatchDate(dateStr,time){
   const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
   const d=new Date(dateStr+'T12:00:00');
-  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate()+(time?' · '+time:'');
+  const timeStr=time?(' · '+time.split(':')[0]+'h'):'';
+  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate()+timeStr;
 }
 function nextMatchHtml(country,code){
   const m=getNextMatch(country);
