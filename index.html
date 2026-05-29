@@ -113,7 +113,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 /* OPTIONS */
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
 .options-grid .next-btn{grid-column:1/-1;justify-content:center;align-self:stretch}
-.option-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;padding:14px 18px;border-radius:3px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:14px}
+.option-btn{background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'Barlow',sans-serif;font-size:14px;font-weight:400;padding:14px 18px;border-radius:3px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:12px}
 .option-btn:hover:not(:disabled){background:var(--surface2);border-color:var(--muted)}
 .option-btn:disabled{cursor:default}
 .option-btn.correct,.option-btn.reveal-correct{background:rgba(71,255,142,.08);border-color:var(--success);color:var(--success)}
@@ -153,7 +153,6 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-card{align-items:stretch;height:240px;overflow:hidden}
   .options-grid{display:flex;flex-wrap:wrap;gap:8px}
   .option-btn{flex:1 1 0;min-width:0}
-  .opt-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .options-grid .next-btn{flex:0 0 100%;justify-content:center}
   .player-info{justify-content:space-between}
   .player-name{margin-bottom:0}
