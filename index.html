@@ -194,7 +194,8 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .player-mid-m .photo-scene{flex:1;min-width:0;height:auto!important;width:auto!important}
   .player-mid-m .photo-flipper{width:100%!important;height:100%!important;min-height:160px}
   .player-mid-m .photo-front{width:100%!important;height:100%!important;background:linear-gradient(180deg,#262f38 0%,#13181e 100%)!important}
-  .player-mid-m .photo-front .qmark,.player-mid-m .photo-front .qmark-sub{display:none}
+  .player-mid-m .photo-front .qmark{font-size:64px}
+  .player-mid-m .photo-front .qmark-sub{font-size:10px}
   .player-mid-m .photo-back{position:absolute!important;top:0;left:0;width:100%!important;height:100%!important}
   .player-mid-m .photo-back img.player-img,.player-mid-m .no-photo-back{width:100%!important;height:100%!important}
   /* Options column */
@@ -1647,7 +1648,10 @@ function renderRound(){
       <div class="player-mid-m">
         <div class="photo-scene">
           <div class="photo-flipper" id="flipper">
-            <div class="photo-front"></div>
+            <div class="photo-front">
+              <div class="qmark">?</div>
+              <div class="qmark-sub">Answer to reveal</div>
+            </div>
             <div class="photo-back" id="photo-back">
               <div class="spinner"></div>
               <div class="club-badge" id="club-badge"></div>
