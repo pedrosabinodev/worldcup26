@@ -1519,8 +1519,8 @@ const CAZETV={
   "Scotland|Brazil":              {time:"19:00",link:"https://www.youtube.com/watch?v=dxYTTxhgVNU"},
 };
 function formatMatchDate(dateStr,time){
-  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const days=lang==='pt'?['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado']:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months=lang==='pt'?['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']:['January','February','March','April','May','June','July','August','September','October','November','December'];
   const d=new Date(dateStr+'T12:00:00');
   const timeStr=time?(' · '+time.split(':')[0]+'h'):'';
   return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate()+timeStr;
@@ -1532,18 +1532,18 @@ function nextMatchHtml(country,code){
   const opp=isHome?m.t2:m.t1, oppCode=isHome?m.c2:m.c1;
   return `<div class="next-match" id="next-match">
     <div class="next-match-header">
-      <span class="next-match-label">Next match</span>
+      <span class="next-match-label">${t('Next match','Próximo jogo')}</span>
       <span class="next-match-datetime">${formatMatchDate(m.date,m.time)}</span>
     </div>
     <div class="next-match-row">
       <div class="next-match-team">
-        <span class="next-match-name">${country}</span>
+        <span class="next-match-name">${countryName(country)}</span>
         ${flagImg(code,28,20)}
       </div>
       <span class="next-match-sep">×</span>
       <div class="next-match-team">
         ${flagImg(oppCode,28,20)}
-        <span class="next-match-name">${opp}</span>
+        <span class="next-match-name">${countryName(opp)}</span>
       </div>
     </div>
   </div>`;
@@ -1552,7 +1552,7 @@ function watchBtnHtml(country){
   const m=getNextMatch(country);
   if(!m||!m.link) return '';
   return `<a id="watch-btn" class="watch-btn" href="${m.link}" target="_blank" rel="noopener noreferrer">
-    Watch match
+    ${t('Watch match','Assistir ao jogo')}
     <img src="caseTVLogo.png" width="16" height="16" alt="" style="border-radius:3px;display:block;flex-shrink:0">
   </a>`;
 }
@@ -1561,6 +1561,8 @@ function watchBtnHtml(country){
 // GAME STATE
 // ═══════════════════════════════════════════════════════════
 const MODE_LABELS={'stars':'Stars Only','mixed':'Mixed','all':'All Players'};
+const MODE_LABELS_PT={'stars':'Só Estrelas','mixed':'Misturado','all':'Todos os Jogadores'};
+function modeLabel(d){return lang==='pt'?MODE_LABELS_PT[d]:MODE_LABELS[d];}
 let score=0,streak=0,round=0,answered=false;
 let currentPlayer=null,options=[],queue=[],currentDifficulty='stars';
 const TOTAL_ROUNDS=10,photoCache={};
@@ -1612,7 +1614,7 @@ function startGame(d){
     if(p.photo){const pi=new Image();pi.src=p.photo;}
     if(!seenClubs.has(p.club)){seenClubs.add(p.club);fetchClubBadge(p.club);}
   });
-  document.getElementById('diff-breadcrumb-value').textContent=MODE_LABELS[currentDifficulty];
+  document.getElementById('diff-breadcrumb-value').textContent=modeLabel(currentDifficulty);
   show('game-screen');
   nextRound();
 }
@@ -1632,7 +1634,7 @@ function updateHUD(){
   document.getElementById('streak').textContent=streak;
   document.getElementById('round-display').textContent=`${Math.min(round,queue.length)}/${queue.length}`;
   document.getElementById('progress-fill').style.width=`${((round-1)/queue.length*100).toFixed(1)}%`;
-  document.getElementById('q-counter').textContent=`Player ${round} of ${queue.length}`;
+  document.getElementById('q-counter').textContent=t(`Player ${round} of ${queue.length}`,`Jogador ${round} de ${queue.length}`);
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1640,12 +1642,12 @@ function updateHUD(){
 // ═══════════════════════════════════════════════════════════
 function renderRound(){
   const isMob=window.innerWidth<=600;
-  const nextLbl=round<queue.length?'Next':'Results';
+  const nextLbl=round<queue.length?t('Next','Próximo'):t('Results','Resultados');
   const arrow=`<svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>`;
   const optHtml=opts=>opts.map((opt,i)=>`
     <button class="option-btn" id="opt-${i}" onclick="handleAnswer(${i})">
       <div class="flag-wrap">${flagImg(opt.code,40,28)}</div>
-      <span class="opt-name">${opt.country}</span>
+      <span class="opt-name">${countryName(opt.country)}</span>
       <span class="opt-check" id="check-${i}"></span>
     </button>`).join('');
 
@@ -1653,14 +1655,14 @@ function renderRound(){
     document.getElementById('player-card').innerHTML=`
       <div class="player-top-m">
         <div class="player-name">${currentPlayer.name}</div>
-        <div class="player-pos">${currentPlayer.pos}</div>
+        <div class="player-pos">${posName(currentPlayer.pos)}</div>
       </div>
       <div class="player-mid-m">
         <div class="photo-scene">
           <div class="photo-flipper" id="flipper">
             <div class="photo-front">
               <div class="qmark">?</div>
-              <div class="qmark-sub">Answer to reveal</div>
+              <div class="qmark-sub">${t('Answer to reveal','Responda para revelar')}</div>
             </div>
             <div class="photo-back" id="photo-back">
               <div class="spinner"></div>
@@ -1669,7 +1671,7 @@ function renderRound(){
           </div>
         </div>
         <div class="player-options-m">
-          <div class="question-label-m">WHICH COUNTRY DOES THIS PLAYER REPRESENT?</div>
+          <div class="question-label-m">${t('WHICH COUNTRY DOES THIS PLAYER REPRESENT?','QUAL PAÍS ESTE JOGADOR REPRESENTA?')}</div>
           <div class="options-m" id="options-m"></div>
         </div>
       </div>
@@ -1707,7 +1709,7 @@ function renderRound(){
       <div class="player-info">
         <div class="player-top">
           <div class="player-name">${currentPlayer.name}</div>
-          <div class="player-pos">${currentPlayer.pos}</div>
+          <div class="player-pos">${posName(currentPlayer.pos)}</div>
         </div>
         <div class="player-bottom">
           <div class="feedback-desktop">
@@ -1723,19 +1725,19 @@ function renderRound(){
               const opp=isHome?m_d.t2:m_d.t1,oppCode=isHome?m_d.c2:m_d.c1;
               return `
                 <div class="next-match-header" id="next-match">
-                  <span class="next-match-label">Next match</span>
+                  <span class="next-match-label">${t('Next match','Próximo jogo')}</span>
                   <span class="next-match-datetime">${formatMatchDate(m_d.date,m_d.time)}</span>
                 </div>
                 <div class="reveal-country-row">
                   <div class="next-match-row">
                     <div class="next-match-team">
-                      <span class="next-match-name">${currentPlayer.country}</span>
+                      <span class="next-match-name">${countryName(currentPlayer.country)}</span>
                       ${flagImg(currentPlayer.code,28,20)}
                     </div>
                     <span class="next-match-sep">×</span>
                     <div class="next-match-team">
                       ${flagImg(oppCode,28,20)}
-                      <span class="next-match-name">${opp}</span>
+                      <span class="next-match-name">${countryName(opp)}</span>
                     </div>
                   </div>
                   <div class="reveal-btns">${watchBtnHtml(currentPlayer.country)}</div>
@@ -1859,16 +1861,16 @@ function handleAnswer(idx){
     const ft=id('ft'),fs=id('fs'),fi=id('fi');
     if(!ft) continue;
     if(isCorrect){
-      const correctMsgs=['Correct!','Nice!',"You're right!",'Well done!','Spot on!','Nailed it!'];
-      ft.textContent=streak>1?`🔥 Streak × ${streak}`:correctMsgs[Math.floor(Math.random()*correctMsgs.length)];
+      const correctMsgs=lang==='pt'?['Correto!','Isso aí!','Acertou!','Muito bem!','Na mosca!','Arrasou!']:['Correct!','Nice!',"You're right!",'Well done!','Spot on!','Nailed it!'];
+      ft.textContent=streak>1?t(`🔥 Streak × ${streak}`,`🔥 Sequência × ${streak}`):correctMsgs[Math.floor(Math.random()*correctMsgs.length)];
       ft.className='feedback-text show correct';
-      if(fs){fs.textContent=streak>=3?'+200 pts (streak bonus)':'+100 pts';fs.className='feedback-sub show correct';}
+      if(fs){fs.textContent=streak>=3?t('+200 pts (streak bonus)','+200 pts (bônus de sequência)'):'+100 pts';fs.className='feedback-sub show correct';}
     } else {
-      const wrongMsgs=['Not quite.','Almost!','So close!','Oops!','Nice try!'];
+      const wrongMsgs=lang==='pt'?['Quase...','Não dessa vez.','Tão perto!','Ops!','Boa tentativa!']:['Not quite.','Almost!','So close!','Oops!','Nice try!'];
       ft.textContent=wrongMsgs[Math.floor(Math.random()*wrongMsgs.length)];
       ft.className='feedback-text show wrong';
     }
-    if(fi){fi.textContent=`Plays for ${currentPlayer.country} and ${currentPlayer.club}.`;fi.className='feedback-sub show';}
+    if(fi){fi.textContent=t(`Plays for ${currentPlayer.country} and ${currentPlayer.club}.`,`Joga por ${countryName(currentPlayer.country)} e ${currentPlayer.club}.`);fi.className='feedback-sub show';}
   }
 
   // Flip card
@@ -1910,10 +1912,10 @@ function showResults(){
   document.getElementById('results-score').textContent=score;
   const max=queue.length*200;
   document.getElementById('results-sub').textContent=
-    score>=max*.85?'You clearly watch too much football. Legendary.':
-    score>=max*.6?'Solid knowledge. A true football fan.':
-    score>=max*.35?'Not bad. Room to grow.':
-    'Keep watching — the World Cup will help.';
+    score>=max*.85?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lendário.'):
+    score>=max*.6?t('Solid knowledge. A true football fan.','Sólido conhecimento. Um verdadeiro fã.'):
+    score>=max*.35?t('Not bad. Room to grow.','Nada mal. Ainda tem como melhorar.'):
+    t('Keep watching — the World Cup will help.','Continue assistindo — a Copa vai ajudar.');
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1932,20 +1934,37 @@ const PT={
     {title:'Todos os Jogadores', desc:'Todos os jogadores do dataset. Apenas para especialistas.'},
   ],
 };
-const EN={
-  eyebrow:'FIFA World Cup 2026',
-  title:'Do you know<br>the <span>players?</span>',
-  sub:'Guess which country each player represents. Answer to reveal their photo and club. 20 rounds per match.',
-  modeLabel:'Choose your difficulty to start',
-  cards:[
-    {title:'Stars Only',   desc:'World-famous players everyone should know. Great for casual fans.'},
-    {title:'Mixed',        desc:'Stars plus well-known players from all 48 nations. A real test.'},
-    {title:'All Players',  desc:'Every player in the dataset. Experts only.'},
-  ],
+
+// ── Country names ──────────────────────────────────────────
+const PT_COUNTRIES={
+  Netherlands:'Holanda','South Korea':'Coreia do Sul','Saudi Arabia':'Arábia Saudita',
+  Morocco:'Marrocos',Iran:'Irã',Switzerland:'Suíça',Ghana:'Gana',Tunisia:'Tunísia',
+  Ecuador:'Equador',Uruguay:'Uruguai',Croatia:'Croácia',England:'Inglaterra',
+  France:'França',Germany:'Alemanha',Belgium:'Bélgica',Japan:'Japão',
+  Australia:'Austrália',Spain:'Espanha',Qatar:'Catar',USA:'EUA',Canada:'Canadá',
+  Brazil:'Brasil',Mexico:'México',Senegal:'Senegal',Argentina:'Argentina',Portugal:'Portugal',
 };
+function countryName(c){return lang==='pt'?(PT_COUNTRIES[c]||c):c;}
+
+// ── Player positions ───────────────────────────────────────
+const PT_POS={Forward:'Atacante',Midfielder:'Meio-campista',Defender:'Defensor',Goalkeeper:'Goleiro'};
+function posName(p){return lang==='pt'?(PT_POS[p]||p):p;}
+
+// ── Generic string helper ──────────────────────────────────
+function t(en,pt){return lang==='pt'?pt:en;}
 
 function applyLang(){
-  const s=lang==='pt'?PT:EN;
+  const s=lang==='pt'?PT:{
+    eyebrow:'FIFA World Cup 2026',
+    title:'Do you know<br>the <span>players?</span>',
+    sub:'Guess which country each player represents. Answer to reveal their photo and club. 20 rounds per match.',
+    modeLabel:'Choose your difficulty to start',
+    cards:[
+      {title:'Stars Only',   desc:'World-famous players everyone should know. Great for casual fans.'},
+      {title:'Mixed',        desc:'Stars plus well-known players from all 48 nations. A real test.'},
+      {title:'All Players',  desc:'Every player in the dataset. Experts only.'},
+    ],
+  };
   document.querySelector('.welcome-eyebrow').textContent=s.eyebrow;
   document.querySelector('.welcome-title').innerHTML=s.title;
   document.querySelector('.welcome-sub').textContent=s.sub;
@@ -1954,8 +1973,19 @@ function applyLang(){
     card.querySelector('.mode-card-title').textContent=s.cards[i].title;
     card.querySelector('.mode-card-desc').textContent=s.cards[i].desc;
   });
-  const btn=document.getElementById('lang-toggle');
-  btn.setAttribute('data-lang',lang);
+  // Static game labels visible in other screens
+  const ql=document.getElementById('q-label');
+  if(ql) ql.textContent=t('Which country does this player represent?','Qual país este jogador representa?');
+  const bcl=document.querySelector('.diff-breadcrumb-label');
+  if(bcl) bcl.textContent=t('Difficulty','Dificuldade');
+  // Results buttons (static HTML)
+  const pa=document.querySelector('.play-again');
+  if(pa) pa.textContent=t('Play Again','Jogar Novamente');
+  const cm=document.querySelector('.change-mode');
+  if(cm) cm.textContent=t('Change Difficulty','Mudar Dificuldade');
+  const rl=document.querySelector('.results-label');
+  if(rl) rl.textContent=t('Final score','Pontuação final');
+  document.getElementById('lang-toggle').setAttribute('data-lang',lang);
 }
 
 function toggleLang(){
