@@ -1611,6 +1611,7 @@ function buildOptions(p){
 function startGame(d){
   currentDifficulty=d||currentDifficulty;
   score=0;streak=0;round=0;
+  gtag('event','game_start',{difficulty:currentDifficulty});
   const pool=getPool(currentDifficulty);
   // NO-REPEAT: shuffle + slice guarantees each player appears at most once
   queue=shuffle(pool).slice(0,Math.min(TOTAL_ROUNDS,pool.length));
@@ -1853,6 +1854,7 @@ function handleAnswer(idx){
   const correctIdx=options.findIndex(o=>o.country===currentPlayer.country);
   if(isCorrect){score+=(streak>=3?200:100);streak++;}
   else{streak=0;}
+  gtag('event','answer',{difficulty:currentDifficulty,correct:isCorrect,round,streak});
   updateHUD();
 
   options.forEach((_,i)=>{
@@ -1917,6 +1919,7 @@ function handleAnswer(idx){
 // ═══════════════════════════════════════════════════════════
 function showResults(){
   show('results-screen');
+  gtag('event','game_complete',{difficulty:currentDifficulty,score,max_score:queue.length*200,rounds:queue.length});
   document.getElementById('results-score').textContent=score;
   const max=queue.length*200;
   document.getElementById('results-sub').textContent=
@@ -1999,6 +2002,7 @@ function applyLang(){
 function toggleLang(){
   lang=lang==='en'?'pt':'en';
   localStorage.setItem('lang',lang);
+  gtag('event','language_switch',{language:lang});
   applyLang();
 }
 
