@@ -260,7 +260,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
     <div id="welcome-screen">
       <div class="welcome-eyebrow">FIFA World Cup 2026</div>
       <div class="welcome-title">Do you know<br>the <span>players?</span></div>
-      <div class="welcome-sub">Guess which country each player represents. Answer to reveal their photo and club. 20 rounds per match.</div>
+      <div class="welcome-sub">Guess which country each player represents. Answer to reveal their photo and club. 10 rounds per match.</div>
       <div class="mode-label">Choose your difficulty to start</div>
       <div class="mode-cards">
         <div class="mode-card" onclick="startGame('stars')">
@@ -1937,7 +1937,7 @@ let lang=localStorage.getItem('lang')||'en';
 const PT={
   eyebrow:'Copa do Mundo FIFA 2026',
   title:'Você conhece<br>os <span>jogadores?</span>',
-  sub:'Adivinhe qual país cada jogador representa. Responda para revelar sua foto e clube.',
+  sub:'Adivinhe qual país cada jogador representa. Responda para revelar sua foto e clube. 10 rodadas por partida.',
   modeLabel:'Escolha sua dificuldade para começar',
   cards:[
     {title:'Só Estrelas',   desc:'Jogadores mundialmente famosos que todos deveriam conhecer. Ótimo para fãs casuais.'},
@@ -1968,7 +1968,7 @@ function applyLang(){
   const s=lang==='pt'?PT:{
     eyebrow:'FIFA World Cup 2026',
     title:'Do you know<br>the <span>players?</span>',
-    sub:'Guess which country each player represents. Answer to reveal their photo and club. 20 rounds per match.',
+    sub:'Guess which country each player represents. Answer to reveal their photo and club. 10 rounds per match.',
     modeLabel:'Choose your difficulty to start',
     cards:[
       {title:'Stars Only',   desc:'World-famous players everyone should know. Great for casual fans.'},
