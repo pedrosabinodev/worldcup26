@@ -2559,7 +2559,6 @@ function loadPhotoIntoBack(src,fallbackWiki){
   if(!back) return;
   if(src){
     const img=new Image();
-    img.crossOrigin='anonymous';
     img.onload=()=>{
       // Guard: if the user advanced to the next round, this element is detached
       if(!back.isConnected) return;
