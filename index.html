@@ -186,19 +186,18 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 /* SHARE MODAL */
 .share-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(3px)}
 .share-modal.open{display:flex}
-.share-modal-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:24px;width:100%;max-width:440px;display:flex;flex-direction:column;gap:20px}
+.share-modal-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:24px;width:100%;max-width:440px;max-height:80vh;display:flex;flex-direction:column;gap:20px}
 .share-modal-header{display:flex;align-items:center;justify-content:space-between}
 .share-modal-title{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .share-modal-x{background:none;border:none;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:0;transition:color .15s}
 .share-modal-x:hover{color:var(--text)}
-.share-text-block{background:var(--surface2);border:1px solid var(--border2);border-radius:4px;padding:16px 20px;font-family:'Barlow',sans-serif;font-size:14px;line-height:1.75;color:var(--text);white-space:pre-wrap;user-select:all;cursor:text;max-height:50vh;overflow-y:auto}
+.share-text-block{background:var(--surface2);border:1px solid var(--border2);border-radius:4px;padding:16px 20px;font-family:'Barlow',sans-serif;font-size:14px;line-height:1.75;color:var(--text);white-space:pre-wrap;user-select:all;cursor:text;flex:1;overflow-y:auto}
 .share-actions{display:flex;flex-direction:column;gap:12px}
 .copy-share-btn{flex:1;background:var(--accent);color:var(--bg);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;padding:14px 20px;border-radius:3px;cursor:pointer;transition:opacity .15s}
 .copy-share-btn:hover{opacity:.9}
 .copy-share-btn.copied{background:var(--success)}
 .modal-close-btn{background:none;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border2);padding:14px 24px;border-radius:3px;cursor:pointer;white-space:nowrap;transition:border-color .15s,color .15s}
 .modal-close-btn:hover{border-color:var(--muted);color:var(--text)}
-.share-hint{font-size:12px;color:rgba(139,139,149,.6);text-align:center}
 
 /* RESPONSIVE */
 @media(min-width:601px){
@@ -372,7 +371,6 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
           <button class="copy-share-btn" id="copy-share-btn" onclick="copyShareText()">📋 Copy &amp; Share</button>
           <button class="modal-close-btn" id="modal-close-btn" onclick="closeShareModal()">Close</button>
         </div>
-        <p class="share-hint" id="share-hint">Paste in WhatsApp, X, Instagram, iMessage…</p>
       </div>
     </div>
 
@@ -2858,8 +2856,6 @@ function applyLang(){
   if(smTitle) smTitle.textContent=t('Share your match','Compartilhe sua partida');
   const mcBtn=document.getElementById('modal-close-btn');
   if(mcBtn) mcBtn.textContent=t('Close','Fechar');
-  const shint=document.getElementById('share-hint');
-  if(shint) shint.textContent=t('Paste in WhatsApp, X, Instagram, iMessage…','Cole no WhatsApp, X, Instagram, iMessage…');
 }
 
 function toggleLang(){
