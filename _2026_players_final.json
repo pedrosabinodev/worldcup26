@@ -804,7 +804,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nef5l21770824051.jpg"
   },
   {
-    "name": "Xaver",
+    "name": "Xaver Schlager",
     "country": "Austria",
     "code": "at",
     "pos": "Midfielder",
@@ -1561,7 +1561,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/yi6dt21746034945.jpg"
   },
   {
-    "name": "Wesley",
+    "name": "Wesley Vinícius",
     "country": "Brazil",
     "code": "br",
     "pos": "Defender",
@@ -1571,7 +1571,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/nvtv6m1741320511.jpg"
   },
   {
-    "name": "Gabriel",
+    "name": "Gabriel Santos",
     "country": "Brazil",
     "code": "br",
     "pos": "Defender",
@@ -1788,14 +1788,14 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/94n8i41580203524.jpg"
   },
   {
-    "name": "Thiago",
+    "name": "Thiago Almada",
     "country": "Brazil",
     "code": "br",
     "pos": "Forward",
     "club": "Brentford FC",
     "d": 3,
-    "wiki": "Igor_Nascimento_Rodrigues",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/dvar5j1771939878.jpg"
+    "wiki": "Thiago_Almada",
+    "photo": "https://www.thesportsdb.com/images/media/player/thumb/nxn1kn1780009680.jpg"
   },
   {
     "name": "Rayan",
@@ -1848,7 +1848,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/gv2id91779127993.jpg"
   },
   {
-    "name": "Logan",
+    "name": "Logan Costa",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Defender",
@@ -1868,7 +1868,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/5qdlty1705487789.jpg"
   },
   {
-    "name": "Jovane",
+    "name": "Jovane Borges",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Midfielder",
@@ -1918,7 +1918,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ts35fw1669547014.jpg"
   },
   {
-    "name": "Marcio",
+    "name": "Marcio Brazão",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Goalkeeper",
@@ -1998,7 +1998,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/mwu5tv1741897409.jpg"
   },
   {
-    "name": "Ryan",
+    "name": "Ryan Graca",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Forward",
@@ -2047,7 +2047,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/6rni0z1779195841.jpg"
   },
   {
-    "name": "Kelvin",
+    "name": "Kelvin Spencer",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Defender",
@@ -2057,7 +2057,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/vw7qh71779195926.jpg"
   },
   {
-    "name": "Hélio",
+    "name": "Hélio Oliveira",
     "country": "Cape Verde",
     "code": "cv",
     "pos": "Midfielder",
@@ -2295,7 +2295,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/hxkkoz1780106563.jpg"
   },
   {
-    "name": "Promise",
+    "name": "Promise David",
     "country": "Canada",
     "code": "ca",
     "pos": "Forward",
@@ -2315,7 +2315,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/i7oke71677880371.jpg"
   },
   {
-    "name": "Marcelo",
+    "name": "Marcelo Flores",
     "country": "Canada",
     "code": "ca",
     "pos": "Midfielder",
@@ -2415,7 +2415,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/uk6yfg1726080105.jpg"
   },
   {
-    "name": "James",
+    "name": "James Rodríguez",
     "country": "Colombia",
     "code": "co",
     "pos": "Midfielder",
@@ -2723,7 +2723,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/z3i26p1772029986.jpg"
   },
   {
-    "name": "Tshibola",
+    "name": "Tshibola Aaron",
     "country": "DR Congo",
     "code": "cd",
     "pos": "Midfielder",
@@ -2763,7 +2763,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/9b57361678887178.jpg"
   },
   {
-    "name": "Mayele",
+    "name": "Mayele Kalala",
     "country": "DR Congo",
     "code": "cd",
     "pos": "Forward",
@@ -2983,7 +2983,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ws5egt1735338560.jpg"
   },
   {
-    "name": "Amad",
+    "name": "Amad Diallo",
     "country": "Ivory Coast",
     "code": "ci",
     "pos": "Forward",
@@ -4144,7 +4144,7 @@
     "wiki": "Mohamed_El-Shenawy"
   },
   {
-    "name": "Yasser",
+    "name": "Yasser Elhanafy",
     "country": "Egypt",
     "code": "eg",
     "pos": "Defender",
@@ -4162,7 +4162,7 @@
     "wiki": "Mohamed_Eldemerdash"
   },
   {
-    "name": "Hossam",
+    "name": "Hossam Abdelmegeed",
     "country": "Egypt",
     "code": "eg",
     "pos": "Defender",
@@ -4664,13 +4664,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/1nob4p1778803847.jpg"
   },
   {
-    "name": "Dayotchanculle Upamecano",
+    "name": "Dayot Upamecano",
     "country": "France",
     "code": "fr",
     "pos": "Defender",
     "club": "FC Bayern München",
-    "d": 3,
-    "wiki": "Dayotchanculle_Upamecano",
+    "d": 2,
+    "wiki": "Dayot_Upamecano",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/a66k1g1778818296.jpg"
   },
   {
@@ -4684,13 +4684,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/ghod9q1778805401.jpg"
   },
   {
-    "name": "Kouadio Kone",
+    "name": "Manu Koné",
     "country": "France",
     "code": "fr",
     "pos": "Midfielder",
     "club": "AS Roma",
-    "d": 3,
-    "wiki": "Kouadio_Kone",
+    "d": 2,
+    "wiki": "Manu_Koné",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/8hse0b1778805166.jpg"
   },
   {
@@ -4774,14 +4774,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/dqh5pj1778817478.jpg"
   },
   {
-    "name": "Konate",
+    "name": "Ibrahima Konaté",
     "country": "France",
     "code": "fr",
     "pos": "Defender",
     "club": "Liverpool FC",
     "d": 2,
-    "wiki": "Ibrahima_Konaté",
-    "photo": "https://www.thesportsdb.com/images/media/player/thumb/x6p7ul1778805101.jpg"
+    "wiki": "Ibrahima_Konaté"
   },
   {
     "name": "Mike Maignan",
@@ -5174,7 +5173,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/l81x0t1631706928.jpg"
   },
   {
-    "name": "Caleb",
+    "name": "Caleb Yirenkyi",
     "country": "Ghana",
     "code": "gh",
     "pos": "Midfielder",
@@ -5194,14 +5193,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/e0bcbl1746073793.jpg"
   },
   {
-    "name": "Thomas",
+    "name": "Thomas Partey",
     "country": "Ghana",
     "code": "gh",
     "pos": "Midfielder",
     "club": "Villarreal CF",
     "d": 1,
-    "wiki": "Thomas_Partey",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/lnsxw11705917605.jpg"
+    "wiki": "Thomas_Partey"
   },
   {
     "name": "Abdul Suleman",
@@ -5213,13 +5211,13 @@
     "wiki": "Abdul_Suleman"
   },
   {
-    "name": "Fatawu",
+    "name": "Fatawu Issahaku",
     "country": "Ghana",
     "code": "gh",
     "pos": "Forward",
     "club": "Leicester City FC",
-    "d": 3,
-    "wiki": "Abdul_Issahaku",
+    "d": 2,
+    "wiki": "Abdul_Fatawu_Issahaku",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/8yoz1a1668454156.jpg"
   },
   {
@@ -5243,13 +5241,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bx0rp01509542430.jpg"
   },
   {
-    "name": "Asante",
+    "name": "Solomon Asante",
     "country": "Ghana",
     "code": "gh",
     "pos": "Forward",
     "club": "Coventry City FC",
     "d": 3,
-    "wiki": "Solomon_Thomas-Asante",
+    "wiki": "Solomon_Asante",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/2l2iae1677849806.jpg"
   },
   {
@@ -5350,23 +5348,23 @@
     "wiki": "Augustine_Boakye"
   },
   {
-    "name": "Peprah",
+    "name": "Emmanuel Oppong",
     "country": "Ghana",
     "code": "gh",
     "pos": "Defender",
     "club": "OGC Nice",
     "d": 3,
-    "wiki": "Kojo_Oppong",
+    "wiki": "Emmanuel_Oppong",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/d5xcxz1765836176.jpg"
   },
   {
-    "name": "Kamaldeen",
+    "name": "Kamaldeen Sulemana",
     "country": "Ghana",
     "code": "gh",
     "pos": "Forward",
     "club": "Atalanta Bergamo",
-    "d": 3,
-    "wiki": "Kamal_Sulemana",
+    "d": 2,
+    "wiki": "Kamaldeen_Sulemana",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/w9stoi1630490492.jpg"
   },
   {
@@ -5379,13 +5377,13 @@
     "wiki": "Derrick_Luckassen"
   },
   {
-    "name": "Nuamah",
+    "name": "Ernest Nuamah",
     "country": "Ghana",
     "code": "gh",
     "pos": "Forward",
     "club": "Olympique Lyonnais",
-    "d": 3,
-    "wiki": "Ernest_Appiah"
+    "d": 2,
+    "wiki": "Ernest_Nuamah"
   },
   {
     "name": "Prince Adu",
@@ -5397,7 +5395,7 @@
     "wiki": "Prince_Adu"
   },
   {
-    "name": "Seneya",
+    "name": "Marvin Senaya",
     "country": "Ghana",
     "code": "gh",
     "pos": "Defender",
@@ -5675,7 +5673,7 @@
     "wiki": "Ali_Safarbeiranvand"
   },
   {
-    "name": "Saleh",
+    "name": "Saleh Hardani",
     "country": "Iran",
     "code": "ir",
     "pos": "Defender",
@@ -5799,7 +5797,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/3pcno21610655335.jpg"
   },
   {
-    "name": "Roozbeh",
+    "name": "Roozbeh Cheshmi",
     "country": "Iran",
     "code": "ir",
     "pos": "Midfielder",
@@ -5818,7 +5816,7 @@
     "wiki": "Mahdi_Torabi"
   },
   {
-    "name": "Arya",
+    "name": "Arya Yousefi",
     "country": "Iran",
     "code": "ir",
     "pos": "Defender",
@@ -5827,7 +5825,7 @@
     "wiki": "Arya_Yousefi"
   },
   {
-    "name": "Amirhossein",
+    "name": "Amirhossein Hosseinzadehtazehgheshlagh",
     "country": "Iran",
     "code": "ir",
     "pos": "Forward",
@@ -5836,7 +5834,7 @@
     "wiki": "Amirhossein_Hosseinzadehtazehgheshlagh"
   },
   {
-    "name": "Shahriyar",
+    "name": "Shahriyar Moghanloo",
     "country": "Iran",
     "code": "ir",
     "pos": "Forward",
@@ -5845,7 +5843,7 @@
     "wiki": "Shahriyar_Moghanloo"
   },
   {
-    "name": "Mohammad",
+    "name": "Mohammad Ghorbani",
     "country": "Iran",
     "code": "ir",
     "pos": "Midfielder",
@@ -5864,7 +5862,7 @@
     "wiki": "Seyedhossein_Hosseini"
   },
   {
-    "name": "Ramin",
+    "name": "Ramin Rezaeiansemeskandi",
     "country": "Iran",
     "code": "ir",
     "pos": "Defender",
@@ -5882,7 +5880,7 @@
     "wiki": "Dennis_Dargahi"
   },
   {
-    "name": "Danial",
+    "name": "Danial Iri",
     "country": "Iran",
     "code": "ir",
     "pos": "Defender",
@@ -5900,7 +5898,7 @@
     "wiki": "Amirmohammad_Razaghinia"
   },
   {
-    "name": "Fahad",
+    "name": "Fahad Raheem",
     "country": "Iraq",
     "code": "iq",
     "pos": "Goalkeeper",
@@ -5910,7 +5908,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/so1yp41780463439.jpg"
   },
   {
-    "name": "Rebin",
+    "name": "Rebin Adhamat",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -5920,7 +5918,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/kuvak91780463116.jpg"
   },
   {
-    "name": "Hussein",
+    "name": "Hussein Ali",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -5940,7 +5938,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/3m6pe31780463304.jpg"
   },
   {
-    "name": "Akam",
+    "name": "Akam Rahman",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -5950,7 +5948,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/cmul1b1780441613.jpg"
   },
   {
-    "name": "Munaf",
+    "name": "Munaf al-Tekreeti",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -5959,7 +5957,7 @@
     "wiki": "Munaf_al-Tekreeti"
   },
   {
-    "name": "Youssef",
+    "name": "Youssef Amyn",
     "country": "Iraq",
     "code": "iq",
     "pos": "Midfielder",
@@ -5969,7 +5967,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/prr9521780440625.jpg"
   },
   {
-    "name": "Ibrahim",
+    "name": "Ibrahim al-Kaabawi",
     "country": "Iraq",
     "code": "iq",
     "pos": "Midfielder",
@@ -5988,7 +5986,7 @@
     "wiki": "Ali_Alzubaidi"
   },
   {
-    "name": "Mohanad",
+    "name": "Mohanad al-Shammari",
     "country": "Iraq",
     "code": "iq",
     "pos": "Forward",
@@ -6007,7 +6005,7 @@
     "wiki": "Ahmed_Ahmed"
   },
   {
-    "name": "Jalal",
+    "name": "Jalal Hachim",
     "country": "Iraq",
     "code": "iq",
     "pos": "Goalkeeper",
@@ -6035,7 +6033,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/zbtnwy1697485915.jpg"
   },
   {
-    "name": "Ahmed",
+    "name": "Ahmed al-Hajjaj",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -6065,7 +6063,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/1z782i1780446475.jpg"
   },
   {
-    "name": "Aymen",
+    "name": "Aymen Ghadhban",
     "country": "Iraq",
     "code": "iq",
     "pos": "Forward",
@@ -6084,7 +6082,7 @@
     "wiki": "Kevin_William"
   },
   {
-    "name": "Aimar",
+    "name": "Aimar Sher",
     "country": "Iraq",
     "code": "iq",
     "pos": "Midfielder",
@@ -6094,7 +6092,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/tuyc4f1631797563.jpg"
   },
   {
-    "name": "Marko",
+    "name": "Marko Hussein",
     "country": "Iraq",
     "code": "iq",
     "pos": "Forward",
@@ -6134,7 +6132,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/ifyqkb1780446299.jpg"
   },
   {
-    "name": "Mustafa",
+    "name": "Mustafa Korji",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -6144,7 +6142,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/tzmqn71780446976.jpg"
   },
   {
-    "name": "Frans",
+    "name": "Frans Haddad",
     "country": "Iraq",
     "code": "iq",
     "pos": "Defender",
@@ -6322,7 +6320,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/06wuk11681570896.jpg"
   },
   {
-    "name": "Ayase",
+    "name": "Ayase Ueda",
     "country": "Japan",
     "code": "jp",
     "pos": "Forward",
@@ -6412,7 +6410,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/iajov41726736211.jpg"
   },
   {
-    "name": "Yazeed",
+    "name": "Yazeed Abulaila",
     "country": "Jordan",
     "code": "jo",
     "pos": "Goalkeeper",
@@ -6502,7 +6500,7 @@
     "wiki": "Mousa_Suleiman"
   },
   {
-    "name": "Odeh",
+    "name": "Odeh Fakhoury",
     "country": "Jordan",
     "code": "jo",
     "pos": "Forward",
@@ -6529,7 +6527,7 @@
     "wiki": "Mahmoud_Almardi"
   },
   {
-    "name": "Raja'Ei",
+    "name": "Raja'Ei Hasan",
     "country": "Jordan",
     "code": "jo",
     "pos": "Midfielder",
@@ -6556,7 +6554,7 @@
     "wiki": "Mohammad_Abualnadi"
   },
   {
-    "name": "Saleem",
+    "name": "Saleem Obaid",
     "country": "Jordan",
     "code": "jo",
     "pos": "Defender",
@@ -6574,7 +6572,7 @@
     "wiki": "Ibrahim_Sabra"
   },
   {
-    "name": "Sa'Ed",
+    "name": "Sa'Ed Alrosan",
     "country": "Jordan",
     "code": "jo",
     "pos": "Defender",
@@ -6592,7 +6590,7 @@
     "wiki": "Mohannad_Abu_Taha"
   },
   {
-    "name": "Nizar",
+    "name": "Nizar al-Rashdan",
     "country": "Jordan",
     "code": "jo",
     "pos": "Midfielder",
@@ -6610,7 +6608,7 @@
     "wiki": "Abdallah_Alfakhori"
   },
   {
-    "name": "Ehsan",
+    "name": "Ehsan Haddad",
     "country": "Jordan",
     "code": "jo",
     "pos": "Defender",
@@ -6646,86 +6644,85 @@
     "wiki": "Anas_Badawi"
   },
   {
-    "name": "Seunggyu",
+    "name": "Kim Seung-gyu",
     "country": "South Korea",
     "code": "kr",
     "pos": "Goalkeeper",
     "club": "FC Tokyo",
-    "d": 3,
-    "wiki": "Seunggyu_Kim"
+    "d": 2,
+    "wiki": "Kim_Seung-gyu"
   },
   {
-    "name": "Hanbeom",
+    "name": "Lee Han-beom",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "FC Midtjylland",
     "d": 3,
-    "wiki": "Hanbeom_Lee"
+    "wiki": "Lee_Han-beom"
   },
   {
-    "name": "Gihyuk",
+    "name": "Lee Gi-hyeok",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Gangwon FC",
     "d": 3,
-    "wiki": "Gihyuk_Lee"
+    "wiki": "Lee_Gi-hyeok"
   },
   {
-    "name": "Minjae",
+    "name": "Kim Min-jae",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "FC Bayern München",
-    "d": 3,
-    "wiki": "Minjae_Kim"
+    "d": 2,
+    "wiki": "Kim_Min-jae"
   },
   {
-    "name": "Taehyeon",
+    "name": "Kim Tae-hyeon",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "Kashima Antlers",
     "d": 3,
-    "wiki": "Taehyeon_Kim"
+    "wiki": "Kim_Tae-hyeon"
   },
   {
-    "name": "Inbeom",
+    "name": "Hwang In-beom",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Feyenoord Rotterdam",
-    "d": 3,
-    "wiki": "Inbeom_Hwang"
+    "d": 2,
+    "wiki": "Hwang_In-beom"
   },
   {
-    "name": "Heungmin",
+    "name": "Son Heung-min",
     "country": "South Korea",
     "code": "kr",
     "pos": "Forward",
     "club": "LAFC",
-    "d": 3,
-    "wiki": "Heung_Son",
-    "photo": "https://www.thesportsdb.com/images/media/player/thumb/r5abfl1778974278.jpg"
+    "d": 1,
+    "wiki": "Son_Heung-min"
   },
   {
-    "name": "Seungho",
+    "name": "Paik Seung-ho",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Birmingham City FC",
     "d": 3,
-    "wiki": "Seungho_Paik"
+    "wiki": "Paik_Seung-ho"
   },
   {
-    "name": "Guesung",
+    "name": "Cho Gue-sung",
     "country": "South Korea",
     "code": "kr",
     "pos": "Forward",
     "club": "FC Midtjylland",
-    "d": 3,
-    "wiki": "Guesung_Cho"
+    "d": 2,
+    "wiki": "Cho_Gue-sung"
   },
   {
     "name": "Jaesung",
@@ -6748,106 +6745,106 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/cgr5971778971405.jpg"
   },
   {
-    "name": "Bumkeun",
+    "name": "Song Bum-keun",
     "country": "South Korea",
     "code": "kr",
     "pos": "Goalkeeper",
     "club": "Jeonbuk Hyundai Motors FC",
     "d": 3,
-    "wiki": "Bumkeun_Song"
+    "wiki": "Song_Bum-keun"
   },
   {
-    "name": "Taeseok",
+    "name": "Lee Tae-seok",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "FK Austria Wien",
     "d": 3,
-    "wiki": "Taeseok_Lee"
+    "wiki": "Lee_Tae-seok"
   },
   {
-    "name": "Wije",
+    "name": "Cho Wi-je",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "Jeonbuk Hyundai Motors FC",
     "d": 3,
-    "wiki": "Wije_Cho"
+    "wiki": "Cho_Wi-je"
   },
   {
-    "name": "Moonhwan",
+    "name": "Kim Moon-hwan",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "Daejeon Hana Citizen FC",
     "d": 3,
-    "wiki": "Moonhwan_Kim"
+    "wiki": "Kim_Moon-hwan"
   },
   {
-    "name": "Jinseob",
+    "name": "Park Jin-seob",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "Zhejiang FC",
     "d": 3,
-    "wiki": "Jinseob_Park"
+    "wiki": "Park_Jin-seob"
   },
   {
-    "name": "Junho",
+    "name": "Bae Junho",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Stoke City FC",
-    "d": 3,
-    "wiki": "Junho_Bae"
+    "d": 2,
+    "wiki": "Bae_Junho"
   },
   {
-    "name": "Hyeongyu",
+    "name": "Oh Hyeon-gyu",
     "country": "South Korea",
     "code": "kr",
     "pos": "Forward",
     "club": "Be ş ikta ş JK",
-    "d": 3,
-    "wiki": "Hyeongyu_Oh"
+    "d": 2,
+    "wiki": "Oh_Hyeon-gyu"
   },
   {
-    "name": "Kangin",
+    "name": "Lee Kang-in",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Paris Saint-Germain",
-    "d": 3,
-    "wiki": "Kangin_Lee"
+    "d": 2,
+    "wiki": "Lee_Kang-in"
   },
   {
-    "name": "Hyunjun",
+    "name": "Yang Hyun-jun",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Celtic FC",
     "d": 3,
-    "wiki": "Hyunjun_Yang"
+    "wiki": "Yang_Hyun-jun"
   },
   {
-    "name": "Hyeonwoo",
+    "name": "Jo Hyeon-woo",
     "country": "South Korea",
     "code": "kr",
     "pos": "Goalkeeper",
     "club": "Ulsan HD",
     "d": 3,
-    "wiki": "Hyeonwoo_Jo"
+    "wiki": "Jo_Hyeon-woo"
   },
   {
-    "name": "Youngwoo",
+    "name": "Seol Young-woo",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
     "club": "FK Crvena Zvezda",
     "d": 3,
-    "wiki": "Youngwoo_Seol"
+    "wiki": "Seol_Young-woo"
   },
   {
-    "name": "Jens",
+    "name": "Jens Castrop",
     "country": "South Korea",
     "code": "kr",
     "pos": "Defender",
@@ -6857,31 +6854,31 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/bcnyom1778970409.jpg"
   },
   {
-    "name": "Jingyu",
+    "name": "Kim Jin-gyu",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Jeonbuk Hyundai Motors FC",
     "d": 3,
-    "wiki": "Jingyu_Kim"
+    "wiki": "Kim_Jin-gyu"
   },
   {
-    "name": "Jisung",
+    "name": "Eom Ji-sung",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Swansea City AFC",
     "d": 3,
-    "wiki": "Jisung_Eom"
+    "wiki": "Eom_Ji-sung"
   },
   {
-    "name": "Donggyeong",
+    "name": "Lee Dong-gyeong",
     "country": "South Korea",
     "code": "kr",
     "pos": "Midfielder",
     "club": "Ulsan HD",
     "d": 3,
-    "wiki": "Donggyeong_Lee"
+    "wiki": "Lee_Dong-gyeong"
   },
   {
     "name": "José Rangel",
@@ -6964,7 +6961,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/bgwqzf1750327819.jpg"
   },
   {
-    "name": "Raúl",
+    "name": "Raúl Jiménez",
     "country": "Mexico",
     "code": "mx",
     "pos": "Forward",
@@ -7044,7 +7041,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/deil6s1719501074.jpg"
   },
   {
-    "name": "Orbelín",
+    "name": "Orbelín Pineda",
     "country": "Mexico",
     "code": "mx",
     "pos": "Midfielder",
@@ -7232,7 +7229,7 @@
     "wiki": "Sou\u0000Ane_Rahimi"
   },
   {
-    "name": "Brahim",
+    "name": "Brahim Abdelkader",
     "country": "Morocco",
     "code": "ma",
     "pos": "Forward",
@@ -7271,7 +7268,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/qyvpxx1710577410.jpg"
   },
   {
-    "name": "Issa",
+    "name": "Issa Diop",
     "country": "Morocco",
     "code": "ma",
     "pos": "Defender",
@@ -7490,14 +7487,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/l0lr521578226693.jpg"
   },
   {
-    "name": "Memphis",
+    "name": "Memphis Depay",
     "country": "Netherlands",
     "code": "nl",
     "pos": "Forward",
     "club": "SC Corinthians",
     "d": 2,
-    "wiki": "Memphis_Depay",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/b8ce921706956738.jpg"
+    "wiki": "Memphis_Depay"
   },
   {
     "name": "Cody Gakpo",
@@ -8268,7 +8264,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/1a45ue1779820732.jpg"
   },
   {
-    "name": "Ismael",
+    "name": "Ismael Díaz",
     "country": "Panama",
     "code": "pa",
     "pos": "Midfielder",
@@ -8538,7 +8534,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/pfmcgv1665915778.jpg"
   },
   {
-    "name": "Mauricio",
+    "name": "Mauricio Magalhães",
     "country": "Paraguay",
     "code": "py",
     "pos": "Midfielder",
@@ -8988,7 +8984,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/s5z8bu1707601067.jpg"
   },
   {
-    "name": "Gueye",
+    "name": "Gueye Seydinaissalaye",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -8997,7 +8993,7 @@
     "wiki": "Gueye_Seydinaissalaye"
   },
   {
-    "name": "Jassem",
+    "name": "Jassem Abdulsallam",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -9063,7 +9059,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/pkfve31707592229.jpg"
   },
   {
-    "name": "Karim",
+    "name": "Karim Boudiaf",
     "country": "Qatar",
     "code": "qa",
     "pos": "Midfielder",
@@ -9073,7 +9069,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/crv34o1668600178.jpg"
   },
   {
-    "name": "Ayoub",
+    "name": "Ayoub Aloui",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -9082,7 +9078,7 @@
     "wiki": "Ayoub_Aloui"
   },
   {
-    "name": "Homam",
+    "name": "Homam Ahmed",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -9120,7 +9116,7 @@
     "wiki": "Ahmed_Alganehi"
   },
   {
-    "name": "Sultan",
+    "name": "Sultan al-Brake",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -9130,7 +9126,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/9r4w6z1709485298.jpg"
   },
   {
-    "name": "Almoez",
+    "name": "Almoez Abdulla",
     "country": "Qatar",
     "code": "qa",
     "pos": "Forward",
@@ -9149,7 +9145,7 @@
     "wiki": "Ahmed_Abdoulla"
   },
   {
-    "name": "Salah",
+    "name": "Salah Hassan",
     "country": "Qatar",
     "code": "qa",
     "pos": "Goalkeeper",
@@ -9179,7 +9175,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/hflwtj1668601261.jpg"
   },
   {
-    "name": "Tahsin",
+    "name": "Tahsin Jamshid",
     "country": "Qatar",
     "code": "qa",
     "pos": "Forward",
@@ -9189,7 +9185,7 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/7034aa1780378285.jpg"
   },
   {
-    "name": "Alhashmi",
+    "name": "Alhashmi Mohialdin",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
@@ -9257,17 +9253,16 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/b43vri1668849859.jpg"
   },
   {
-    "name": "Nasser",
+    "name": "Nasser Al-Dawsari",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Midfielder",
     "club": "Al Hilal SC",
-    "d": 3,
-    "wiki": "Nasser_Al-Dawsari",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/40dzog1668793675.jpg"
+    "d": 2,
+    "wiki": "Nasser_Al-Dawsari"
   },
   {
-    "name": "Musab",
+    "name": "Musab Aljuwayr",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Midfielder",
@@ -9276,7 +9271,7 @@
     "wiki": "Musab_Aljuwayr"
   },
   {
-    "name": "Aiman",
+    "name": "Aiman Ahmed",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Forward",
@@ -9285,7 +9280,7 @@
     "wiki": "Aiman_Ahmed"
   },
   {
-    "name": "Feras",
+    "name": "Feras Albrikan",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Forward",
@@ -9294,14 +9289,13 @@
     "wiki": "Feras_Al-Brikan"
   },
   {
-    "name": "Salem",
+    "name": "Salem Al-Dawsari",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Forward",
     "club": "Al Hilal SC",
     "d": 2,
-    "wiki": "Salem_Al-Dawsari",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/xqwrzf1668794930.jpg"
+    "wiki": "Salem_Al-Dawsari"
   },
   {
     "name": "Saleh Alshehri",
@@ -9314,7 +9308,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/8scycx1668850397.jpg"
   },
   {
-    "name": "Saud",
+    "name": "Saud Abdulhamid",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Defender",
@@ -9324,7 +9318,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/opcqpo1668712724.jpg"
   },
   {
-    "name": "Nawaf",
+    "name": "Nawaf Bu",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Defender",
@@ -9351,7 +9345,7 @@
     "wiki": "Abdullah_Alkhaibari"
   },
   {
-    "name": "Ziyad",
+    "name": "Ziyad Aljohani",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Midfielder",
@@ -9360,7 +9354,7 @@
     "wiki": "Ziyad_Aljohani"
   },
   {
-    "name": "Khalid",
+    "name": "Khalid Alghannam",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Forward",
@@ -9426,7 +9420,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/jergmq1668799922.jpg"
   },
   {
-    "name": "Moteb",
+    "name": "Moteb Alharbi",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Defender",
@@ -9435,7 +9429,7 @@
     "wiki": "Moteb_Alharbi"
   },
   {
-    "name": "Jehad",
+    "name": "Jehad Thikri",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Defender",
@@ -9444,7 +9438,7 @@
     "wiki": "Jehad_Thikri"
   },
   {
-    "name": "Mohammed",
+    "name": "Mohammed Abu",
     "country": "Saudi Arabia",
     "code": "sa",
     "pos": "Defender",
@@ -9778,7 +9772,7 @@
     "wiki": "Assane_Diao"
   },
   {
-    "name": "Lamine",
+    "name": "Lamine Camara",
     "country": "Senegal",
     "code": "sn",
     "pos": "Midfielder",
@@ -9846,7 +9840,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/hdt64h1609169603.jpg"
   },
   {
-    "name": "Krépin",
+    "name": "Krépin Diatta",
     "country": "Senegal",
     "code": "sn",
     "pos": "Defender",
@@ -9914,7 +9908,7 @@
     "wiki": "Mouhamadou_Diarra"
   },
   {
-    "name": "Bara",
+    "name": "Bara Ndiaye",
     "country": "Senegal",
     "code": "sn",
     "pos": "Midfielder",
@@ -10252,13 +10246,13 @@
     "wiki": "Alejandro_Grimaldo"
   },
   {
-    "name": "Eric",
+    "name": "Eric García",
     "country": "Spain",
     "code": "es",
     "pos": "Defender",
     "club": "FC Barcelona",
-    "d": 3,
-    "wiki": "Eric_García_Martret",
+    "d": 2,
+    "wiki": "Eric_García",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/mc6fd21779730502.jpg"
   },
   {
@@ -10292,13 +10286,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/wuh4nr1771253715.jpg"
   },
   {
-    "name": "Fabián",
+    "name": "Fabián Ruiz",
     "country": "Spain",
     "code": "es",
     "pos": "Midfielder",
     "club": "Paris Saint-Germain",
-    "d": 3,
-    "wiki": "Fabian_Ruiz_Peña",
+    "d": 2,
+    "wiki": "Fabián_Ruiz",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/53hbfh1770216586.jpg"
   },
   {
@@ -10322,13 +10316,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/lo29ok1771254713.jpg"
   },
   {
-    "name": "Yeremy",
+    "name": "Yeremy Pino",
     "country": "Spain",
     "code": "es",
     "pos": "Forward",
     "club": "Crystal Palace FC",
-    "d": 3,
-    "wiki": "Yeremy_Pino_Santos",
+    "d": 2,
+    "wiki": "Yeremy_Pino",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/5smsdr1622109964.jpg"
   },
   {
@@ -11365,7 +11359,7 @@
     "wiki": "Kenan_Yildiz"
   },
   {
-    "name": "Altay",
+    "name": "Altay Bayindir",
     "country": "Turkiye",
     "code": "tr",
     "pos": "Goalkeeper",
@@ -11432,7 +11426,7 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/5o5qpu1610882908.jpg"
   },
   {
-    "name": "Yunus",
+    "name": "Yunus Akgün",
     "country": "Turkiye",
     "code": "tr",
     "pos": "Forward",
@@ -11460,7 +11454,7 @@
     "wiki": "Barış_Yılmaz"
   },
   {
-    "name": "Kaan",
+    "name": "Kaan Ayhan",
     "country": "Turkiye",
     "code": "tr",
     "pos": "Midfielder",

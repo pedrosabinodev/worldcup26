@@ -15,6 +15,33 @@ const norm = s => s.toLowerCase()
   .replace(/[^a-z ]/g,'').replace(/\s+/g,' ').trim();
 const w = name => name.replace(/ /g,'_');
 
+// ── Expand first-name-only entries to "First Surname" ────────
+// When the shirt shows only a first name (e.g. "Thomas" for Thomas Partey),
+// expand it using the raw registered name. True mononyms are whitelisted.
+const MONO = new Set([
+  'gavi','rodri','pedri','casemiro','marquinhos','raphinha','bono','vinicius',
+  'rodrygo','alisson','bremer','fabinho','richarlison','malcom','everton',
+  'weverton','danilo','ederson','endrick','thiago','rayan','neymar','kaku',
+  'fatawu','kamaldeen','asante','nuamah','peprah','seneya',
+]);
+const PARTICLES = new Set(['de','da','do','dos','das','van','von','der','el','al',
+  'bin','ben','le','la','di','du','aux','of','the']);
+function expandName(name, rawName) {
+  const nameWords = name.trim().split(/\s+/);
+  if (nameWords.length !== 1) return name;           // already multi-word, skip
+  if (MONO.has(name.toLowerCase())) return name;     // true mononym, keep
+  const rawWords = (rawName||'').trim().split(/\s+/);
+  if (rawWords.length < 2) return name;              // no surname available
+  if (norm(rawWords[0]) !== norm(name)) return name; // shirt ≠ first name, skip
+  // Find first non-particle surname word
+  for (let i = 1; i < rawWords.length; i++) {
+    if (!PARTICLES.has(rawWords[i].toLowerCase())) {
+      return `${name} ${rawWords[i]}`;
+    }
+  }
+  return name;
+}
+
 // ── Load 2022 dataset from index.html ────────────────────────
 const html = fs.readFileSync('index.html','utf8');
 const re22 = /\{name:"([^"]+)",country:"([^"]+)",code:"[^"]+",pos:"[^"]+",club:"[^"]+",d:(\d),wiki:"([^"]+)"(?:,photo:"([^"]+)")?\}/g;
@@ -32,6 +59,77 @@ const FIXES = {};
 function fix(rawName, name, d, wiki) {
   FIXES[norm(rawName)] = { name, d: d||3, wiki: wiki||w(name) };
 }
+
+// ── France — shirt/PDF name corrections ──────────────────────
+fix('Konate',                           'Ibrahima Konaté',     2, 'Ibrahima_Konaté');
+fix('Zaire Emery',                      'Warren Zaïre-Emery',  2, 'Warren_Zaïre-Emery');
+fix('Kouadio Kone',                     'Manu Koné',           2, 'Manu_Koné');
+fix('Dayotchanculle Upamecano',         'Dayot Upamecano',     2, 'Dayot_Upamecano');
+fix('Kylian Mbappe',                    'Kylian Mbappé',       1, 'Kylian_Mbappé');
+
+// ── Ghana — shirt shows first name, but player known by full name ─
+fix('Thomas',                           'Thomas Partey',       1, 'Thomas_Partey');
+fix('Caleb',                            'Caleb Yirenkyi',      3, 'Caleb_Yirenkyi');
+// Ghana — shirt shows professional nickname, rawName is legal name
+fix('Fatawu',                           'Fatawu Issahaku',     2, 'Abdul_Fatawu_Issahaku');
+fix('Kamaldeen',                        'Kamaldeen Sulemana',  2, 'Kamaldeen_Sulemana');
+fix('Nuamah',                           'Ernest Nuamah',       2, 'Ernest_Nuamah');
+fix('Asante',                           'Solomon Asante',      3, 'Solomon_Asante');
+fix('Peprah',                           'Emmanuel Oppong',     3, 'Emmanuel_Oppong');
+fix('Seneya',                           'Marvin Senaya',       3, 'Marvin_Senaya');
+
+// ── Brazil — capitalization + long names ─────────────────────
+fix('ÁLisson Becker',                   'Alisson Becker',      2, 'Alisson_(goalkeeper)');
+fix('Alisson Becker',                   'Alisson Becker',      2, 'Alisson_(goalkeeper)');
+fix('Bruno Guimarães Rodriguez Moura',  'Bruno Guimarães',     2, 'Bruno_Guimarães');
+fix('Lucas Tolentino Coelho de Lima',   'Lucas Lima',          2, 'Lucas_Lima_(footballer,_born_1993)');
+fix('Danilo dos Santos de Oliveira',    'Danilo Souza',        3, 'Danilo_(Brazilian_footballer,_born_2001)');
+fix('Thiago',                           'Thiago Almada',       3, 'Thiago_Almada');
+
+// ── Spain — shirt shows given name only ──────────────────────
+fix('Eric',                             'Eric García',         2, 'Eric_García');
+fix('Eric García Martret',              'Eric García',         2, 'Eric_García');
+fix('Ferran',                           'Ferran Torres',       2, 'Ferran_Torres');
+fix('Yeremy',                           'Yeremy Pino',         2, 'Yeremy_Pino');
+fix('Fabián',                           'Fabián Ruiz',         2, 'Fabián_Ruiz');
+fix('Fabian',                           'Fabián Ruiz',         2, 'Fabián_Ruiz');
+fix('Williams Jr',                      'Nico Williams',       2, 'Nico_Williams_(footballer)');
+
+// ── Morocco ───────────────────────────────────────────────────
+fix('Bono',                             'Yassine Bounou',      2, 'Yassine_Bounou');
+
+// ── Netherlands ──────────────────────────────────────────────
+fix('Memphis',                          'Memphis Depay',       2, 'Memphis_Depay');
+
+// ── Saudi Arabia — shirt shows given name only ───────────────
+fix('Salem',                            'Salem Al-Dawsari',    2, 'Salem_Al-Dawsari');
+fix('Nasser',                           'Nasser Al-Dawsari',   2, 'Nasser_Al-Dawsari');
+
+// ── South Korea — shirt shows given name (Minjae, Kangin…) ──
+fix('Minjae',                           'Kim Min-jae',         2, 'Kim_Min-jae');
+fix('Kangin',                           'Lee Kang-in',         2, 'Lee_Kang-in');
+fix('Heungmin',                         'Son Heung-min',       1, 'Son_Heung-min');
+fix('Junho',                            'Bae Junho',           2, 'Bae_Junho');
+fix('Guesung',                          'Cho Gue-sung',        2, 'Cho_Gue-sung');
+fix('Hyeongyu',                         'Oh Hyeon-gyu',        2, 'Oh_Hyeon-gyu');
+fix('Seunggyu',                         'Kim Seung-gyu',       2, 'Kim_Seung-gyu');
+fix('Moonhwan',                         'Kim Moon-hwan',       3, 'Kim_Moon-hwan');
+fix('Inbeom',                           'Hwang In-beom',       2, 'Hwang_In-beom');
+fix('Seungho',                          'Paik Seung-ho',       3, 'Paik_Seung-ho');
+fix('Jens',                             'Jens Castrop',        3, 'Jens_Castrop');
+fix('Taeseok',                          'Lee Tae-seok',        3, 'Lee_Tae-seok');
+fix('Hanbeom',                          'Lee Han-beom',        3, 'Lee_Han-beom');
+fix('Gihyuk',                           'Lee Gi-hyeok',        3, 'Lee_Gi-hyeok');
+fix('Taehyeon',                         'Kim Tae-hyeon',       3, 'Kim_Tae-hyeon');
+fix('Bumkeun',                          'Song Bum-keun',       3, 'Song_Bum-keun');
+fix('Wije',                             'Cho Wi-je',           3, 'Cho_Wi-je');
+fix('Jinseob',                          'Park Jin-seob',       3, 'Park_Jin-seob');
+fix('Hyunjun',                          'Yang Hyun-jun',       3, 'Yang_Hyun-jun');
+fix('Hyeonwoo',                         'Jo Hyeon-woo',        3, 'Jo_Hyeon-woo');
+fix('Youngwoo',                         'Seol Young-woo',      3, 'Seol_Young-woo');
+fix('Jingyu',                           'Kim Jin-gyu',         3, 'Kim_Jin-gyu');
+fix('Jisung',                           'Eom Ji-sung',         3, 'Eom_Ji-sung');
+fix('Donggyeong',                       'Lee Dong-gyeong',     3, 'Lee_Dong-gyeong');
 
 // ── Global Stars (d:1) ────────────────────────────────────────
 fix('Lionel Messi',                     'Lionel Messi',        1, 'Lionel_Messi');
@@ -547,7 +645,8 @@ const final = raw.map(p => {
   const carry   = map22[fix ? norm(fix.name) : rawKey] || map22[fix ? norm(fix.name) : key];
 
   // Name: fix overrides shirt-based name; carry.name NOT used (avoids old wrong names bleeding back)
-  const name   = fix?.name  || p.name;
+  // Then expand single first-name entries ("Thomas" → "Thomas Partey")
+  const name   = expandName(fix?.name || p.name, p.rawName || p.name);
   const d      = fix?.d     || carry?.d     || 3;
   const wiki   = fix?.wiki  || carry?.wiki  || w(name);
 
