@@ -164,6 +164,42 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .change-mode{background:none;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border2);padding:16px 32px;border-radius:3px;cursor:pointer}
 .change-mode:hover{border-color:var(--muted);color:var(--text)}
 
+/* MATCH REVIEW */
+.match-review{width:100%;max-width:772px;text-align:left}
+.review-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px}
+.review-label{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.share-btn{background:none;border:none;color:var(--accent);font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:0;transition:opacity .15s}
+.share-btn:hover{opacity:.7}
+.review-divider{height:1px;background:var(--border)}
+.player-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(36,36,40,.5)}
+.player-row:nth-child(even){background:rgba(240,240,238,.02)}
+.review-idx{font-size:12px;color:rgba(139,139,149,.6);min-width:16px;text-align:right;flex-shrink:0}
+.review-photo{width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--surface2);display:flex;align-items:center;justify-content:center}
+.review-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.review-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.review-player-name{font-size:14px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.review-country{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--muted)}
+.result-badge{flex-shrink:0;padding:4px 10px;border-radius:12px;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;line-height:1}
+.result-badge.correct{background:rgba(71,255,142,.08);border:1px solid rgba(71,255,142,.4);color:var(--success)}
+.result-badge.wrong{background:rgba(255,77,77,.06);border:1px solid rgba(255,77,77,.4);color:var(--danger)}
+
+/* SHARE MODAL */
+.share-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(3px)}
+.share-modal.open{display:flex}
+.share-modal-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:24px;width:100%;max-width:440px;display:flex;flex-direction:column;gap:20px}
+.share-modal-header{display:flex;align-items:center;justify-content:space-between}
+.share-modal-title{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.share-modal-x{background:none;border:none;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:0;transition:color .15s}
+.share-modal-x:hover{color:var(--text)}
+.share-text-block{background:var(--surface2);border:1px solid var(--border2);border-radius:4px;padding:16px 20px;font-family:'Barlow',sans-serif;font-size:14px;line-height:1.75;color:var(--text);white-space:pre-wrap;user-select:all;cursor:text;max-height:50vh;overflow-y:auto}
+.share-actions{display:flex;gap:12px}
+.copy-share-btn{flex:1;background:var(--accent);color:var(--bg);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;padding:14px 20px;border-radius:3px;cursor:pointer;transition:opacity .15s}
+.copy-share-btn:hover{opacity:.9}
+.copy-share-btn.copied{background:var(--success)}
+.modal-close-btn{background:none;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border2);padding:14px 24px;border-radius:3px;cursor:pointer;white-space:nowrap;transition:border-color .15s,color .15s}
+.modal-close-btn:hover{border-color:var(--muted);color:var(--text)}
+.share-hint{font-size:12px;color:rgba(139,139,149,.6);text-align:center}
+
 /* RESPONSIVE */
 @media(min-width:601px){
   .player-card{align-items:stretch;height:240px;overflow:hidden}
@@ -231,6 +267,13 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
   .next-match-name,.next-match-datetime{white-space:normal}
   .next-btn{padding:12px 20px;text-align:center;justify-content:center;width:100%}
   .feedback{display:none}
+  .match-review{max-width:100%}
+  .player-row{padding:10px 12px;gap:10px}
+  .review-photo{width:36px;height:36px}
+  .review-player-name{font-size:13px}
+  .review-country{font-size:11px}
+  .share-actions{flex-direction:column}
+  .modal-close-btn{text-align:center}
 }
 </style>
 </head>
@@ -306,6 +349,31 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
       <div class="results-btn-row">
         <button class="play-again" onclick="startGame(currentDifficulty)">Play Again</button>
         <button class="change-mode" onclick="showWelcome()">Change Difficulty</button>
+      </div>
+      <!-- MATCH REVIEW -->
+      <div class="match-review">
+        <div class="review-header">
+          <span class="review-label" id="review-section-label">MATCH REVIEW</span>
+          <button class="share-btn" id="share-btn" onclick="openShareModal()">SHARE REVIEW</button>
+        </div>
+        <div class="review-divider"></div>
+        <div id="review-list"></div>
+      </div>
+    </div>
+
+    <!-- SHARE MODAL -->
+    <div class="share-modal" id="share-modal" onclick="handleModalBackdrop(event)">
+      <div class="share-modal-card">
+        <div class="share-modal-header">
+          <span class="share-modal-title" id="share-modal-title">Share your match</span>
+          <button class="share-modal-x" onclick="closeShareModal()" aria-label="Close">✕</button>
+        </div>
+        <div class="share-text-block" id="share-text-block"></div>
+        <div class="share-actions">
+          <button class="copy-share-btn" id="copy-share-btn" onclick="copyShareText()">📋 Copy &amp; Share</button>
+          <button class="modal-close-btn" id="modal-close-btn" onclick="closeShareModal()">Close</button>
+        </div>
+        <p class="share-hint" id="share-hint">Paste in WhatsApp, X, Instagram, iMessage…</p>
       </div>
     </div>
 
@@ -2246,6 +2314,7 @@ const MODE_LABELS_PT={'stars':'Só Estrelas','mixed':'Misturado','all':'Todos os
 function modeLabel(d){return lang==='pt'?MODE_LABELS_PT[d]:MODE_LABELS[d];}
 let score=0,streak=0,round=0,answered=false;
 let currentPlayer=null,options=[],queue=[],currentDifficulty='stars';
+let history=[];
 const TOTAL_ROUNDS=10,photoCache={};
 
 // ═══════════════════════════════════════════════════════════
@@ -2283,7 +2352,7 @@ function buildOptions(p){
 // startGame: click difficulty card → game starts immediately
 function startGame(d){
   currentDifficulty=d||currentDifficulty;
-  score=0;streak=0;round=0;
+  score=0;streak=0;round=0;history=[];
   gtag('event','game_start',{difficulty:currentDifficulty});
   const pool=getPool(currentDifficulty);
   // NO-REPEAT: shuffle + slice guarantees each player appears at most once
@@ -2530,6 +2599,7 @@ function handleAnswer(idx){
   const correctIdx=options.findIndex(o=>o.country===currentPlayer.country);
   if(isCorrect){score+=(streak>=3?200:100);streak++;}
   else{streak=0;}
+  history.push({player:currentPlayer,correct:isCorrect,guessed:chosen.country});
   gtag('event','answer',{difficulty:currentDifficulty,correct:isCorrect,round,streak});
   updateHUD();
 
@@ -2591,6 +2661,104 @@ function handleAnswer(idx){
 }
 
 // ═══════════════════════════════════════════════════════════
+// FLAG EMOJI — ISO 3166-1 alpha-2 code → emoji flag
+// ═══════════════════════════════════════════════════════════
+function flagEmoji(code){
+  if(code==='gb-eng') return '🏴󠁧󠁢󠁥󠁮󠁧󠁿';
+  if(code==='gb-sct') return '🏴󠁧󠁢󠁳󠁣󠁴󠁿';
+  return code.toUpperCase().split('').map(c=>
+    String.fromCodePoint(0x1F1E6+c.charCodeAt(0)-65)
+  ).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// MATCH REVIEW
+// ═══════════════════════════════════════════════════════════
+function buildMatchReview(){
+  const list=document.getElementById('review-list');
+  if(!list||!history.length) return;
+  list.innerHTML=history.map((h,i)=>{
+    const p=h.player;
+    const photo=p.photo
+      ?`<img src="${p.photo}" alt="">`
+      :`<span style="font-size:18px">👤</span>`;
+    return `<div class="player-row">
+      <span class="review-idx">${i+1}</span>
+      <div class="review-photo">${photo}</div>
+      <div class="review-info">
+        <span class="review-player-name">${p.name}</span>
+        <div class="review-country">
+          <span>${flagEmoji(p.code)}</span>
+          <span>${countryName(p.country)}</span>
+        </div>
+      </div>
+      <span class="result-badge ${h.correct?'correct':'wrong'}">${h.correct?'✓':'✗'}</span>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// SHARE TEXT
+// ═══════════════════════════════════════════════════════════
+function buildShareText(){
+  const mode=modeLabel(currentDifficulty);
+  const rows=history.map(h=>
+    `${h.correct?'🟩':'🟥'} ${h.player.name} · ${flagEmoji(h.player.code)} ${h.player.country}`
+  ).join('\n');
+  const correct=history.filter(h=>h.correct).length;
+  const statsLine=`🏆 ${score} pts  🔥 ${t('Streak','Sequência')} ×${streak}  ${correct}/${history.length}`;
+  const max=history.length*200;
+  const sub=score>=max*.85
+    ?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lendário.')
+    :score>=max*.6
+    ?t('Solid knowledge. A true football fan.','Sólido conhecimento. Um verdadeiro fã.')
+    :score>=max*.35
+    ?t('Not bad. Room to grow.','Nada mal. Ainda tem como melhorar.')
+    :t('Keep watching — the World Cup will help.','Continue assistindo — a Copa vai ajudar.');
+  return `⚽ World Cup 26 · ${mode}\n\n${rows}\n\n${statsLine}\n\n${sub}\n▶ worldcup26.vercel.app`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// SHARE MODAL
+// ═══════════════════════════════════════════════════════════
+function openShareModal(){
+  document.getElementById('share-text-block').textContent=buildShareText();
+  const btn=document.getElementById('copy-share-btn');
+  btn.textContent=t('📋 Copy & Share','📋 Copiar e Compartilhar');
+  btn.classList.remove('copied');
+  document.getElementById('share-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeShareModal(){
+  document.getElementById('share-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function handleModalBackdrop(e){
+  if(e.target.id==='share-modal') closeShareModal();
+}
+async function copyShareText(){
+  const txt=document.getElementById('share-text-block').textContent;
+  const btn=document.getElementById('copy-share-btn');
+  try{
+    await navigator.clipboard.writeText(txt);
+    btn.textContent=t('✓ Copied!','✓ Copiado!');
+    btn.classList.add('copied');
+    setTimeout(()=>{
+      btn.textContent=t('📋 Copy & Share','📋 Copiar e Compartilhar');
+      btn.classList.remove('copied');
+    },2500);
+  }catch(_){
+    // Fallback: select all text for manual copy
+    const block=document.getElementById('share-text-block');
+    const sel=window.getSelection(),range=document.createRange();
+    range.selectNodeContents(block);
+    sel.removeAllRanges();sel.addRange(range);
+  }
+}
+// Close modal on Escape key
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeShareModal();});
+
+// ═══════════════════════════════════════════════════════════
 // RESULTS
 // ═══════════════════════════════════════════════════════════
 function showResults(){
@@ -2603,6 +2771,9 @@ function showResults(){
     score>=max*.6?t('Solid knowledge. A true football fan.','Sólido conhecimento. Um verdadeiro fã.'):
     score>=max*.35?t('Not bad. Room to grow.','Nada mal. Ainda tem como melhorar.'):
     t('Keep watching — the World Cup will help.','Continue assistindo — a Copa vai ajudar.');
+  buildMatchReview();
+  document.getElementById('review-section-label').textContent=t('MATCH REVIEW','REVISÃO DA PARTIDA');
+  document.getElementById('share-btn').textContent=t('SHARE REVIEW','COMPARTILHAR');
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -2684,6 +2855,13 @@ function applyLang(){
   document.getElementById('lbl-score').textContent  = t('Score',  'Pontos');
   document.getElementById('lbl-streak').textContent = t('Streak', 'Sequência');
   document.getElementById('lbl-round').textContent  = t('Round',  'Rodada');
+  // Share modal static labels
+  const smTitle=document.getElementById('share-modal-title');
+  if(smTitle) smTitle.textContent=t('Share your match','Compartilhe sua partida');
+  const mcBtn=document.getElementById('modal-close-btn');
+  if(mcBtn) mcBtn.textContent=t('Close','Fechar');
+  const shint=document.getElementById('share-hint');
+  if(shint) shint.textContent=t('Paste in WhatsApp, X, Instagram, iMessage…','Cole no WhatsApp, X, Instagram, iMessage…');
 }
 
 function toggleLang(){
