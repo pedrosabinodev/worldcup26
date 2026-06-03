@@ -246,9 +246,9 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
         <span class="lt-pt">PT</span>
       </button>
       <div class="score-row" id="hud" style="visibility:hidden;opacity:0">
-        <div class="score-item"><div class="score-label">Score</div><div class="score-val" id="score">0</div></div>
-        <div class="score-item"><div class="score-label">Streak</div><div class="score-val streak-val" id="streak">0</div></div>
-        <div class="score-item"><div class="score-label">Round</div><div class="score-val" id="round-display">1/20</div></div>
+        <div class="score-item"><div class="score-label" id="lbl-score">Score</div><div class="score-val" id="score">0</div></div>
+        <div class="score-item"><div class="score-label" id="lbl-streak">Streak</div><div class="score-val streak-val" id="streak">0</div></div>
+        <div class="score-item"><div class="score-label" id="lbl-round">Round</div><div class="score-val" id="round-display">1/10</div></div>
       </div>
     </header>
 
@@ -351,7 +351,8 @@ const CLUB_BADGES={
 function clubBadge(club){
   const svg=CLUB_BADGES[club];
   if(svg) return svg;
-  return `<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#333"/><text x="14" y="18" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#fff">${(club||'?').slice(0,3).toUpperCase()}</text></svg>`;
+  const abbr=(club||'?').slice(0,3).toUpperCase().replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  return `<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="13" fill="#333"/><text x="14" y="18" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#fff">${abbr}</text></svg>`;
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -2321,16 +2322,20 @@ function updateHUD(){
 // ═══════════════════════════════════════════════════════════
 // RENDER
 // ═══════════════════════════════════════════════════════════
-function renderRound(){
-  const isMob=window.innerWidth<=600;
-  const nextLbl=round<queue.length?t('Next','Próximo'):t('Results','Resultados');
-  const arrow=`<svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>`;
-  const optHtml=opts=>opts.map((opt,i)=>`
+const ARROW_SVG=`<svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>`;
+
+function optHtml(opts){
+  return opts.map((opt,i)=>`
     <button class="option-btn" id="opt-${i}" onclick="handleAnswer(${i})">
       <div class="flag-wrap">${flagImg(opt.code,40,28)}</div>
       <span class="opt-name">${countryName(opt.country)}</span>
       <span class="opt-check" id="check-${i}"></span>
     </button>`).join('');
+}
+
+function renderRound(){
+  const isMob=window.innerWidth<=600;
+  const nextLbl=round<queue.length?t('Next','Próximo'):t('Results','Resultados');
 
   if(isMob){
     document.getElementById('player-card').innerHTML=`
@@ -2363,7 +2368,7 @@ function renderRound(){
             <span class="feedback-sub" id="fs-m"></span>
             <span class="feedback-sub" id="fi-m"></span>
           </div>
-          <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>
+          <button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${ARROW_SVG}</button>
         </div>
         <div class="reveal-row" id="reveal-row">
           <div class="reveal-country" id="reveal-country">
@@ -2379,7 +2384,7 @@ function renderRound(){
         <div class="photo-flipper" id="flipper">
           <div class="photo-front">
             <div class="qmark">?</div>
-            <div class="qmark-sub">Answer to reveal</div>
+            <div class="qmark-sub">${t('Answer to reveal','Responda para revelar')}</div>
           </div>
           <div class="photo-back" id="photo-back">
             <div class="spinner"></div>
@@ -2433,7 +2438,7 @@ function renderRound(){
         </div>
       </div>`;
     document.getElementById('options-grid').innerHTML=optHtml(options)+
-      `<button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${arrow}</button>`;
+      `<button class="next-btn" id="next-btn" onclick="nextRound()">${nextLbl}${ARROW_SVG}</button>`;
   }
 
   document.getElementById('ft').textContent='';
@@ -2497,10 +2502,9 @@ function loadPhotoIntoBack(src,fallbackWiki){
       if(bd) back.appendChild(bd);
     };
     img.onerror=()=>{
-      // TheSportsDB failed — fall back to Wikipedia
       if(!back.isConnected) return;
-      if(fallbackWiki) loadPhotoIntoBack(null);
-      prefetchPhoto(fallbackWiki).then(()=>loadPhotoIntoBack(photoCache[fallbackWiki]));
+      loadPhotoIntoBack(null); // show placeholder immediately
+      if(fallbackWiki) prefetchPhoto(fallbackWiki).then(()=>loadPhotoIntoBack(photoCache[fallbackWiki]));
     };
     img.src=src;
   } else {
@@ -2620,12 +2624,20 @@ const PT={
 
 // ── Country names ──────────────────────────────────────────
 const PT_COUNTRIES={
-  Netherlands:'Holanda','South Korea':'Coreia do Sul','Saudi Arabia':'Arábia Saudita',
-  Morocco:'Marrocos',Iran:'Irã',Switzerland:'Suíça',Ghana:'Gana',Tunisia:'Tunísia',
-  Ecuador:'Equador',Uruguay:'Uruguai',Croatia:'Croácia',England:'Inglaterra',
-  France:'França',Germany:'Alemanha',Belgium:'Bélgica',Japan:'Japão',
-  Australia:'Austrália',Spain:'Espanha',Qatar:'Catar',USA:'EUA',Canada:'Canadá',
-  Brazil:'Brasil',Mexico:'México',Senegal:'Senegal',Argentina:'Argentina',Portugal:'Portugal',
+  Algeria:'Argélia',Argentina:'Argentina',Australia:'Austrália',Austria:'Áustria',
+  Belgium:'Bélgica',Bosnia:'Bósnia',Brazil:'Brasil',Canada:'Canadá',
+  'Cape Verde':'Cabo Verde',Colombia:'Colômbia',Croatia:'Croácia',
+  'Curaçao':'Curaçao','DR Congo':'Rep. Dem. do Congo',Ecuador:'Equador',
+  Egypt:'Egito',England:'Inglaterra',France:'França',Germany:'Alemanha',
+  Ghana:'Gana',Haiti:'Haiti',Iran:'Irã',Iraq:'Iraque',
+  'Ivory Coast':'Costa do Marfim',Japan:'Japão',Jordan:'Jordânia',
+  Mexico:'México',Morocco:'Marrocos',Netherlands:'Holanda',
+  'New Zealand':'Nova Zelândia',Norway:'Noruega',Panama:'Panamá',
+  Paraguay:'Paraguai',Portugal:'Portugal',Qatar:'Catar',
+  'Saudi Arabia':'Arábia Saudita',Scotland:'Escócia',Senegal:'Senegal',
+  'South Africa':'África do Sul','South Korea':'Coreia do Sul',Spain:'Espanha',
+  Sweden:'Suécia',Switzerland:'Suíça',Tunisia:'Tunísia',Turkiye:'Turquia',
+  Uruguay:'Uruguai',USA:'EUA',Uzbekistan:'Uzbequistão',
 };
 function countryName(c){return lang==='pt'?(PT_COUNTRIES[c]||c):c;}
 
@@ -2669,6 +2681,9 @@ function applyLang(){
   const rl=document.querySelector('.results-label');
   if(rl) rl.textContent=t('Final score','Pontuação final');
   document.getElementById('lang-toggle').setAttribute('data-lang',lang);
+  document.getElementById('lbl-score').textContent  = t('Score',  'Pontos');
+  document.getElementById('lbl-streak').textContent = t('Streak', 'Sequência');
+  document.getElementById('lbl-round').textContent  = t('Round',  'Rodada');
 }
 
 function toggleLang(){

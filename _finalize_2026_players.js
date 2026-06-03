@@ -79,8 +79,6 @@ fix('Peprah',                           'Emmanuel Oppong',     3, 'Emmanuel_Oppo
 fix('Seneya',                           'Marvin Senaya',       3, 'Marvin_Senaya');
 
 // ── Brazil — capitalization + long names ─────────────────────
-fix('ÁLisson Becker',                   'Alisson Becker',      2, 'Alisson_(goalkeeper)');
-fix('Alisson Becker',                   'Alisson Becker',      2, 'Alisson_(goalkeeper)');
 fix('Bruno Guimarães Rodriguez Moura',  'Bruno Guimarães',     2, 'Bruno_Guimarães');
 fix('Lucas Tolentino Coelho de Lima',   'Lucas Lima',          2, 'Lucas_Lima_(footballer,_born_1993)');
 fix('Danilo dos Santos de Oliveira',    'Danilo Souza',        3, 'Danilo_(Brazilian_footballer,_born_2001)');
@@ -206,7 +204,6 @@ fix('Diogo José Teixeira da Silva',     'Diogo Jota',          2, 'Diogo_Jota')
 fix('Joao Felix Sequeira',              'João Félix',          2, 'João_Félix');
 fix('João Félix Sequeira',              'João Félix',          2, 'João_Félix');
 fix('Joao Cancelo',                     'João Cancelo',        2, 'João_Cancelo');
-fix('Bernardo Mota Veiga de Carvalho e Silva','Bernardo Silva',2, 'Bernardo_Silva');
 fix('Bernardo Mota Veiga de Carvalho e Silva','Bernardo Silva',2, 'Bernardo_Silva');
 fix('Ruben Diogo da Silva Neves',       'Rúben Neves',         2, 'Rúben_Neves');
 fix('Gonçalo Matias Ramos',             'Gonçalo Ramos',       2, 'Gonçalo_Ramos');
@@ -343,8 +340,6 @@ fix('Ferran Torres Garcia',             'Ferran Torres',       2, 'Ferran_Torres
 fix('Pedri Gonzalez Lopez',             'Pedri',               1, 'Pedri');
 
 // France (more)
-fix('Antoine Griezmann',                'Antoine Griezmann',   1, 'Antoine_Griezmann');
-fix('Antoine Griezmann',                'Antoine Griezmann',   1, 'Antoine_Griezmann');
 fix('Masour Dembele',                   'Moussa Dembélé',      2, 'Moussa_Dembélé_(footballer,_born_1996)');
 fix('Marcus Thuram Ulien',              'Marcus Thuram',       2, 'Marcus_Thuram');
 fix('Ngolo Kante',                      "N'Golo Kanté",        2, "N'Golo_Kanté");
@@ -406,7 +401,6 @@ fix('John Stones',                      'John Stones',         2, 'John_Stones')
 fix('Romelu Lukaku Menama',             'Romelu Lukaku',       2, 'Romelu_Lukaku');
 fix('Romelu Menama Lukaku Bolingoli',   'Romelu Lukaku',       2, 'Romelu_Lukaku');
 fix('Romelu Lukaku Bolingoli',          'Romelu Lukaku',       2, 'Romelu_Lukaku');
-fix('Antoine Griezmann',                'Antoine Griezmann',   1, 'Antoine_Griezmann');
 fix('Youri Tielemans',                  'Youri Tielemans',     2, 'Youri_Tielemans');
 fix('Timothy Castagne',                 'Timothy Castagne',    2, 'Timothy_Castagne');
 fix('Thomas Meunier',                   'Thomas Meunier',      2, 'Thomas_Meunier');
