@@ -61,6 +61,8 @@ function fix(rawName, name, d, wiki) {
 }
 
 // ── France — shirt/PDF name corrections ──────────────────────
+fix('Thuram',                           'Marcus Thuram',       2, 'Marcus_Thuram');
+fix('Marcus Thuram Ulien',              'Marcus Thuram',       2, 'Marcus_Thuram');
 fix('Konate',                           'Ibrahima Konaté',     2, 'Ibrahima_Konaté');
 fix('Zaire Emery',                      'Warren Zaïre-Emery',  2, 'Warren_Zaïre-Emery');
 fix('Kouadio Kone',                     'Manu Koné',           2, 'Manu_Koné');
@@ -187,11 +189,16 @@ fix('José Dalot',                      'Diogo Dalot',         2, 'Diogo_Dalot')
 fix('Jose Malheiro de Sa',             'José Sá',             2, 'José_Sá_(goalkeeper)');
 fix('José Malheiro de Sá',            'José Sá',             2, 'José_Sá_(goalkeeper)');
 fix('Pedro Lomba Neto',               'Pedro Neto',          2, 'Pedro_Neto_(footballer)');
+fix('Vitinha',                         'Vitinha',             2, 'Vitinha_(footballer)');
+fix('Vítor Machado Ferreira',          'Vitinha',             2, 'Vitinha_(footballer)');
+fix('João Neves',                      'João Neves',          2, 'João_Neves_(footballer)');
+fix('Joao Neves',                      'João Neves',          2, 'João_Neves_(footballer)');
 fix('Pedro Correia',                   'Pedro Neto',          2, 'Pedro_Neto_(footballer)');
 // Brazil
 fix('Bruno Guimaraes Rodriguez Moura', 'Bruno Guimarães',    2, 'Bruno_Guimarães');
 fix('Bruno Guimarães Rodriguez Moura','Bruno Guimarães',     2, 'Bruno_Guimarães');
-fix('Danilo dos Santos de Oliveira',   'Danilo',              2, 'Danilo_(footballer,_born_1991)');
+fix('Danilo dos Santos de Oliveira',   'Danilo Souza',        3, 'Danilo_Souza_(footballer)');
+fix('Igor Nascimento Rodrigues',       'Igor Thiago',         3, 'Igor_Thiago');
 fix('Gabriel Teodoro Martinelli Silva','Gabriel Martinelli',  2, 'Gabriel_Martinelli');
 fix('Gleison Silva Nascimento',        'Bremer',              2, 'Bremer_(footballer)');
 fix('Ederson Santana de Moraes',       'Ederson',             2, 'Ederson_(footballer,_born_1993)');
@@ -258,7 +265,7 @@ fix('Jordan Lee Pickford',              'Jordan Pickford',     2, 'Jordan_Pickfo
 
 // Germany
 fix('Joshua Kimmich',                   'Joshua Kimmich',      2, 'Joshua_Kimmich');
-fix('Jamal Musiala',                    'Jamal Musiala',       2, 'Jamal_Musiala');
+fix('Jamal Musiala',                    'Jamal Musiala',       1, 'Jamal_Musiala');
 fix('Florian Wirtz',                    'Florian Wirtz',       1, 'Florian_Wirtz');
 fix('Manuel Neuer',                     'Manuel Neuer',        1, 'Manuel_Neuer');
 fix('Thibaut Courtois',                 'Thibaut Courtois',    2, 'Thibaut_Courtois');
@@ -272,6 +279,8 @@ fix('Kai Havertz',                      'Kai Havertz',         2, 'Kai_Havertz')
 // Argentina
 fix('Emiliano Martinez',                'Emiliano Martínez',   2, 'Emiliano_Martínez');
 fix('Emiliano Adrian Martinez',         'Emiliano Martínez',   2, 'Emiliano_Martínez');
+fix('Damian Martinez',                  'Damián Martínez',     2, 'Damián_Martínez');
+fix('Damián Martínez',                  'Damián Martínez',     2, 'Damián_Martínez');
 fix('Enzo Fernandez',                   'Enzo Fernández',      2, 'Enzo_Fernández');
 fix('Rodrigo De Paul',                  'Rodrigo De Paul',     2, 'Rodrigo_De_Paul');
 fix('Marcos Acuna',                     'Marcos Acuña',        2, 'Marcos_Acuña');
@@ -306,8 +315,11 @@ fix('Sofyan Amrabat',                   'Sofyan Amrabat',      2, 'Sofyan_Amraba
 fix('Youssef En-Nesyri',                'Youssef En-Nesyri',   2, 'Youssef_En-Nesyri');
 fix('Bono',                             'Bono',                2, 'Yassine_Bounou');
 fix('Yassine Bounou',                   'Yassine Bounou',      2, 'Yassine_Bounou');
+fix('Brahim',                           'Brahim Díaz',         2, 'Brahim_Díaz');
+fix('Brahim Abdelkader Díaz',           'Brahim Díaz',         2, 'Brahim_Díaz');
 
 // Japan
+fix('Wataru Endo',                      'Wataru Endo',         2, 'Wataru_Endo');
 fix('Takefusa Kubo',                    'Takefusa Kubo',       2, 'Takefusa_Kubo');
 fix('Kaoru Mitoma',                     'Kaoru Mitoma',        2, 'Kaoru_Mitoma');
 fix('Ritsu Doan',                       'Ritsu Dōan',          2, 'Ritsu_Dōan');
@@ -389,12 +401,18 @@ fix('Lovro Majer',                      'Lovro Majer',         2, 'Lovro_Majer')
 fix('Luka Su C I C',                    'Luka Sučić',          2, 'Luka_Sučić');
 
 // Argentina
+fix('Damián Martínez',                  'Damián Martínez',     2, 'Damián_Martínez');
+fix('Damian Martinez',                  'Damián Martínez',     2, 'Damián_Martínez');
 fix('Alexis Mac Allister',              'Alexis Mac Allister', 2, 'Alexis_Mac_Allister');
 fix('Nahuel Molina Lucero',             'Nahuel Molina',       2, 'Nahuel_Molina');
 fix('Geronimo Rulli',                   'Gerónimo Rulli',      2, 'Gerónimo_Rulli');
 fix('Cristian Gabriel Romero',          'Cristian Romero',     2, 'Cristian_Romero');
 
 // England
+fix('Eberechi Eze',                     'Eberechi Eze',        2, 'Eberechi_Eze');
+fix('Oliver Watkins',                   'Oliver Watkins',      2, 'Oliver_Watkins');
+fix('Reece James',                      'Reece James',         2, 'Reece_James');
+fix('Kobbie Mainoo',                    'Kobbie Mainoo',       2, 'Kobbie_Mainoo');
 fix('Marcus Rashford',                  'Marcus Rashford',     2, 'Marcus_Rashford');
 fix('Jordan Henderson',                 'Jordan Henderson',    2, 'Jordan_Henderson');
 fix('Kyle Walker',                      'Kyle Walker',         2, 'Kyle_Walker');
@@ -451,6 +469,8 @@ fix('Santiago Mele Castañero',          'Santiago Mele',       2, 'Santiago_Mel
 fix('Agustin Canobbio',                 'Agustín Canobbio',    2, 'Agustín_Canobbio');
 
 // Mexico — strip maternal surname + fix capitalization
+fix('Raúl',                            'Raúl Jiménez',        2, 'Raúl_Jiménez');
+fix('Raúl Jiménez Rodríguez',          'Raúl Jiménez',        2, 'Raúl_Jiménez');
 fix('José Rangel Aguilar',             'José Rangel',         3, 'José_Rangel');
 fix('Jorge Sánchez Ramos',             'Jorge Sánchez',       3, 'Jorge_Sánchez');
 fix('César Montes Castro',             'César Montes',        2, 'César_Montes');
@@ -488,6 +508,9 @@ fix('Carlos Gómez Hinestroza',         'Carlos Gómez',        2, 'Carlos_Góme
 fix('ÁLvaro Montero',                  'Álvaro Montero',      2, 'Álvaro_Montero');
 fix('Cordoba',                         'Jhon Córdoba',        2, 'Jhon_Córdoba');
 fix('Sanchez',                         'Davinson Sánchez',    2, 'Davinson_Sánchez');
+fix('James',                           'James Rodríguez',     2, 'James_Rodríguez');
+fix('Luis Diaz Marulanda',             'Luis Díaz',           2, 'Luis_Díaz_(footballer)');
+fix('Luis Díaz Marulanda',             'Luis Díaz',           2, 'Luis_Díaz_(footballer)');
 
 // Ecuador
 fix('Anthony Valencia Bajaña',         'Anthony Valencia',    2, 'Anthony_Valencia');

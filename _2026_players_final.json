@@ -481,7 +481,7 @@
     "code": "ar",
     "pos": "Goalkeeper",
     "club": "Aston Villa FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Damián_Martínez",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/xgwwtg1763043497.jpg"
   },
@@ -1721,14 +1721,13 @@
     "wiki": "Fabio_Tavares"
   },
   {
-    "name": "Danilo",
+    "name": "Danilo Souza",
     "country": "Brazil",
     "code": "br",
     "pos": "Midfielder",
     "club": "Botafogo",
     "d": 2,
-    "wiki": "Danilo_(footballer,_born_1991)",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/0b5ic01548344254.jpg"
+    "wiki": "Danilo_Souza_(footballer)"
   },
   {
     "name": "Endrick",
@@ -1791,13 +1790,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/94n8i41580203524.jpg"
   },
   {
-    "name": "Thiago Almada",
+    "name": "Igor Thiago",
     "country": "Brazil",
     "code": "br",
     "pos": "Forward",
     "club": "Brentford FC",
     "d": 3,
-    "wiki": "Thiago_Almada",
+    "wiki": "Igor_Thiago",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/nxn1kn1780009680.jpg"
   },
   {
@@ -2388,13 +2387,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/3sivzv1725066629.jpg"
   },
   {
-    "name": "Luis Diaz",
+    "name": "Luis Díaz",
     "country": "Colombia",
     "code": "co",
     "pos": "Forward",
     "club": "FC Bayern München",
-    "d": 3,
-    "wiki": "Luis_Díaz_Marulanda",
+    "d": 2,
+    "wiki": "Luis_Díaz_(footballer)",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/qkw97r1779753703.jpg"
   },
   {
@@ -2423,7 +2422,7 @@
     "code": "co",
     "pos": "Midfielder",
     "club": "Minnesota United FC",
-    "d": 3,
+    "d": 2,
     "wiki": "James_Rodríguez",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/etpchw1779769101.jpg"
   },
@@ -2568,13 +2567,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/mrffk31779766609.jpg"
   },
   {
-    "name": "Suarez",
+    "name": "Luis Suárez",
     "country": "Colombia",
     "code": "co",
     "pos": "Forward",
     "club": "Sporting CP",
     "d": 3,
-    "wiki": "Luis_Suárez_Charris",
+    "wiki": "Luis_Suárez_(Colombian_footballer)",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/grivvk1779769643.jpg"
   },
   {
@@ -4553,7 +4552,7 @@
     "code": "gb-eng",
     "pos": "Midfielder",
     "club": "Manchester United FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Kobbie_Mainoo",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/h66a4l1696149845.jpg"
   },
@@ -4583,7 +4582,7 @@
     "code": "gb-eng",
     "pos": "Forward",
     "club": "Aston Villa FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Oliver_Watkins"
   },
   {
@@ -4601,7 +4600,7 @@
     "code": "gb-eng",
     "pos": "Midfielder",
     "club": "Arsenal FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Eberechi_Eze",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/9kldty1780012419.jpg"
   },
@@ -4631,7 +4630,7 @@
     "code": "gb-eng",
     "pos": "Defender",
     "club": "Chelsea FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Reece_James",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/uqrxvv1431677357.jpg"
   },
@@ -4735,13 +4734,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/co0ahr1778818162.jpg"
   },
   {
-    "name": "Thuram",
+    "name": "Marcus Thuram",
     "country": "France",
     "code": "fr",
     "pos": "Forward",
     "club": "FC Internazionale Milano",
-    "d": 3,
-    "wiki": "Marcus_Thuram-Ulien",
+    "d": 2,
+    "wiki": "Marcus_Thuram",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/qo7y1v1724515703.jpg"
   },
   {
@@ -5010,7 +5009,7 @@
     "code": "de",
     "pos": "Midfielder",
     "club": "FC Bayern München",
-    "d": 2,
+    "d": 1,
     "wiki": "Jamal_Musiala",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/y998n31779384099.jpg"
   },
@@ -6229,7 +6228,7 @@
     "code": "jp",
     "pos": "Midfielder",
     "club": "Liverpool FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Wataru_Endo",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/4z056r1605710848.jpg"
   },
@@ -6998,7 +6997,7 @@
     "code": "mx",
     "pos": "Forward",
     "club": "Fulham FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Raúl_Jiménez",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/hfzefq1772025775.jpg"
   },
@@ -7261,13 +7260,13 @@
     "wiki": "Sou\u0000Ane_Rahimi"
   },
   {
-    "name": "Brahim Abdelkader",
+    "name": "Brahim Díaz",
     "country": "Morocco",
     "code": "ma",
     "pos": "Forward",
     "club": "Real Madrid C. F.",
-    "d": 3,
-    "wiki": "Brahim_Abdelkader",
+    "d": 2,
+    "wiki": "Brahim_Díaz",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/z1u3sj1779839715.jpg"
   },
   {
@@ -8228,13 +8227,13 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/x40xsw1716211711.jpg"
   },
   {
-    "name": "Jhon Córdoba",
+    "name": "José Córdoba",
     "country": "Panama",
     "code": "pa",
     "pos": "Defender",
     "club": "Norwich City FC",
     "d": 2,
-    "wiki": "Jhon_Córdoba",
+    "wiki": "José_Córdoba",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/uk6yfg1726080105.jpg"
   },
   {
@@ -8873,7 +8872,7 @@
     "code": "pt",
     "pos": "Midfielder",
     "club": "Paris Saint-Germain",
-    "d": 3,
+    "d": 2,
     "wiki": "João_Gonçalves_Neves",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/463f8a1770217760.jpg"
   },
@@ -8953,7 +8952,7 @@
     "code": "pt",
     "pos": "Midfielder",
     "club": "Paris Saint-Germain",
-    "d": 3,
+    "d": 2,
     "wiki": "Vitor_Machado_Ferreira",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/a0b12b1770218109.jpg"
   },
@@ -8998,14 +8997,13 @@
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/gqugl31780373004.jpg"
   },
   {
-    "name": "Pedro Neto",
+    "name": "Pedro Correia",
     "country": "Qatar",
     "code": "qa",
     "pos": "Defender",
     "club": "Al Sadd SC",
     "d": 2,
-    "wiki": "Pedro_Neto_(footballer)",
-    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/g1325q1771427940.jpg"
+    "wiki": "Pedro_Correia_(footballer)"
   },
   {
     "name": "Lucas Mendes",
