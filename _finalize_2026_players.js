@@ -69,6 +69,40 @@ fix('Rafael Alexandre Conceição Leão', 'Rafael Leão',         2, 'Rafael_Le�
 fix('Bruno Miguel Borges Fernandes',    'Bruno Fernandes',     2, 'Bruno_Fernandes');
 fix('Ruben dos Santos Gato Alves Dias', 'Rúben Dias',         2, 'Rúben_Dias');
 fix('Rúben dos Santos Gato Alves Dias', 'Rúben Dias',         2, 'Rúben_Dias');
+// Portugal — full last names from PDF not caught by shirt extraction
+fix('Nelson Cabral Semedo',             'Nélson Semedo',       2, 'Nélson_Semedo');
+fix('Nélson Cabral Semedo',            'Nélson Semedo',       2, 'Nélson_Semedo');
+fix('Tomas Lemos Araujo',              'Tomás Araújo',        2, 'Tomás_Araújo');
+fix('Tomás Lemos Araújo',             'Tomás Araújo',        2, 'Tomás_Araújo');
+fix('Bruno Borges Fernandes',          'Bruno Fernandes',     2, 'Bruno_Fernandes');
+fix('Goncalo Bernardo Inacio',         'Gonçalo Inácio',      2, 'Gonçalo_Inácio');
+fix('Gonçalo Bernardo Inácio',        'Gonçalo Inácio',      2, 'Gonçalo_Inácio');
+fix('Goncalo Ganchinho Guedes',        'Gonçalo Guedes',      2, 'Gonçalo_Guedes');
+fix('Gonçalo Ganchinho Guedes',       'Gonçalo Guedes',      2, 'Gonçalo_Guedes');
+fix('Ruben da Silva Neves',            'Rúben Neves',         2, 'Rúben_Neves');
+fix('Rúben da Silva Neves',           'Rúben Neves',         2, 'Rúben_Neves');
+fix('Francisco Fernandes da Conceicao','Francisco Conceição', 2, 'Francisco_Conceição');
+fix('Francisco Fernandes da Conceição','Francisco Conceição', 2, 'Francisco_Conceição');
+fix('Nuno Tavares Mendes',             'Nuno Mendes',         2, 'Nuno_Mendes');
+fix('Jose Dalot Teixeira',             'Diogo Dalot',         2, 'Diogo_Dalot');
+fix('José Dalot',                      'Diogo Dalot',         2, 'Diogo_Dalot');
+fix('Jose Malheiro de Sa',             'José Sá',             2, 'José_Sá_(goalkeeper)');
+fix('José Malheiro de Sá',            'José Sá',             2, 'José_Sá_(goalkeeper)');
+fix('Pedro Lomba Neto',               'Pedro Neto',          2, 'Pedro_Neto_(footballer)');
+fix('Pedro Correia',                   'Pedro Neto',          2, 'Pedro_Neto_(footballer)');
+// Brazil
+fix('Bruno Guimaraes Rodriguez Moura', 'Bruno Guimarães',    2, 'Bruno_Guimarães');
+fix('Bruno Guimarães Rodriguez Moura','Bruno Guimarães',     2, 'Bruno_Guimarães');
+fix('Danilo dos Santos de Oliveira',   'Danilo',              2, 'Danilo_(footballer,_born_1991)');
+fix('Gabriel Teodoro Martinelli Silva','Gabriel Martinelli',  2, 'Gabriel_Martinelli');
+fix('Gleison Silva Nascimento',        'Bremer',              2, 'Bremer_(footballer)');
+fix('Ederson Santana de Moraes',       'Ederson',             2, 'Ederson_(footballer,_born_1993)');
+fix('Roger Ibanez da Silva',           'Roger Ibañez',        2, 'Roger_Ibañez');
+fix('Weverton Pereira da Silva',       'Weverton',            2, 'Weverton_(footballer,_born_1987)');
+fix('Alex Lobo Silva',                 'Alex Sandro',         2, 'Alex_Sandro');
+fix('Matheus Santos Carneiro da Cunha','Matheus Cunha',       2, 'Matheus_Cunha');
+fix('Vinicius Paixao de Oliveira Junior','Vinícius Júnior',   1, 'Vinícius_Júnior');
+fix('Vinicius Paixão de Oliveira Júnior','Vinícius Júnior',  1, 'Vinícius_Júnior');
 fix('Diogo Jose Teixeira da Silva',     'Diogo Jota',          2, 'Diogo_Jota');
 fix('Diogo José Teixeira da Silva',     'Diogo Jota',          2, 'Diogo_Jota');
 fix('Joao Felix Sequeira',              'João Félix',          2, 'João_Félix');
@@ -293,6 +327,196 @@ fix('Edouard Mendy',                    'Édouard Mendy',       2, 'Édouard_Men
 fix('Ismaila Sarr',                     'Ismaïla Sarr',        2, 'Ismaïla_Sarr');
 fix('Nicolas Jackson',                  'Nicolas Jackson',     2, 'Nicolas_Jackson');
 
+// Uruguay — strip maternal surname
+fix('Sergio Rochet Alvarez',            'Sergio Rochet',       2, 'Sergio_Rochet');
+fix('José Giménez de Vargas',           'José Giménez',        2, 'José_Giménez');
+fix('Sebastián Cáceres Ramos',          'Sebastián Cáceres',   2, 'Sebastián_Cáceres');
+fix('Ronald Araújo da Silva',           'Ronald Araújo',       1, 'Ronald_Araújo');
+fix('Manuel Ugarte Ribeiro',            'Manuel Ugarte',       2, 'Manuel_Ugarte');
+fix('Rodrigo Bentancur Colmán',         'Rodrigo Bentancur',   2, 'Rodrigo_Bentancur');
+fix('Diego de la Cruz Arcosa',          'Diego de la Cruz',    2, 'Diego_de_la_Cruz');
+fix('Federico Valverde Dipetta',        'Federico Valverde',   1, 'Federico_Valverde');
+fix('Darwin Nuñez Ribeiro',             'Darwin Núñez',        2, 'Darwin_Núñez');
+fix('Giorgian de Arrascaeta Benedetti', 'Giorgian de Arrascaeta', 2, 'Giorgian_de_Arrascaeta');
+fix('Facundo Pellistri Rebollo',        'Facundo Pellistri',   2, 'Facundo_Pellistri');
+fix('Guillermo Varela Olivera',         'Guillermo Varela',    2, 'Guillermo_Varela');
+fix('Emiliano Martínez Toranza',        'Emiliano Martínez',   2, 'Emiliano_Martínez_(goalkeeper)');
+fix('Mathías Olivera Miramontes',       'Mathías Olivera',     2, 'Mathías_Olivera');
+fix('Matías Viña Susperreguy',          'Matías Viña',         2, 'Matías_Viña');
+fix('Maximiliano Araújo Vilches',       'Maximiliano Araújo',  2, 'Maximiliano_Araújo');
+fix('Nestor Muslera Micol',             'Fernando Muslera',    2, 'Fernando_Muslera');
+fix('Santiago Bueno Sciutto',           'Santiago Bueno',      2, 'Santiago_Bueno');
+fix('Joaquin Piquerez Moreira',         'Joaquín Piquerez',    2, 'Joaquín_Piquerez');
+fix('Radrigo Zalazar Martinez',         'Rodrigo Zalazar',     2, 'Rodrigo_Zalazar');
+fix('Paul Rodríguez Bravo',             'Paul Rodríguez',      3, 'Paul_Rodríguez');
+fix('Juan Sanabria Magolé',             'Juan Sanabria',       3, 'Juan_Sanabria');
+fix('Rodrigo Aguirre Soto',             'Rodrigo Aguirre',     2, 'Rodrigo_Aguirre');
+fix('Federico Viñas Barboza',           'Federico Viñas',      2, 'Federico_Viñas');
+fix('Santiago Mele Castañero',          'Santiago Mele',       2, 'Santiago_Mele');
+fix('Agustin Canobbio',                 'Agustín Canobbio',    2, 'Agustín_Canobbio');
+
+// Mexico — strip maternal surname + fix capitalization
+fix('José Rangel Aguilar',             'José Rangel',         3, 'José_Rangel');
+fix('Jorge Sánchez Ramos',             'Jorge Sánchez',       3, 'Jorge_Sánchez');
+fix('César Montes Castro',             'César Montes',        2, 'César_Montes');
+fix('Edson ÁLvarez Velázquez',         'Edson Álvarez',       2, 'Edson_Álvarez');
+fix('Johan Vásquez Ibarra',            'Johan Vásquez',       2, 'Johan_Vásquez');
+fix('Erik Lira Méndez',                'Erik Lira',           3, 'Erik_Lira');
+fix('Luis Romo Barrón',                'Luis Romo',           3, 'Luis_Romo');
+fix('ÁLvaro Fidalgo',                  'Álvaro Fidalgo',      2, 'Álvaro_Fidalgo');
+fix('Ernesto Vega Rojas',              'Ernesto Vega',        3, 'Ernesto_Vega');
+fix('Carlos Acevedo López',            'Carlos Acevedo',      3, 'Carlos_Acevedo');
+fix('Francisco Ochoa Magaña',          'Guillermo Ochoa',     2, 'Guillermo_Ochoa');
+fix('Armando González Alba',           'Armando González',    3, 'Armando_González');
+fix('Israel Reyes Romero',             'Israel Reyes',        3, 'Israel_Reyes');
+fix('Julián Quiñones Quiñones',        'Julián Quiñones',     3, 'Julián_Quiñones');
+fix('Gilberto Mora Zambrano',          'Gilberto Mora',       3, 'Gilberto_Mora');
+fix('Mateo Chávez García',             'Mateo Chávez',        3, 'Mateo_Chávez');
+fix('César Huerta Valera',             'César Huerta',        3, 'César_Huerta');
+fix('Guillermo Martínez Ayala',        'Guillermo Martínez',  3, 'Guillermo_Martínez');
+fix('Jesús Gallardo Vasconcelos',      'Jesús Gallardo',      3, 'Jesús_Gallardo');
+fix('Luis Chávez Magallón',            'Luis Chávez',         3, 'Luis_Chávez');
+fix('Roberto Alvarado Hernández',      'Roberto Alvarado',    3, 'Roberto_Alvarado');
+
+// Colombia — strip maternal surname + fix special chars
+fix('Daniel Muñoz Mejia',              'Daniel Muñoz',        2, 'Daniel_Muñoz_(footballer)');
+fix('Jhon Lucumi Bonilla',             'Jhon Lucumí',         2, 'Jhon_Lucumí');
+fix('Kevin Castaño Gil',               'Kevin Castaño',       2, 'Kevin_Castaño');
+fix('Jhon Arias Andrade',              'Jhon Arias',          2, 'Jhon_Arias_(footballer)');
+fix('Camilo Vargas Gil',               'Camilo Vargas',       2, 'Camilo_Vargas');
+fix('Yerry Mina Gonzalez',             'Yerry Mina',          2, 'Yerry_Mina');
+fix('Jefferson Lerma Solis',           'Jefferson Lerma',     2, 'Jefferson_Lerma');
+fix('Johan Mojica Palacio',            'Johan Mojica',        2, 'Johan_Mojica');
+fix('Willer Ditta Perez',              'Willer Ditta',        2, 'Willer_Ditta');
+fix('Juan Hernandez Suarez',           'Juan Hernández',      2, 'Juan_Hernández');
+fix('Carlos Gómez Hinestroza',         'Carlos Gómez',        2, 'Carlos_Gómez');
+fix('ÁLvaro Montero',                  'Álvaro Montero',      2, 'Álvaro_Montero');
+fix('Cordoba',                         'Jhon Córdoba',        2, 'Jhon_Córdoba');
+fix('Sanchez',                         'Davinson Sánchez',    2, 'Davinson_Sánchez');
+
+// Ecuador
+fix('Anthony Valencia Bajaña',         'Anthony Valencia',    2, 'Anthony_Valencia');
+fix('Enner Valencia Lastra',           'Enner Valencia',      2, 'Enner_Valencia');
+fix('Jordy Caicedo Medina',            'Jordy Caicedo',       2, 'Jordy_Caicedo');
+fix('Moisés Caicedo Corozo',           'Moisés Caicedo',      2, 'Moisés_Caicedo');
+fix('ÁNgelo Preciado',                 'Ángelo Preciado',     2, 'Ángelo_Preciado');
+
+// Paraguay
+fix('Diego Gomez Amarilla',            'Diego Gómez',         2, 'Diego_Gómez_(footballer)');
+fix('Miguel Almirón Rejala',           'Miguel Almirón',      2, 'Miguel_Almirón');
+fix('Gustavo Gómez Portillo',          'Gustavo Gómez',       2, 'Gustavo_Gómez_(footballer)');
+fix('Alejandro Romero Gamarra',        'Kaku',                2, 'Alejandro_Romero_Gamarra');
+
+// Bosnia — broken special chars (Ć/Š/Ž/Č split by PDF)
+fix('Mujaki Ć',                        'Nihad Mujakić',       3, 'Nihad_Mujakić');
+fix('Had Ž Ikaduni Ć',                 'Dennis Hadžikadunić', 2, 'Dennis_Hadžikadunić');
+fix('Muharemovi Ć',                    'Tarik Muharemović',   3, 'Tarik_Muharemović');
+fix('Kola Š Inac',                     'Sead Kolasinac',      2, 'Sead_Kolasinac');
+fix('Tahirovi Ć',                      'Benjamin Tahirović',  2, 'Benjamin_Tahirović');
+fix('Dedi Ć',                          'Amar Dedić',          3, 'Amar_Dedić');
+fix('Gigovi Ć',                        'Armin Gigović',       3, 'Armin_Gigović');
+fix('Ba Ž Dar',                        'Samed Baždar',        3, 'Samed_Baždar');
+fix('Demirovi Ć',                      'Ermedin Demirović',   2, 'Ermedin_Demirović');
+fix('D Ž Eko',                         'Edin Džeko',          1, 'Edin_Džeko');
+fix('Ba Š I Ć',                        'Ivan Bašić',          3, 'Ivan_Bašić');
+fix('Š Unji Ć',                        'Ivan Šunjić',         2, 'Ivan_Šunjić');
+fix('Memi Ć',                          'Amar Memić',          3, 'Amar_Memić');
+fix('Had Ž Iahmetovi Ć',               'Amir Hadžiahmetović', 2, 'Amir_Hadžiahmetović');
+fix('Burni Ć',                         'Burnić',              3, 'Burnić');
+fix('Alajbegovi Ć',                    'Kerim Alajbegović',   3, 'Kerim_Alajbegović');
+fix('Bajraktarevi Ć',                  'Esmir Bajraktarević', 3, 'Esmir_Bajraktarević');
+fix('Radelji Ć',                       'Stjepan Radeljić',    3, 'Stjepan_Radeljić');
+fix('Zlomisli Ć',                      'Martin Zlomislić',    3, 'Martin_Zlomislić');
+fix('Tabakovi Ć',                      'Haris Tabakovic',     3, 'Haris_Tabakovic');
+fix('Č Elik',                          'Nidal Čelik',         3, 'Nidal_Čelik');
+fix('Luki Ć',                          'Jovo Lukić',          3, 'Jovo_Lukić');
+fix('Mahmi Ć',                         'Ermin Mahmić',        3, 'Ermin_Mahmić');
+
+// Croatia — broken special chars + truncated first names
+fix('Jo Gvardiol',                     'Joško Gvardiol',      1, 'Joško_Gvardiol');
+fix('Livakovi Ć',                      'Dominik Livaković',   2, 'Dominik_Livaković');
+fix('Stani Š I Ć',                     'Josip Stanišić',      2, 'Josip_Stanišić');
+fix('Pongra Č I Ć',                    'Marin Pongračić',     2, 'Marin_Pongračić');
+fix('Ć Aleta-Car',                     'Duje Ćaleta-Car',     2, 'Duje_Ćaleta-Car');
+fix('Š Utalo',                         'Josip Šutalo',        2, 'Josip_Šutalo');
+fix('Kova Č I Ć',                      'Mateo Kovačić',       1, 'Mateo_Kovačić');
+fix('Kramari Ć',                       'Andrej Kramarić',     2, 'Andrej_Kramarić');
+fix('Modri Ć',                         'Luka Modrić',         1, 'Luka_Modrić');
+fix('Vla Š I Ć',                       'Nikola Vlašić',       2, 'Nikola_Vlašić');
+fix('Peri Š I Ć',                      'Ivan Perišić',        2, 'Ivan_Perišić');
+fix('Pa Š Ali Ć',                      'Mario Pašalić',       2, 'Mario_Pašalić');
+fix('Petar Su Č I Ć',                  'Petar Sučić',         2, 'Petar_Sučić');
+fix('Jaki Ć',                          'Kristijan Jakić',     2, 'Kristijan_Jakić');
+fix('Matanovi Ć',                      'Igor Matanović',      2, 'Igor_Matanović');
+fix('Su Č I Ć',                        'Luka Sučić',          2, 'Luka_Sučić');
+fix('Vu Š Kovi Ć',                     'Luka Vušković',       2, 'Luka_Vušković');
+fix('Marco Pa Š Ali Ć',                'Marco Pašalić',       2, 'Marco_Pašalić');
+fix('Erli Ć',                          'Martin Erlić',        3, 'Martin_Erlić');
+
+// Czechia — broken special chars + truncated first names
+fix('Ková Ř',                          'Matěj Kovář',         2, 'Matěj_Kovář');
+fix('Hole Š',                          'Tomáš Holeš',         2, 'Tomáš_Holeš');
+fix('Hraná Č',                         'Robin Hranáč',        2, 'Robin_Hranáč');
+fix('Š Chaloupek',                     'Chaloupek',           3, 'Štefan_Chaloupek');
+fix('Krej Č Í',                        'Ladislav Krejčí',     2, 'Ladislav_Krejčí');
+fix('Hlo Ž Ek',                        'Adam Hložek',         2, 'Adam_Hložek');
+fix('Č Erv',                           'Lukáš Červ',          2, 'Lukáš_Červ');
+fix('Š Ulc',                           'Pavel Šulc',          2, 'Pavel_Šulc');
+fix('Stan Ě K',                        'Jindřich Staněk',     2, 'Jindřich_Staněk');
+fix('Doud Ě Ra',                       'David Douděra',       2, 'David_Douděra');
+fix('Sou Č Ek',                        'Tomáš Souček',        2, 'Tomáš_Souček');
+fix('Horní Č Ek',                      'Lukáš Horniček',      3, 'Lukáš_Horniček');
+fix('Soch Ů Rek',                      'Hugo Sochůrek',       3, 'Hugo_Sochůrek');
+fix('Vi Š Inský',                      'Denis Višinský',      3, 'Denis_Višinský');
+
+// Türkiye — broken special chars (İ, Ğ, Ş split by PDF)
+fix('Zek İ Çel İ K',                   'Zeki Çelik',          2, 'Zeki_Çelik');
+fix('Dem İ Ral',                       'Merih Demiral',       2, 'Merih_Demiral');
+fix('ÇA Ğ Lar',                        'Çağlar Söyüncü',      2, 'Çağlar_Söyüncü');
+fix('Aktürko Ğ Lu',                    'Kerem Aktürkoglu',    2, 'Kerem_Aktürkoglu');
+fix('Den İ Z Gül',                     'Deniz Gül',           3, 'Deniz_Gül');
+fix('ÇAlhano Ğ Lu',                    'Hakan Çalhanoğlu',    1, 'Hakan_Çalhanoğlu');
+fix('Abdülker İ M',                    'Abdülkerim Bardakcı', 2, 'Abdülkerim_Bardakcı');
+fix('İ Sma İ L',                       'İsmail Yüksek',       3, 'İsmail_Yüksek');
+fix('Kahvec İ',                        'İrfan Can Kahveci',   2, 'İrfan_Can_Kahveci');
+fix('Ferdi Kadio Ğ Lu',                'Ferdi Kadıoğlu',      2, 'Ferdi_Kadıoğlu');
+fix('Bari Ş',                          'Barış Yılmaz',        3, 'Barış_Yılmaz');
+fix('U Ğ Urcan',                       'Uğurcan Çakır',       2, 'Uğurcan_Çakır');
+fix('O Ğ Uz',                          'Oğuz Aydın',          3, 'Oğuz_Aydın');
+fix('Salih ÖZcan',                     'Salih Özcan',         2, 'Salih_Özcan');
+
+// Egypt
+fix('Mohamed Elshenawy Gomaa',         'Mohamed El Shenawy', 2, 'Mohamed_El-Shenawy');
+
+// Panama
+fix('Fidel Escobar Mendieta',          'Fidel Escobar',       2, 'Fidel_Escobar');
+fix('José Rodríguez Francis',          'José Rodríguez',      2, 'José_Rodríguez_(Panamanian_footballer)');
+fix('Tomas Rodriguez Mena',            'Tomás Rodríguez',     2, 'Tomás_Rodríguez_(Panamanian_footballer)');
+fix('Michael Murillo Bermudez',        'Michael Murillo',     2, 'Michael_Murillo');
+
+// Spain — strip maternal surname for players with 3-word names
+fix('Marcos Llorente Moreno',          'Marcos Llorente',     2, 'Marcos_Llorente');
+fix('Alejandro Baena Rodríguez',       'Alejandro Baena',     2, 'Alejandro_Baena');
+fix('Victor Muñoz Villanueva',         'Víctor Muñoz',        2, 'Víctor_Muñoz');
+fix('Borja Iglesias Quintás',          'Borja Iglesias',      2, 'Borja_Iglesias');
+fix('Luiz Rosa da Silva',              'Luiz Henrique',       2, 'Luiz_Henrique_(footballer,_born_2001)');
+
+// Netherlands — fix missing first name
+fix('van de Ven',                        'Micky van de Ven',    2, 'Micky_van_de_Ven');
+
+// Iran — strip third name
+fix('Saeid Ezatolahi Afagh',             'Saeid Ezatolahi',     2, 'Saeid_Ezatolahi');
+fix('Alireza Jahanbakhsh Jirandeh',      'Alireza Jahanbakhsh', 2, 'Alireza_Jahanbakhsh');
+
+// Cape Verde — known football names
+fix('Kevin Gonçalves Pereira de Pina',   'Kevin de Pina',       3, 'Kevin_de_Pina');
+fix('Deroy D\'Encarnação Duarte',         'Laros Duarte',        3, 'Laros_Duarte');
+fix('Jair Semedo Monteiro',              'Jair Semedo',         3, 'Jair_Semedo');
+fix('Wagner Cardoso de Pina',            'Wagner de Pina',      3, 'Wagner_de_Pina');
+
+// Paraguay
+fix('Orlando Gill Noldin',               'Orlando Gill',        3, 'Orlando_Gill');
+
 // Others
 fix('Erling Braut Haaland',             'Erling Haaland',      1, 'Erling_Haaland');
 fix('Alban Hajdari',                    'Alban Hajdari',       2, 'Alban_Hajdari');
@@ -301,26 +525,40 @@ fix('Breel Donald Embolo',              'Breel Embolo',        2, 'Breel_Embolo'
 fix('Mohamed Simakan',                  'Mohamed Simakan',     2, 'Mohamed_Simakan');
 fix('Achraf Dari',                      'Achraf Dari',         2, 'Achraf_Dari');
 
+// ── Build photo map from previous run (keyed by rawName) ─────
+const prevFile = '_2026_players_final.json';
+const prevPhotoMap = {};
+if (require('fs').existsSync(prevFile)) {
+  const prev = JSON.parse(require('fs').readFileSync(prevFile,'utf8'));
+  prev.forEach(p => { if(p.photo) prevPhotoMap[norm(p.name)] = p.photo; });
+  console.log('Previous photos loaded:', Object.keys(prevPhotoMap).length);
+}
+// Also load TheSportsDB progress cache
+const progressFile = '_sdb_progress.json';
+const sdbProgress = require('fs').existsSync(progressFile)
+  ? JSON.parse(require('fs').readFileSync(progressFile,'utf8')) : {};
+
 // ── Apply fixes + carry over from 2022 ───────────────────────
 const final = raw.map(p => {
-  const key = norm(p.name);
-  const fix = FIXES[key];
-  const carry = map22[fix ? norm(fix.name) : key];
+  // Try FIXES using both the new shirt-based name AND the rawName
+  const key     = norm(p.name);
+  const rawKey  = norm(p.rawName || p.name);
+  const fix     = FIXES[key] || FIXES[rawKey];
+  const carry   = map22[fix ? norm(fix.name) : rawKey] || map22[fix ? norm(fix.name) : key];
 
-  const name   = fix?.name  || carry?.name  || p.name;
+  // Name: fix overrides shirt-based name; carry.name NOT used (avoids old wrong names bleeding back)
+  const name   = fix?.name  || p.name;
   const d      = fix?.d     || carry?.d     || 3;
   const wiki   = fix?.wiki  || carry?.wiki  || w(name);
-  const photo  = carry?.photo || undefined;
 
-  const result = {
-    name,
-    country: p.country,
-    code: p.code,
-    pos: p.pos,
-    club: p.club,
-    d,
-    wiki,
-  };
+  // Photo priority: 2022 carry-over → previous run → SDB progress cache
+  const photo  = carry?.photo
+    || prevPhotoMap[norm(name)]
+    || prevPhotoMap[rawKey]
+    || (sdbProgress[p.name] || sdbProgress[p.rawName] || null)
+    || undefined;
+
+  const result = { name, country: p.country, code: p.code, pos: p.pos, club: p.club, d, wiki };
   if (photo) result.photo = photo;
   return result;
 });
