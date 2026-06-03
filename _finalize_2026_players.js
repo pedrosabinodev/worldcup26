@@ -68,7 +68,7 @@ fix('Dayotchanculle Upamecano',         'Dayot Upamecano',     2, 'Dayot_Upameca
 fix('Kylian Mbappe',                    'Kylian Mbappé',       1, 'Kylian_Mbappé');
 
 // ── Ghana — shirt shows first name, but player known by full name ─
-fix('Thomas',                           'Thomas Partey',       1, 'Thomas_Partey');
+fix('Thomas',                           'Thomas Partey',       2, 'Thomas_Partey'); // d:2 — Ghana star, not casual global tier
 fix('Caleb',                            'Caleb Yirenkyi',      3, 'Caleb_Yirenkyi');
 // Ghana — shirt shows professional nickname, rawName is legal name
 fix('Fatawu',                           'Fatawu Issahaku',     2, 'Abdul_Fatawu_Issahaku');
@@ -160,8 +160,10 @@ fix('Diogo Meireles da Costa',          'Diogo Costa',         2, 'Diogo_Costa_(
 fix('Rodrigo Goes',                     'Rodrygo',             2, 'Rodrygo');
 fix('Rodrygo Goes',                     'Rodrygo',             2, 'Rodrygo');
 fix('Endrick Felipe Moreira de Sousa',  'Endrick',             2, 'Endrick_(footballer)');
-fix('Rafael Alexandre Conceicao Leao', 'Rafael Leão',         2, 'Rafael_Leão');
-fix('Rafael Alexandre Conceição Leão', 'Rafael Leão',         2, 'Rafael_Leão');
+fix('Rafael Alexandre Conceicao Leao', 'Rafa Leão',           2, 'Rafael_Leão');
+fix('Rafael Alexandre Conceição Leão', 'Rafa Leão',           2, 'Rafael_Leão');
+fix('Rafa Leão',                       'Rafa Leão',           2, 'Rafael_Leão');
+fix('Rafael da Conceição Leão',        'Rafa Leão',           2, 'Rafael_Leão');
 fix('Bruno Miguel Borges Fernandes',    'Bruno Fernandes',     2, 'Bruno_Fernandes');
 fix('Ruben dos Santos Gato Alves Dias', 'Rúben Dias',         2, 'Rúben_Dias');
 fix('Rúben dos Santos Gato Alves Dias', 'Rúben Dias',         2, 'Rúben_Dias');
@@ -257,8 +259,9 @@ fix('Jordan Lee Pickford',              'Jordan Pickford',     2, 'Jordan_Pickfo
 // Germany
 fix('Joshua Kimmich',                   'Joshua Kimmich',      2, 'Joshua_Kimmich');
 fix('Jamal Musiala',                    'Jamal Musiala',       2, 'Jamal_Musiala');
-fix('Florian Wirtz',                    'Florian Wirtz',       2, 'Florian_Wirtz');
-fix('Manuel Neuer',                     'Manuel Neuer',        2, 'Manuel_Neuer');
+fix('Florian Wirtz',                    'Florian Wirtz',       1, 'Florian_Wirtz');
+fix('Manuel Neuer',                     'Manuel Neuer',        1, 'Manuel_Neuer');
+fix('Thibaut Courtois',                 'Thibaut Courtois',    2, 'Thibaut_Courtois');
 fix('Niclas Fullkrug',                  'Niclas Füllkrug',     2, 'Niclas_Füllkrug');
 fix('Niclas Füllkrug',                  'Niclas Füllkrug',     2, 'Niclas_Füllkrug');
 fix('Antonio Rudiger',                  'Antonio Rüdiger',     2, 'Antonio_Rüdiger');
@@ -283,8 +286,8 @@ fix('Mikel Oyarzabal',                  'Mikel Oyarzabal',     2, 'Mikel_Oyarzab
 fix('Dani Olmo',                        'Dani Olmo',           2, 'Dani_Olmo');
 fix('Alejandro Grimaldo Garcia',        'Alejandro Grimaldo',  2, 'Alejandro_Grimaldo');
 fix('Alejandro Grimaldo García',        'Alejandro Grimaldo',  2, 'Alejandro_Grimaldo');
-fix('Lamine Yamal',                     'Lamine Yamal',        2, 'Lamine_Yamal');
-fix('Lamine Yamal Nasraoui Ebana',      'Lamine Yamal',        2, 'Lamine_Yamal');
+fix('Lamine Yamal',                     'Lamine Yamal',        1, 'Lamine_Yamal');
+fix('Lamine Yamal Nasraoui Ebana',      'Lamine Yamal',        1, 'Lamine_Yamal');
 fix('Nico Williams Arthuer',            'Nico Williams',       2, 'Nico_Williams_(footballer)');
 
 // Netherlands
@@ -298,7 +301,7 @@ fix('Xavi Simons',                      'Xavi Simons',         2, 'Xavi_Simons')
 fix('Ryan Gravenberch',                 'Ryan Gravenberch',    2, 'Ryan_Gravenberch');
 
 // Morocco
-fix('Achraf Hakimi',                    'Achraf Hakimi',       2, 'Achraf_Hakimi');
+fix('Achraf Hakimi',                    'Achraf Hakimi',       1, 'Achraf_Hakimi');
 fix('Sofyan Amrabat',                   'Sofyan Amrabat',      2, 'Sofyan_Amrabat');
 fix('Youssef En-Nesyri',                'Youssef En-Nesyri',   2, 'Youssef_En-Nesyri');
 fix('Bono',                             'Bono',                2, 'Yassine_Bounou');
@@ -423,7 +426,7 @@ fix('Nicolas Jackson',                  'Nicolas Jackson',     2, 'Nicolas_Jacks
 fix('Sergio Rochet Alvarez',            'Sergio Rochet',       2, 'Sergio_Rochet');
 fix('José Giménez de Vargas',           'José Giménez',        2, 'José_Giménez');
 fix('Sebastián Cáceres Ramos',          'Sebastián Cáceres',   2, 'Sebastián_Cáceres');
-fix('Ronald Araújo da Silva',           'Ronald Araújo',       1, 'Ronald_Araújo');
+fix('Ronald Araújo da Silva',           'Ronald Araújo',       2, 'Ronald_Araújo');
 fix('Manuel Ugarte Ribeiro',            'Manuel Ugarte',       2, 'Manuel_Ugarte');
 fix('Rodrigo Bentancur Colmán',         'Rodrigo Bentancur',   2, 'Rodrigo_Bentancur');
 fix('Diego de la Cruz Arcosa',          'Diego de la Cruz',    2, 'Diego_de_la_Cruz');
@@ -509,7 +512,7 @@ fix('Dedi Ć',                          'Amar Dedić',          3, 'Amar_Dedić'
 fix('Gigovi Ć',                        'Armin Gigović',       3, 'Armin_Gigović');
 fix('Ba Ž Dar',                        'Samed Baždar',        3, 'Samed_Baždar');
 fix('Demirovi Ć',                      'Ermedin Demirović',   2, 'Ermedin_Demirović');
-fix('D Ž Eko',                         'Edin Džeko',          1, 'Edin_Džeko');
+fix('D Ž Eko',                         'Edin Džeko',          2, 'Edin_Džeko');
 fix('Ba Š I Ć',                        'Ivan Bašić',          3, 'Ivan_Bašić');
 fix('Š Unji Ć',                        'Ivan Šunjić',         2, 'Ivan_Šunjić');
 fix('Memi Ć',                          'Amar Memić',          3, 'Amar_Memić');
@@ -525,13 +528,13 @@ fix('Luki Ć',                          'Jovo Lukić',          3, 'Jovo_Lukić'
 fix('Mahmi Ć',                         'Ermin Mahmić',        3, 'Ermin_Mahmić');
 
 // Croatia — broken special chars + truncated first names
-fix('Jo Gvardiol',                     'Joško Gvardiol',      1, 'Joško_Gvardiol');
+fix('Jo Gvardiol',                     'Joško Gvardiol',      2, 'Joško_Gvardiol');
 fix('Livakovi Ć',                      'Dominik Livaković',   2, 'Dominik_Livaković');
 fix('Stani Š I Ć',                     'Josip Stanišić',      2, 'Josip_Stanišić');
 fix('Pongra Č I Ć',                    'Marin Pongračić',     2, 'Marin_Pongračić');
 fix('Ć Aleta-Car',                     'Duje Ćaleta-Car',     2, 'Duje_Ćaleta-Car');
 fix('Š Utalo',                         'Josip Šutalo',        2, 'Josip_Šutalo');
-fix('Kova Č I Ć',                      'Mateo Kovačić',       1, 'Mateo_Kovačić');
+fix('Kova Č I Ć',                      'Mateo Kovačić',       2, 'Mateo_Kovačić');
 fix('Kramari Ć',                       'Andrej Kramarić',     2, 'Andrej_Kramarić');
 fix('Modri Ć',                         'Luka Modrić',         1, 'Luka_Modrić');
 fix('Vla Š I Ć',                       'Nikola Vlašić',       2, 'Nikola_Vlašić');
@@ -567,7 +570,7 @@ fix('Dem İ Ral',                       'Merih Demiral',       2, 'Merih_Demiral
 fix('ÇA Ğ Lar',                        'Çağlar Söyüncü',      2, 'Çağlar_Söyüncü');
 fix('Aktürko Ğ Lu',                    'Kerem Aktürkoglu',    2, 'Kerem_Aktürkoglu');
 fix('Den İ Z Gül',                     'Deniz Gül',           3, 'Deniz_Gül');
-fix('ÇAlhano Ğ Lu',                    'Hakan Çalhanoğlu',    1, 'Hakan_Çalhanoğlu');
+fix('ÇAlhano Ğ Lu',                    'Hakan Çalhanoğlu',    2, 'Hakan_Çalhanoğlu');
 fix('Abdülker İ M',                    'Abdülkerim Bardakcı', 2, 'Abdülkerim_Bardakcı');
 fix('İ Sma İ L',                       'İsmail Yüksek',       3, 'İsmail_Yüksek');
 fix('Kahvec İ',                        'İrfan Can Kahveci',   2, 'İrfan_Can_Kahveci');
@@ -579,6 +582,7 @@ fix('Salih ÖZcan',                     'Salih Özcan',         2, 'Salih_Özcan
 
 // Egypt
 fix('Mohamed Elshenawy Gomaa',         'Mohamed El Shenawy', 2, 'Mohamed_El-Shenawy');
+fix('Omar Marmoush',                   'Omar Marmoush',      2, 'Omar_Marmoush');
 
 // Panama
 fix('Fidel Escobar Mendieta',          'Fidel Escobar',       2, 'Fidel_Escobar');

@@ -1040,7 +1040,7 @@
     "code": "be",
     "pos": "Goalkeeper",
     "club": "Real Madrid C. F.",
-    "d": 1,
+    "d": 2,
     "wiki": "Thibaut_Courtois",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/54zonn1779039115.jpg"
   },
@@ -1399,7 +1399,7 @@
     "code": "ba",
     "pos": "Forward",
     "club": "FC Schalke 04",
-    "d": 1,
+    "d": 2,
     "wiki": "Edin_Džeko",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/sml4xg1710662840.jpg"
   },
@@ -3141,7 +3141,7 @@
     "code": "hr",
     "pos": "Defender",
     "club": "Manchester City FC",
-    "d": 1,
+    "d": 2,
     "wiki": "Joško_Gvardiol",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/dku11k1703326585.jpg"
   },
@@ -3181,7 +3181,7 @@
     "code": "hr",
     "pos": "Midfielder",
     "club": "Manchester City FC",
-    "d": 1,
+    "d": 2,
     "wiki": "Mateo_Kovačić",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/15hnid1703325850.jpg"
   },
@@ -4145,6 +4145,16 @@
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/akphab1767540890.jpg"
   },
   {
+    "name": "Mohamed Salah",
+    "country": "Egypt",
+    "code": "eg",
+    "pos": "Forward",
+    "club": "Al-Ittihad FC",
+    "d": 1,
+    "wiki": "Mohamed_Salah",
+    "photo": "https://r2.thesportsdb.com/images/media/player/thumb/o7y57t1718438615.jpg"
+  },
+  {
     "name": "Mohamed El Shenawy",
     "country": "Egypt",
     "code": "eg",
@@ -4349,7 +4359,7 @@
     "code": "eg",
     "pos": "Forward",
     "club": "Manchester City FC",
-    "d": 3,
+    "d": 2,
     "wiki": "Omar_Marmoush",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/w1jx521658324336.jpg"
   },
@@ -4910,7 +4920,7 @@
     "code": "de",
     "pos": "Goalkeeper",
     "club": "FC Bayern München",
-    "d": 2,
+    "d": 1,
     "wiki": "Manuel_Neuer",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/2wx5jc1779384216.jpg"
   },
@@ -5070,7 +5080,7 @@
     "code": "de",
     "pos": "Midfielder",
     "club": "Liverpool FC",
-    "d": 2,
+    "d": 1,
     "wiki": "Florian_Wirtz",
     "photo": "https://www.thesportsdb.com/images/media/player/thumb/k2mwrs1779386689.jpg"
   },
@@ -5210,7 +5220,7 @@
     "code": "gh",
     "pos": "Midfielder",
     "club": "Villarreal CF",
-    "d": 1,
+    "d": 2,
     "wiki": "Thomas_Partey",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/lnsxw11705917605.jpg"
   },
@@ -7178,7 +7188,7 @@
     "code": "ma",
     "pos": "Defender",
     "club": "Paris Saint-Germain",
-    "d": 2,
+    "d": 1,
     "wiki": "Achraf_Hakimi",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/lwhwh71770216476.jpg"
   },
@@ -8883,7 +8893,7 @@
     "code": "pt",
     "pos": "Forward",
     "club": "AC Milan",
-    "d": 3,
+    "d": 2,
     "wiki": "Rafael_da_Conceição_Leão",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/m1sh9x1549742563.jpg"
   },
@@ -10428,7 +10438,7 @@
     "code": "es",
     "pos": "Forward",
     "club": "FC Barcelona",
-    "d": 2,
+    "d": 1,
     "wiki": "Lamine_Yamal",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ukerpq1692551634.jpg"
   },
@@ -11373,7 +11383,7 @@
     "code": "tr",
     "pos": "Midfielder",
     "club": "FC Internazionale Milano",
-    "d": 1,
+    "d": 2,
     "wiki": "Hakan_Çalhanoğlu",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/ays7ot1737352882.jpg"
   },
@@ -11569,7 +11579,7 @@
     "code": "uy",
     "pos": "Defender",
     "club": "FC Barcelona",
-    "d": 1,
+    "d": 2,
     "wiki": "Ronald_Araújo",
     "photo": "https://r2.thesportsdb.com/images/media/player/thumb/z4bmo21771260643.jpg"
   },
