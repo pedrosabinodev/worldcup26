@@ -670,12 +670,88 @@ const CLUB_WIKI={
 };
 const clubPhotoCache={};
 const _clubInFlight={};
+// 2026 PDF uses full club names — map to existing CLUB_WIKI abbreviated keys
+const CLUB_ALIASES={
+  "Manchester City FC":"Man City","FC Barcelona":"Barcelona",
+  "FC Bayern München":"Bayern Munich","FC Bayern Munich":"Bayern Munich",
+  "Manchester United FC":"Man United","Arsenal FC":"Arsenal",
+  "Liverpool FC":"Liverpool","Chelsea FC":"Chelsea",
+  "Tottenham Hotspur FC":"Tottenham","Everton FC":"Everton",
+  "Aston Villa FC":"Aston Villa","Crystal Palace FC":"Crystal Palace",
+  "Brighton & Hove Albion FC":"Brighton","Fulham FC":"Fulham",
+  "Brentford FC":"Brentford","Wolverhampton Wanderers FC":"Wolves",
+  "West Ham United FC":"West Ham","Newcastle United FC":"Newcastle",
+  "Nottingham Forest FC":"Nottm Forest","Leicester City FC":"Leicester",
+  "Paris Saint-Germain":"PSG","Paris Saint-Germain FC":"PSG",
+  "Real Madrid C. F.":"Real Madrid","Real Madrid CF":"Real Madrid",
+  "Atlético De Madrid":"Atlético","Atletico De Madrid":"Atlético",
+  "Club Atlético De Madrid":"Atlético","Club Atlético de Madrid":"Atlético",
+  "Borussia Dortmund":"Dortmund","Galatasaray SK":"Galatasaray",
+  "Fenerbahçe SK":"Fenerbahçe","Fenerbahce SK":"Fenerbahce SK",
+  "PSV Eindhoven":"PSV","RC Lens":"Lens","RC Strasbourg Alsace":"Strasbourg",
+  "Olympique Lyonnais":"Olympique Lyon","Olympique De Marseille":"Marseille",
+  "Stade Rennais FC":"Rennes","Stade De Reims":"Stade Reims",
+  "Lille OSC":"Lille","OGC Nice":"Nice","AS Monaco":"Monaco",
+  "FC Nantes":"Nantes","FC Lorient":"Lorient","SC Montpellier":"Montpellier",
+  "Montpellier HSC":"Montpellier","Toulouse FC":"Toulouse",
+  "Bayer 04 Leverkusen":"Leverkusen","Bayer Leverkusen":"Leverkusen",
+  "RB Leipzig":"RB Leipzig","Eintracht Frankfurt":"E. Frankfurt",
+  "VfB Stuttgart":"Stuttgart","SC Freiburg":"Freiburg",
+  "TSG 1899 Hoffenheim":"Hoffenheim","1. FC Union Berlin":"Union Berlin",
+  "SV Werder Bremen":"Werder Bremen","VfL Wolfsburg":"Wolfsburg",
+  "Hertha BSC":"Hertha","Hamburger SV":"Hamburg",
+  "Ajax Amsterdam":"Ajax","AFC Ajax":"Ajax",
+  "Feyenoord Rotterdam":"Feyenoord Rotterdam",
+  "Club Brugge KV":"Club Brugge","R.S.C. Anderlecht":"Anderlecht",
+  "RSC Anderlecht":"Anderlecht","KRC Genk":"Genk",
+  "Celtic FC":"Celtic","Rangers FC":"Rangers",
+  "S.L. Benfica":"Benfica","SL Benfica":"Benfica",
+  "Sporting CP":"Sporting CP","FC Porto":"Porto","S.C. Braga":"Braga",
+  "ACF Fiorentina":"Fiorentina","Juventus FC":"Juventus",
+  "Inter Milan":"Inter Milan","AC Milan":"AC Milan","AS Roma":"Roma",
+  "S.S. Lazio":"Lazio","SSC Napoli":"Napoli","Atalanta BC":"Atalanta",
+  "Bologna FC 1909":"Bologna","Torino FC":"Torino",
+  "GNK Dinamo Zagreb":"Dinamo Zagreb","HNK Hajduk Split":"Hajduk Split",
+  "FK Red Star Belgrade":"Red Star Belgrade",
+  "FC Red Bull Salzburg":"Red Bull Salzburg",
+  "BSC Young Boys":"BSC Young Boys","FC Zurich":"FC Basel",
+  "Al Hilal SC":"Al Hilal SFC","Al-Hilal SC":"Al Hilal SFC",
+  "Al Ahli FC":"Al Ahli","Al-Ahli FC":"Al Ahli",
+  "Al Ahly SC":"Al Ahly","CR Flamengo":"Flamengo",
+  "Clube De Regatas Do Flamengo":"Flamengo",
+  "Sociedade Esportiva Palmeiras":"Palmeiras",
+  "São Paulo FC":"São Paulo","Club Athletico Paranaense":"Athletico Paranaense",
+  "Club Atlético River Plate":"River Plate",
+  "CA River Plate":"River Plate","CA Boca Juniors":"CA Independiente",
+  "APOEL FC":"Pafos","Seattle Sounders FC":"Seattle Sounders",
+  "CF Montréal":"CF Montréal","Vancouver Whitecaps FC":"Vancouver",
+  "New York City FC":"NYCFC","New York Red Bulls":"NY Red Bulls",
+  "LA Galaxy":"LA Galaxy","Los Angeles FC":"Los Angeles",
+  "Inter Miami CF":"Inter Miami","Toronto FC":"Toronto",
+  "Charlotte FC":"Charlotte","Chicago Fire FC":"Chicago Fire",
+  "FC Cincinnati":"FC Cincinnatti","Portland Timbers":"Portland",
+  "Houston Dynamo FC":"Houston Dynamo","Colorado Rapids":"Colorado Rapids",
+  "Gamba Osaka":"Gamba Osaka","Kawasaki Frontale":"Kawasaki",
+  "Urawa Red Diamonds":"Urawa Reds","Melbourne City FC":"Melbourne City",
+  "Central Coast Mariners FC":"Central Coast Mariners","Sydney FC":"Sydney",
+  "Adelaide United FC":"Adelaide United",
+  "FK Crvena zvezda":"Red Star Belgrade",
+  "Legia Warsaw":"Legia Warsaw","Lech Poznań":"Lech Poznań",
+};
+function resolveClubWiki(club){
+  const n=club.replace(/\x00/g,'fi');
+  return CLUB_WIKI[n]||CLUB_WIKI[club]||
+    CLUB_WIKI[CLUB_ALIASES[n]]||CLUB_WIKI[CLUB_ALIASES[club]]||
+    // Strip " FC"/" SC"/" CF" suffix and try
+    CLUB_WIKI[n.replace(/\s+(?:FC|SC|CF|C\.F\.|S\.C\.|SK|SFC|AFC|AFK|GmbH|1849|1903|1904|1905|1906|1907|1908|1909|1910|1911|1912|1913|1914|1915|1916|1917|1918|1919|1920)\s*$/i,'').trim()]||
+    // Strip "FC "/"CR "/"AS " prefix and try
+    CLUB_WIKI[n.replace(/^(?:FC|AC|AS|SC|FK|NK|CR|SL|SD|RC|VfB|VfL)\s+/i,'').trim()]||
+    null;
+}
 async function fetchClubBadge(club){
   if(clubPhotoCache[club]!==undefined) return;
   if(_clubInFlight[club]){await _clubInFlight[club];return;}
-  // Normalize PDF ligature artifact: 'fi' encoded as \x00 (e.g. "She\x00eld" → "Sheffield")
-  const normalized=club.replace(/\x00/g,'fi');
-  const wiki=CLUB_WIKI[normalized]||CLUB_WIKI[club];
+  const wiki=resolveClubWiki(club);
   if(!wiki){clubPhotoCache[club]=null;return;}
   _clubInFlight[club]=(async()=>{
     try{
