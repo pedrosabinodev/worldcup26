@@ -86,7 +86,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .qmark-sub{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;padding:0 8px}
 .photo-back{background:var(--surface2);transform:rotateY(180deg);position:relative}
 .photo-back img.player-img{display:block;width:var(--PW);height:var(--PH);object-fit:cover;object-position:top center}
-.club-badge{position:absolute;bottom:7px;right:7px;width:34px;height:34px;border-radius:50%;background:rgba(10,10,11,.85);border:1.5px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:3;opacity:0;transition:opacity .4s ease .25s}
+.club-badge{position:absolute;bottom:7px;right:7px;width:34px;height:34px;border-radius:50%;background:rgba(10,10,11,.85);border:1.5px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;overflow:hidden;z-index:3;opacity:0;transition:opacity .3s ease .15s}
 .club-badge.show{opacity:1}
 .club-badge svg{width:28px;height:28px;display:block}
 .club-badge img{width:28px;height:28px;object-fit:contain;display:block}
@@ -2690,7 +2690,7 @@ function handleAnswer(idx){
     if(src){const ci=document.createElement('img');ci.src=src;ci.alt='';b.appendChild(ci);}
     else{b.innerHTML=clubBadge(currentPlayer.club);}
     b.classList.add('show');
-  },630);
+  },530);
 
   // Reveal row fades in — no layout shift
   const rr=document.getElementById('reveal-row');
