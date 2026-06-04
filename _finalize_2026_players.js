@@ -140,6 +140,8 @@ fix('Neymar Da Silva Santos Junior',    'Neymar Jr',           1, 'Neymar');
 fix('Vinicius Paixão de Oliveira Júnior','Vinícius Júnior',    1, 'Vinícius_Júnior');
 fix('Vinicius Paixao de Oliveira Junior','Vinícius Júnior',    1, 'Vinícius_Júnior');
 fix('Erling Haaland',                   'Erling Haaland',      1, 'Erling_Haaland');
+fix('Martin Odegaard',                  'Martin Ødegaard',     2, 'Martin_Ødegaard');
+fix('Martín ØDegaard',                  'Martin Ødegaard',     2, 'Martin_Ødegaard');
 fix('Jude Bellingham',                  'Jude Bellingham',     1, 'Jude_Bellingham');
 fix('Rodri',                            'Rodri',               1, 'Rodri_(footballer)');
 fix('Rodrigo Hernandez Cascante',       'Rodri',               1, 'Rodri_(footballer)');
@@ -281,8 +283,8 @@ fix('Kai Havertz',                      'Kai Havertz',         2, 'Kai_Havertz')
 // Argentina
 fix('Emiliano Martinez',                'Emiliano Martínez',   2, 'Emiliano_Martínez');
 fix('Emiliano Adrian Martinez',         'Emiliano Martínez',   2, 'Emiliano_Martínez');
-fix('Damian Martinez',                  'Damián Martínez',     2, 'Damián_Martínez');
-fix('Damián Martínez',                  'Damián Martínez',     2, 'Damián_Martínez');
+fix('Damian Martinez',                  'Emiliano Martínez',   2, 'Emiliano_Martínez');
+fix('Damián Martínez',                  'Emiliano Martínez',   2, 'Emiliano_Martínez');
 fix('Enzo Fernandez',                   'Enzo Fernández',      2, 'Enzo_Fernández');
 fix('Rodrigo De Paul',                  'Rodrigo De Paul',     2, 'Rodrigo_De_Paul');
 fix('Marcos Acuna',                     'Marcos Acuña',        2, 'Marcos_Acuña');
@@ -357,7 +359,7 @@ fix('Ferran Torres Garcia',             'Ferran Torres',       2, 'Ferran_Torres
 fix('Pedri Gonzalez Lopez',             'Pedri',               1, 'Pedri');
 
 // France (more)
-fix('Masour Dembele',                   'Moussa Dembélé',      2, 'Moussa_Dembélé_(footballer,_born_1996)');
+fix('Masour Dembele',                   'Ousmane Dembélé',     2, 'Ousmane_Dembélé');
 fix('Marcus Thuram Ulien',              'Marcus Thuram',       2, 'Marcus_Thuram');
 fix('Ngolo Kante',                      "N'Golo Kanté",        2, "N'Golo_Kanté");
 fix('Bradley Barcola',                  'Bradley Barcola',     2, 'Bradley_Barcola');

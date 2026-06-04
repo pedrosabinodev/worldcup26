@@ -154,7 +154,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 #fi-m{font-size:13px;flex-basis:100%}
 
 /* RESULTS */
-#results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:24px;padding:80px 0}
+#results-screen{flex:1;display:none;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:24px;padding:64px 0}
 .results-score{font-family:'Barlow Condensed',sans-serif;font-size:96px;font-weight:700;color:var(--accent);line-height:1}
 .results-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .results-sub{font-size:18px;color:var(--muted);max-width:360px;line-height:1.6}
@@ -165,7 +165,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
 .change-mode:hover{border-color:var(--muted);color:var(--text)}
 
 /* MATCH REVIEW */
-.match-review{width:100%;max-width:772px;text-align:left}
+.match-review{width:100%;max-width:772px;text-align:left;margin-top:48px}
 .review-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px}
 .review-label{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .share-btn{background:none;border:none;color:var(--accent);font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:0;transition:opacity .15s}
@@ -895,7 +895,7 @@ const PLAYERS = [
   {name:"Alexis Mac Allister",country:"Argentina",code:"ar",pos:"Midfielder",club:"Liverpool FC",d:2,wiki:"Alexis_Mac_Allister",photo:"https://r2.thesportsdb.com/images/media/player/thumb/9n5dnd1751999911.jpg"},
   {name:"Jose Lopez",country:"Argentina",code:"ar",pos:"Forward",club:"SE Palmeiras",d:3,wiki:"Jose_Lopez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/nx47de1552921989.jpg"},
   {name:"Lautaro Martínez",country:"Argentina",code:"ar",pos:"Forward",club:"FC Internazionale Milano",d:1,wiki:"Lautaro_Martínez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/y9j7e11719034723.jpg"},
-  {name:"Damián Martínez",country:"Argentina",code:"ar",pos:"Goalkeeper",club:"Aston Villa FC",d:2,wiki:"Damián_Martínez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/xgwwtg1763043497.jpg"},
+  {name:"Emiliano Martínez",country:"Argentina",code:"ar",pos:"Goalkeeper",club:"Aston Villa FC",d:2,wiki:"Emiliano_Martínez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/xgwwtg1763043497.jpg"},
   {name:"Enzo Fernández",country:"Argentina",code:"ar",pos:"Midfielder",club:"Chelsea FC",d:2,wiki:"Enzo_Fernández",photo:"https://r2.thesportsdb.com/images/media/player/thumb/59cm7k1771427301.jpg"},
   {name:"Facundo Medina",country:"Argentina",code:"ar",pos:"Defender",club:"Olympique Marseille",d:3,wiki:"Facundo_Medina",photo:"https://www.thesportsdb.com/images/media/player/thumb/2sd8u81780011419.jpg"},
   {name:"Nahuel Molina",country:"Argentina",code:"ar",pos:"Defender",club:"Atlético De Madrid",d:2,wiki:"Nahuel_Molina",photo:"https://r2.thesportsdb.com/images/media/player/thumb/uhc6mv1719036284.jpg"},
@@ -1322,7 +1322,7 @@ const PLAYERS = [
   {name:"Dayot Upamecano",country:"France",code:"fr",pos:"Defender",club:"FC Bayern München",d:2,wiki:"Dayot_Upamecano",photo:"https://www.thesportsdb.com/images/media/player/thumb/a66k1g1778818296.jpg"},
   {name:"Jules Kounde",country:"France",code:"fr",pos:"Defender",club:"FC Barcelona",d:2,wiki:"Jules_Koundé",photo:"https://www.thesportsdb.com/images/media/player/thumb/ghod9q1778805401.jpg"},
   {name:"Manu Koné",country:"France",code:"fr",pos:"Midfielder",club:"AS Roma",d:2,wiki:"Manu_Koné",photo:"https://www.thesportsdb.com/images/media/player/thumb/8hse0b1778805166.jpg"},
-  {name:"Moussa Dembélé",country:"France",code:"fr",pos:"Forward",club:"Paris Saint-Germain",d:2,wiki:"Moussa_Dembélé_(footballer,_born_1996)",photo:"https://r2.thesportsdb.com/images/media/player/thumb/5s1xf81596282985.jpg"},
+  {name:"Ousmane Dembélé",country:"France",code:"fr",pos:"Forward",club:"Paris Saint-Germain",d:2,wiki:"Ousmane_Dembélé",photo:"https://r2.thesportsdb.com/images/media/player/thumb/5s1xf81596282985.jpg"},
   {name:"Aurélien Tchouaméni",country:"France",code:"fr",pos:"Midfielder",club:"Real Madrid C. F.",d:2,wiki:"Aurélien_Tchouaméni",photo:"https://www.thesportsdb.com/images/media/player/thumb/co0ahr1778818162.jpg"},
   {name:"Marcus Thuram",country:"France",code:"fr",pos:"Forward",club:"FC Internazionale Milano",d:2,wiki:"Marcus_Thuram",photo:"https://r2.thesportsdb.com/images/media/player/thumb/qo7y1v1724515703.jpg"},
   {name:"Kylian Mbappé",country:"France",code:"fr",pos:"Forward",club:"Real Madrid C. F.",d:1,wiki:"Kylian_Mbappé",photo:"https://www.thesportsdb.com/images/media/player/thumb/v08cj31778816426.jpg"},
@@ -1662,7 +1662,7 @@ const PLAYERS = [
   {name:"Alexander Sørloth",country:"Norway",code:"no",pos:"Forward",club:"Atlético De Madrid",d:3,wiki:"Alexander_Sørloth",photo:"https://r2.thesportsdb.com/images/media/player/thumb/slx8ts1724311500.jpg"},
   {name:"Sander Berge",country:"Norway",code:"no",pos:"Midfielder",club:"Fulham FC",d:3,wiki:"Sander_Berge",photo:"https://www.thesportsdb.com/images/media/player/thumb/awnp9b1779407774.jpg"},
   {name:"Erling Haaland",country:"Norway",code:"no",pos:"Forward",club:"Manchester City FC",d:1,wiki:"Erling_Haaland",photo:"https://r2.thesportsdb.com/images/media/player/thumb/bb1agj1727415216.jpg"},
-  {name:"Martín ØDegaard",country:"Norway",code:"no",pos:"Midfielder",club:"Arsenal FC",d:3,wiki:"Martín_ØDegaard",photo:"https://r2.thesportsdb.com/images/media/player/thumb/ttlff21727415365.jpg"},
+  {name:"Martin Ødegaard",country:"Norway",code:"no",pos:"Midfielder",club:"Arsenal FC",d:2,wiki:"Martin_Ødegaard",photo:"https://r2.thesportsdb.com/images/media/player/thumb/ttlff21727415365.jpg"},
   {name:"Strand Larsen",country:"Norway",code:"no",pos:"Forward",club:"Crystal Palace FC",d:3,wiki:"Jørgen_Larsen",photo:"https://r2.thesportsdb.com/images/media/player/thumb/iklw8s1772140820.jpg"},
   {name:"Sander Tangvik",country:"Norway",code:"no",pos:"Goalkeeper",club:"Hamburger SV",d:3,wiki:"Sander_Tangvik",photo:"https://www.thesportsdb.com/images/media/player/thumb/3rat671779406783.jpg"},
   {name:"Egil Selvik",country:"Norway",code:"no",pos:"Goalkeeper",club:"Watford FC",d:3,wiki:"Egil_Selvik",photo:"https://r2.thesportsdb.com/images/media/player/thumb/k9bzoa1739973004.jpg"},
