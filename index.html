@@ -2757,7 +2757,7 @@ function buildShareText(){
   const statsLine=`🏆 ${score} pts  🔥 ${t('Streak','Sequência')} ×${streak}  ${correct}/${history.length}`;
   const max=history.length*200;
   const sub=score>=max*.85
-    ?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lendário.')
+    ?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lenda.')
     :score>=max*.6
     ?t('Solid knowledge. A true football fan.','Sólido conhecimento. Um verdadeiro fã.')
     :score>=max*.35
@@ -2816,7 +2816,7 @@ function showResults(){
   document.getElementById('results-score').textContent=score;
   const max=queue.length*200;
   document.getElementById('results-sub').textContent=
-    score>=max*.85?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lendário.'):
+    score>=max*.85?t('You clearly watch too much football. Legendary.','Você claramente assiste futebol demais. Lenda.'):
     score>=max*.6?t('Solid knowledge. A true football fan.','Sólido conhecimento. Um verdadeiro fã.'):
     score>=max*.35?t('Not bad. Room to grow.','Nada mal. Ainda tem como melhorar.'):
     t('Keep watching — the World Cup will help.','Continue assistindo — a Copa vai ajudar.');
