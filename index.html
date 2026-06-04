@@ -309,21 +309,21 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
       <div class="welcome-sub">Guess which country each player represents. Answer to reveal their photo and club. 10 rounds per match.</div>
       <div class="mode-label">Choose your difficulty to start</div>
       <div class="mode-cards">
-        <div class="mode-card" onclick="startGame('stars')">
+        <button class="mode-card" onclick="startGame('stars')">
           <div class="mode-card-icon">⭐</div>
           <div class="mode-card-title">Stars Only</div>
           <div class="mode-card-desc">World-famous players everyone should know. Great for casual fans.</div>
-        </div>
-        <div class="mode-card" onclick="startGame('mixed')">
+        </button>
+        <button class="mode-card" onclick="startGame('mixed')">
           <div class="mode-card-icon">🔥</div>
           <div class="mode-card-title">Mixed</div>
           <div class="mode-card-desc">Stars plus well-known players from all 48 nations. A real test.</div>
-        </div>
-        <div class="mode-card" onclick="startGame('all')">
+        </button>
+        <button class="mode-card" onclick="startGame('all')">
           <div class="mode-card-icon">🌍</div>
           <div class="mode-card-title">All Players</div>
           <div class="mode-card-desc">Every player in the dataset. Experts only.</div>
-        </div>
+        </button>
       </div>
       <div class="creator-sign" id="creator-sign">by Pedro Sabino</div>
     </div>
@@ -912,7 +912,7 @@ const PLAYERS = [
   {name:"Hicham Boudaoui",country:"Algeria",code:"dz",pos:"Midfielder",club:"OGC Nice",d:3,wiki:"Hicham_Boudaoui",photo:"https://r2.thesportsdb.com/images/media/player/thumb/vgryvf1609022848.jpg"},
   {name:"Aït Nouri",country:"Algeria",code:"dz",pos:"Defender",club:"Manchester City FC",d:3,wiki:"Rayan_Aït-Nouri",photo:"https://www.thesportsdb.com/images/media/player/thumb/itf0a21780252666.jpg"},
   {name:"Oussama Benbot",country:"Algeria",code:"dz",pos:"Goalkeeper",club:"USM Alger",d:3,wiki:"Oussama_Benbot",photo:"https://www.thesportsdb.com/images/media/player/thumb/lfutof1780251618.jpg"},
-  {name:"Ra\u0000K Belghali",country:"Algeria",code:"dz",pos:"Defender",club:"Hellas Verona FC",d:3,wiki:"Ra\u0000K_Belghali",photo:"https://r2.thesportsdb.com/images/media/player/thumb/vfqhwg1759162273.jpg"},
+  {name:"Rafik Belghali",country:"Algeria",code:"dz",pos:"Defender",club:"Hellas Verona FC",d:3,wiki:"Ra\u0000K_Belghali",photo:"https://r2.thesportsdb.com/images/media/player/thumb/vfqhwg1759162273.jpg"},
   {name:"Mohammed Amoura",country:"Algeria",code:"dz",pos:"Forward",club:"VfL Wolfsburg",d:3,wiki:"Mohammed_Amoura"},
   {name:"Nabil Bentaleb",country:"Algeria",code:"dz",pos:"Midfielder",club:"Lille OSC",d:3,wiki:"Nabil_Bentaleb",photo:"https://r2.thesportsdb.com/images/media/player/thumb/kluyu41578151803.jpg"},
   {name:"Adil Boulbina",country:"Algeria",code:"dz",pos:"Forward",club:"Al Duhail SC",d:3,wiki:"Adil_Boulbina",photo:"https://www.thesportsdb.com/images/media/player/thumb/hz3nql1780251870.jpg"},
@@ -940,7 +940,7 @@ const PLAYERS = [
   {name:"Thiago Almada",country:"Argentina",code:"ar",pos:"Forward",club:"Atlético De Madrid",d:3,wiki:"Thiago_Almada",photo:"https://www.thesportsdb.com/images/media/player/thumb/nxn1kn1780009680.jpg"},
   {name:"Giuliano Simeone",country:"Argentina",code:"ar",pos:"Forward",club:"Atlético De Madrid",d:3,wiki:"Giuliano_Simeone",photo:"https://www.thesportsdb.com/images/media/player/thumb/c24ms91780010953.jpg"},
   {name:"Nico Paz",country:"Argentina",code:"ar",pos:"Forward",club:"Como",d:3,wiki:"Nicolas_Paz_Martínez",photo:"https://www.thesportsdb.com/images/media/player/thumb/ol1v8l1780010884.jpg"},
-  {name:"Nicolas Otamendi",country:"Argentina",code:"ar",pos:"Defender",club:"SL Ben\u0000ca",d:2,wiki:"Nicolás_Otamendi",photo:"https://www.thesportsdb.com/images/media/player/thumb/c735ni1780010283.jpg"},
+  {name:"Nicolas Otamendi",country:"Argentina",code:"ar",pos:"Defender",club:"SL Benfica",d:2,wiki:"Nicolás_Otamendi",photo:"https://www.thesportsdb.com/images/media/player/thumb/c735ni1780010283.jpg"},
   {name:"Alexis Mac Allister",country:"Argentina",code:"ar",pos:"Midfielder",club:"Liverpool FC",d:2,wiki:"Alexis_Mac_Allister",photo:"https://r2.thesportsdb.com/images/media/player/thumb/9n5dnd1751999911.jpg"},
   {name:"Jose Lopez",country:"Argentina",code:"ar",pos:"Forward",club:"SE Palmeiras",d:3,wiki:"Jose_Lopez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/nx47de1552921989.jpg"},
   {name:"Lautaro Martínez",country:"Argentina",code:"ar",pos:"Forward",club:"FC Internazionale Milano",d:1,wiki:"Lautaro_Martínez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/y9j7e11719034723.jpg"},
@@ -1013,7 +1013,7 @@ const PLAYERS = [
   {name:"Jeremy Doku",country:"Belgium",code:"be",pos:"Forward",club:"Manchester City FC",d:2,wiki:"Jérémy_Doku",photo:"https://r2.thesportsdb.com/images/media/player/thumb/w37jy41703326117.jpg"},
   {name:"Senne Lammens",country:"Belgium",code:"be",pos:"Goalkeeper",club:"Manchester United FC",d:3,wiki:"Senne_Lammens",photo:"https://www.thesportsdb.com/images/media/player/thumb/ikdzhg1779039951.jpg"},
   {name:"Mike Penders",country:"Belgium",code:"be",pos:"Goalkeeper",club:"RC Strasbourg",d:3,wiki:"Mike_Penders",photo:"https://r2.thesportsdb.com/images/media/player/thumb/1n31ja1766053786.jpg"},
-  {name:"Dodi Lukebakio",country:"Belgium",code:"be",pos:"Forward",club:"SL Ben\u0000ca",d:3,wiki:"Dodi_Lukebakio_Ngandoli",photo:"https://www.thesportsdb.com/images/media/player/thumb/vd8d3j1779040343.jpg"},
+  {name:"Dodi Lukebakio",country:"Belgium",code:"be",pos:"Forward",club:"SL Benfica",d:3,wiki:"Dodi_Lukebakio_Ngandoli",photo:"https://www.thesportsdb.com/images/media/player/thumb/vd8d3j1779040343.jpg"},
   {name:"Thomas Meunier",country:"Belgium",code:"be",pos:"Defender",club:"Lille OSC",d:2,wiki:"Thomas_Meunier",photo:"https://www.thesportsdb.com/images/media/player/thumb/uljulm1779040994.jpg"},
   {name:"de Winter",country:"Belgium",code:"be",pos:"Defender",club:"AC Milan",d:3,wiki:"Koni_de_Winter",photo:"https://r2.thesportsdb.com/images/media/player/thumb/5h062e1667323389.jpg"},
   {name:"de Ketelaere",country:"Belgium",code:"be",pos:"Forward",club:"Atalanta Bergamo",d:2,wiki:"Charles_De_Ketelaere",photo:"https://www.thesportsdb.com/images/media/player/thumb/q597y21779039802.jpg"},
@@ -1032,7 +1032,7 @@ const PLAYERS = [
   {name:"Tarik Muharemović",country:"Bosnia",code:"ba",pos:"Defender",club:"US Sassuolo",d:3,wiki:"Tarik_Muharemović",photo:"https://r2.thesportsdb.com/images/media/player/thumb/2s76nh1764103543.jpg"},
   {name:"Sead Kolasinac",country:"Bosnia",code:"ba",pos:"Defender",club:"Atalanta Bergamo",d:2,wiki:"Sead_Kolasinac",photo:"https://r2.thesportsdb.com/images/media/player/thumb/kzf4g21510852753.jpg"},
   {name:"Benjamin Tahirović",country:"Bosnia",code:"ba",pos:"Midfielder",club:"Brøndby IF",d:2,wiki:"Benjamin_Tahirović",photo:"https://r2.thesportsdb.com/images/media/player/thumb/pny4wf1679566380.jpg"},
-  {name:"Amar Dedić",country:"Bosnia",code:"ba",pos:"Defender",club:"SL Ben\u0000ca",d:3,wiki:"Amar_Dedić",photo:"https://www.thesportsdb.com/images/media/player/thumb/y4f55i1778543039.jpg"},
+  {name:"Amar Dedić",country:"Bosnia",code:"ba",pos:"Defender",club:"SL Benfica",d:3,wiki:"Amar_Dedić",photo:"https://www.thesportsdb.com/images/media/player/thumb/y4f55i1778543039.jpg"},
   {name:"Armin Gigović",country:"Bosnia",code:"ba",pos:"Midfielder",club:"BSC Young Boys",d:3,wiki:"Armin_Gigović",photo:"https://www.thesportsdb.com/images/media/player/thumb/1azb771778543473.jpg"},
   {name:"Samed Baždar",country:"Bosnia",code:"ba",pos:"Forward",club:"Jagiellonia Bia ł ystok",d:3,wiki:"Samed_Baždar"},
   {name:"Ermedin Demirović",country:"Bosnia",code:"ba",pos:"Forward",club:"VfB Stuttgart",d:2,wiki:"Ermedin_Demirović",photo:"https://www.thesportsdb.com/images/media/player/thumb/ahykd01778543129.jpg"},
@@ -1090,7 +1090,7 @@ const PLAYERS = [
   {name:"Jamiro Monteiro",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"PEC Zwolle",d:3,wiki:"Jamiro_Monteiro_Alvarenga",photo:"https://r2.thesportsdb.com/images/media/player/thumb/nr9slg1652709187.jpg"},
   {name:"Rodrigues",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"Apollon Limassol",d:3,wiki:"Garry_Mendes_Rodrigues",photo:"https://r2.thesportsdb.com/images/media/player/thumb/ts35fw1669547014.jpg"},
   {name:"Marcio Brazão",country:"Cape Verde",code:"cv",pos:"Goalkeeper",club:"PFC Montana",d:3,wiki:"Marcio_Brazão",photo:"https://www.thesportsdb.com/images/media/player/thumb/1mmw3t1779196932.jpg"},
-  {name:"Lopes Cabral",country:"Cape Verde",code:"cv",pos:"Defender",club:"SL Ben\u0000ca",d:3,wiki:"Sidny_Lopes_Cabral",photo:"https://www.thesportsdb.com/images/media/player/thumb/iazr871779127008.jpg"},
+  {name:"Lopes Cabral",country:"Cape Verde",code:"cv",pos:"Defender",club:"SL Benfica",d:3,wiki:"Sidny_Lopes_Cabral",photo:"https://www.thesportsdb.com/images/media/player/thumb/iazr871779127008.jpg"},
   {name:"Laros Duarte",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"PFC Ludogorets Razgrad",d:3,wiki:"Laros_Duarte",photo:"https://r2.thesportsdb.com/images/media/player/thumb/kboxxu1700768246.jpg"},
   {name:"Duarte",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"Puskás Akadémia FC",d:3,wiki:"Laros_D'Encarnação_Duarte",photo:"https://r2.thesportsdb.com/images/media/player/thumb/j0e80u1723140331.jpg"},
   {name:"Jair Semedo",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"SC Farense",d:3,wiki:"Jair_Semedo",photo:"https://www.thesportsdb.com/images/media/player/thumb/frac291779197531.jpg"},
@@ -1106,7 +1106,7 @@ const PLAYERS = [
   {name:"Hélio Oliveira",country:"Cape Verde",code:"cv",pos:"Midfielder",club:"Maccabi Tel-Aviv FC",d:3,wiki:"Hélio_Oliveira",photo:"https://r2.thesportsdb.com/images/media/player/thumb/phf9f11767870978.jpg"},
   {name:"Dayne St. Clair",country:"Canada",code:"ca",pos:"Goalkeeper",club:"Inter Miami CF",d:3,wiki:"Dayne_St._Clair",photo:"https://r2.thesportsdb.com/images/media/player/thumb/qs5jq31548433419.jpg"},
   {name:"Alistair Johnston",country:"Canada",code:"ca",pos:"Defender",club:"Celtic FC",d:3,wiki:"Alistair_Johnston",photo:"https://r2.thesportsdb.com/images/media/player/thumb/ujidh41663868125.jpg"},
-  {name:"al\u0000E Jones",country:"Canada",code:"ca",pos:"Defender",club:"Middlesbrough FC",d:3,wiki:"al\u0000E_Jones"},
+  {name:"Alfie Jones",country:"Canada",code:"ca",pos:"Defender",club:"Middlesbrough FC",d:3,wiki:"al\u0000E_Jones"},
   {name:"de Fougerolles",country:"Canada",code:"ca",pos:"Defender",club:"FCV Dender EH",d:3,wiki:"Luc_Rollet_de_Fougerolles",photo:"https://r2.thesportsdb.com/images/media/player/thumb/s2uypp1699734125.jpg"},
   {name:"Joel Waterman",country:"Canada",code:"ca",pos:"Defender",club:"Chicago Fire FC",d:3,wiki:"Joel_Waterman",photo:"https://r2.thesportsdb.com/images/media/player/thumb/i1mmh61602618073.jpg"},
   {name:"Mathieu Choinière",country:"Canada",code:"ca",pos:"Midfielder",club:"LAFC",d:3,wiki:"Mathieu_Choinière",photo:"https://r2.thesportsdb.com/images/media/player/thumb/9kwudv1641303835.jpg"},
@@ -1135,7 +1135,7 @@ const PLAYERS = [
   {name:"Jhon Lucumí",country:"Colombia",code:"co",pos:"Defender",club:"Bologna FC",d:2,wiki:"Jhon_Lucumí",photo:"https://r2.thesportsdb.com/images/media/player/thumb/r7hnhc1723963266.jpg"},
   {name:"Santiago Arias",country:"Colombia",code:"co",pos:"Defender",club:"CA Independiente",d:3,wiki:"Santiago_Arias_Naranjo",photo:"https://www.thesportsdb.com/images/media/player/thumb/eqzorn1779751673.jpg"},
   {name:"Kevin Castaño",country:"Colombia",code:"co",pos:"Midfielder",club:"CA River Plate",d:2,wiki:"Kevin_Castaño",photo:"https://r2.thesportsdb.com/images/media/player/thumb/re6wit1723963135.jpg"},
-  {name:"Richard Rios",country:"Colombia",code:"co",pos:"Midfielder",club:"SL Ben\u0000ca",d:3,wiki:"Richard_Ríos_Montoya",photo:"https://r2.thesportsdb.com/images/media/player/thumb/3sivzv1725066629.jpg"},
+  {name:"Richard Rios",country:"Colombia",code:"co",pos:"Midfielder",club:"SL Benfica",d:3,wiki:"Richard_Ríos_Montoya",photo:"https://r2.thesportsdb.com/images/media/player/thumb/3sivzv1725066629.jpg"},
   {name:"Luis Díaz",country:"Colombia",code:"co",pos:"Forward",club:"FC Bayern München",d:2,wiki:"Luis_Díaz_(footballer)",photo:"https://www.thesportsdb.com/images/media/player/thumb/qkw97r1779753703.jpg"},
   {name:"Jorge Carrascal",country:"Colombia",code:"co",pos:"Midfielder",club:"CR Flamengo",d:3,wiki:"Jorge_Carrascal_Guardo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/f7p4te1723963648.jpg"},
   {name:"Jhon Córdoba",country:"Colombia",code:"co",pos:"Forward",club:"FC Krasnodar",d:2,wiki:"Jhon_Córdoba",photo:"https://r2.thesportsdb.com/images/media/player/thumb/uk6yfg1726080105.jpg"},
@@ -1153,7 +1153,7 @@ const PLAYERS = [
   {name:"Jaminton Campaz",country:"Colombia",code:"co",pos:"Forward",club:"CA Rosario Central",d:3,wiki:"Jaminton_Campaz",photo:"https://r2.thesportsdb.com/images/media/player/thumb/2upcby1765295846.jpg"},
   {name:"Deiver Machado",country:"Colombia",code:"co",pos:"Defender",club:"FC Nantes",d:3,wiki:"Deiver_Machado_Mena",photo:"https://www.thesportsdb.com/images/media/player/thumb/ygplav1779755083.jpg"},
   {name:"Davinson Sánchez",country:"Colombia",code:"co",pos:"Defender",club:"Galatasaray SK",d:2,wiki:"Davinson_Sánchez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/ukweyz1703592911.jpg"},
-  {name:"Álvaro Montero",country:"Colombia",code:"co",pos:"Goalkeeper",club:"CA Vélez Sars\u0000eld",d:2,wiki:"Álvaro_Montero",photo:"https://www.thesportsdb.com/images/media/player/thumb/mrffk31779766609.jpg"},
+  {name:"Álvaro Montero",country:"Colombia",code:"co",pos:"Goalkeeper",club:"CA Vélez Sarfield",d:2,wiki:"Álvaro_Montero",photo:"https://www.thesportsdb.com/images/media/player/thumb/mrffk31779766609.jpg"},
   {name:"Luis Suárez",country:"Colombia",code:"co",pos:"Forward",club:"Sporting CP",d:3,wiki:"Luis_Suárez_(Colombian_footballer)",photo:"https://www.thesportsdb.com/images/media/player/thumb/grivvk1779769643.jpg"},
   {name:"Carlos Gómez",country:"Colombia",code:"co",pos:"Forward",club:"CR Vasco Da Gama",d:2,wiki:"Carlos_Gómez",photo:"https://www.thesportsdb.com/images/media/player/thumb/6ccq2e1779753965.jpg"},
   {name:"Lionel Mpasi",country:"DR Congo",code:"cd",pos:"Goalkeeper",club:"Le Havre AC",d:3,wiki:"Lionel_Mpasi",photo:"https://r2.thesportsdb.com/images/media/player/thumb/6nvand1705586482.jpg"},
@@ -1244,7 +1244,7 @@ const PLAYERS = [
   {name:"Livano Comenencia",country:"Curaçao",code:"cw",pos:"Midfielder",club:"FC Zürich",d:3,wiki:"Livano_Comenencia",photo:"https://www.thesportsdb.com/images/media/player/thumb/gvoe401779193383.jpg"},
   {name:"Jürgen Locadia",country:"Curaçao",code:"cw",pos:"Forward",club:"Miami FC",d:3,wiki:"Jürgen_Locadia",photo:"https://www.thesportsdb.com/images/media/player/thumb/kwtqqh1779193934.jpg"},
   {name:"Leandro Bacuna",country:"Curaçao",code:"cw",pos:"Midfielder",club:"I ğ dır FK",d:3,wiki:"Leandro_Bacuna",photo:"https://www.thesportsdb.com/images/media/player/thumb/hlurfv1779490510.jpg"},
-  {name:"Jeremy Antonisse",country:"Curaçao",code:"cw",pos:"Forward",club:"AE Ki\u0000sia FC",d:3,wiki:"Jeremy_Antonisse",photo:"https://www.thesportsdb.com/images/media/player/thumb/9gntnl1779489919.jpg"},
+  {name:"Jeremy Antonisse",country:"Curaçao",code:"cw",pos:"Forward",club:"AE Kifisia FC",d:3,wiki:"Jeremy_Antonisse",photo:"https://www.thesportsdb.com/images/media/player/thumb/9gntnl1779489919.jpg"},
   {name:"Misjonne Hansen",country:"Curaçao",code:"cw",pos:"Forward",club:"Middlesbrough FC",d:3,wiki:"Misjonne_Hansen",photo:"https://r2.thesportsdb.com/images/media/player/thumb/tgls171701019754.jpg"},
   {name:"Tyrese Noslin",country:"Curaçao",code:"cw",pos:"Forward",club:"SC Telstar",d:3,wiki:"Tyrese_Noslin",photo:"https://r2.thesportsdb.com/images/media/player/thumb/enymza1758110045.jpg"},
   {name:"Kenji Gorre",country:"Curaçao",code:"cw",pos:"Forward",club:"Maccabi Haifa FC",d:3,wiki:"Kenji_Gorre",photo:"https://www.thesportsdb.com/images/media/player/thumb/95iyv21779193623.jpg"},
@@ -1254,7 +1254,7 @@ const PLAYERS = [
   {name:"Armando Obispo",country:"Curaçao",code:"cw",pos:"Defender",club:"PSV Eindhoven",d:3,wiki:"Armando_Obispo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/n5p6md1679496829.jpg"},
   {name:"Gervane Kastaneer",country:"Curaçao",code:"cw",pos:"Forward",club:"Terengganu FC",d:3,wiki:"Gervane_Kastaneer",photo:"https://r2.thesportsdb.com/images/media/player/thumb/uvilvt1750627686.jpg"},
   {name:"Joshua Brenet",country:"Curaçao",code:"cw",pos:"Defender",club:"Kayserispor",d:3,wiki:"Joshua_Brenet",photo:"https://r2.thesportsdb.com/images/media/player/thumb/175wim1700398518.jpg"},
-  {name:"Tahith Chong",country:"Curaçao",code:"cw",pos:"Midfielder",club:"She\u0000eld United FC",d:3,wiki:"Tahith_Chong",photo:"https://r2.thesportsdb.com/images/media/player/thumb/1aygqk1585668693.jpg"},
+  {name:"Tahith Chong",country:"Curaçao",code:"cw",pos:"Midfielder",club:"Sheffield United FC",d:3,wiki:"Tahith_Chong",photo:"https://r2.thesportsdb.com/images/media/player/thumb/1aygqk1585668693.jpg"},
   {name:"Kevin Felida",country:"Curaçao",code:"cw",pos:"Midfielder",club:"FC Den Bosch",d:3,wiki:"Kevin_Felida",photo:"https://r2.thesportsdb.com/images/media/player/thumb/rjgevz1701120574.jpg"},
   {name:"Riechedly Bazoer",country:"Curaçao",code:"cw",pos:"Defender",club:"Konyaspor",d:3,wiki:"Riechedly_Bazoer",photo:"https://r2.thesportsdb.com/images/media/player/thumb/emal8x1557865240.jpg"},
   {name:"Deveron Fonville",country:"Curaçao",code:"cw",pos:"Defender",club:"NEC Nijmegen",d:3,wiki:"Deveron_Fonville",photo:"https://r2.thesportsdb.com/images/media/player/thumb/hd9f261760717035.jpg"},
@@ -1297,7 +1297,7 @@ const PLAYERS = [
   {name:"Yeboah Zamora",country:"Ecuador",code:"ec",pos:"Forward",club:"Venezia FC",d:3,wiki:"John_Yeboah_Zamora",photo:"https://r2.thesportsdb.com/images/media/player/thumb/xv21mj1735536238.jpg"},
   {name:"Ray Paez",country:"Ecuador",code:"ec",pos:"Midfielder",club:"CA River Plate",d:3,wiki:"Ray_Paez_Andrade",photo:"https://r2.thesportsdb.com/images/media/player/thumb/w31hz81735536482.jpg"},
   {name:"Rodriguez",country:"Ecuador",code:"ec",pos:"Forward",club:"Royale Union Saint-Gilloise",d:3,wiki:"Kevin_Rodríguez_Cortez",photo:"https://r2.thesportsdb.com/images/media/player/thumb/uek8qa1668549700.jpg"},
-  {name:"Wellington Ramírez",country:"Ecuador",code:"ec",pos:"Goalkeeper",club:"AE Ki\u0000sia FC",d:3,wiki:"Wellington_Ramírez_Preciado",photo:"https://r2.thesportsdb.com/images/media/player/thumb/o5h2k91717175779.jpg"},
+  {name:"Wellington Ramírez",country:"Ecuador",code:"ec",pos:"Goalkeeper",club:"AE Kifisia FC",d:3,wiki:"Wellington_Ramírez_Preciado",photo:"https://r2.thesportsdb.com/images/media/player/thumb/o5h2k91717175779.jpg"},
   {name:"Enner Valencia",country:"Ecuador",code:"ec",pos:"Forward",club:"CF Pachuca",d:2,wiki:"Enner_Valencia",photo:"https://r2.thesportsdb.com/images/media/player/thumb/dakcfv1767607482.jpg"},
   {name:"Alan Minda",country:"Ecuador",code:"ec",pos:"Midfielder",club:"Atlético Mineiro",d:3,wiki:"Alan_Minda_Garcia",photo:"https://r2.thesportsdb.com/images/media/player/thumb/w387l51767801780.jpg"},
   {name:"Pedro Vite",country:"Ecuador",code:"ec",pos:"Midfielder",club:"Pumas UNAM",d:3,wiki:"Pedro_Vite_Uca",photo:"https://r2.thesportsdb.com/images/media/player/thumb/jp890g1652281216.jpg"},
@@ -1632,7 +1632,7 @@ const PLAYERS = [
   {name:"Ayyoub Bouaddi",country:"Morocco",code:"ma",pos:"Midfielder",club:"Lille OSC",d:3,wiki:"Ayyoub_Bouaddi",photo:"https://www.thesportsdb.com/images/media/player/thumb/qwebar1779839598.jpg"},
   {name:"Chemsdine Talbi",country:"Morocco",code:"ma",pos:"Midfielder",club:"Sunderland AFC",d:3,wiki:"Chemsdine_Talbi",photo:"https://r2.thesportsdb.com/images/media/player/thumb/o1wmv01772030103.jpg"},
   {name:"Azz-Eddine Ounahi",country:"Morocco",code:"ma",pos:"Midfielder",club:"Girona FC",d:3,wiki:"Azz-Eddine_Ounahi"},
-  {name:"Sou\u0000Ane Rahimi",country:"Morocco",code:"ma",pos:"Forward",club:"Al Ain FC",d:3,wiki:"Sou\u0000Ane_Rahimi"},
+  {name:"Soufiane Rahimi",country:"Morocco",code:"ma",pos:"Forward",club:"Al Ain FC",d:3,wiki:"Sou\u0000Ane_Rahimi"},
   {name:"Brahim Díaz",country:"Morocco",code:"ma",pos:"Forward",club:"Real Madrid C. F.",d:2,wiki:"Brahim_Díaz",photo:"https://www.thesportsdb.com/images/media/player/thumb/z1u3sj1779839715.jpg"},
   {name:"Ismael Saibari",country:"Morocco",code:"ma",pos:"Midfielder",club:"PSV Eindhoven",d:3,wiki:"Ismael_Saibari",photo:"https://r2.thesportsdb.com/images/media/player/thumb/tk93qg1702564078.jpg"},
   {name:"el Kajoui",country:"Morocco",code:"ma",pos:"Goalkeeper",club:"RS Berkane",d:3,wiki:"Monir_el_Kajoui"},
@@ -1679,7 +1679,7 @@ const PLAYERS = [
   {name:"Maxime Crocombe",country:"New Zealand",code:"nz",pos:"Goalkeeper",club:"Millwall FC",d:3,wiki:"Maxime_Crocombe",photo:"https://www.thesportsdb.com/images/media/player/thumb/fhenxj1778730751.jpg"},
   {name:"Timothy Payne",country:"New Zealand",code:"nz",pos:"Defender",club:"Wellington Phoenix FC",d:3,wiki:"Timothy_Payne",photo:"https://www.thesportsdb.com/images/media/player/thumb/03ge3a1778733387.jpg"},
   {name:"de Vries",country:"New Zealand",code:"nz",pos:"Defender",club:"Auckland FC",d:3,wiki:"Francis_de_Vries",photo:"https://r2.thesportsdb.com/images/media/player/thumb/x9owpm1730090361.jpg"},
-  {name:"Tyler Bindon",country:"New Zealand",code:"nz",pos:"Defender",club:"She\u0000eld United FC",d:3,wiki:"Tyler_Bindon",photo:"https://www.thesportsdb.com/images/media/player/thumb/thaqsi1778730349.jpg"},
+  {name:"Tyler Bindon",country:"New Zealand",code:"nz",pos:"Defender",club:"Sheffield United FC",d:3,wiki:"Tyler_Bindon",photo:"https://www.thesportsdb.com/images/media/player/thumb/thaqsi1778730349.jpg"},
   {name:"Michael Boxall",country:"New Zealand",code:"nz",pos:"Defender",club:"Minnesota United FC",d:3,wiki:"Michael_Boxall",photo:"https://www.thesportsdb.com/images/media/player/thumb/qv4lka1778730526.jpg"},
   {name:"Joe Bell",country:"New Zealand",code:"nz",pos:"Midfielder",club:"Viking Stavanger",d:3,wiki:"Joe_Bell",photo:"https://r2.thesportsdb.com/images/media/player/thumb/i95q3d1654114663.jpg"},
   {name:"Matthew Garbett",country:"New Zealand",code:"nz",pos:"Midfielder",club:"Peterborough United FC",d:3,wiki:"Matthew_Garbett",photo:"https://www.thesportsdb.com/images/media/player/thumb/x9yoaj1778731232.jpg"},
@@ -1715,14 +1715,14 @@ const PLAYERS = [
   {name:"Strand Larsen",country:"Norway",code:"no",pos:"Forward",club:"Crystal Palace FC",d:3,wiki:"Jørgen_Larsen",photo:"https://r2.thesportsdb.com/images/media/player/thumb/iklw8s1772140820.jpg"},
   {name:"Sander Tangvik",country:"Norway",code:"no",pos:"Goalkeeper",club:"Hamburger SV",d:3,wiki:"Sander_Tangvik",photo:"https://www.thesportsdb.com/images/media/player/thumb/3rat671779406783.jpg"},
   {name:"Egil Selvik",country:"Norway",code:"no",pos:"Goalkeeper",club:"Watford FC",d:3,wiki:"Egil_Selvik",photo:"https://r2.thesportsdb.com/images/media/player/thumb/k9bzoa1739973004.jpg"},
-  {name:"Fredrik Aursnes",country:"Norway",code:"no",pos:"Midfielder",club:"SL Ben\u0000ca",d:3,wiki:"Fredrik_Aursnes",photo:"https://www.thesportsdb.com/images/media/player/thumb/1xzeaw1779407454.jpg"},
+  {name:"Fredrik Aursnes",country:"Norway",code:"no",pos:"Midfielder",club:"SL Benfica",d:3,wiki:"Fredrik_Aursnes",photo:"https://www.thesportsdb.com/images/media/player/thumb/1xzeaw1779407454.jpg"},
   {name:"Fredrik Bjørkan",country:"Norway",code:"no",pos:"Defender",club:"FK Bodø/Glimt",d:3,wiki:"Fredrik_Bjørkan",photo:"https://www.thesportsdb.com/images/media/player/thumb/03tpm61779407988.jpg"},
   {name:"Holmgren",country:"Norway",code:"no",pos:"Defender",club:"Torino FC",d:3,wiki:"Marcus_Pedersen",photo:"https://r2.thesportsdb.com/images/media/player/thumb/slee8j1622647830.jpg"},
   {name:"Torbjørn Heggem",country:"Norway",code:"no",pos:"Defender",club:"Bologna FC",d:3,wiki:"Torbjørn_Heggem",photo:"https://r2.thesportsdb.com/images/media/player/thumb/3zsl9f1717613261.jpg"},
   {name:"Kristian Thorstvedt",country:"Norway",code:"no",pos:"Midfielder",club:"US Sassuolo",d:3,wiki:"Kristian_Thorstvedt",photo:"https://r2.thesportsdb.com/images/media/player/thumb/lc8edn1623869248.jpg"},
   {name:"Thelonious Aasgaard",country:"Norway",code:"no",pos:"Midfielder",club:"Rangers FC",d:3,wiki:"Thelonious_Aasgaard",photo:"https://www.thesportsdb.com/images/media/player/thumb/qzy7tk1779406956.jpg"},
   {name:"Antonio Nusa",country:"Norway",code:"no",pos:"Forward",club:"RB Leipzig",d:3,wiki:"Antonio_Nusa",photo:"https://r2.thesportsdb.com/images/media/player/thumb/orowpm1731102557.jpg"},
-  {name:"Andreas Schjelderup",country:"Norway",code:"no",pos:"Midfielder",club:"SL Ben\u0000ca",d:3,wiki:"Andreas_Schjelderup",photo:"https://r2.thesportsdb.com/images/media/player/thumb/j5t0vz1702209151.jpg"},
+  {name:"Andreas Schjelderup",country:"Norway",code:"no",pos:"Midfielder",club:"SL Benfica",d:3,wiki:"Andreas_Schjelderup",photo:"https://r2.thesportsdb.com/images/media/player/thumb/j5t0vz1702209151.jpg"},
   {name:"Oscar Bobb",country:"Norway",code:"no",pos:"Midfielder",club:"Fulham FC",d:3,wiki:"Oscar_Bobb",photo:"https://www.thesportsdb.com/images/media/player/thumb/d0ai4y1779408227.jpg"},
   {name:"Jens Hauge",country:"Norway",code:"no",pos:"Midfielder",club:"FK Bodø/Glimt",d:3,wiki:"Jens_Hauge",photo:"https://r2.thesportsdb.com/images/media/player/thumb/pvg93m1602960359.jpg"},
   {name:"Sondre Langås",country:"Norway",code:"no",pos:"Defender",club:"Derby County FC",d:3,wiki:"Sondre_Langås",photo:"https://r2.thesportsdb.com/images/media/player/thumb/r1c9d31760182401.jpg"},
@@ -1783,7 +1783,7 @@ const PLAYERS = [
   {name:"Diogo Costa",country:"Portugal",code:"pt",pos:"Goalkeeper",club:"FC Porto",d:2,wiki:"Diogo_Costa_(goalkeeper)",photo:"https://r2.thesportsdb.com/images/media/player/thumb/oosfmz1617009926.jpg"},
   {name:"Nélson Semedo",country:"Portugal",code:"pt",pos:"Defender",club:"Fenerbahçe SK",d:2,wiki:"Nélson_Semedo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/qlw1ut1516964784.jpg"},
   {name:"Rúben Dias",country:"Portugal",code:"pt",pos:"Defender",club:"Manchester City FC",d:2,wiki:"Rúben_Dias",photo:"https://r2.thesportsdb.com/images/media/player/thumb/9kws2w1684833492.jpg"},
-  {name:"Tomás Araújo",country:"Portugal",code:"pt",pos:"Defender",club:"SL Ben\u0000ca",d:2,wiki:"Tomás_Araújo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/er26ze1741768576.jpg"},
+  {name:"Tomás Araújo",country:"Portugal",code:"pt",pos:"Defender",club:"SL Benfica",d:2,wiki:"Tomás_Araújo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/er26ze1741768576.jpg"},
   {name:"Diogo Dalot",country:"Portugal",code:"pt",pos:"Defender",club:"Manchester United FC",d:2,wiki:"Diogo_Dalot",photo:"https://r2.thesportsdb.com/images/media/player/thumb/0rv14y1706525697.jpg"},
   {name:"Matheus Nunes",country:"Portugal",code:"pt",pos:"Midfielder",club:"Manchester City FC",d:2,wiki:"Matheus_Nunes",photo:"https://r2.thesportsdb.com/images/media/player/thumb/fm3isa1703327534.jpg"},
   {name:"Cristiano Ronaldo",country:"Portugal",code:"pt",pos:"Forward",club:"Al Nassr FC",d:1,wiki:"Cristiano_Ronaldo",photo:"https://r2.thesportsdb.com/images/media/player/thumb/bkre241600892282.jpg"},
@@ -2357,6 +2357,9 @@ function watchBtnHtml(country){
   </a>`;
 }
 
+// ─── HTML escape helper — used wherever dynamic text goes into innerHTML ───
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
 // ═══════════════════════════════════════════════════════════
 // GAME STATE
 // ═══════════════════════════════════════════════════════════
@@ -2460,7 +2463,7 @@ function renderRound(){
   if(isMob){
     document.getElementById('player-card').innerHTML=`
       <div class="player-top-m">
-        <div class="player-name">${currentPlayer.name}</div>
+        <div class="player-name">${esc(currentPlayer.name)}</div>
         <div class="player-pos">${posName(currentPlayer.pos)}</div>
       </div>
       <div class="player-mid-m">
@@ -2514,7 +2517,7 @@ function renderRound(){
       </div>
       <div class="player-info">
         <div class="player-top">
-          <div class="player-name">${currentPlayer.name}</div>
+          <div class="player-name">${esc(currentPlayer.name)}</div>
           <div class="player-pos">${posName(currentPlayer.pos)}</div>
         </div>
         <div class="player-bottom">
@@ -2730,19 +2733,19 @@ function buildMatchReview(){
   list.innerHTML=history.map((h,i)=>{
     const p=h.player;
     const photo=p.photo
-      ?`<img src="${p.photo}" alt="">`
-      :`<span style="font-size:18px">👤</span>`;
+      ?`<img src="${esc(p.photo)}" alt="${esc(p.name)}">`
+      :`<span style="font-size:18px" aria-hidden="true">👤</span>`;
     return `<div class="player-row">
-      <span class="review-idx">${i+1}</span>
+      <span class="review-idx" aria-hidden="true">${i+1}</span>
       <div class="review-photo">${photo}</div>
       <div class="review-info">
-        <span class="review-player-name">${p.name}</span>
+        <span class="review-player-name">${esc(p.name)}</span>
         <div class="review-country">
-          <span>${flagEmoji(p.code)}</span>
-          <span>${countryName(p.country)}</span>
+          <span aria-hidden="true">${flagEmoji(p.code)}</span>
+          <span>${esc(countryName(p.country))}</span>
         </div>
       </div>
-      <span class="result-badge ${h.correct?'correct':'wrong'}">${h.correct?'✓':'✗'}</span>
+      <span class="result-badge ${h.correct?'correct':'wrong'}" aria-label="${h.correct?'Correct':'Wrong'}">${h.correct?'✓':'✗'}</span>
     </div>`;
   }).join('');
 }
