@@ -325,7 +325,7 @@ header{padding:28px 0 20px;display:flex;align-items:center;justify-content:space
           <div class="mode-card-desc">Every player in the dataset. Experts only.</div>
         </div>
       </div>
-      <div class="creator-sign">by Pedro Sabino</div>
+      <div class="creator-sign" id="creator-sign">by Pedro Sabino</div>
     </div>
 
     <!-- GAME SCREEN -->
@@ -2903,6 +2903,8 @@ function applyLang(){
   const rl=document.querySelector('.results-label');
   if(rl) rl.textContent=t('Final score','Pontuação final');
   document.getElementById('lang-toggle').setAttribute('data-lang',lang);
+  const cs=document.getElementById('creator-sign');
+  if(cs) cs.textContent=t('by Pedro Sabino','por Pedro Sabino');
   document.getElementById('lbl-score').textContent  = t('Score',  'Pontos');
   document.getElementById('lbl-streak').textContent = t('Streak', 'Sequência');
   document.getElementById('lbl-round').textContent  = t('Round',  'Rodada');
