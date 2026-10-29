@@ -21,6 +21,8 @@ js/data/worldcup.js   COUNTRIES (48 nations + PT names), WC26_MATCHES (all 104 r
 js/i18n.js            EN/PT strings, t(), countryName(), applyLang()
 js/app.js             game state, rendering, media loading, answer/results/share, events
 caseTVLogo.png        icon on the "Watch match" button
+data-sources/         reference records the game does NOT load (e.g. the CazéTV
+                      last-match video list the `link` fields were taken from)
 ```
 Scripts are classic `<script>` tags loaded in that order and share globals — data first,
 then i18n, then app.
@@ -47,8 +49,9 @@ listed get `CLUB_BADGES[club]` or a generic three-letter badge.
 **Match** — `{date, time, stage, t1, c1, t2, c2, s1, s2, aet?, pen?, link?}`
 - Times are Brasília (UTC−3). `s1`/`s2` include extra time; penalties are only in `pen`.
 - The reveal box shows each team's *last* match (`getLastMatch`) with its score.
-- `link`: CazéTV replay URL. Add it to the team's last match only; the "Watch match"
-  button is always visible and becomes a link once `link` exists.
+- `link`: CazéTV full-match replay, set on every team's last match (all 48 teams).
+  Source: `data-sources/world_cup_2026_last_matches_cazetv.json`, from the playlist
+  https://www.youtube.com/playlist?list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D
 
 ## Scoring
 10 rounds. Correct = +100, or +200 when the streak was already 3+. Wrong resets the streak.

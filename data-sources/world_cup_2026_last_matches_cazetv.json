@@ -1,0 +1,864 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "generated": "2026-10-28",
+  "sources": {
+    "results": [
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_C",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_E",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_F",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_H",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_I",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_J",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_K",
+      "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_L"
+    ],
+    "videos": {
+      "channel": "CazéTV",
+      "playlist": "Jogos Completos | Copa do Mundo FIFA™ 2026",
+      "playlist_url": "https://www.youtube.com/playlist?list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D",
+      "playlist_size": 104
+    }
+  },
+  "notes": "Home/away order and score follow Wikipedia; CazéTV titles sometimes list teams in reverse order. Score is home-away; 'a.e.t.' = after extra time; penalties are home-away.",
+  "matches": [
+    {
+      "stage": "Final",
+      "date": "2026-07-19",
+      "match": "Spain x Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "score": "1-0 (a.e.t.)",
+      "penalties": null,
+      "last_match_of": [
+        "Spain",
+        "Argentina"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ESPANHA X ARGENTINA",
+      "playlist_position": 1,
+      "video_id": "zPQDvq-Fe0U",
+      "youtube_url": "https://www.youtube.com/watch?v=zPQDvq-Fe0U",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=zPQDvq-Fe0U&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Third place",
+      "date": "2026-07-18",
+      "match": "France x England",
+      "home": "France",
+      "away": "England",
+      "score": "4-6",
+      "penalties": null,
+      "last_match_of": [
+        "France",
+        "England"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: FRANÇA X INGLATERRA",
+      "playlist_position": 2,
+      "video_id": "r5PvNTvf3Go",
+      "youtube_url": "https://www.youtube.com/watch?v=r5PvNTvf3Go",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=r5PvNTvf3Go&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Quarter-final",
+      "date": "2026-07-11",
+      "match": "Norway x England",
+      "home": "Norway",
+      "away": "England",
+      "score": "1-2 (a.e.t.)",
+      "penalties": null,
+      "last_match_of": [
+        "Norway"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: NORUEGA X INGLATERRA",
+      "playlist_position": 5,
+      "video_id": "Mh9xGj3XOPM",
+      "youtube_url": "https://www.youtube.com/watch?v=Mh9xGj3XOPM",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=Mh9xGj3XOPM&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Quarter-final",
+      "date": "2026-07-11",
+      "match": "Argentina x Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "score": "3-1 (a.e.t.)",
+      "penalties": null,
+      "last_match_of": [
+        "Switzerland"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ARGENTINA X SUÍÇA",
+      "playlist_position": 6,
+      "video_id": "NzOvPzIFOqU",
+      "youtube_url": "https://www.youtube.com/watch?v=NzOvPzIFOqU",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=NzOvPzIFOqU&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Quarter-final",
+      "date": "2026-07-10",
+      "match": "Spain x Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "score": "2-1",
+      "penalties": null,
+      "last_match_of": [
+        "Belgium"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ESPANHA X BÉLGICA",
+      "playlist_position": 7,
+      "video_id": "54apQSJpf0A",
+      "youtube_url": "https://www.youtube.com/watch?v=54apQSJpf0A",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=54apQSJpf0A&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Quarter-final",
+      "date": "2026-07-09",
+      "match": "France x Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "score": "2-0",
+      "penalties": null,
+      "last_match_of": [
+        "Morocco"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: FRANÇA X MARROCOS",
+      "playlist_position": 8,
+      "video_id": "WP7qXzta_a0",
+      "youtube_url": "https://www.youtube.com/watch?v=WP7qXzta_a0",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=WP7qXzta_a0&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-07",
+      "match": "Argentina x Egypt",
+      "home": "Argentina",
+      "away": "Egypt",
+      "score": "3-2",
+      "penalties": null,
+      "last_match_of": [
+        "Egypt"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ARGENTINA X EGITO",
+      "playlist_position": 9,
+      "video_id": "AwcBso-8708",
+      "youtube_url": "https://www.youtube.com/watch?v=AwcBso-8708",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=AwcBso-8708&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-07",
+      "match": "Switzerland x Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "score": "0-0 (a.e.t.)",
+      "penalties": "4-3",
+      "last_match_of": [
+        "Colombia"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: SUÍÇA X COLÔMBIA",
+      "playlist_position": 10,
+      "video_id": "e2j1v8oFMtA",
+      "youtube_url": "https://www.youtube.com/watch?v=e2j1v8oFMtA",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=e2j1v8oFMtA&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-06",
+      "match": "Portugal x Spain",
+      "home": "Portugal",
+      "away": "Spain",
+      "score": "0-1",
+      "penalties": null,
+      "last_match_of": [
+        "Portugal"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: PORTUGAL X ESPANHA",
+      "playlist_position": 11,
+      "video_id": "i6-j6_5aXL8",
+      "youtube_url": "https://www.youtube.com/watch?v=i6-j6_5aXL8",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=i6-j6_5aXL8&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-06",
+      "match": "United States x Belgium",
+      "home": "United States",
+      "away": "Belgium",
+      "score": "1-4",
+      "penalties": null,
+      "last_match_of": [
+        "United States"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ESTADOS UNIDOS X BÉLGICA",
+      "playlist_position": 12,
+      "video_id": "NfyQ2SzjC3c",
+      "youtube_url": "https://www.youtube.com/watch?v=NfyQ2SzjC3c",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=NfyQ2SzjC3c&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-05",
+      "match": "Mexico x England",
+      "home": "Mexico",
+      "away": "England",
+      "score": "2-3",
+      "penalties": null,
+      "last_match_of": [
+        "Mexico"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: MÉXICO X INGLATERRA",
+      "playlist_position": 13,
+      "video_id": "WFjglRQSPd8",
+      "youtube_url": "https://www.youtube.com/watch?v=WFjglRQSPd8",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=WFjglRQSPd8&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-05",
+      "match": "Brazil x Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "score": "1-2",
+      "penalties": null,
+      "last_match_of": [
+        "Brazil"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BRASIL X NORUEGA",
+      "playlist_position": 14,
+      "video_id": "nJtyshk43Xo",
+      "youtube_url": "https://www.youtube.com/watch?v=nJtyshk43Xo",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=nJtyshk43Xo&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-04",
+      "match": "Canada x Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "score": "0-3",
+      "penalties": null,
+      "last_match_of": [
+        "Canada"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: CANADÁ X MARROCOS",
+      "playlist_position": 15,
+      "video_id": "mOv8dFdAqI0",
+      "youtube_url": "https://www.youtube.com/watch?v=mOv8dFdAqI0",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=mOv8dFdAqI0&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 16",
+      "date": "2026-07-04",
+      "match": "Paraguay x France",
+      "home": "Paraguay",
+      "away": "France",
+      "score": "0-1",
+      "penalties": null,
+      "last_match_of": [
+        "Paraguay"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: PARAGUAI X FRANÇA",
+      "playlist_position": 16,
+      "video_id": "X9rz4MObhLQ",
+      "youtube_url": "https://www.youtube.com/watch?v=X9rz4MObhLQ",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=X9rz4MObhLQ&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-03",
+      "match": "Australia x Egypt",
+      "home": "Australia",
+      "away": "Egypt",
+      "score": "1-1 (a.e.t.)",
+      "penalties": "2-4",
+      "last_match_of": [
+        "Australia"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: AUSTRÁLIA X EGITO",
+      "playlist_position": 17,
+      "video_id": "OwVHSCdF37g",
+      "youtube_url": "https://www.youtube.com/watch?v=OwVHSCdF37g",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=OwVHSCdF37g&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-03",
+      "match": "Colombia x Ghana",
+      "home": "Colombia",
+      "away": "Ghana",
+      "score": "1-0",
+      "penalties": null,
+      "last_match_of": [
+        "Ghana"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: COLÔMBIA X GANA",
+      "playlist_position": 18,
+      "video_id": "ZVfAZkCZTsc",
+      "youtube_url": "https://www.youtube.com/watch?v=ZVfAZkCZTsc",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=ZVfAZkCZTsc&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-03",
+      "match": "Argentina x Cape Verde",
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "score": "3-2 (a.e.t.)",
+      "penalties": null,
+      "last_match_of": [
+        "Cape Verde"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ARGENTINA X CABO VERDE",
+      "playlist_position": 19,
+      "video_id": "xtgjgpTuQTQ",
+      "youtube_url": "https://www.youtube.com/watch?v=xtgjgpTuQTQ",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=xtgjgpTuQTQ&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-02",
+      "match": "Spain x Austria",
+      "home": "Spain",
+      "away": "Austria",
+      "score": "3-0",
+      "penalties": null,
+      "last_match_of": [
+        "Austria"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ESPANHA X ÁUSTRIA",
+      "playlist_position": 20,
+      "video_id": "__xDLB2Pi0w",
+      "youtube_url": "https://www.youtube.com/watch?v=__xDLB2Pi0w",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=__xDLB2Pi0w&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-02",
+      "match": "Portugal x Croatia",
+      "home": "Portugal",
+      "away": "Croatia",
+      "score": "2-1",
+      "penalties": null,
+      "last_match_of": [
+        "Croatia"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: PORTUGAL X CROÁCIA",
+      "playlist_position": 21,
+      "video_id": "HaWzj8bpYK4",
+      "youtube_url": "https://www.youtube.com/watch?v=HaWzj8bpYK4",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=HaWzj8bpYK4&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-02",
+      "match": "Switzerland x Algeria",
+      "home": "Switzerland",
+      "away": "Algeria",
+      "score": "2-0",
+      "penalties": null,
+      "last_match_of": [
+        "Algeria"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: SUÍÇA X ARGÉLIA",
+      "playlist_position": 22,
+      "video_id": "YnoxRD3NDuE",
+      "youtube_url": "https://www.youtube.com/watch?v=YnoxRD3NDuE",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=YnoxRD3NDuE&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-01",
+      "match": "England x DR Congo",
+      "home": "England",
+      "away": "DR Congo",
+      "score": "2-1",
+      "penalties": null,
+      "last_match_of": [
+        "DR Congo"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: INGLATERRA X RD CONGO",
+      "playlist_position": 23,
+      "video_id": "aSXLerQStXA",
+      "youtube_url": "https://www.youtube.com/watch?v=aSXLerQStXA",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=aSXLerQStXA&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-01",
+      "match": "United States x Bosnia and Herzegovina",
+      "home": "United States",
+      "away": "Bosnia and Herzegovina",
+      "score": "2-0",
+      "penalties": null,
+      "last_match_of": [
+        "Bosnia and Herzegovina"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ESTADOS UNIDOS X BÓSNIA",
+      "playlist_position": 24,
+      "video_id": "ohgVDlwpC4A",
+      "youtube_url": "https://www.youtube.com/watch?v=ohgVDlwpC4A",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=ohgVDlwpC4A&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-07-01",
+      "match": "Belgium x Senegal",
+      "home": "Belgium",
+      "away": "Senegal",
+      "score": "3-2 (a.e.t.)",
+      "penalties": null,
+      "last_match_of": [
+        "Senegal"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BÉLGICA X SENEGAL",
+      "playlist_position": 25,
+      "video_id": "EOwYQqAixzA",
+      "youtube_url": "https://www.youtube.com/watch?v=EOwYQqAixzA",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=EOwYQqAixzA&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-30",
+      "match": "Ivory Coast x Norway",
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "score": "1-2",
+      "penalties": null,
+      "last_match_of": [
+        "Ivory Coast"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: COSTA DO MARFIM X NORUEGA",
+      "playlist_position": 26,
+      "video_id": "-1LksEX-4Ig",
+      "youtube_url": "https://www.youtube.com/watch?v=-1LksEX-4Ig",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=-1LksEX-4Ig&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-30",
+      "match": "Mexico x Ecuador",
+      "home": "Mexico",
+      "away": "Ecuador",
+      "score": "2-0",
+      "penalties": null,
+      "last_match_of": [
+        "Ecuador"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: MÉXICO X EQUADOR",
+      "playlist_position": 27,
+      "video_id": "HhcZqI_NqBs",
+      "youtube_url": "https://www.youtube.com/watch?v=HhcZqI_NqBs",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=HhcZqI_NqBs&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-30",
+      "match": "France x Sweden",
+      "home": "France",
+      "away": "Sweden",
+      "score": "3-0",
+      "penalties": null,
+      "last_match_of": [
+        "Sweden"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: FRANÇA X SUÉCIA",
+      "playlist_position": 28,
+      "video_id": "8t7YDJ3hLYQ",
+      "youtube_url": "https://www.youtube.com/watch?v=8t7YDJ3hLYQ",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=8t7YDJ3hLYQ&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-29",
+      "match": "Brazil x Japan",
+      "home": "Brazil",
+      "away": "Japan",
+      "score": "2-1",
+      "penalties": null,
+      "last_match_of": [
+        "Japan"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BRASIL X JAPÃO",
+      "playlist_position": 29,
+      "video_id": "XL2jTQdj134",
+      "youtube_url": "https://www.youtube.com/watch?v=XL2jTQdj134",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=XL2jTQdj134&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-29",
+      "match": "Netherlands x Morocco",
+      "home": "Netherlands",
+      "away": "Morocco",
+      "score": "1-1 (a.e.t.)",
+      "penalties": "2-3",
+      "last_match_of": [
+        "Netherlands"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: HOLANDA X MARROCOS",
+      "playlist_position": 30,
+      "video_id": "SWLm3YgA418",
+      "youtube_url": "https://www.youtube.com/watch?v=SWLm3YgA418",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=SWLm3YgA418&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-29",
+      "match": "Germany x Paraguay",
+      "home": "Germany",
+      "away": "Paraguay",
+      "score": "1-1 (a.e.t.)",
+      "penalties": "3-4",
+      "last_match_of": [
+        "Germany"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ALEMANHA X PARAGUAI",
+      "playlist_position": 31,
+      "video_id": "MMBZyJNGpL4",
+      "youtube_url": "https://www.youtube.com/watch?v=MMBZyJNGpL4",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=MMBZyJNGpL4&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Round of 32",
+      "date": "2026-06-28",
+      "match": "South Africa x Canada",
+      "home": "South Africa",
+      "away": "Canada",
+      "score": "0-1",
+      "penalties": null,
+      "last_match_of": [
+        "South Africa"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ÁFRICA DO SUL X CANADÁ",
+      "playlist_position": 32,
+      "video_id": "6L3aOGmPHic",
+      "youtube_url": "https://www.youtube.com/watch?v=6L3aOGmPHic",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=6L3aOGmPHic&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group L - Matchday 3",
+      "date": "2026-06-27",
+      "match": "Panama x England",
+      "home": "Panama",
+      "away": "England",
+      "score": "0-2",
+      "penalties": null,
+      "last_match_of": [
+        "Panama"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: INGLATERRA X PANAMÁ",
+      "playlist_position": 33,
+      "video_id": "FDCM9HggRlM",
+      "youtube_url": "https://www.youtube.com/watch?v=FDCM9HggRlM",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=FDCM9HggRlM&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group J - Matchday 3",
+      "date": "2026-06-27",
+      "match": "Jordan x Argentina",
+      "home": "Jordan",
+      "away": "Argentina",
+      "score": "1-3",
+      "penalties": null,
+      "last_match_of": [
+        "Jordan"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ARGENTINA X JORDÂNIA",
+      "playlist_position": 34,
+      "video_id": "O-RMGDl9z5w",
+      "youtube_url": "https://www.youtube.com/watch?v=O-RMGDl9z5w",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=O-RMGDl9z5w&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group K - Matchday 3",
+      "date": "2026-06-27",
+      "match": "DR Congo x Uzbekistan",
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "score": "3-1",
+      "penalties": null,
+      "last_match_of": [
+        "Uzbekistan"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: RD CONGO X UZBEQUISTÃO",
+      "playlist_position": 36,
+      "video_id": "QHHK06-b7aI",
+      "youtube_url": "https://www.youtube.com/watch?v=QHHK06-b7aI",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=QHHK06-b7aI&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group G - Matchday 3",
+      "date": "2026-06-26",
+      "match": "New Zealand x Belgium",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "score": "1-5",
+      "penalties": null,
+      "last_match_of": [
+        "New Zealand"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BÉLGICA X NOVA ZELÂNDIA",
+      "playlist_position": 40,
+      "video_id": "5T7bTslW7oI",
+      "youtube_url": "https://www.youtube.com/watch?v=5T7bTslW7oI",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=5T7bTslW7oI&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group G - Matchday 3",
+      "date": "2026-06-26",
+      "match": "Egypt x Iran",
+      "home": "Egypt",
+      "away": "Iran",
+      "score": "1-1",
+      "penalties": null,
+      "last_match_of": [
+        "Iran"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: EGITO X IRÃ",
+      "playlist_position": 41,
+      "video_id": "eeSdrrpKVlY",
+      "youtube_url": "https://www.youtube.com/watch?v=eeSdrrpKVlY",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=eeSdrrpKVlY&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group H - Matchday 3",
+      "date": "2026-06-26",
+      "match": "Cape Verde x Saudi Arabia",
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "score": "0-0",
+      "penalties": null,
+      "last_match_of": [
+        "Saudi Arabia"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: CABO VERDE X ARÁBIA SAUDITA",
+      "playlist_position": 42,
+      "video_id": "7kdzXhc90xw",
+      "youtube_url": "https://www.youtube.com/watch?v=7kdzXhc90xw",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=7kdzXhc90xw&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group H - Matchday 3",
+      "date": "2026-06-26",
+      "match": "Uruguay x Spain",
+      "home": "Uruguay",
+      "away": "Spain",
+      "score": "0-1",
+      "penalties": null,
+      "last_match_of": [
+        "Uruguay"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: URUGUAI X ESPANHA",
+      "playlist_position": 43,
+      "video_id": "d2OffmJxHbY",
+      "youtube_url": "https://www.youtube.com/watch?v=d2OffmJxHbY",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=d2OffmJxHbY&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group I - Matchday 3",
+      "date": "2026-06-26",
+      "match": "Senegal x Iraq",
+      "home": "Senegal",
+      "away": "Iraq",
+      "score": "5-0",
+      "penalties": null,
+      "last_match_of": [
+        "Iraq"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: SENEGAL X IRAQUE",
+      "playlist_position": 44,
+      "video_id": "VFF2tuap6mo",
+      "youtube_url": "https://www.youtube.com/watch?v=VFF2tuap6mo",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=VFF2tuap6mo&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group D - Matchday 3",
+      "date": "2026-06-25",
+      "match": "Turkey x United States",
+      "home": "Turkey",
+      "away": "United States",
+      "score": "3-2",
+      "penalties": null,
+      "last_match_of": [
+        "Turkey"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: TURQUIA X ESTADOS UNIDOS",
+      "playlist_position": 47,
+      "video_id": "cAl4PErpiuE",
+      "youtube_url": "https://www.youtube.com/watch?v=cAl4PErpiuE",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=cAl4PErpiuE&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group F - Matchday 3",
+      "date": "2026-06-25",
+      "match": "Tunisia x Netherlands",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "score": "1-3",
+      "penalties": null,
+      "last_match_of": [
+        "Tunisia"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: TUNÍSIA X HOLANDA",
+      "playlist_position": 49,
+      "video_id": "meWCRh7LE-0",
+      "youtube_url": "https://www.youtube.com/watch?v=meWCRh7LE-0",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=meWCRh7LE-0&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group E - Matchday 3",
+      "date": "2026-06-25",
+      "match": "Curaçao x Ivory Coast",
+      "home": "Curaçao",
+      "away": "Ivory Coast",
+      "score": "0-2",
+      "penalties": null,
+      "last_match_of": [
+        "Curaçao"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: COSTA DO MARFIM X CURAÇAO",
+      "playlist_position": 50,
+      "video_id": "yiq5VPpo34U",
+      "youtube_url": "https://www.youtube.com/watch?v=yiq5VPpo34U",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=yiq5VPpo34U&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group C - Matchday 3",
+      "date": "2026-06-24",
+      "match": "Scotland x Brazil",
+      "home": "Scotland",
+      "away": "Brazil",
+      "score": "0-3",
+      "penalties": null,
+      "last_match_of": [
+        "Scotland"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BRASIL X ESCÓCIA",
+      "playlist_position": 51,
+      "video_id": "ioH5k4ss_tY",
+      "youtube_url": "https://www.youtube.com/watch?v=ioH5k4ss_tY",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=ioH5k4ss_tY&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group A - Matchday 3",
+      "date": "2026-06-24",
+      "match": "South Africa x South Korea",
+      "home": "South Africa",
+      "away": "South Korea",
+      "score": "1-0",
+      "penalties": null,
+      "last_match_of": [
+        "South Korea"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: ÁFRICA DO SUL X COREIA DO SUL",
+      "playlist_position": 52,
+      "video_id": "cFu_iI4h1to",
+      "youtube_url": "https://www.youtube.com/watch?v=cFu_iI4h1to",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=cFu_iI4h1to&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group A - Matchday 3",
+      "date": "2026-06-24",
+      "match": "Czech Republic x Mexico",
+      "home": "Czech Republic",
+      "away": "Mexico",
+      "score": "0-3",
+      "penalties": null,
+      "last_match_of": [
+        "Czech Republic"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: TCHÉQUIA X MÉXICO",
+      "playlist_position": 53,
+      "video_id": "D0947hff-G0",
+      "youtube_url": "https://www.youtube.com/watch?v=D0947hff-G0",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=D0947hff-G0&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group C - Matchday 3",
+      "date": "2026-06-24",
+      "match": "Morocco x Haiti",
+      "home": "Morocco",
+      "away": "Haiti",
+      "score": "4-2",
+      "penalties": null,
+      "last_match_of": [
+        "Haiti"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: HAITI X MARROCOS",
+      "playlist_position": 54,
+      "video_id": "Cy-JKocMCf8",
+      "youtube_url": "https://www.youtube.com/watch?v=Cy-JKocMCf8",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=Cy-JKocMCf8&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    },
+    {
+      "stage": "Group B - Matchday 3",
+      "date": "2026-06-24",
+      "match": "Bosnia and Herzegovina x Qatar",
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "score": "3-1",
+      "penalties": null,
+      "last_match_of": [
+        "Qatar"
+      ],
+      "cazetv_video_title": "JOGO COMPLETO: BÓSNIA X CATAR",
+      "playlist_position": 55,
+      "video_id": "YAa0XEHZCys",
+      "youtube_url": "https://www.youtube.com/watch?v=YAa0XEHZCys",
+      "youtube_url_in_playlist": "https://www.youtube.com/watch?v=YAa0XEHZCys&list=PLsFWLnYCEXEVWs5wf60vfwUU4FaOEre3D"
+    }
+  ],
+  "team_index": {
+    "Algeria": "YnoxRD3NDuE",
+    "Argentina": "zPQDvq-Fe0U",
+    "Australia": "OwVHSCdF37g",
+    "Austria": "__xDLB2Pi0w",
+    "Belgium": "54apQSJpf0A",
+    "Bosnia and Herzegovina": "ohgVDlwpC4A",
+    "Brazil": "nJtyshk43Xo",
+    "Canada": "mOv8dFdAqI0",
+    "Cape Verde": "xtgjgpTuQTQ",
+    "Colombia": "e2j1v8oFMtA",
+    "Croatia": "HaWzj8bpYK4",
+    "Curaçao": "yiq5VPpo34U",
+    "Czech Republic": "D0947hff-G0",
+    "DR Congo": "aSXLerQStXA",
+    "Ecuador": "HhcZqI_NqBs",
+    "Egypt": "AwcBso-8708",
+    "England": "r5PvNTvf3Go",
+    "France": "r5PvNTvf3Go",
+    "Germany": "MMBZyJNGpL4",
+    "Ghana": "ZVfAZkCZTsc",
+    "Haiti": "Cy-JKocMCf8",
+    "Iran": "eeSdrrpKVlY",
+    "Iraq": "VFF2tuap6mo",
+    "Ivory Coast": "-1LksEX-4Ig",
+    "Japan": "XL2jTQdj134",
+    "Jordan": "O-RMGDl9z5w",
+    "Mexico": "WFjglRQSPd8",
+    "Morocco": "WP7qXzta_a0",
+    "Netherlands": "SWLm3YgA418",
+    "New Zealand": "5T7bTslW7oI",
+    "Norway": "Mh9xGj3XOPM",
+    "Panama": "FDCM9HggRlM",
+    "Paraguay": "X9rz4MObhLQ",
+    "Portugal": "i6-j6_5aXL8",
+    "Qatar": "YAa0XEHZCys",
+    "Saudi Arabia": "7kdzXhc90xw",
+    "Scotland": "ioH5k4ss_tY",
+    "Senegal": "EOwYQqAixzA",
+    "South Africa": "6L3aOGmPHic",
+    "South Korea": "cFu_iI4h1to",
+    "Spain": "zPQDvq-Fe0U",
+    "Sweden": "8t7YDJ3hLYQ",
+    "Switzerland": "NzOvPzIFOqU",
+    "Tunisia": "meWCRh7LE-0",
+    "Turkey": "cAl4PErpiuE",
+    "United States": "NfyQ2SzjC3c",
+    "Uruguay": "d2OffmJxHbY",
+    "Uzbekistan": "QHHK06-b7aI"
+  }
+}
